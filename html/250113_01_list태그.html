@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>list 태그</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ol {
+        list-style: lower-latin;
+      }
+      ul.one {
+        list-style: decimal;
+        margin: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <p>리스트1</p>
+    <p>리스트2</p>
+    <p>리스트3</p>
+    <p>리스트4</p>
+
+    <!--
+    리스트 태그를 수납장이라고 생각해라 
+    li는 서랍
+    -->
+
+    <!-- Order List -->
+    <ol>
+      <li>리스트1</li>
+      <li>리스트2</li>
+      <li>리스트3</li>
+      <li>리스트4</li>
+    </ol>
+    <ol>
+      <li>리스트1</li>
+      <li>리스트2</li>
+      <li>리스트3</li>
+      <li>리스트4</li>
+    </ol>
+
+    <!-- Unorder List -->
+    <ul>
+      <li>리스트1</li>
+      <li>리스트2</li>
+      <li>리스트3</li>
+      <li>리스트4</li>
+    </ul>
+
+    <ul class="one">
+      <li>
+        리스트1
+        <ul>
+          <li>리스트11</li>
+        </ul>
+      </li>
+      <li>리스트2</li>
+      <li>리스트3</li>
+      <li>리스트4</li>
+    </ul>
+  </body>
+</html>
