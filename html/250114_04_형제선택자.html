@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>인접선택자</title>
+    <style>
+      h1#one + p {
+        color: red;
+      }
+      h1#two ~ p {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="one">인접선택자</h1>
+    <!-- 현재 요소의 바로 뒤에 나오는 요소만을 가리키는 선택자 + -->
+    <p class="first on">하나</p>
+    <p class="first-on">둘</p>
+    <p>셋</p>
+    <p>넷</p>
+    <p>다섯</p>
+    <br />
+    <h1 id="two">형제선택자</h1>
+    <!-- 형제 선택자는 현재 요소와 같은 계층에 있는 요소만을 선택 ~  -->
+    <p>하나</p>
+    <p>둘</p>
+    <p>셋</p>
+    <p>넷</p>
+    <p>다섯</p>
+  </body>
+</html>
