@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <style>
+      dl:nth-last-child(1) {
+        /* 마지막에서부터 첫째인 dl */
+        color: red;
+      }
+      a:only-child {
+        color: violet;
+      }
+      dt:only-of-type {
+        /* 해당 타입의 외동인 애 */
+        color: deeppink;
+      }
+      /*child는 항상 부모를 본다*/
+    </style>
+  </head>
+  <body>
+    <p>문단태그</p>
+    <a href="">링크태그</a>
+    <span>인라인태그</span>
+    <h1>제목태그</h1>
+    <ul>
+      <li>리스트1</li>
+      <li>리스트2</li>
+      <li>리스트3</li>
+      <li>리스트4</li>
+    </ul>
+    <ol>
+      <li>리스트1</li>
+      <li>리스트2</li>
+      <li>리스트3</li>
+      <li>리스트4</li>
+    </ol>
+    <dl>
+      <dt>용어</dt>
+      <dd>용어설명</dd>
+      <dd>용어설명</dd>
+    </dl>
+    <dl>
+      <dt>용어</dt>
+      <dd>용어설명</dd>
+      <dd>용어설명</dd>
+    </dl>
+    <p><a href="">링크태그</a></p>
+    <p><a href="">링크태그</a></p>
+    <p><a href="">링크태그</a><span>인라인태그</span></p>
+  </body>
+</html>

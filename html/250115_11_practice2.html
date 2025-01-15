@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      div {
+        position: relative;
+        width: 1200px;
+        height: 100px;
+        background-color: yellow;
+      }
+      p {
+        width: 20%;
+        height: 100%;
+        background-color: red;
+      }
+      p:nth-child(2) {
+        position: absolute;
+        top: 0;
+        left: 40%;
+      }
+      p:nth-child(3) {
+        position: absolute;
+        top: 0;
+        left: 80%;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <p></p>
+      <p></p>
+      <p></p>
+    </div>
+  </body>
+</html>

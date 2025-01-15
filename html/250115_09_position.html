@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      p {
+        width: 500px;
+        height: 500px;
+      }
+      p:first-child {
+        position: relative;
+        background-color: lightcoral;
+        /* z-index 주려면 포지션을 줘야함 
+        메뉴와 같은 맨 앞에 와야하는 애들한테 숫자 크게(999) 줌 */
+        z-index: -2;
+      }
+      p:nth-child(2) {
+        position: relative;
+        top: -100px;
+        left: 100px;
+        background-color: lightblue;
+        z-index: -1;
+      }
+    </style>
+  </head>
+  <body>
+    <p></p>
+    <p></p>
+  </body>
+</html>

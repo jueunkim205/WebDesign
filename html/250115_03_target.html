@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <style>
+      p {
+        display: none;
+      }
+
+      #new:target,
+      #notice:target {
+        /* 링크태그를 눌렀을때 변화를 줌 
+         target으로 갔을때 최종 선택자 */
+        display: inline;
+      }
+      ::selection {
+        background-color: yellow;
+        /* 마우스 드래그시 색상변경됨 */
+      }
+    </style>
+  </head>
+  <body>
+    <a href="#new">링크태그</a>
+    <p id="new">문단태그</p>
+    <a href="#notice">공지사항</a>
+    <p id="notice">하이</p>
+  </body>
+</html>

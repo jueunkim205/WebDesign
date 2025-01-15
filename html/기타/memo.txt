@@ -24,8 +24,23 @@ alt + w -> 다른 태그로 감싸기
 
 [css]
 
-"color": {
-"prefix": "clr",
-"body": ["color: "],
-"description": "color"
-}
+  "color": {
+    "prefix": "clr",
+    "body": ["color: red;"],
+    "description": "color"
+  },
+  "*{": {
+    "prefix": "*{",
+    "body": ["*{ margin : 0; padding : 0;}"],
+    "description": "setting"
+  },
+  "pa": {
+    "prefix": "pa",
+    "body": ["position : absolute;"],
+    "description": "position"
+  },
+  "pr": {
+    "prefix": "pr",
+    "body": ["position : relative;"],
+    "description": "position"
+  }
