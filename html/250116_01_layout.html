@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>layout</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      div {
+        position: relative;
+        /* text-align: center; */
+        height: 100px;
+      }
+      div.big {
+        width: 1200px;
+        border: 1px solid #000;
+      }
+      div.small {
+        top: 50px;
+        /* 순위에 크게 영향을 받지 않을때 쓴다 */
+        width: 1000px;
+        border: 1px solid blue;
+      }
+      .big p,
+      .small p {
+        /* abolute 주면 다 부모를 떠남 
+          부모의 높이값이 사라짐       */
+        position: absolute;
+        width: 20%;
+        height: 100%;
+        background-color: plum;
+        top: 0;
+      }
+      p:first-child {
+        left: 0;
+      }
+      p:nth-child(2) {
+        /* display: inline-block; */
+        left: calc(50% - (20% / 2));
+      }
+      p:last-child {
+        right: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <!--
+     div는 모든것을 묶을 수 있음 
+     p태그로 이미지나 글자를 자식으로 삼기 좋음 
+    수정관리를 덜 할 수 있게 코딩하면 좋다
+    -->
+    <h1>제목태그</h1>
+    <div class="big">
+      <p>왼쪽정렬</p>
+      <p>가운데정렬</p>
+      <p>오른쪽정렬</p>
+    </div>
+    <div class="small">
+      <p>왼쪽정렬</p>
+      <p>가운데정렬</p>
+      <p>오른쪽정렬</p>
+    </div>
+  </body>
+</html>
