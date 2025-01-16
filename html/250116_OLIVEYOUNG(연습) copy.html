@@ -9,21 +9,31 @@
       * {
         margin: 0;
         padding: 0;
+        scroll-behavior: smooth;
       }
+
       body > div {
         width: 1440px;
-        border: 1px solid #000;
-        overflow: hidden;
+        height: 2500px;
+        background-color: #eee;
         margin: 0 auto;
       }
-      body > div > div {
-        display: inline-block;
-      }
+
       .left {
+        display: inline-block;
         position: sticky;
+        width: 40%;
+        height: 300px;
+        top: 0;
+        border: 1px solid blue;
       }
+
       ul {
         list-style: none;
+      }
+      .right li {
+        margin-bottom: 30px;
+        border: 1px solid #000;
       }
       a {
         text-decoration: none;
@@ -42,7 +52,6 @@
   </head>
   <body>
     <!-- https://corp.oliveyoung.com/ko -->
-    <!-- 왼쪽 -->
     <div>
       <div class="left">
         <h1>
@@ -51,22 +60,22 @@
         </h1>
         <ul>
           <li>
-            <a href="">올리브영 매장</a>
+            <a href="#one">올리브영 매장</a>
           </li>
           <li>
-            <a href="">올리브영 Online (국내)</a>
+            <a href="#two">올리브영 Online (국내)</a>
           </li>
           <li>
-            <a href="">올리브영 글로벌</a>
+            <a href="#three">올리브영 글로벌</a>
           </li>
         </ul>
       </div>
-      <!-- 오른쪽 -->
+
       <div class="right">
-        <p><a href="#one">01</a></p>
         <ul>
           <!-- li -->
           <li>
+            <p id="one">01</p>
             <p>
               <img
                 src="https://corp.oliveyoung.com/img/tmp/tmp_img_platform1-cf428ca64855adc4a1062251b83cf683.jpg"
@@ -90,6 +99,8 @@
           </li>
           <!-- li -->
           <li>
+            <p id="two">02</p>
+
             <p>
               <img
                 src="https://corp.oliveyoung.com/img/tmp/tmp_img_platform1-cf428ca64855adc4a1062251b83cf683.jpg"
@@ -119,6 +130,7 @@
           </li>
           <!-- li -->
           <li>
+            <p id="three">03</p>
             <p>
               <img
                 src="https://corp.oliveyoung.com/img/tmp/tmp_img_platform1-cf428ca64855adc4a1062251b83cf683.jpg"
