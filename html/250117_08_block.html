@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>block속성</title>
+    <style>
+      /*오늘 정렬 배운거text
+      
+        text-align : justify
+        vertical-align: middle;
+        line-height: 500px;
+      
+      */
+      div {
+        border: 1px solid #000;
+      }
+      .con1 {
+        /* 내용에 맞춰서 width값 맞추기 */
+        display: inline-block;
+        padding: 20px;
+      }
+      .con2 {
+        clear: both;
+        float: left;
+      }
+      p {
+        /*  float태그 따라가지 말라고 clear 씀 */
+        clear: both;
+        display: inline-block;
+        border: 1px solid #000;
+        vertical-align: middle;
+      }
+      h1 {
+        height: 500px;
+        border: 1px solid #000;
+        /* 높이가 있어야함 */
+        text-align: center;
+        line-height: 500px;
+        text-indent: -9999px;
+      }
+      h2 {
+        font-size: 50px;
+        text-shadow: 2px 2px 5px rgb(255, 162, 75),
+          -2px -2px 5px rgb(64, 255, 64), 0 0 20px rgba(0, 255, 255, 0.7);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="con">
+      <div class="con1">블록속성을 배우고 있다.</div>
+    </div>
+    <div class="con2">float속성을 사용한다.</div>
+    <p>하나<br />둘<br />셋</p>
+    <span>인라인태그</span>
+    <h1>제목태그</h1>
+    <h2>그림자</h2>
+  </body>
+</html>

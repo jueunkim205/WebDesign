@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>block속성</title>
+    <style>
+      /********************
+       prettier 쓰면 안됨 
+       *********************/
+
+    div{width: 500px; border: 1px solid #000; margin: 10px;}
+
+     .normal{white-space: normal; }
+     
+     /* nowrap : 부모가 감싸지 않음 
+     overflow: hidden 넘치는거 가림
+     ellipsis : ... */
+     .nowrap{white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
+
+     .pre{white-space: pre; }
+
+     /* pre-wrap : 길면 부모가 감쌈 */
+     .pre-wrap{white-space: pre-wrap; }
+
+     /* pre-line : 공백처리x 줄바꿈o */
+     .pre-line{white-space: pre-line; visibility: visible; }
+    </style>
+  </head>
+  <body>
+   <div class="normal">L           orem
+     ipsum dolor sit amet consectetur adipisicing elit. Autem illum eveniet doloribus maxime minus nobis eaque obcaecati adipisci fugiat unde?</div>
+   <div class="nowrap">L           orem
+     ipsum dolor sit amet consectetur adipisicing elit. Autem illum eveniet doloribus maxime minus nobis eaque obcaecati adipisci fugiat unde?</div>
+   <div class="pre">L           orem
+     ipsum dolor sit amet consectetur adipisicing elit. Autem illum eveniet doloribus maxime minus nobis eaque obcaecati adipisci fugiat unde?</div>
+   <div class="pre-wrap">L           orem
+     ipsum dolor sit amet consectetur adipisicing elit. Autem illum eveniet doloribus maxime minus nobis eaque obcaecati adipisci fugiat unde?</div>
+   <div class="pre-line">L           orem
+     ipsum dolor sit amet consectetur adipisicing elit. Autem illum eveniet doloribus maxime minus nobis eaque obcaecati adipisci fugiat unde?</div>
+  </body>
+</html>
