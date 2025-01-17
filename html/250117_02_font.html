@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>font</title>
+    <!-- 폰트 가져오기
+    googlefont -> embed -> web -> link -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap");
+      @font-face {
+        font-family: Roboto;
+        src: url(./webfonts/Roboto-Regular.woff) format("woff");
+      }
+      /* 파일 이름에 공백 있을경우 공백 없애기 */
+      @font-face {
+        font-family: CookieRun;
+        src: url(./webfonts/CookieRunRegular.otf) format("opentype");
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        font-size: 30px;
+      }
+      /* font-family: 적용할 폰트, 폰트 없을경우 예비용, 예비용... */
+      .one {
+        font-family: Arial, "돋움", Dotum, sans-serif;
+      }
+      .two {
+        font-family: "Times New Roman", Times, 바탕, serif;
+      }
+      .three {
+        font-family: "궁서", cursive;
+      }
+      .four {
+        font-family: "Pretendard";
+      }
+      .five {
+        font-family: Roboto, 궁서, sans-serif;
+      }
+      .siv {
+        font-family: "Noto Sans", "Noto Sans KR", sans-serif;
+        font-weight: 500;
+      }
+      .seven {
+        font-family: "Cedarville Cursive", serif;
+      }
+      .eight {
+        font-family: CookieRun;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="num">
+      <p class="one">문단태그 abcdABCD 12345</p>
+      <p class="two">문단태그 abcdABCD 12345</p>
+      <p class="three">문단태그 abcdABCD 12345</p>
+      <p class="four">문단태그 abcdABCD 12345</p>
+      <p class="five">문단태그 abcdABCD 12345</p>
+      <p class="siv">문단태그 abcdABCD 12345</p>
+      <p class="seven">문단태그 abcdABCD 12345</p>
+      <p class="eight">쿠키런 문단태그 abcdABCD 12345</p>
+    </div>
+  </body>
+</html>

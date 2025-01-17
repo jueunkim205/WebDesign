@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>fontSize</title>
+    <style>
+      html {
+        /* 기본은 16px */
+        font-size: 50px;
+      }
+      div {
+        width: 500px;
+        height: 500px;
+        border: 1px solid #000;
+      }
+      div:first-child p {
+        font-size: 50px;
+      }
+      div:nth-child(2) {
+        font-size: 32px;
+      }
+      div:nth-child(2) p {
+        /* 기본 font size : 16px
+        브라우저상에서 최저사이즈를 10px으로 함
+        부모에 사이즈를 주면 그 반의 사이즈로 바뀜
+        */
+        font-size: 50%;
+      }
+      div:nth-child(3) {
+        width: 400px;
+        font-size: 100px;
+        color: blue;
+      }
+      div:nth-child(3) p {
+        /* em : 부모크기를 따라감 */
+        font-size: 1em;
+        width: 1em;
+        background-color: yellowgreen;
+      }
+      div:nth-child(3) p {
+        font-size: 100px;
+        width: 400px;
+      }
+      div:nth-child(4) p {
+        /* rem : root em 최상위 html */
+        font-size: 1rem;
+        width: 1rem;
+        background-color: khaki;
+      }
+      /*  vw = viewport width, vh = viewport height
+      현재 디바이스 화면 사이즈의 영향을 받음 */
+      div:nth-child(5) p {
+        font-size: 1vw;
+      }
+      div:nth-child(6) p {
+        font-size: 10vh;
+      }
+    </style>
+  </head>
+  <body>
+    <div><p>fontSize 1</p></div>
+    <div><p>fontSize 2</p></div>
+    <div><p>fontSize 3</p></div>
+    <div><p>fontSize 4</p></div>
+    <div><p>fontSize 5</p></div>
+    <div><p>fontSize 6</p></div>
+  </body>
+</html>
