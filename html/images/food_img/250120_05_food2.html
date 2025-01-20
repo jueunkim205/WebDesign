@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>food</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+
+      #wrap {
+        font-size: 0;
+        width: 800px;
+        margin: 0 auto;
+      }
+      .head {
+        height: 24px;
+      }
+      .nav {
+        height: 13px;
+        overflow: hidden;
+      }
+      .nav > div {
+        float: left;
+      }
+      .nav > div:nth-child(2) {
+        margin-left: 150px;
+        font-size: 10px;
+      }
+      .nav > div:nth-child(2) ul {
+        overflow: hidden;
+      }
+      .nav > div:nth-child(2) ul li {
+        float: left;
+      }
+      .nav > div:nth-child(2) ul li a {
+        margin: 0 20px;
+        text-decoration: none;
+        color: #000;
+        text-transform: uppercase;
+      }
+      .nav > div:nth-child(2) ul li a:hover {
+        text-decoration: underline;
+        color: #8ac007;
+      }
+      .nav > div:last-child {
+        float: right;
+      }
+      .con {
+        clear: both;
+        height: 744px;
+      }
+      .con > div {
+        float: left;
+      }
+      .con > div:nth-child(3) div {
+        margin-top: 150px;
+      }
+      .con > div .number {
+        border-left: 1px solid #ccc;
+      }
+      .con > div .number p:first-child {
+        margin: 0 auto;
+        width: 100px;
+        height: 100px;
+        background-color: #fddee1;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 100px;
+        font-size: 32px;
+      }
+
+      .con > div .number p:last-child {
+        width: 145px;
+        background-color: #fddee1;
+        font-size: 16px;
+        margin: 10px auto 0;
+        text-transform: uppercase;
+        padding: 5px 0 5px 10px;
+        box-sizing: border-box;
+      }
+
+      .foot {
+        clear: both;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrap">
+      <div class="head">
+        <img src="top.gif" alt="top" />
+      </div>
+      <div class="nav">
+        <div>
+          <p><img src="food_01.gif" alt="food" /></p>
+        </div>
+        <div>
+          <ul>
+            <li><a href="#">august / 2003</a></li>
+            <li><a href="#">summer</a></li>
+            <li><a href="#">spacial</a></li>
+            <li><a href="#">e-magazine</a></li>
+          </ul>
+        </div>
+        <div>
+          <p><img src="food_02.gif" alt="directory" /></p>
+        </div>
+      </div>
+      <!-- con -->
+      <div class="con">
+        <div>
+          <p><img src="note.gif" alt="note" /></p>
+        </div>
+        <div>
+          <p><img src="image.gif" alt="image" /></p>
+        </div>
+        <div>
+          <div>
+            <div class="number">
+              <p>08</p>
+              <p>food&diet</p>
+            </div>
+            <p><img src="navigation.gif" alt="navigation" /></p>
+          </div>
+        </div>
+        <div>
+          <p><img src="page.gif" alt="page" /></p>
+        </div>
+      </div>
+      <!-- con끝 -->
+      <div class="foot">
+        <p><img src="bottom.gif" alt="" /></p>
+      </div>
+    </div>
+  </body>
+</html>
