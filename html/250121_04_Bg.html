@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>background</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      p {
+        width: 200px;
+        height: 200px;
+        border: 20px solid rgba(200, 200, 255, 0.4);
+        padding: 100px;
+      }
+
+      /* 요소의 [이미지]가 어느 부분까지 차지할 지를 설정 */
+
+      .origin p {
+        background-image: url(./images/photo1.jpg);
+        background-repeat: no-repeat;
+      }
+      .origin p:first-child {
+        background-origin: border-box;
+      }
+      .origin p:nth-child(2) {
+        background-origin: padding-box;
+      }
+      .origin p:last-child {
+        background-origin: content-box;
+      }
+
+      /* 요소의 [색상]이 어느 부분까지 차지할 지를 설정 */
+
+      .clip p {
+        background-color: rgb(147, 185, 255);
+      }
+
+      .clip p:first-child {
+        background-clip: border-box;
+      }
+      .clip p:nth-child(2) {
+        background-clip: padding-box;
+      }
+      .clip p:last-child {
+        background-clip: content-box;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="origin">
+      <p>border-box</p>
+      <p>padding-box</p>
+      <p>content-box</p>
+    </div>
+    <div class="clip">
+      <p>border-box</p>
+      <p>padding-box</p>
+      <p>content-box</p>
+    </div>
+  </body>
+</html>
