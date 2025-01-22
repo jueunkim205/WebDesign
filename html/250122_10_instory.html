@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width initial-scale=1.0" />
+    <title>INSTORY.ver2</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        background-color: #d3222a;
+      }
+
+      #wrap {
+        width: 100%;
+      }
+
+      .top,
+      .pattern p,
+      .main,
+      .foot p {
+        width: 1000px;
+        margin: 0 auto;
+      }
+
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+      }
+
+      .top {
+        overflow: hidden;
+      }
+
+      .top ul {
+        float: right;
+      }
+      .top li {
+        float: left;
+      }
+      .top li a {
+        color: #fff;
+        text-transform: uppercase;
+        line-height: 20px;
+        font-size: 12px;
+        margin: 0 10px;
+      }
+      .top li a:hover {
+        color: #fc0;
+        text-decoration: underline;
+      }
+
+      .top li:last-child a {
+        margin-right: 0;
+      }
+
+      .top li:last-child::after {
+        width: 0;
+      }
+
+      .pattern {
+        clear: both;
+        background: url(./images/instory/pattern.gif);
+        height: 82px;
+      }
+      .main ul {
+        position: relative;
+        /* relative 자기 자리에서 위치 옮기겠다 */
+        top: -420px;
+        left: 30px;
+      }
+
+      .main ul li a {
+        color: #000;
+        text-transform: capitalize;
+        font-size: 20px;
+      }
+
+      .main ul li a:hover {
+        color: red;
+      }
+
+      .main > div {
+        float: left;
+        height: 625px;
+      }
+
+      .main > div:last-child {
+        width: 514px;
+        background: url(./images/instory/index_main_02.gif);
+      }
+
+      .foot {
+        clear: both;
+        height: 100px;
+        background: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrap">
+      <div class="top">
+        <!-- top wid1000px -->
+        <ul>
+          <li><a href="">korean</a></li>
+          <li><a href="">login</a></li>
+          <li><a href="">japanese</a></li>
+          <li><a href="">chiness</a></li>
+          <li><a href="">italian</a></li>
+        </ul>
+      </div>
+      <div class="pattern">
+        <p>
+          <img src="./images/instory/index_pattern.gif" alt="인덱스 패턴" />
+        </p>
+      </div>
+      <!-- p + main 1000px -->
+      <div class="main">
+        <div>
+          <p><img src="./images/instory/index_main_01.gif" alt="" /></p>
+          <ul>
+            <li><a href="#">home</a></li>
+            <li><a href="#">instory</a></li>
+            <li><a href="#">portfolio</a></li>
+            <li><a href="#">product</a></li>
+            <li><a href="#">illustrator</a></li>
+            <li><a href="#">contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <p>Home 메인페이지입니다</p>
+        </div>
+      </div>
+
+      <div class="foot">
+        <!-- foot 1000px -->
+        <p><img src="./images/instory/copyright.gif" alt="" /></p>
+      </div>
+    </div>
+  </body>
+</html>

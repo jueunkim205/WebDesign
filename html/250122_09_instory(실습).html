@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width initial-scale=1.0" />
+    <title>INSTORY</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        background: #d3222a;
+      }
+
+      .instory {
+        width: 1000px;
+        margin: 0 auto;
+      }
+      .instory,
+      .con {
+        overflow: hidden;
+      }
+      p {
+        font-size: 0;
+      }
+      .instory > p:first-child {
+        width: 100%;
+
+        overflow: hidden;
+      }
+      .instory > p:first-child img {
+        float: right;
+      }
+
+      .instory > p:nth-child(2) {
+        background: url(./images/instory/pattern.gif);
+      }
+      .con p {
+        overflow: hidden;
+        float: left;
+      }
+      .con p:nth-child(2) {
+        position: relative;
+      }
+      span {
+        position: absolute;
+        left: 0;
+        font-size: 15px;
+      }
+      .instory > p:last-child {
+        height: 100px;
+        background-color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="instory">
+      <p><img src="./images/instory/index_top.gif" alt="index" /></p>
+      <p><img src="./images/instory/index_pattern.gif" alt="index" /></p>
+      <div class="con">
+        <p><img src="./images/instory/index_main_01.gif" alt="main" /></p>
+        <p>
+          <img src="./images/instory/index_main_02.gif" alt="main" />
+          <span>HOME 메인페이지입니다</span>
+        </p>
+      </div>
+      <p><img src="./images/instory/copyright.gif" alt="copyright" /></p>
+    </div>
+  </body>
+</html>

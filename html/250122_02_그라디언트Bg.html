@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>그라디언트Bg</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      p {
+        height: 100px;
+        margin: 20px;
+      }
+      p:nth-child(1) {
+        background-image: linear-gradient(midnightblue, orange, skyblue);
+      }
+      p:nth-child(2) {
+        background: linear-gradient(to top, midnightblue, orange, skyblue);
+      }
+      p:nth-child(3) {
+        background: linear-gradient(to right, midnightblue, orange, skyblue);
+      }
+
+      p:nth-child(4) {
+        background: linear-gradient(
+          to bottom right,
+          midnightblue,
+          orange,
+          skyblue
+        );
+      }
+
+      p:nth-child(5) {
+        background: linear-gradient(to left, midnightblue, orange, skyblue);
+      }
+
+      p:nth-child(6) {
+        background: linear-gradient(-45deg, midnightblue, orange, skyblue);
+      }
+
+      p:nth-child(7) {
+        background: linear-gradient(midnightblue 30%, orange 10%, skyblue);
+      }
+
+      p:nth-child(8) {
+        background: repeating-linear-gradient(
+          midnightblue,
+          orange 10%,
+          skyblue 20%
+        );
+      }
+
+      p:nth-child(9) {
+        background: radial-gradient(
+          circle,
+          midnightblue,
+          orange 10%,
+          skyblue 20%
+        );
+      }
+      p:nth-child(10) {
+        background: repeating-radial-gradient(
+          circle,
+          midnightblue,
+          orange 10%,
+          skyblue 20%
+        );
+      }
+    </style>
+  </head>
+  <body>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+  </body>
+</html>

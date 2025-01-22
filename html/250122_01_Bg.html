@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>background</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      p {
+        /* background: bg-color bg-image position/bg-size bg-repeat bg-origin bg-clip bg-attachment; */
+        /* height: 200px;
+        background-image: url(./images/img_flwr.gif),
+          url(./images/banner_photo.png), url(./images/paper.gif);
+        background-position: 0 0, right bottom, left top;
+        background-repeat: no-repeat, no-repeat, repeat;
+        background-size: 50px, 100px, 100px;
+        border: 2px solid lightgreen; */
+        height: 200px;
+        background: url(./images/img_flwr.gif) 0 0/50px no-repeat,
+          url(./images/banner_photo.png) right bottom/100px no-repeat,
+          url(./images/paper.gif);
+        background-color: lightcoral;
+      }
+    </style>
+  </head>
+  <body>
+    <p>백그라운드</p>
+  </body>
+</html>
