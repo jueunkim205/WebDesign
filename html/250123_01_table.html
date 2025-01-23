@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width initial-scale=1.0" />
+    <title>Table</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      table {
+        border: 1px solid red;
+        border-collapse: collapse;
+      }
+
+      /* tr {
+        border: 1px solid green;
+      } */
+
+      td,
+      th {
+        border: 1px solid blue;
+        padding: 20px;
+      }
+
+      table:nth-child(2) {
+        width: 500px;
+      }
+
+      table:nth-child(2) th,
+      table:nth-child(2) td {
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <table cellspacing="0">
+      <thead>
+        <tr>
+          <!-- th : font weight 두꺼워지고 가운데정렬 됨 -->
+          <th>셀11</th>
+          <th>셀12</th>
+          <th>셀13</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>셀21</td>
+          <td>셀22</td>
+          <td>셀23</td>
+        </tr>
+        <tr>
+          <!-- td*3{셀3$} -->
+          <td>셀31</td>
+          <td>셀32</td>
+          <td>셀33</td>
+        </tr>
+      </tbody>
+    </table>
+    <table cellspacing="0">
+      <thead>
+        <tr>
+          <!-- 열 합치기 -->
+          <th>셀11</th>
+          <th>셀12</th>
+          <th>셀13</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td colspan="2">셀11셀12</td>
+          <td rowspan="2">셀23셀33</td>
+        </tr>
+        <tr>
+          <!-- td*3{셀3$} -->
+          <td>셀31</td>
+          <td>셀32</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

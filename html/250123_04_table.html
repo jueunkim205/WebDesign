@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width initial-scale=1.0" />
+    <title>Table</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      table {
+        border-collapse: collapse;
+        width: 500px;
+        /* 레이아웃 고정 */
+        table-layout: fixed;
+      }
+
+      td {
+        border: 1px solid #ccc;
+        padding: 20px;
+      }
+      tr td:first-child {
+        width: 10%;
+        /* 텍스트 넘치는거 가리기 */
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <td>1111111 11111 11111</td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>1</td>
+      </tr>
+    </table>
+  </body>
+</html>
