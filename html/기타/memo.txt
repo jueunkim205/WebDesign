@@ -8,10 +8,13 @@ alt 누른채로 여러개 드래그하면 한번에 지울 수 있음
 alt + w -> 다른 태그로 감싸기
 
 
-
+--------- 좋아보이는 확장프로그램 ---------
+CSS Peek
 
 
 --------- 내가 만든 단축기 목록 ---------
+
+ctrl + shift + p -> Snippets: Configure User Snippets
 
 [html]
 
@@ -24,15 +27,15 @@ alt + w -> 다른 태그로 감싸기
 
 [css]
 
+ "*{": {
+    "prefix": "*{",
+    "body": ["*{ margin : 0; padding : 0;}"],
+    "description": "setting"
+  },
   "color": {
     "prefix": "clr",
     "body": ["color: red;"],
     "description": "color"
-  },
-  "*{": {
-    "prefix": "*{",
-    "body": ["*{ margin : 0; padding : 0;}"],
-    "description": "setting"
   },
   "pa": {
     "prefix": "pa",
