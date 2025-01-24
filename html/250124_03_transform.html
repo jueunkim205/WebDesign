@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>transform</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      p {
+        width: 100px;
+        height: 100px;
+        background: linear-gradient(#ddd, #aaa);
+        margin: 20 0px;
+      }
+
+      p:first-child {
+        /* transform: translate(100px) scale(1.5); */
+        transform: scale(0.5) translate(50px);
+      }
+      p:nth-child(2) {
+        transform: scale(0.5) translate(100px);
+      }
+      p:nth-child(3) {
+        transform: scale(0.5) translate(150px);
+      }
+
+      p:nth-child(4) {
+        width: 50px;
+        height: 50px;
+        transform: translate(50px);
+      }
+      p:nth-child(5) {
+        width: 50px;
+        height: 50px;
+        transform: translate(100px);
+      }
+      p:nth-child(6) {
+        width: 50px;
+        height: 50px;
+        transform: translate(150px);
+      }
+    </style>
+  </head>
+  <body>
+    <p>1</p>
+    <p>2</p>
+    <p>3</p>
+    <p>4</p>
+    <p>5</p>
+    <p>6</p>
+  </body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>objectfit</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      p {
+        border: 2px solid skyblue;
+        width: 500px;
+        height: 200px;
+        /* overflow로 박스사이즈에 맞춰 이미지를 가릴 수 있지만 사진의 포지션은 움직일 수 없음 */
+        /* overflow: hidden; */
+      }
+      p img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        /* 기본은 center */
+        /* 추후 동영상 파일 삽입할 경우 object-fit 사용 */
+        object-position: center;
+      }
+      div {
+        width: 500px;
+        height: 200px;
+        background: url(./images/photo5.jpg) center/cover;
+      }
+    </style>
+  </head>
+  <body>
+    <p><img src="./images/photo5.jpg" alt="photo5" /></p>
+    <div></div>
+  </body>
+</html>

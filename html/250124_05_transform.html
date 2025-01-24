@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>transform</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      #div1 {
+        width: 200px;
+        height: 200px;
+        margin: 100px;
+        padding: 10px;
+        border: 1px solid #000;
+        perspective: 800px;
+      }
+
+      #div2 {
+        padding: 40px;
+        background: linear-gradient(red, pink);
+        transform: rotateX(60deg);
+        /* 자식요소가 3d스타일을 유지하게 함 */
+        transform-style: preserve-3d;
+      }
+      p {
+        width: 100px;
+        height: 100px;
+        background: green;
+        margin: 50px auto;
+        transform: skew(30deg, 30deg);
+      }
+
+      #div3 {
+        background: yellow;
+        padding: 40px;
+        transform: rotateY(-60deg);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="div1">
+      <div id="div2">
+        hello
+        <div id="div3"></div>
+      </div>
+    </div>
+    <p></p>
+  </body>
+</html>
