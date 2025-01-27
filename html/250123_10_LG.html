@@ -19,18 +19,31 @@
         font-family: LGEITextB;
         src: url(webfonts/LGEIText-Bold.02647e62.otf) format("opentype");
       }
+      @font-face {
+        font-family: LGEIHeadline;
+        src: url(webfonts/LGEIHeadline-Bold.b0dbf17c.otf) format("opentype");
+      }
 
       a {
         text-decoration: none;
       }
       /* 첫화면 */
       .first {
+        position: relative;
         width: 100wh;
         height: 100vh;
         text-align: center;
+        border: 1px solid #000;
+      }
+      .textbox {
+        width: 80%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
       }
       .first h1 {
-        font-family: "LGEITextB" serif;
+        font-family: "LGEIHeadline" serif;
         font-size: 75px;
       }
 
@@ -170,15 +183,18 @@
     <!-- https://smartsolution.developer.lge.com/ko/cloud/landing -->
     <!-- 첫화면 -->
     <div class="first">
-      <h1>
-        공간과 사람을 연결하는 스마트 솔루션<br />
-        LG Smart Solution API Developer
-      </h1>
-      <p>
-        Life’s Good! 공간을 자동화하고 차별화 할 수 있는 기술을 확보하세요.<br />
-        고객의 경험이 확장되는 순간마다 여러분의 비즈니스는 성공으로 이어집니다.
-      </p>
-      <a href="#">파트너십 요청</a>
+      <div class="textbox">
+        <h1>
+          공간과 사람을 연결하는 스마트 솔루션<br />
+          LG Smart Solution API Developer
+        </h1>
+        <p>
+          Life’s Good! 공간을 자동화하고 차별화 할 수 있는 기술을 확보하세요.<br />
+          고객의 경험이 확장되는 순간마다 여러분의 비즈니스는 성공으로
+          이어집니다.
+        </p>
+        <a href="#">파트너십 요청</a>
+      </div>
       <!-- up -->
     </div>
     <div class="up">
