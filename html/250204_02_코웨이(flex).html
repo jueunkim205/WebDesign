@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>코웨이</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      as="style"
+      crossorigin
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css"
+    />
+    <style>
+      /*****************************
+        Flex 컨테이너에 적용하는 속성들
+        1. flex-direction
+        2. flex-wrap
+        3. flex-flow
+        4. justify-content
+        5. align-items
+        6. align-content
+        *****************************/
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+
+      ul.esg {
+        width: 1150px;
+        margin: 50px auto;
+        height: 410px;
+        display: flex;
+      }
+
+      ul.esg li {
+        width: calc(100% / 3);
+        height: 100%;
+        text-align: center;
+        padding-top: 100px;
+        box-sizing: border-box;
+        color: #fff;
+        transition: 0.5s;
+      }
+
+      ul.esg li:first-child {
+        background: url(https://sustainability.coway.co.kr/images/main/policy-img-1.jpg)
+          center/cover;
+      }
+
+      ul.esg li:nth-child(2) {
+        background: url(https://sustainability.coway.co.kr/images/main/policy-img-2.jpg)
+          center/cover;
+      }
+      ul.esg li:nth-child(3) {
+        background: url(https://sustainability.coway.co.kr/images/main/policy-img-3.jpg)
+          center/cover;
+      }
+
+      ul.esg li > div > p {
+        font-family: Montserrat, serif;
+        font-size: 22px;
+        font-weight: 800;
+        margin-bottom: 15px;
+      }
+      ul.esg li .txt p {
+        font-family: Pretendard, serif;
+        font-weight: 500;
+        padding: 5px 0;
+        font-size: 20px;
+      }
+
+      ul.esg li .txt {
+        display: none;
+      }
+
+      /* hover */
+      ul.esg li:hover {
+        width: 45%;
+        padding-top: 50px;
+      }
+
+      ul.esg li:hover .txt {
+        display: block;
+      }
+
+      ul.esg li:hover a {
+        display: inline-block;
+        width: 60px;
+        height: 60px;
+        background: #26a8ff;
+        line-height: 60px;
+        border-radius: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="esg">
+      <li>
+        <div>
+          <p>Environmental</p>
+          <div class="txt">
+            <p>환경경영</p>
+            <p>기후변화 대응</p>
+            <p>친환경 제품 및 자원순환</p>
+            <p>환경관리</p>
+          </div>
+          <a href="">
+            <img
+              src="https://sustainability.coway.co.kr/images/main/policy-icon-more.png"
+              alt="plus img"
+            />
+          </a>
+        </div>
+      </li>
+      <li>
+        <div>
+          <p>Social</p>
+          <div class="txt">
+            <p>임직원</p>
+            <p>인권경영</p>
+            <p>공급망</p>
+            <p>지역사회</p>
+            <p>안전보건</p>
+            <p>제품 품질 및 안전</p>
+            <p>정보보안 및 개인정보보호</p>
+          </div>
+          <a href="">
+            <img
+              src="https://sustainability.coway.co.kr/images/main/policy-icon-more.png"
+              alt="plus img"
+            />
+          </a>
+        </div>
+      </li>
+      <li>
+        <div>
+          <p>Governance</p>
+          <div class="txt">
+            <p>지배구조</p>
+            <p>정도경영 대응</p>
+            <p>리스크 관리</p>
+          </div>
+          <a href="">
+            <img
+              src="https://sustainability.coway.co.kr/images/main/policy-icon-more.png"
+              alt="plus img"
+            />
+          </a>
+        </div>
+      </li>
+    </ul>
+  </body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>starfield</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- 수정하기 -->
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: "Noto Sans KR", serif;
+      }
+
+      ul.starfield {
+        width: 1180px;
+        margin: 50px auto;
+        display: flex;
+        list-style: none;
+        justify-content: space-between;
+      }
+      .starfield li {
+        width: 280px;
+        text-align: center;
+        transition: 0.5s;
+      }
+      .starfield li > a > p {
+        position: relative;
+        border-radius: 20px;
+        overflow: hidden;
+        height: 280px;
+      }
+
+      /* 첫번째요소 너비 고정 */
+      .starfield li:first-child {
+        width: 580px;
+      }
+
+      .starfield li a img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+
+      .starfield li .txt {
+        margin-top: 32px;
+      }
+
+      .starfield li .txt p:first-child {
+        color: #c30e2e;
+      }
+
+      .starfield li .txt p:last-child {
+        font-size: 20px;
+        font-weight: 500;
+        color: #000;
+        margin-top: 10px;
+      }
+
+      .starfield li a {
+        text-decoration: none;
+      }
+      /* 가상 */
+      .starfield li > a > p::after,
+      .starfield:hover li:not(:hover) > a > p::after {
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+      }
+
+      /***** hover *****/
+
+      .starfield li:hover {
+        width: 580px;
+      }
+
+      .starfield li:hover > a > p::after,
+      .starfield li:first-child > a > p::after {
+        opacity: 0;
+      }
+
+      .starfield:hover li:not(:hover) {
+        width: 280px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <ul class="starfield">
+        <li>
+          <a href="">
+            <p>
+              <img
+                src="https://www.starfield.co.kr/assets/images/starfield/main-library-img01.jpg"
+                alt="별마당 도서관 이미지"
+              />
+            </p>
+            <div class="txt">
+              <p>별마당 도서관</p>
+              <p>휴식과 만남, 그리고 책을 주제로 소통하는 문화 감성 공간</p>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <p>
+              <img
+                src="https://www.starfield.co.kr/assets/images/starfield/main-library-img02.jpg"
+                alt="별마당 키즈 이미지"
+              />
+            </p>
+            <div class="txt">
+              <p>별마당 키즈</p>
+              <p>
+                책과 공연을 중심으로 아동심리학자와 함께 만든 키즈다감각체험
+                공간
+              </p>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <p>
+              <img
+                src="https://www.starfield.co.kr/assets/images/starfield/main-library-img03.jpg"
+                alt="강연&공연 이미지"
+              />
+            </p>
+            <div class="txt">
+              <p>강연&공연</p>
+              <p>가슴에 별을 품은 이들을 위한 다양한 이야기</p>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
