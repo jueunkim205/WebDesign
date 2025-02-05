@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>삼성중공업</title>
+    <link
+      rel="stylesheet"
+      as="style"
+      crossorigin
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css"
+    />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      /* section1 */
+      ul.con {
+        list-style: none;
+        width: 1720px;
+        height: 630px;
+        margin: 100px auto;
+        display: flex;
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+          0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      }
+
+      ul.con li {
+        position: relative;
+        width: calc(100% / 4);
+        height: 100%;
+        transition: 1s;
+        font-family: Pretendard, serif;
+        box-sizing: border-box;
+      }
+
+      ul.con li:first-child {
+        background: url(https://www.samsungshi.com/images/main/mSolution_bg_01.jpg);
+      }
+      ul.con li:nth-child(2) {
+        background: url(https://www.samsungshi.com/images/main/mSolution_bg_02.jpg);
+      }
+      ul.con li:nth-child(3) {
+        background: url(https://www.samsungshi.com/images/main/mSolution_bg_03.jpg);
+      }
+      ul.con li:nth-child(4) {
+        background: url(https://www.samsungshi.com/images/main/mSolution_bg_04.jpg);
+      }
+
+      ul.con .txt {
+        position: absolute;
+        width: 90%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #fff;
+      }
+
+      ul.con .txt h1 {
+        text-align: center;
+        font-size: 35px;
+        transition: 0.5s;
+      }
+
+      ul.con .txt span {
+        font-weight: 200;
+      }
+
+      ul.con .txt h4,
+      ul.con .txt p:last-child {
+        opacity: 0;
+      }
+
+      ul.con .txt p:last-child {
+        position: relative;
+        font-weight: 600;
+        font-size: 18px;
+      }
+
+      ul.con .txt p:last-child::after {
+        position: absolute;
+        content: "";
+        top: 40px;
+        left: -15px;
+        width: 70px;
+        height: 5px;
+        background: #fff;
+      }
+
+      ul.con .txt h4 {
+        word-break: keep-all;
+        font-size: 20px;
+        font-weight: 400;
+        margin: 20px 0 50px;
+      }
+
+      ul.con li p img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      /***** hover *****/
+
+      ul.con li:hover {
+        width: 800px;
+      }
+
+      ul.con li:hover .txt {
+        width: 70%;
+      }
+
+      ul.con li:hover .txt h1 {
+        text-align: left;
+        font-size: 50px;
+      }
+
+      ul.con li:hover h4,
+      ul.con li:hover .txt p:last-child {
+        opacity: 1;
+        transition: 0.5s;
+      }
+
+      ul.con li:hover img {
+        display: none;
+      }
+
+      /* section1 끝 */
+      /* section2 */
+      ul.recruit {
+        display: flex;
+        list-style: none;
+        margin: 100px auto;
+        width: 1720px;
+        height: 458px;
+        gap: 20px;
+      }
+      ul.recruit li {
+        flex: 1 1 10%;
+        border-radius: 20px;
+        border: 1px solid #000;
+      }
+      ul.recruit li:first-child {
+        background: url(https://www.samsungshi.com/images/main/mRecruit_bg_01.jpg)
+          center/cover;
+        flex-grow: 2;
+      }
+      ul.recruit li:nth-child(2) {
+        background: url(https://www.samsungshi.com/images/main/mRecruit_bg_02.jpg)
+          center/cover;
+      }
+      ul.recruit li:nth-child(3) {
+        background: url(https://www.samsungshi.com/images/main/mRecruit_bg_03.jpg)
+          center/cover;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- https://www.samsungshi.com/Ko/Default.aspx -->
+    <section class="sec1">
+      <ul class="con">
+        <li>
+          <div class="txt">
+            <h1>제품 <span>|</span> 서비스</h1>
+            <h4>끊임없는 제품 혁신과<br />엔지니어링 역량 강화</h4>
+            <p>
+              <img
+                src="https://www.samsungshi.com/images/main/mSolution_arrow.png"
+                alt="arrow"
+              />
+            </p>
+            <p>자세히</p>
+          </div>
+        </li>
+        <li>
+          <div class="txt">
+            <h1>그린 솔루션</h1>
+            <p>
+              <img
+                src="https://www.samsungshi.com/images/main/mSolution_arrow.png"
+                alt="arrow"
+              />
+            </p>
+            <h4>지구를 위한 조선·해양<br />탄소중립 기술 개발</h4>
+            <p>자세히</p>
+          </div>
+        </li>
+        <li>
+          <div class="txt">
+            <h1>디지털 솔루션</h1>
+            <p>
+              <img
+                src="https://www.samsungshi.com/images/main/mSolution_arrow.png"
+                alt="arrow"
+              />
+            </p>
+            <h4>미래 디지털 기술<br />시장 선도</h4>
+            <p>자세히</p>
+          </div>
+        </li>
+        <li>
+          <div class="txt">
+            <h1>스마트야드 솔루션</h1>
+            <h4>미래형 조선소로<br />패러다임 전환</h4>
+            <p>자세히</p>
+          </div>
+        </li>
+      </ul>
+    </section>
+    <section class="sec2">
+      <ul class="recruit">
+        <li><h1>채용절차</h1></li>
+        <li><h1>채용공고</h1></li>
+        <li><h1>회사생활</h1></li>
+      </ul>
+    </section>
+  </body>
+</html>
