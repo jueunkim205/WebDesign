@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>극동건설</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      /*********** section4 시작 ***********/
+      .con {
+        margin: 500px 0;
+        padding: 120px 0;
+        background: url(../../images/극동건설_img1.jpg) center center no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+      }
+
+      .con h1 {
+        font-size: 45px;
+        color: #fff;
+        width: 1280px;
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      .con ul {
+        width: 1000px;
+        margin: 0 auto;
+        list-style: none;
+        padding-top: 70px;
+        overflow: hidden;
+      }
+
+      .con ul li {
+        position: relative;
+        float: left;
+        padding: 30px;
+        width: 25%;
+        /*  box-sizing : width, height 값에 padding 값이나 border 값은 포함되지 않게 하는 속성 */
+        box-sizing: border-box;
+        text-align: center;
+        letter-spacing: -2px; /* 자간 */
+        word-break: keep-all; /* 줄바꿈 */
+        color: #fff;
+      }
+
+      a {
+        display: block;
+        text-decoration: none;
+        color: #fff;
+      }
+      /* 라인만들기 */
+      .con ul li::after {
+        content: "";
+        position: absolute;
+        width: 1px;
+        height: 90px;
+        background-color: #fff;
+        /* 가운데부근으로 오게 함 */
+        top: 50%;
+        right: 0;
+        /* 세로길이의 절반 */
+        margin-top: -45px;
+        opacity: 0.5;
+      }
+      .con ul li:last-child::after {
+        /* 마지막 선 없애기 */
+        width: 0;
+      }
+
+      .con ul li h3 {
+        position: relative;
+        font-size: 25px;
+        font-weight: normal;
+        margin-bottom: 30px;
+        /* border: 1px solid #fff; */
+        padding: 10px 30px;
+        display: inline-block;
+      }
+
+      /* hover효과 */
+
+      .con ul li h3 .line {
+        position: absolute;
+        background: #fff;
+      }
+
+      .con ul li h3 .top {
+        width: 100%;
+        height: 1px;
+        top: 0;
+        left: 0;
+      }
+
+      .con ul li h3 .right {
+        width: 1px;
+        height: 100%;
+        top: 0;
+        right: 0;
+      }
+
+      .con ul li h3 .bottom {
+        width: 100%;
+        height: 1px;
+        bottom: 0;
+        left: 0;
+      }
+
+      .con ul li h3 .left {
+        width: 1px;
+        height: 100%;
+        top: 0;
+        left: 0;
+      }
+
+      /*********** section4 끝 ***********/
+      /*********** section5 시작 ***********/
+
+      .sec5 ul {
+        list-style: none;
+        margin: 50px;
+      }
+      .sec5 ul li {
+        position: relative;
+        display: inline-block;
+        /* width: 300px;
+        height: 300px; */
+        padding: 40px 30px;
+        background: #f0f0f0;
+      }
+      .sec5 ul li a {
+        text-decoration: none;
+        color: #222;
+      }
+
+      .sec5 ul li div p {
+        margin: 50px 0;
+      }
+
+      .sec5 ul li div h1 span {
+        font-weight: bold;
+        display: block;
+      }
+
+      /* line */
+      .sec5 ul li a .line {
+        position: absolute;
+        background: #07348c;
+      }
+
+      .sec5 ul li a .top {
+        width: 100%;
+        height: 5px;
+        left: 0;
+        top: 0;
+        transform: scaleX(0);
+        transform-origin: 0 0;
+        transition: 0.5s ease-in-out 1.5s;
+      }
+      .sec5 ul li:hover a .top {
+        transform: scaleX(1);
+        transition: 0.5s ease-in-out;
+      }
+
+      .sec5 ul li a .right {
+        width: 5px;
+        height: 100%;
+        right: 0;
+        top: 0;
+        transform: scaleY(0);
+        transform-origin: 0 0;
+        transition: 0.5s ease-in-out 1s;
+      }
+
+      .sec5 ul li:hover a .right {
+        transform: scaleY(1);
+        transition: 0.5s ease-in-out 0.5s;
+      }
+
+      .sec5 ul li a .bottom {
+        width: 100%;
+        height: 5px;
+        right: 0;
+        bottom: 0;
+        transform: scaleX(0);
+        /* 반대방향 */
+        transform-origin: 100% 100%;
+        transition: 0.5s ease-in-out 0.5s;
+      }
+
+      .sec5 ul li:hover a .bottom {
+        transform: scaleY(1);
+        transition: 0.5s ease-in-out 1s;
+      }
+
+      .sec5 ul li a .left {
+        width: 5px;
+        height: 100%;
+        left: 0;
+        top: 0;
+        transform: scaleY(0);
+        transform-origin: 100% 100%;
+        transition: 0.5s ease-in-out;
+      }
+
+      .sec5 ul li:hover a .left {
+        transform: scaleX(1);
+        transition: 0.5s ease-in-out 1.5s;
+      }
+
+      /*********** section5 끝 ***********/
+    </style>
+  </head>
+  <body>
+    <!-- https://www.kukdong.co.kr/ -->
+
+    <!-- 
+  header : 메뉴
+  section1 : 첫화면
+  section2 : business
+  section3 : portfolio
+  section4 : 개개인의 특성과...
+  section5 : PR Center
+  section6 : 배너
+  footer
+ -->
+
+    <section class="sec4">
+      <div class="con">
+        <h1>
+          개개인의 특성과 능력을 중시하는 극동건설은<br />
+          여러분의 <strong>성장의 터</strong>를 마련합니다.
+        </h1>
+        <ul>
+          <li>
+            <a href="">
+              <h3>
+                인재상
+                <!-- hover시 효과주기 -->
+                <span class="line top"></span>
+                <span class="line right"></span>
+                <span class="line bottom"></span>
+                <span class="line left"></span>
+              </h3>
+              <p>극동건설이 추구하는 인재상을 여러분께 소개합니다</p>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <h3>
+                인사제도
+                <span class="line top"></span>
+                <span class="line right"></span>
+                <span class="line bottom"></span>
+                <span class="line left"></span>
+              </h3>
+              <p>
+                임직원의 역량향상과 동기부여를 위해 다양한 제도를 운영합니다
+              </p>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <h3>
+                채용안내
+                <span class="line top"></span>
+                <span class="line right"></span>
+                <span class="line bottom"></span>
+                <span class="line left"></span>
+              </h3>
+              <p>극동건설의 채용제도 및 절차를 자세히 소개합니다</p>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <h3>
+                채용공고
+                <span class="line top"></span>
+                <span class="line right"></span>
+                <span class="line bottom"></span>
+                <span class="line left"></span>
+              </h3>
+              <p>극동건설의 채용공고를 소개합니다</p>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- PR Center -->
+    <section class="sec5">
+      <ul>
+        <li>
+          <a href="">
+            <div>
+              <h1>언론속의 <span>극동</span></h1>
+              <p>언론에 소개되는 극동의 소식을<br />안내해드립니다.</p>
+              <span>
+                <img
+                  src="https://www.kukdong.co.kr/images/common/next_bar_bk.png"
+                  alt="arrow"
+                />
+              </span>
+            </div>
+            <!-- hover 효과를 주기 위함 -->
+            <span class="line top"></span>
+            <span class="line right"></span>
+            <span class="line bottom"></span>
+            <span class="line left"></span>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <div>
+              <h1>입주고객 <span>A/S 안내</span></h1>
+              <p>스타클래스 입주 후 A/S 신청에<br />대한 안내 입니다.</p>
+              <span>
+                <img
+                  src="https://www.kukdong.co.kr/images/common/next_bar_bk.png"
+                  alt="arrow"
+                />
+              </span>
+            </div>
+            <span class="line top"></span>
+            <span class="line right"></span>
+            <span class="line bottom"></span>
+            <span class="line left"></span>
+          </a>
+        </li>
+      </ul>
+    </section>
+  </body>
+</html>

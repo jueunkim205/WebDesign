@@ -10,11 +10,11 @@
         margin: 0;
         padding: 0;
       }
-      ul {
+      section ul {
         list-style: none;
         margin: 50px;
       }
-      ul li {
+      section ul li {
         position: relative;
         display: inline-block;
         /* width: 300px;
@@ -22,27 +22,27 @@
         padding: 40px 30px;
         background: #f0f0f0;
       }
-      ul li a {
+      section ul li a {
         text-decoration: none;
         color: #222;
       }
 
-      ul li div p {
+      section ul li div p {
         margin: 50px 0;
       }
 
-      ul li div h1 span {
+      section ul li div h1 span {
         font-weight: bold;
         display: block;
       }
 
       /* line */
-      ul li a .line {
+      section ul li a .line {
         position: absolute;
         background: #07348c;
       }
 
-      ul li a .top {
+      section ul li a .top {
         width: 100%;
         height: 5px;
         left: 0;
@@ -51,12 +51,12 @@
         transform-origin: 0 0;
         transition: 0.5s ease-in-out 1.5s;
       }
-      ul li:hover a .top {
+      section ul li:hover a .top {
         transform: scaleX(1);
         transition: 0.5s ease-in-out;
       }
 
-      ul li a .right {
+      section ul li a .right {
         width: 5px;
         height: 100%;
         right: 0;
@@ -66,12 +66,12 @@
         transition: 0.5s ease-in-out 1s;
       }
 
-      ul li:hover a .right {
+      section ul li:hover a .right {
         transform: scaleY(1);
         transition: 0.5s ease-in-out 0.5s;
       }
 
-      ul li a .bottom {
+      section ul li a .bottom {
         width: 100%;
         height: 5px;
         right: 0;
@@ -82,12 +82,12 @@
         transition: 0.5s ease-in-out 0.5s;
       }
 
-      ul li:hover a .bottom {
+      section ul li:hover a .bottom {
         transform: scaleY(1);
         transition: 0.5s ease-in-out 1s;
       }
 
-      ul li a .left {
+      section ul li a .left {
         width: 5px;
         height: 100%;
         left: 0;
@@ -97,7 +97,7 @@
         transition: 0.5s ease-in-out;
       }
 
-      ul li:hover a .left {
+      section ul li:hover a .left {
         transform: scaleX(1);
         transition: 0.5s ease-in-out 1.5s;
       }
@@ -106,7 +106,7 @@
   <body>
     <!-- https://www.kukdong.co.kr/ -->
 
-    <div class="wrap">
+    <section>
       <ul>
         <li>
           <a href="">
@@ -127,7 +127,6 @@
             <span class="line left"></span>
           </a>
         </li>
-
         <li>
           <a href="">
             <div>
@@ -147,6 +146,6 @@
           </a>
         </li>
       </ul>
-    </div>
+    </section>
   </body>
 </html>
