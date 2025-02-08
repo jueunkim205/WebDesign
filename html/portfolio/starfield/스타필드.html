@@ -80,25 +80,20 @@
       }
 
       /* section3 시작 */
-      * {
-        margin: 0;
-        padding: 0;
-        font-family: "Noto Sans KR", serif;
-      }
 
-      ul.starfield {
+      .sec3 ul.starfield {
         width: 1180px;
         margin: 50px auto;
         display: flex;
         list-style: none;
         justify-content: space-between;
       }
-      .starfield li {
+      .sec3 .starfield li {
         width: 280px;
         text-align: center;
         transition: 0.5s;
       }
-      .starfield li > a > p {
+      .sec3 .starfield li > a > p {
         position: relative;
         border-radius: 20px;
         overflow: hidden;
@@ -106,38 +101,38 @@
       }
 
       /* 첫번째요소 너비 고정 */
-      .starfield li:first-child {
+      .sec3 .starfield li:first-child {
         width: 580px;
       }
 
-      .starfield li a img {
+      .sec3 .starfield li a img {
         width: 100%;
         height: 100%;
         object-fit: cover;
         object-position: center;
       }
 
-      .starfield li .txt {
+      .sec3 .starfield li .txt {
         margin-top: 32px;
       }
 
-      .starfield li .txt p:first-child {
+      .sec3 .starfield li .txt p:first-child {
         color: #c30e2e;
       }
 
-      .starfield li .txt p:last-child {
+      .sec3 .starfield li .txt p:last-child {
         font-size: 20px;
         font-weight: 500;
         color: #000;
         margin-top: 10px;
       }
 
-      .starfield li a {
+      .sec3 .starfield li a {
         text-decoration: none;
       }
       /* 가상 */
-      .starfield li > a > p::after,
-      .starfield:hover li:not(:hover) > a > p::after {
+      .sec3 .starfield li > a > p::after,
+      .sec3 .starfield:hover li:not(:hover) > a > p::after {
         position: absolute;
         content: "";
         top: 0;
@@ -149,16 +144,16 @@
 
       /***** hover *****/
 
-      .starfield li:hover {
+      .sec3 .starfield li:hover {
         width: 580px;
       }
 
-      .starfield li:hover > a > p::after,
-      .starfield li:first-child > a > p::after {
+      .sec3 .starfield li:hover > a > p::after,
+      .sec3 .starfield li:first-child > a > p::after {
         opacity: 0;
       }
 
-      .starfield:hover li:not(:hover) {
+      .sec3 .starfield:hover li:not(:hover) {
         width: 280px;
       }
     </style>
@@ -173,7 +168,68 @@
       section5 Entertainment
       footer
      -->
-    <section class="sec2"></section>
+    <section class="sec2">
+      <div class="wrap">
+        <ul>
+          <li>
+            <a href="">
+              <p>
+                <img
+                  src="https://www.starfield.co.kr/cdn/starfield_09/bnc/20240304/IM20240304091640273572.jpg"
+                  alt="이벤트 배너 이미지"
+                />
+              </p>
+              <div class="textbox">
+                <p>01.01(수) - 01.31(금)</p>
+                <h1>오시는 길 안내</h1>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <p>
+                <img
+                  src="https://www.starfield.co.kr/cdn/starfield_09/bnc/20241206/IM20241206030114658480.jpg"
+                  alt="이벤트 배너 이미지"
+                />
+              </p>
+              <div class="textbox">
+                <p>01.01(수) - 01.31(금)</p>
+                <h1>스타필드 수원 1월 키즈 프로그램</h1>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <p>
+                <img
+                  src="https://www.starfield.co.kr/cdn/starfield_09/bnc/20241206/IM20241206030122374624.jpg"
+                  alt="이벤트 배너 이미지"
+                />
+              </p>
+              <div class="textbox">
+                <p>01.01(수) - 01.31(금)</p>
+                <h1>신규 오픈 브랜드 안내</h1>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <p>
+                <img
+                  src="https://www.starfield.co.kr/cdn/starfield_09/bnc/20241206/IM20241206030143386554.jpg"
+                  alt="이벤트 배너 이미지"
+                />
+              </p>
+              <div class="textbox">
+                <p>01.01(수) - 01.31(금)</p>
+                <h1>별마당 도서관 1월 강연&공연 안내</h1>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
 
     <section class="sec3">
       <ul class="starfield">
