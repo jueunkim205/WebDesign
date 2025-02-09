@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>노랑풍선</title>
+    <title>노랑풍선 회사소개 [여행을 가볍게]</title>
 
     <link
       href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
@@ -21,11 +21,13 @@
       }
 
       .wrap {
+        /* 전체 가로 1480px; */
         width: 1480px;
         margin: 100px auto 0;
+        box-sizing: border-box;
       }
 
-      .wrap > h1 {
+      section > h1 {
         font-family: Noto Sans KR, serif;
         font-size: 36px;
         text-align: center;
@@ -36,56 +38,49 @@
         margin: 100px 0;
       }
 
-      .ul1 li {
-        /* position: relative; */
+      /******** section3 시작 ********/
+      .sec3 li {
         width: 100%;
         height: 440px;
-        box-sizing: border-box;
         margin-bottom: 44px;
       }
-      .ul1 li:last-child {
+      .sec3 li:last-child {
         margin-bottom: 0;
       }
-      .ul1 li > p {
+      .sec3 li > p {
         width: 720px;
         height: 100%;
         border-radius: 10px;
         overflow: hidden;
       }
 
-      .ul1 li:nth-child(2n + 1) > p {
+      .sec3 li:nth-child(2n + 1) > p {
         float: left;
       }
-      .ul1 li:nth-child(2n) > p {
+      .sec3 li:nth-child(2n) > p {
         float: right;
       }
 
-      .ul1 li img {
+      .sec3 li img {
         object-fit: cover;
       }
 
-      .ul1 li .textbox {
-        /* position: absolute;
-        top: 50%;*/
+      .sec3 li .textbox {
         position: relative;
         transform: translate(-50%, -50%);
         top: 50%;
       }
 
-      .ul1 li:nth-child(2n + 1) .textbox {
-        /* float: right; */
-        /* margin: 100px 50px; */
-        /* right: 5%; */
+      .sec3 li:nth-child(2n + 1) .textbox {
         left: 57%;
       }
 
-      .ul1 li:nth-child(2n) .textbox {
-        /* float: left; */
+      .sec3 li:nth-child(2n) .textbox {
         left: 43%;
         text-align: right;
       }
 
-      .ul1 li .textbox p {
+      .sec3 li .textbox p {
         font-family: Noto Sans KR, serif;
         margin-bottom: 8px;
         font-size: 24px;
@@ -94,7 +89,7 @@
         letter-spacing: -1px;
       }
 
-      .ul1 li .textbox h1:first-of-type {
+      .sec3 li .textbox h1:first-of-type {
         font-family: Noto Sans KR, serif;
         font-size: 48px;
         color: #222;
@@ -102,175 +97,284 @@
         letter-spacing: -2px;
       }
 
-      .ul1 li .textbox h1:last-of-type {
+      .sec3 li .textbox h1:last-of-type {
         font-family: Noto Sans KR, serif;
         font-size: 48px;
         color: #ffc72c;
         font-weight: 800;
       }
+      /******** section3 끝 ********/
 
-      /* 노랑풍선이 만드는 여행 */
-      ul.ul2 {
+      /******** section4 시작 ********/
+      .sec4 ul {
         width: 100%;
         height: 500px;
+        display: flex;
+        gap: 16px;
       }
 
-      .ul2 li {
+      .sec4 li {
         position: relative;
-        float: left;
-        width: calc((100% - 112px) / 8);
         height: 100%;
         text-align: center;
-        box-sizing: border-box;
-        margin-right: 16px;
+        /* box-sizing: border-box; */
         border-radius: 12px;
         overflow: hidden;
+        width: calc(100% / 8);
       }
 
-      .ul2 li:last-child {
+      .sec4 li:hover {
+        width: 400px;
+        transition: 1s;
+      }
+
+      .sec4 li:last-child {
         margin-right: 0;
       }
 
-      .ul2 li::after {
+      .sec4 li::after {
         position: absolute;
         top: 0;
         left: 0;
         content: "";
-        background-color: #000;
-        opacity: 0.2;
+        filter: brightness(80%);
         width: 100%;
         height: 100%;
+        z-index: -1;
       }
 
-      .ul2 li:hover::after {
-        opacity: 0.4;
+      .sec4 li:hover::after {
+        filter: brightness(50%);
       }
 
-      .ul2 li:first-child {
+      .sec4 li:first-child::after {
         background: url(https://company.ybtour.co.kr/images/bg/bg_category_1.jpg)
           center/cover;
       }
-      .ul2 li:nth-child(2) {
+      .sec4 li:nth-child(2)::after {
         background: url(https://company.ybtour.co.kr/images/bg/bg_category_2.jpg)
           60% center/cover;
       }
-      .ul2 li:nth-child(3) {
+      .sec4 li:nth-child(3)::after {
         background: url(https://company.ybtour.co.kr/images/bg/bg_category_4.jpg)
           10% center/cover;
       }
-      .ul2 li:nth-child(4) {
+      .sec4 li:nth-child(4)::after {
         background: url(https://company.ybtour.co.kr/images/bg/bg_category_5.jpg)
           center/cover;
       }
-      .ul2 li:nth-child(5) {
+      .sec4 li:nth-child(5)::after {
         background: url(https://company.ybtour.co.kr/images/bg/bg_category_6.jpg)
           center/cover;
       }
-      .ul2 li:nth-child(6) {
+      .sec4 li:nth-child(6)::after {
         background: url(https://company.ybtour.co.kr/images/bg/bg_category_3.jpg)
           30% center/cover;
       }
-      .ul2 li:nth-child(7) {
+      .sec4 li:nth-child(7)::after {
         background: url(https://company.ybtour.co.kr/images/bg/bg_category_7.jpg)
           center/cover;
       }
-      .ul2 li:last-child {
+      .sec4 li:last-child::after {
         background: url(https://company.ybtour.co.kr/images/bg/bg_category_8.jpg)
           right/cover;
       }
 
-      .ul2 li h1 {
+      .sec4 .txt {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        margin: 0 auto;
+      }
+
+      .sec4 li h1 {
         position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
         font-family: Noto Sans, serif;
         font-weight: 800;
         font-size: 24px;
         color: #fff;
         width: 100%;
-        z-index: 1;
+        word-break: keep-all;
       }
+
+      .sec4 .txt p {
+        opacity: 0;
+        word-break: keep-all;
+        height: 100px;
+        padding: 10px;
+        font-weight: bold;
+        color: #fff;
+        line-height: 30px;
+        letter-spacing: -1px;
+      }
+
+      .sec4 li:hover h1 {
+        font-size: 30px;
+        position: relative;
+      }
+
+      .sec4 li:hover p {
+        display: block;
+        opacity: 1;
+        transition: opacity 0.3s 0.4s;
+      }
+
+      /******** section4 끝 ********/
     </style>
   </head>
-  <body>
-    <div class="wrap">
-      <h1 class="title">노랑풍선이 바라는 여행</h1>
-      <ul class="ul1">
-        <!-- 1 -->
-        <li>
-          <p>
-            <img
-              src="https://company.ybtour.co.kr/images/bg/bg_story_1.jpg"
-              alt="img1"
-            />
-          </p>
-          <div class="textbox">
-            <p>여행의 새로운 가치를 알립니다</p>
-            <h1>가치를 전달하는 여행</h1>
-            <h1>Value-Creating</h1>
-          </div>
-        </li>
-        <!-- 2 -->
-        <li>
-          <p>
-            <img
-              src="https://company.ybtour.co.kr/images/bg/bg_story_2.jpg"
-              alt="img2"
-            />
-          </p>
-          <div class="textbox">
-            <p>고객의, 고객에 의한, 고객을 위한</p>
-            <h1>신뢰를 받는 여행</h1>
-            <h1>Trustworthy</h1>
-          </div>
-        </li>
-        <!-- 3 -->
-        <li>
-          <p>
-            <img
-              src="https://company.ybtour.co.kr/images/bg/bg_story_3.jpg"
-              alt="img3"
-            />
-          </p>
-          <div class="textbox">
-            <p>일상의 가장 반짝이는 순간을 만듭니다</p>
-            <h1>즐거움을 선사하는 여행</h1>
-            <h1>Joyful</h1>
-          </div>
-        </li>
-        <!-- 4 -->
-        <li>
-          <p>
-            <img
-              src="https://company.ybtour.co.kr/images/bg/bg_story_4.jpg"
-              alt="img4"
-            />
-          </p>
-          <div class="textbox">
-            <p>다양한 여행상품으로 여행 문화를 선도합니다</p>
-            <h1>혁신적인 여행</h1>
-            <h1>Innovative</h1>
-          </div>
-        </li>
-      </ul>
 
+  <body>
+    <!-- https://company.ybtour.co.kr/ -->
+    <!--
+    sec1 첫화면
+    sec2 여행수 고객수
+    sec3 노랑풍선이 바라는 여행
+    sec4 노랑풍선이 만드는 여행 -->
+
+    <div class="wrap">
+      <section class="sec3">
+        <h1 class="title">노랑풍선이 바라는 여행</h1>
+        <ul>
+          <!-- 1 -->
+          <li>
+            <p>
+              <img
+                src="https://company.ybtour.co.kr/images/bg/bg_story_1.jpg"
+                alt="img1"
+              />
+            </p>
+            <div class="textbox">
+              <p>여행의 새로운 가치를 알립니다</p>
+              <h1>가치를 전달하는 여행</h1>
+              <h1>Value-Creating</h1>
+            </div>
+          </li>
+          <!-- 2 -->
+          <li>
+            <p>
+              <img
+                src="https://company.ybtour.co.kr/images/bg/bg_story_2.jpg"
+                alt="img2"
+              />
+            </p>
+            <div class="textbox">
+              <p>고객의, 고객에 의한, 고객을 위한</p>
+              <h1>신뢰를 받는 여행</h1>
+              <h1>Trustworthy</h1>
+            </div>
+          </li>
+          <!-- 3 -->
+          <li>
+            <p>
+              <img
+                src="https://company.ybtour.co.kr/images/bg/bg_story_3.jpg"
+                alt="img3"
+              />
+            </p>
+            <div class="textbox">
+              <p>일상의 가장 반짝이는 순간을 만듭니다</p>
+              <h1>즐거움을 선사하는 여행</h1>
+              <h1>Joyful</h1>
+            </div>
+          </li>
+          <!-- 4 -->
+          <li>
+            <p>
+              <img
+                src="https://company.ybtour.co.kr/images/bg/bg_story_4.jpg"
+                alt="img4"
+              />
+            </p>
+            <div class="textbox">
+              <p>다양한 여행상품으로 여행 문화를 선도합니다</p>
+              <h1>혁신적인 여행</h1>
+              <h1>Innovative</h1>
+            </div>
+          </li>
+        </ul>
+      </section>
       <!-- 노랑풍선이 만드는 여행 -->
-      <h1>노랑풍선이 만드는 여행</h1>
-      <ul class="ul2">
-        <li><h1>Package</h1></li>
-        <li><h1>Honeymoon</h1></li>
-        <li>
-          <h1>Golf<br />& Theme</h1>
-        </li>
-        <li><h1>Air Ticket</h1></li>
-        <li><h1>Hotel</h1></li>
-        <li>
-          <h1>Tour<br />& Ticket</h1>
-        </li>
-        <li><h1>Domestic</h1></li>
-        <li><h1>Incentive</h1></li>
-      </ul>
+      <section class="sec4">
+        <h1>노랑풍선이 만드는 여행</h1>
+        <ul>
+          <li>
+            <div class="txt">
+              <h1>Package</h1>
+              <p>
+                전세계 맞춤 패키지여행으로 연인, 친구, 가족과 함께 행복한 추억을
+                만듭니다.
+              </p>
+            </div>
+          </li>
+          <li>
+            <div class="txt">
+              <h1>Honeymoon</h1>
+              <p>
+                신혼부부의 취향과 조건에 맞춘 특별한 여행으로 낭만적인 순간을
+                함께합니다.
+              </p>
+            </div>
+          </li>
+          <li>
+            <div class="txt">
+              <h1>Golf<br />& Theme</h1>
+              <p>
+                골프투어, 가족여행, 크루즈여행, 휴양여행, 성지순례, 문화탐방 등
+                원하는 테마로 여행할 수 있습니다.
+              </p>
+            </div>
+          </li>
+          <li>
+            <div class="txt">
+              <h1>Air Ticket</h1>
+              <p>
+                세계 주요 도시 및 국내 항공 권 예약·발권과 단체 그룹 예약까지
+                가능합니다.
+              </p>
+            </div>
+          </li>
+          <li>
+            <div class="txt">
+              <h1>Hotel</h1>
+              <p>
+                마음에 맞는 전세계 및 국내 호텔을 쉽고 빠르게 예약할 수
+                있습니다.
+              </p>
+            </div>
+          </li>
+          <li>
+            <div class="txt">
+              <h1>Tour<br />& Ticket</h1>
+              <p>
+                배낭여행 및 개별여행을 위한 유레일 패스 등 교통권과 현지투어,
+                입장티켓을 예약할 수 있습니다.
+              </p>
+            </div>
+          </li>
+          <li>
+            <div class="txt">
+              <h1>Domestic</h1>
+              <p>
+                국내의 문화유적, 제주 패키지, 골프 및 렌터카, 특급 호텔 예약을
+                제공합니다.
+              </p>
+            </div>
+          </li>
+          <li>
+            <div class="txt">
+              <h1>Incentive</h1>
+              <p>
+                국제회의 및 박람회, 기업·단체 연수 단체 포상, 대학교, 지역 모임
+                등 인센티브 여행을 함께합니다.
+              </p>
+            </div>
+          </li>
+        </ul>
+      </section>
     </div>
   </body>
 </html>

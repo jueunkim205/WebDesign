@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>starfield</title>
+    <title>메인 | 스타필드 수원</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap"
       rel="stylesheet"
@@ -20,17 +20,45 @@
         font-family: "Noto Sans KR", serif;
       }
 
-      .sec2 ul {
+      section {
         width: 1200px;
         margin: 100px auto 0;
+      }
+
+      ul {
         list-style: none;
+      }
+      .title {
+        letter-spacing: -2px;
+      }
+      .title h2 {
+        font-size: 56px;
+        font-weight: 300;
+      }
+      .title h1 {
+        font-size: 88px;
+        font-weight: 800;
+      }
+      .title p {
+        font-size: 20px;
+        letter-spacing: -1px;
+      }
+      .title span {
+        font-weight: 300;
+      }
+
+      .sec2 ul {
+        display: flex;
+        gap: 20px;
+      }
+
+      section:nth-child(2n) .title {
+        text-align: right;
       }
 
       .sec2 li {
-        width: 23.5%;
+        width: 25%;
         height: 100%;
-        float: left;
-        margin-right: 2%;
         text-align: center;
         border-radius: 20px;
         overflow: hidden;
@@ -82,9 +110,9 @@
       /* section3 시작 */
 
       .sec3 ul.starfield {
-        width: 1180px;
         margin: 50px auto;
         display: flex;
+        /* gap: 20px; */
         list-style: none;
         justify-content: space-between;
       }
@@ -114,6 +142,7 @@
 
       .sec3 .starfield li .txt {
         margin-top: 32px;
+        height: 100px;
       }
 
       .sec3 .starfield li .txt p:first-child {
@@ -159,6 +188,7 @@
     </style>
   </head>
   <body>
+    <!-- https://www.starfield.co.kr/suwon/main.do -->
     <!-- 
       header 메뉴
       section1 첫화면
@@ -168,8 +198,17 @@
       section5 Entertainment
       footer
      -->
+
     <section class="sec2">
       <div class="wrap">
+        <!-- 상단 타이틀 style 똑같음 -->
+        <!-- h1으로 감싸고 굵은건 strong -->
+
+        <div class="title">
+          <h2>At,</h2>
+          <h1>Starfield Suwon</h1>
+          <p>스타필드 수원만의 이벤트</p>
+        </div>
         <ul>
           <li>
             <a href="">
@@ -232,53 +271,59 @@
     </section>
 
     <section class="sec3">
-      <ul class="starfield">
-        <li>
-          <a href="">
-            <p>
-              <img
-                src="https://www.starfield.co.kr/assets/images/starfield/main-library-img01.jpg"
-                alt="별마당 도서관 이미지"
-              />
-            </p>
-            <div class="txt">
-              <p>별마당 도서관</p>
-              <p>휴식과 만남, 그리고 책을 주제로 소통하는 문화 감성 공간</p>
-            </div>
-          </a>
-        </li>
-        <li>
-          <a href="">
-            <p>
-              <img
-                src="https://www.starfield.co.kr/assets/images/starfield/main-library-img02.jpg"
-                alt="별마당 키즈 이미지"
-              />
-            </p>
-            <div class="txt">
-              <p>별마당 키즈</p>
+      <div class="wrap">
+        <div class="title">
+          <h1>Lib<span>rary</span></h1>
+          <p>책으로 소통하는 문화 감성 공간</p>
+        </div>
+        <ul class="starfield">
+          <li>
+            <a href="">
               <p>
-                책과 공연을 중심으로 아동심리학자와 함께 만든 키즈다감각체험
-                공간
+                <img
+                  src="https://www.starfield.co.kr/assets/images/starfield/main-library-img01.jpg"
+                  alt="별마당 도서관 이미지"
+                />
               </p>
-            </div>
-          </a>
-        </li>
-        <li>
-          <a href="">
-            <p>
-              <img
-                src="https://www.starfield.co.kr/assets/images/starfield/main-library-img03.jpg"
-                alt="강연&공연 이미지"
-              />
-            </p>
-            <div class="txt">
-              <p>강연&공연</p>
-              <p>가슴에 별을 품은 이들을 위한 다양한 이야기</p>
-            </div>
-          </a>
-        </li>
-      </ul>
+              <div class="txt">
+                <p>별마당 도서관</p>
+                <p>휴식과 만남, 그리고 책을 주제로 소통하는 문화 감성 공간</p>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <p>
+                <img
+                  src="https://www.starfield.co.kr/assets/images/starfield/main-library-img02.jpg"
+                  alt="별마당 키즈 이미지"
+                />
+              </p>
+              <div class="txt">
+                <p>별마당 키즈</p>
+                <p>
+                  책과 공연을 중심으로 아동심리학자와 함께 만든 키즈다감각체험
+                  공간
+                </p>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <p>
+                <img
+                  src="https://www.starfield.co.kr/assets/images/starfield/main-library-img03.jpg"
+                  alt="강연&공연 이미지"
+                />
+              </p>
+              <div class="txt">
+                <p>강연&공연</p>
+                <p>가슴에 별을 품은 이들을 위한 다양한 이야기</p>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
     </section>
   </body>
 </html>

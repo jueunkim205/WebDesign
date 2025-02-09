@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JAKOMO</title>
+    <link
+      rel="stylesheet"
+      as="style"
+      crossorigin
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      ul {
+        list-style: none;
+        width: 1330px;
+        margin: 100px auto;
+      }
+      a {
+        text-decoration: none;
+        color: #000;
+      }
+      li {
+        float: left;
+        cursor: pointer;
+        transition: 0s;
+        width: calc((100% - 200px) / 3);
+        box-sizing: border-box;
+        margin-left: 100px;
+        transition: 0.5s;
+      }
+      li:first-child {
+        margin-left: 0;
+        margin-top: 200px;
+      }
+
+      li:nth-child(3) {
+        margin-top: 200px;
+      }
+      li p {
+        font-family: Pretendard, serif;
+        font-size: 14px;
+        font-weight: 700;
+      }
+
+      li h1 {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 42.75px;
+        margin: 15px 0 20px;
+        font-weight: 600;
+      }
+      li img {
+        width: 100%;
+        transition: 0.5s;
+      }
+      li:hover {
+        margin-top: 150px;
+      }
+      li:nth-child(2):hover {
+        margin-top: -50px;
+      }
+      li:hover img {
+        box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.5),
+          0 6px 40px 0 rgba(0, 0, 0, 0.19);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- https://www.jakomosofa.com/ -->
+    <ul>
+      <li>
+        <a href="">
+          <p>자코모 소개</p>
+          <h1>About</h1>
+          <img
+            src="https://www.jakomosofa.com/inc/img/main/info_sect_1.jpg"
+            alt="image"
+          />
+        </a>
+      </li>
+      <li>
+        <a href="">
+          <p>자코모 이야기</p>
+          <h1>Story</h1>
+          <img
+            src="https://www.jakomosofa.com/inc/img/main/info_sect_2.jpg"
+            alt="image"
+          />
+        </a>
+      </li>
+      <li>
+        <a href="">
+          <p>자코모 제품 철학</p>
+          <h1>Philosophy</h1>
+          <img
+            src="https://www.jakomosofa.com/inc/img/main/info_sect_3.jpg"
+            alt="image"
+          />
+        </a>
+      </li>
+    </ul>
+  </body>
+</html>
