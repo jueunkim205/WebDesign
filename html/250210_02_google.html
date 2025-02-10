@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      :focus {
+        outline: none;
+      }
+
+      input[type="search"] {
+        width: 750px;
+        padding: 12px 20px 12px 40px;
+        border-radius: 50px;
+        border: 2px solid #ccc;
+        background-image: url(./images/searchicon.png);
+        background-repeat: no-repeat;
+        background-position: 10px 10px;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      input[type="search"]:hover {
+        background-color: transparent;
+      }
+
+      .google input[type="search"] {
+        width: 750px;
+        background-image: url(./images/google/images/camera.svg),
+          url(./images/google/images/mic.svg),
+          url(./images/google/images/key_board.png);
+        background-position: 98% 5px, 91% 7px, 85% 7px;
+        background-size: 25px, 15px, 30px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <form action="" method="">
+      <input
+        type="search"
+        placeholder="Search..."
+        onfocus="this.placeholder=''"
+      />
+      <p class="google">
+        <input
+          type="search"
+          placeholder="Search..."
+          onfocus="this.placeholder=''"
+        />
+      </p>
+    </form>
+  </body>
+</html>

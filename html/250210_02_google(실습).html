@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      :focus {
+        outline: none;
+      }
+      form {
+        width: 750px;
+        height: 46px;
+        margin: 10px auto;
+        position: relative;
+        display: inline-block;
+        border: 1px solid #000;
+      }
+      input[type="search"] {
+        width: 750px;
+        padding: 12px 20px 12px 40px;
+        border-radius: 50px;
+        border: 2px solid #ccc;
+        background-image: url(./images/searchicon.png);
+        background-repeat: no-repeat;
+        background-position: 10px 10px;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      input[type="search"]:hover {
+        box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+      }
+      .img-box {
+        position: absolute;
+        right: 0;
+        top: 0;
+        padding: 0;
+        display: inline-flex;
+        gap: 10px;
+        border: 1px solid #000;
+      }
+      .img-box > p:first-child > img {
+        width: 24px;
+      }
+      .img-box > p:nth-child(2) > img {
+        width: 16px;
+      }
+      .img-box > p:nth-child(3) > img {
+        width: 20px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <form action="" method="">
+      <input type="search" />
+
+      <div class="img-box">
+        <!-- <div class="search">
+          <p><img src="./images/searchicon.png" alt="" /></p>
+        </div> -->
+        <p><img src="./images/google/images/key_board.png" alt="keyboard" /></p>
+        <p><img src="./images/google/images/mic.svg" alt="mic" /></p>
+        <p><img src="./images/google/images/camera.svg" alt="camera" /></p>
+      </div>
+    </form>
+  </body>
+</html>

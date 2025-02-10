@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Google</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      a {
+        text-decoration: none;
+        display: flex;
+        color: #1f1f1f;
+      }
+
+      ul {
+        list-style: none;
+      }
+
+      header {
+        display: flex;
+        align-items: center;
+        padding: 0 20px;
+        height: 60px;
+        justify-content: space-between;
+        width: 100%;
+      }
+      header ul {
+        display: flex;
+        align-items: center;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      header img {
+        width: 24px;
+        height: 24px;
+        display: flex;
+      }
+
+      header ul.left {
+        font-size: 14px;
+        gap: 20px;
+      }
+
+      header ul.right {
+        font-size: 13px;
+        gap: 14px;
+      }
+
+      header ul li a:hover {
+        text-decoration: underline;
+      }
+
+      header ul li.login a:hover {
+        text-decoration: none;
+        box-shadow: 0px 2px 8px 0px rgba(60, 64, 67, 0.25);
+      }
+
+      header ul li a:hover header ul.right .app img {
+        width: 16px;
+        opacity: 70%;
+        margin: 0 12px;
+      }
+
+      /* 가상공간까지 링크잡힘 */
+
+      header ul li.login a {
+        padding: 10px 25px;
+        background: #0b57d0;
+        border-radius: 25px;
+        color: #fff;
+      }
+
+      header ul.right .app a {
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        transition: 0.5s;
+      }
+
+      header ul.right .app a::before {
+        opacity: 0;
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        background: #ccc;
+        border-radius: 50%;
+        transition: 0.5s;
+      }
+
+      header ul.right .app a:hover::before {
+        opacity: 1;
+        z-index: -1;
+      }
+
+      header ul.right .app a::after {
+        opacity: 0;
+        position: absolute;
+        content: "Google 앱";
+        left: -13px;
+        top: 45px;
+        background: #000;
+        color: #fff;
+        font-size: 10px;
+        font-weight: bold;
+        padding: 5px 10px;
+        white-space: nowrap;
+        border-radius: 5px;
+        cursor: auto;
+      }
+
+      header ul.right .app a:hover:after {
+        opacity: 1;
+        transition-delay: 0.5s;
+      }
+
+      :focus {
+        outline: none;
+      }
+
+      .logo {
+        margin: 100px auto 20px;
+        width: 272px;
+      }
+
+      .logo img {
+        width: 100%;
+      }
+
+      .google {
+        margin: 10px auto;
+        display: flex;
+        width: 584px;
+        padding: 0 10px;
+        height: 44px;
+        border: 1px solid #ccc;
+        border-radius: 100px;
+        box-shadow: 0px 2px 8px 0px rgba(60, 64, 67, 0.25);
+      }
+
+      .google p,
+      .google span {
+        position: relative;
+        padding: 0 10px;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+      }
+
+      .google p {
+        cursor: pointer;
+      }
+
+      .google p img {
+        width: 20px;
+      }
+
+      .google p:hover:before {
+        content: "";
+        position: absolute;
+        left: 15px;
+        top: 35px;
+        width: 10px;
+        height: 10px;
+        background: #000;
+        transform: rotate(45deg);
+        z-index: 1;
+      }
+
+      .google p:hover:after {
+        position: absolute;
+        left: 0;
+        top: 38px;
+        padding: 10px;
+        background: #000;
+        font-size: 10px;
+        font-weight: bold;
+        border: 1px solid #fff;
+        color: #fff;
+        white-space: nowrap;
+        box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.5);
+      }
+
+      .google p:nth-of-type(1):hover:after {
+        content: "입력 도구";
+        left: -23%;
+      }
+
+      .google p:nth-of-type(2):hover:after {
+        content: "음성 검색";
+        left: -28%;
+      }
+
+      .google p:nth-of-type(3):hover:after {
+        content: "이미지로 검색";
+        left: -48%;
+      }
+
+      .google p:nth-of-type(2) img {
+        width: 17px;
+      }
+
+      .google input[type="search"] {
+        width: 600px;
+        border: none;
+        margin-left: 10px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <ul class="left">
+        <li><a href="#">Google 정보</a></li>
+        <li><a href="#">스토어</a></li>
+      </ul>
+
+      <ul class="right">
+        <li><a href="#">Gmail</a></li>
+        <li><a href="#">이미지</a></li>
+        <li class="app">
+          <a href="#"><img src="./images/google/images/app.svg" alt="app" /></a>
+        </li>
+        <li class="login">
+          <a href="#">로그인</a>
+        </li>
+      </ul>
+    </header>
+    <p class="logo">
+      <a href="#"
+        ><img src="./images/google/images/googlelogo.png" alt="logo"
+      /></a>
+    </p>
+    <div class="google">
+      <span><img src="./images/searchicon.png" alt="search" /></span>
+      <input type="search" />
+      <p><img src="./images/google/images/keyboard.gif" alt="keyboard" /></p>
+      <p><img src="./images/google/images/mic.svg" alt="mic" /></p>
+      <p><img src="./images/google/images/camera.svg" alt="camera" /></p>
+    </div>
+  </body>
+</html>
