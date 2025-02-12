@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>우리카드</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@2.0/nanumsquare.css"
+    />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      section {
+        width: 100%;
+        padding: 30px 0;
+      }
+
+      a {
+        text-decoration: none;
+        color: #222;
+      }
+
+      ul {
+        list-style: none;
+        width: 1080px;
+        margin: 50px auto;
+        display: flex;
+        box-sizing: border-box;
+      }
+
+      li {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        word-break: keep-all;
+        position: relative;
+        font-family: "NanumSquare", sans-serif;
+      }
+
+      h2 {
+        font-size: 24px;
+        font-weight: 600;
+        letter-spacing: -1.5px;
+      }
+
+      h3 {
+        font-size: 18px;
+        font-weight: 400;
+        letter-spacing: -1.5px;
+      }
+
+      /*********** section 1 ***********/
+      .sec1 {
+        background: #e2fdfe;
+      }
+
+      .sec1 ul li {
+        width: calc(100% / 6);
+        border-right: 1px solid #e0e0e0;
+        z-index: 1;
+        padding: 10px;
+        gap: 20px;
+        text-align: center;
+      }
+
+      .sec1 ul li p:before {
+        content: "";
+        position: absolute;
+        top: 35%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        background: rgba(0, 0, 0, 0.1);
+        z-index: -1;
+        opacity: 0;
+      }
+
+      .sec1 ul li:hover p:before {
+        opacity: 1;
+        transition: 1s;
+      }
+
+      .sec1 ul li h4 {
+        font-size: 16px;
+        font-weight: 400;
+        margin-top: 20px;
+      }
+
+      .sec1 ul li:last-child {
+        border-right: 0;
+      }
+
+      /*********** section 2 ***********/
+      .sec2 {
+        background: #e2f3fc;
+      }
+
+      .sec2 ul li {
+        width: calc(100% / 4);
+      }
+
+      .sec2 ul li p {
+        display: flex;
+        width: 192px;
+        height: 250px;
+        border-radius: 20px;
+        overflow: hidden;
+      }
+
+      .sec2 ul li::before {
+        content: "";
+        position: absolute;
+        width: 160px;
+        height: 145px;
+        top: 45%;
+        right: -34%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+        cursor: pointer;
+      }
+
+      .sec2 ul li::after {
+        content: "";
+        position: absolute;
+        width: 160px;
+        height: 145px;
+        top: 45%;
+        right: -34%;
+        transform: translate(-50%, -50%);
+      }
+
+      .sec2 ul li p img {
+        width: 100%;
+        height: 100%;
+        transition: 0.5s;
+        transform: scale(1);
+      }
+
+      .sec2 ul li:hover img {
+        transform: scale(1.2);
+      }
+
+      .sec2 ul li:first-child:before {
+        background: url(https://pc.wooricard.com/dcpc/img/pc/content/special_mlon_1_obj.png);
+      }
+      .sec2 ul li:first-child:after {
+        background: url(https://pc.wooricard.com/dcpc/img/pc/content/special_mlon_1_shd.png);
+      }
+      .sec2 ul li:nth-child(2):before {
+        background: url(https://pc.wooricard.com/dcpc/img/pc/content/special_mlon_2_obj.png);
+      }
+      .sec2 ul li:nth-child(2):after {
+        background: url(https://pc.wooricard.com/dcpc/img/pc/content/special_mlon_2_shd.png);
+      }
+      .sec2 ul li:nth-child(3):before {
+        background: url(https://pc.wooricard.com/dcpc/img/pc/content/special_mlon_3_obj.png);
+      }
+      .sec2 ul li:nth-child(3):after {
+        background: url(https://pc.wooricard.com/dcpc/img/pc/content/special_mlon_3_shd.png);
+      }
+      .sec2 ul li:nth-child(4):before {
+        background: url(https://pc.wooricard.com/dcpc/img/pc/content/special_mlon_4_obj.png);
+      }
+      .sec2 ul li:nth-child(4):after {
+        background: url(https://pc.wooricard.com/dcpc/img/pc/content/special_mlon_4_shd.png);
+      }
+
+      .sec2 ul li h2 {
+        margin-top: 50px;
+        margin-bottom: 10px;
+      }
+      .sec2 ul li h3 {
+        margin-bottom: 25px;
+      }
+      .sec2 ul li span {
+        font-size: 18px;
+        line-height: 25px;
+      }
+
+      /*********** section 3 ***********/
+      .sec3 ul li {
+        width: calc(100% / 4);
+      }
+
+      .sec3 ul li:after {
+        position: absolute;
+        content: "";
+        width: 0.5px;
+        height: 180px;
+        background: #ccc;
+        top: 60%;
+        right: 0;
+        transform: translate(-50%, -50%);
+      }
+
+      .sec3 ul li:nth-child(4):after {
+        width: 0;
+      }
+
+      .sec3 ul li h2 {
+        font-size: 25px;
+        margin-bottom: 25px;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="sec1">
+      <ul>
+        <li>
+          <a href="#">
+            <p>
+              <img
+                src="https://pc.wooricard.com/dcpc/img/pc/content/ico_quick_menu1.png"
+                alt="menu img"
+              />
+            </p>
+            <h4>이용대금명세서</h4>
+          </a>
+        </li>
+
+        <li>
+          <a href="#">
+            <p>
+              <img
+                src="https://pc.wooricard.com/dcpc/img/pc/content/ico_quick_menu2.png"
+                alt="menu img"
+              />
+            </p>
+            <h4>결제예상금액</h4>
+          </a>
+        </li>
+
+        <li>
+          <a href="#">
+            <p>
+              <img
+                src="https://pc.wooricard.com/dcpc/img/pc/content/ico_quick_menu3.png"
+                alt="menu img"
+              />
+            </p>
+            <h4>이용내역조회</h4>
+          </a>
+        </li>
+
+        <li>
+          <a href="#">
+            <p>
+              <img
+                src="https://pc.wooricard.com/dcpc/img/pc/content/ico_quick_menu4.png"
+                alt="menu img"
+              />
+            </p>
+            <h4>내정보변경</h4>
+          </a>
+        </li>
+
+        <li>
+          <a href="#">
+            <p>
+              <img
+                src="https://pc.wooricard.com/dcpc/img/pc/content/ico_quick_menu5.png"
+                alt="menu img"
+              />
+            </p>
+            <h4>카드분실신고</h4>
+          </a>
+        </li>
+
+        <li>
+          <a href="#">
+            <p>
+              <img
+                src="https://pc.wooricard.com/dcpc/img/pc/content/ico_quick_menu6.png"
+                alt="menu img"
+              />
+            </p>
+            <h4>카드사용등록</h4>
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <section class="sec2">
+      <ul>
+        <li>
+          <a href="#">
+            <p>
+              <img
+                src="https://pc.wooricard.com/dcpc/img/pc/content/special_mlon_1_bg.png"
+                alt="단기카드대출 img"
+              />
+            </p>
+            <h2>단기카드대출</h2>
+            <h3>(현금서비스)</h3>
+            <span
+              >현금이 급할 때 바로<br />찾아쓰는,<br />편리한 생활자금
+              마련방법</span
+            >
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <p>
+              <img
+                src="https://pc.wooricard.com/dcpc/img/pc/content/special_mlon_2_bg.png"
+                alt="장기카드대출 img"
+              />
+            </p>
+            <h2>장기카드대출</h2>
+            <h3>(카드론)</h3>
+            <span
+              >목돈이 필요할 때<br />복잡한 심사 과정 없이<br />간편하게</span
+            >
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <p>
+              <img
+                src="https://pc.wooricard.com/dcpc/img/pc/content/special_mlon_3_bg.png"
+                alt="일부결제금액이월약정 img"
+              />
+            </p>
+            <h2>일부결제금액이월약정</h2>
+            <h3>(리볼빙)</h3>
+            <span
+              >원하는 만큼만 결제하고 매월<br />결제금액을 계획적으로 관리</span
+            >
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <p>
+              <img
+                src="https://pc.wooricard.com/dcpc/img/pc/content/special_mlon_4_bg.png"
+                alt="올인원대출 img"
+              />
+            </p>
+            <h2>올인원대출</h2>
+            <h3>(신용대출)</h3>
+            <span
+              >우리카드가 없어도 서류없이,<br />방문없이, 내 신용만으로</span
+            >
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <section class="sec3">
+      <ul>
+        <li>
+          <a href="#">
+            <p>
+              <img
+                src="https://pc.wooricard.com/dcpc/img/pc/content/special_mbnf_1_obj.png"
+                alt="해외이용의 정석 img"
+              />
+            </p>
+            <h2>해외이용의 정석</h2>
+            <h3>
+              여행, 직구, 항공<br />
+              무엇이든 우리카드로
+            </h3>
+          </a>
+        </li>
+
+        <li>
+          <a href="#">
+            <p>
+              <img
+                src="https://pc.wooricard.com/dcpc/img/pc/content/special_mbnf_2_obj.png"
+                alt="MY Pick 서비스 img"
+              />
+            </p>
+            <h2>MY Pick 서비스</h2>
+            <h3>
+              혜택도 맞춤!<br />
+              나만을 위한 맞춤 혜택
+            </h3>
+          </a>
+        </li>
+
+        <li>
+          <a href="#">
+            <p>
+              <img
+                src="https://pc.wooricard.com/dcpc/img/pc/content/special_mbnf_3_obj.png"
+                alt="우리V클럽 img"
+              />
+            </p>
+            <h2>우리V클럽</h2>
+            <h3>
+              특별함을 원하는<br />
+              고객을 위한 VIP우대 혜택
+            </h3>
+          </a>
+        </li>
+
+        <li>
+          <a href="#">
+            <p>
+              <img
+                src="https://pc.wooricard.com/dcpc/img/pc/content/special_mbnf_4_obj.png"
+                alt="우리 Point img"
+              />
+            </p>
+            <h2>우리 Point</h2>
+            <h3>차곡차곡 쌓아<br />다양한 곳에서 사용가능</h3>
+          </a>
+        </li>
+      </ul>
+    </section>
+  </body>
+</html>
