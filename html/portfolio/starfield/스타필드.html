@@ -28,6 +28,11 @@
       ul {
         list-style: none;
       }
+
+      a {
+        text-decoration: none;
+      }
+
       .title {
         letter-spacing: -2px;
       }
@@ -47,16 +52,39 @@
         font-weight: 300;
       }
 
-      .sec2 ul {
-        display: flex;
-        gap: 20px;
-      }
-
       section:nth-child(2n) .title {
         text-align: right;
       }
 
-      .sec2 li {
+      /********** section 1 **********/
+
+      .section1 ul {
+        display: flex;
+        width: 900px;
+        margin: 0 auto;
+        border: 1px solid #000;
+      }
+      .section1 ul li {
+        flex: 1;
+        padding: 10px 0;
+        border: 1px solid #000;
+        border-radius: 10px;
+      }
+
+      .section1 ul li a {
+        display: flex;
+        justify-content: center;
+        gap: 5px;
+      }
+
+      /********** section 2 **********/
+
+      .section2 ul {
+        display: flex;
+        gap: 20px;
+      }
+
+      .section2 li {
         width: 25%;
         height: 100%;
         text-align: center;
@@ -65,63 +93,63 @@
         transition: 0.5s;
       }
 
-      .sec2 a {
+      .section2 a {
         text-decoration: none;
         font-size: 0;
         color: black;
       }
-      .sec2 li:hover {
+      .section2 li:hover {
         box-shadow: 0 20px 10px #aaa;
       }
 
-      .sec2 li:first-child {
+      .section2 li:first-child {
         margin-top: 80px;
       }
-      .sec2 li:nth-child(3) {
+      .section2 li:nth-child(3) {
         margin-top: 120px;
       }
-      .sec2 li:nth-child(4) {
+      .section2 li:nth-child(4) {
         margin-top: 40px;
       }
 
-      .sec2 li:last-child {
+      .section2 li:last-child {
         margin-right: 0;
       }
-      .sec2 li .textbox {
+      .section2 li .textbox {
         height: 180px;
         padding: 30px 0;
         background: #f6f6f6;
       }
-      .sec2 li p img {
+      .section2 li p img {
         width: 100%;
       }
-      .sec2 li .textbox p {
+      .section2 li .textbox p {
         font-weight: 500;
         font-size: 16px;
         color: #666;
         margin-bottom: 10px;
       }
-      .sec2 li h1 {
+      .section2 li h1 {
         font-weight: 500;
         font-size: 24px;
         word-break: keep-all;
       }
 
-      /* section3 시작 */
+      /********** section 3 **********/
 
-      .sec3 ul.starfield {
+      .section3 ul.starfield {
         margin: 50px auto;
         display: flex;
         /* gap: 20px; */
         list-style: none;
         justify-content: space-between;
       }
-      .sec3 .starfield li {
+      .section3 .starfield li {
         width: 280px;
         text-align: center;
         transition: 0.5s;
       }
-      .sec3 .starfield li > a > p {
+      .section3 .starfield li > a > p {
         position: relative;
         border-radius: 20px;
         overflow: hidden;
@@ -129,39 +157,39 @@
       }
 
       /* 첫번째요소 너비 고정 */
-      .sec3 .starfield li:first-child {
+      .section3 .starfield li:first-child {
         width: 580px;
       }
 
-      .sec3 .starfield li a img {
+      .section3 .starfield li a img {
         width: 100%;
         height: 100%;
         object-fit: cover;
         object-position: center;
       }
 
-      .sec3 .starfield li .txt {
+      .section3 .starfield li .txt {
         margin-top: 32px;
         height: 100px;
       }
 
-      .sec3 .starfield li .txt p:first-child {
+      .section3 .starfield li .txt p:first-child {
         color: #c30e2e;
       }
 
-      .sec3 .starfield li .txt p:last-child {
+      .section3 .starfield li .txt p:last-child {
         font-size: 20px;
         font-weight: 500;
         color: #000;
         margin-top: 10px;
       }
 
-      .sec3 .starfield li a {
+      .section3 .starfield li a {
         text-decoration: none;
       }
       /* 가상 */
-      .sec3 .starfield li > a > p::after,
-      .sec3 .starfield:hover li:not(:hover) > a > p::after {
+      .section3 .starfield li > a > p::after,
+      .section3 .starfield:hover li:not(:hover) > a > p::after {
         position: absolute;
         content: "";
         top: 0;
@@ -173,16 +201,16 @@
 
       /***** hover *****/
 
-      .sec3 .starfield li:hover {
+      .section3 .starfield li:hover {
         width: 580px;
       }
 
-      .sec3 .starfield li:hover > a > p::after,
-      .sec3 .starfield li:first-child > a > p::after {
+      .section3 .starfield li:hover > a > p::after,
+      .section3 .starfield li:first-child > a > p::after {
         opacity: 0;
       }
 
-      .sec3 .starfield:hover li:not(:hover) {
+      .section3 .starfield:hover li:not(:hover) {
         width: 280px;
       }
     </style>
@@ -199,7 +227,56 @@
       footer
      -->
 
-    <section class="sec2">
+    <section class="section1">
+      <ul class="button">
+        <li>
+          <a href="#">
+            <p>
+              <img
+                src="https://www.starfield.co.kr/assets/images/icon/main-icon-location.svg"
+                alt="수원점 오시는 길 icon"
+              />
+            </p>
+            <span>수원점 오시는 길</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <p>
+              <img
+                src="https://www.starfield.co.kr/assets/images/icon/main-icon-parking.svg"
+                alt="주차 안내 icon"
+              />
+            </p>
+            <span>주차 안내</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <p>
+              <img
+                src="https://www.starfield.co.kr/assets/images/icon/main-icon-amenities.svg"
+                alt="편의시설 안내 icon"
+              />
+            </p>
+            <span>편의시설 안내</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <p>
+              <img
+                src="https://www.starfield.co.kr/assets/images/icon/main-icon-floorguide.svg"
+                alt="층별 안내 icon"
+              />
+            </p>
+            <span>층별 안내</span>
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <section class="section2">
       <div class="wrap">
         <!-- 상단 타이틀 style 똑같음 -->
         <!-- h1으로 감싸고 굵은건 strong -->
@@ -211,7 +288,7 @@
         </div>
         <ul>
           <li>
-            <a href="">
+            <a href="#">
               <p>
                 <img
                   src="https://www.starfield.co.kr/cdn/starfield_09/bnc/20240304/IM20240304091640273572.jpg"
@@ -225,7 +302,7 @@
             </a>
           </li>
           <li>
-            <a href="">
+            <a href="#">
               <p>
                 <img
                   src="https://www.starfield.co.kr/cdn/starfield_09/bnc/20241206/IM20241206030114658480.jpg"
@@ -239,7 +316,7 @@
             </a>
           </li>
           <li>
-            <a href="">
+            <a href="#">
               <p>
                 <img
                   src="https://www.starfield.co.kr/cdn/starfield_09/bnc/20241206/IM20241206030122374624.jpg"
@@ -253,7 +330,7 @@
             </a>
           </li>
           <li>
-            <a href="">
+            <a href="#">
               <p>
                 <img
                   src="https://www.starfield.co.kr/cdn/starfield_09/bnc/20241206/IM20241206030143386554.jpg"
@@ -270,7 +347,7 @@
       </div>
     </section>
 
-    <section class="sec3">
+    <section class="section3">
       <div class="wrap">
         <div class="title">
           <h1>Lib<span>rary</span></h1>
@@ -278,7 +355,7 @@
         </div>
         <ul class="starfield">
           <li>
-            <a href="">
+            <a href="#">
               <p>
                 <img
                   src="https://www.starfield.co.kr/assets/images/starfield/main-library-img01.jpg"
@@ -292,7 +369,7 @@
             </a>
           </li>
           <li>
-            <a href="">
+            <a href="#">
               <p>
                 <img
                   src="https://www.starfield.co.kr/assets/images/starfield/main-library-img02.jpg"
@@ -309,7 +386,7 @@
             </a>
           </li>
           <li>
-            <a href="">
+            <a href="#">
               <p>
                 <img
                   src="https://www.starfield.co.kr/assets/images/starfield/main-library-img03.jpg"
