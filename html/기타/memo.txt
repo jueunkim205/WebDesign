@@ -32,7 +32,7 @@ ctrl + shift + p -> Snippets: Configure User Snippets
   },
   "color": {
     "prefix": "clr",
-    "body": ["color: red;"],
+    "body": ["color: #000"],
     "description": "color"
   },
   "pa": {
