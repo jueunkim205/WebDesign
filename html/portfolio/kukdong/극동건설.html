@@ -5,155 +5,223 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>극동건설</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
     <style>
       * {
         margin: 0;
         padding: 0;
+        box-sizing: border-box;
+        font-family: "Noto Sans KR", serif;
+      }
+      ul {
+        list-style: none;
+      }
+
+      a {
+        text-decoration: none;
+        color: #fff;
+      }
+
+      h3 {
+        font-size: 25px;
+        font-weight: normal;
+      }
+
+      p {
+        font-size: 16px;
+        letter-spacing: -1px;
+        word-break: keep-all;
+      }
+
+      /*********** section2 시작 ***********/
+      .section2 ul {
+        margin: 40px auto;
+        display: flex;
+        width: 1280px;
+        height: 300px;
+        gap: 40px;
+      }
+
+      .section2 li {
+        padding: 35px 33px;
+        flex: 1;
+        border: 1px solid #000;
+      }
+
+      .section2 li:first-child {
+        background: url(https://www.kukdong.co.kr/images/main/business_img2.jpg)
+          center/cover;
+      }
+
+      .section2 li:nth-child(2) {
+        background: url(https://www.kukdong.co.kr/images/main/business_img5.jpg)
+          center/cover;
+      }
+
+      .section2 h3 {
+        font-family: "Play", serif;
+        font-weight: 600;
+        margin-bottom: 20px;
       }
 
       /*********** section4 시작 ***********/
-      .con {
+      .section4 .con {
         margin: 500px 0;
         padding: 120px 0;
-        background: url(../../images/극동건설_img1.jpg) center center no-repeat;
+        background: url(https://www.kukdong.co.kr/images/main/mid_bg_img1.jpg)
+          center center no-repeat;
         background-size: cover;
         background-attachment: fixed;
       }
 
-      .con h1 {
+      .section4 .con h1 {
         font-size: 45px;
-        color: #fff;
         width: 1280px;
         margin: 0 auto;
         text-align: center;
+        font-weight: 300;
+        color: #fff;
       }
 
-      .con ul {
+      .section4 .con ul {
         width: 1000px;
-        margin: 0 auto;
+        display: flex;
+        margin: 80px auto;
         list-style: none;
-        padding-top: 70px;
         overflow: hidden;
       }
 
-      .con ul li {
+      .section4 .con ul li {
         position: relative;
-        float: left;
-        padding: 30px;
-        width: 25%;
-        /*  box-sizing : width, height 값에 padding 값이나 border 값은 포함되지 않게 하는 속성 */
-        box-sizing: border-box;
+        display: flex;
         text-align: center;
-        letter-spacing: -2px; /* 자간 */
-        word-break: keep-all; /* 줄바꿈 */
-        color: #fff;
+        flex: 1;
+        padding: 20px;
       }
 
-      a {
-        display: block;
-        text-decoration: none;
-        color: #fff;
-      }
       /* 라인만들기 */
-      .con ul li::after {
+      .section4 .con ul li::after {
         content: "";
         position: absolute;
         width: 1px;
         height: 90px;
         background-color: #fff;
-        /* 가운데부근으로 오게 함 */
         top: 50%;
         right: 0;
-        /* 세로길이의 절반 */
         margin-top: -45px;
         opacity: 0.5;
       }
-      .con ul li:last-child::after {
+      .section4 .con ul li:last-child::after {
         /* 마지막 선 없애기 */
         width: 0;
       }
 
-      .con ul li h3 {
+      .section4 .con ul li h3 {
         position: relative;
-        font-size: 25px;
-        font-weight: normal;
-        margin-bottom: 30px;
-        /* border: 1px solid #fff; */
-        padding: 10px 30px;
+        margin-bottom: 20px;
+        padding: 5px 40px;
         display: inline-block;
       }
 
-      /* hover효과 */
-
-      .con ul li h3 .line {
+      /* hover효과 line*/
+      .section4 .con ul li h3 .line {
         position: absolute;
-        background: #fff;
+        background: #ccc;
+        width: 0;
+        height: 0;
+        transition: 1s;
       }
 
-      .con ul li h3 .top {
+      .section4 .con ul li h3 .top {
         width: 100%;
         height: 1px;
         top: 0;
         left: 0;
+        transform: scaleX(0);
       }
 
-      .con ul li h3 .right {
-        width: 1px;
-        height: 100%;
-        top: 0;
-        right: 0;
-      }
-
-      .con ul li h3 .bottom {
+      .section4 .con ul li h3 .bottom {
         width: 100%;
         height: 1px;
         bottom: 0;
         left: 0;
+        transform: scaleX(0);
       }
 
-      .con ul li h3 .left {
+      .section4 .con ul li:hover h3 .top,
+      .section4 .con ul li:hover h3 .bottom {
+        transform: scaleX(1);
+      }
+
+      .section4 .con ul li h3 .right {
+        width: 1px;
+        height: 100%;
+        top: 0;
+        right: 0;
+        transform: scaleY(0);
+      }
+
+      .section4 .con ul li h3 .left {
         width: 1px;
         height: 100%;
         top: 0;
         left: 0;
+        transform: scaleY(0);
+      }
+
+      .section4 .con ul li:hover h3 .right,
+      .section4 .con ul li:hover h3 .left {
+        transform: scaleY(1);
+      }
+
+      .section4 .con ul li a {
+        color: #fff;
       }
 
       /*********** section4 끝 ***********/
       /*********** section5 시작 ***********/
 
-      .sec5 ul {
+      .section5 ul {
         list-style: none;
         margin: 50px;
       }
-      .sec5 ul li {
+      .section5 ul li {
         position: relative;
         display: inline-block;
         /* width: 300px;
-        height: 300px; */
+         height: 300px; */
         padding: 40px 30px;
         background: #f0f0f0;
       }
-      .sec5 ul li a {
+      .section5 ul li a {
         text-decoration: none;
         color: #222;
       }
 
-      .sec5 ul li div p {
+      .section5 ul li div p {
         margin: 50px 0;
       }
 
-      .sec5 ul li div h1 span {
+      .section5 ul li div h1 span {
         font-weight: bold;
         display: block;
       }
 
       /* line */
-      .sec5 ul li a .line {
+      .section5 ul li a .line {
         position: absolute;
         background: #07348c;
       }
 
-      .sec5 ul li a .top {
+      .section5 ul li a .top {
         width: 100%;
         height: 5px;
         left: 0;
@@ -162,12 +230,12 @@
         transform-origin: 0 0;
         transition: 0.5s ease-in-out 1.5s;
       }
-      .sec5 ul li:hover a .top {
+      .section5 ul li:hover a .top {
         transform: scaleX(1);
         transition: 0.5s ease-in-out;
       }
 
-      .sec5 ul li a .right {
+      .section5 ul li a .right {
         width: 5px;
         height: 100%;
         right: 0;
@@ -177,12 +245,12 @@
         transition: 0.5s ease-in-out 1s;
       }
 
-      .sec5 ul li:hover a .right {
+      .section5 ul li:hover a .right {
         transform: scaleY(1);
         transition: 0.5s ease-in-out 0.5s;
       }
 
-      .sec5 ul li a .bottom {
+      .section5 ul li a .bottom {
         width: 100%;
         height: 5px;
         right: 0;
@@ -193,12 +261,12 @@
         transition: 0.5s ease-in-out 0.5s;
       }
 
-      .sec5 ul li:hover a .bottom {
+      .section5 ul li:hover a .bottom {
         transform: scaleY(1);
         transition: 0.5s ease-in-out 1s;
       }
 
-      .sec5 ul li a .left {
+      .section5 ul li a .left {
         width: 5px;
         height: 100%;
         left: 0;
@@ -208,7 +276,7 @@
         transition: 0.5s ease-in-out;
       }
 
-      .sec5 ul li:hover a .left {
+      .section5 ul li:hover a .left {
         transform: scaleX(1);
         transition: 0.5s ease-in-out 1.5s;
       }
@@ -230,7 +298,71 @@
   footer
  -->
 
-    <section class="sec4">
+    <!-- business -->
+    <section class="section2">
+      <div class="wrap">
+        <ul>
+          <li>
+            <a href="">
+              <h3>
+                CIVIL<br />
+                WORKS
+              </h3>
+              <p>토목</p>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <h3>
+                CIVIL<br />
+                WORKS
+              </h3>
+              <p>토목</p>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <h3>
+                CIVIL<br />
+                WORKS
+              </h3>
+              <p>토목</p>
+            </a>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <a href="">
+              <h3>
+                CIVIL<br />
+                WORKS
+              </h3>
+              <p>토목</p>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <h3>
+                CIVIL<br />
+                WORKS
+              </h3>
+              <p>토목</p>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <h3>
+                CIVIL<br />
+                WORKS
+              </h3>
+              <p>토목</p>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section4">
       <div class="con">
         <h1>
           개개인의 특성과 능력을 중시하는 극동건설은<br />
@@ -293,7 +425,7 @@
     </section>
 
     <!-- PR Center -->
-    <section class="sec5">
+    <section class="section5">
       <ul>
         <li>
           <a href="">
