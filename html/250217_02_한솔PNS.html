@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>한솔PNS</title>
+    <link
+      rel="stylesheet"
+      as="style"
+      crossorigin
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=check"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      input {
+        display: none;
+      }
+
+      .menu {
+        width: 1220px;
+        margin: 0 auto;
+        font-family: Pretendard, serif;
+        display: flex;
+      }
+
+      .menu label {
+        flex: 1;
+        padding: 20px 0;
+        border-bottom: 1px solid #ccc;
+        font-weight: 500;
+        color: gray;
+        font-size: 16px;
+        cursor: pointer;
+      }
+
+      .con {
+        position: relative;
+        width: 1220px;
+        margin: 30px auto 0;
+      }
+
+      .con > div {
+        display: none;
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+
+      #menu1:checked ~ .menu label:first-child,
+      #menu2:checked ~ .menu label:nth-child(2),
+      #menu3:checked ~ .menu label:nth-child(3),
+      #menu4:checked ~ .menu label:nth-child(4),
+      #menu5:checked ~ .menu label:nth-child(5),
+      #menu6:checked ~ .menu label:last-child {
+        border-bottom: 3px solid #007dc5;
+        font-weight: 800;
+        color: #000;
+      }
+
+      #menu1:checked ~ .con > div:first-child,
+      #menu2:checked ~ .con > div:nth-child(2),
+      #menu3:checked ~ .con > div:nth-child(3),
+      #menu4:checked ~ .con > div:nth-child(4),
+      #menu5:checked ~ .con > div:nth-child(5),
+      #menu6:checked ~ .con > div:last-child {
+        border: 1px solid #000;
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="radio" name="con" id="menu1" checked />
+    <input type="radio" name="con" id="menu2" />
+    <input type="radio" name="con" id="menu3" />
+    <input type="radio" name="con" id="menu4" />
+    <input type="radio" name="con" id="menu5" />
+    <input type="radio" name="con" id="menu6" />
+
+    <div class="menu">
+      <label for="menu1">반도체</label>
+      <label for="menu2">전기/전자</label>
+      <label for="menu3">2차 전지</label>
+      <label for="menu4">식음료/제약</label>
+      <label for="menu5">화학</label>
+      <label for="menu6">기계/금속</label>
+    </div>
+
+    <div class="con">
+      <div>
+        <img
+          src="https://www.hansolpns.com/assets/resources/front/images/contents/smart_factory/industry-01.jpg"
+          alt="industry img"
+        />
+        <div class="task">첫번째 task</div>
+        <div class="sol">첫번째 솔루션</div>
+      </div>
+
+      <div>
+        <img
+          src="https://www.hansolpns.com/assets/resources/front/images/contents/smart_factory/industry-02.jpg"
+          alt="industry img"
+        />
+        <div class="task">두번째 task</div>
+        <div class="sol">두번째 솔루션</div>
+      </div>
+
+      <div>
+        <img
+          src="https://www.hansolpns.com/assets/resources/front/images/contents/smart_factory/industry-03.jpg"
+          alt="industry img"
+        />
+        <div class="task">세번째 task</div>
+        <div class="sol">세번째 솔루션</div>
+      </div>
+
+      <div>
+        <img
+          src="https://www.hansolpns.com/assets/resources/front/images/contents/smart_factory/industry-04.jpg"
+          alt="industry img"
+        />
+        <div class="task">세번째 task</div>
+        <div class="sol">세번째 솔루션</div>
+      </div>
+
+      <div>
+        <img
+          src="https://www.hansolpns.com/assets/resources/front/images/contents/smart_factory/industry-05.jpg"
+          alt="industry img"
+        />
+        <div class="task">세번째 task</div>
+        <div class="sol">세번째 솔루션</div>
+      </div>
+
+      <div>
+        <img
+          src="https://www.hansolpns.com/assets/resources/front/images/contents/smart_factory/industry-06.jpg"
+          alt="industry img"
+        />
+        <div class="task">세번째 task</div>
+        <div class="sol">세번째 솔루션</div>
+      </div>
+    </div>
+  </body>
+</html>

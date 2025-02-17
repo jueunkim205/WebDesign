@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>한솔PNS</title>
+    <link
+      rel="stylesheet"
+      as="style"
+      crossorigin
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=check"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      .wrap {
+        width: 1220px;
+        margin: 0 auto;
+        font-family: Pretendard, serif;
+        box-sizing: border-box;
+      }
+
+      input[type="radio"] {
+        display: none;
+      }
+
+      h1 {
+        font-size: 48px;
+        letter-spacing: -1px;
+        font-weight: 800;
+      }
+
+      .menu {
+        display: flex;
+        margin: 40px 0 30px;
+      }
+
+      label {
+        flex: 1;
+        padding: 10px;
+        border-bottom: 1px solid #ccc;
+        font-weight: 500;
+        color: gray;
+        font-size: 16px;
+        cursor: pointer;
+      }
+
+      #menu1:checked ~ .menu label:first-child,
+      #menu2:checked ~ .menu label:nth-child(2),
+      #menu3:checked ~ .menu label:nth-child(3),
+      #menu4:checked ~ .menu label:nth-child(4),
+      #menu5:checked ~ .menu label:nth-child(5),
+      #menu6:checked ~ .menu label:last-child {
+        border-bottom: 3px solid #007dc5;
+        font-weight: 800;
+        color: #000;
+      }
+
+      .con .conbox {
+        display: none;
+      }
+
+      #menu1:checked ~ .con .conbox:first-child,
+      #menu2:checked ~ .con .conbox:nth-child(2),
+      #menu3:checked ~ .con .conbox:nth-child(3),
+      #menu4:checked ~ .con .conbox:nth-child(4),
+      #menu5:checked ~ .con .conbox:nth-child(5),
+      #menu6:checked ~ .con .conbox:last-child {
+        display: block;
+      }
+
+      .conbox {
+        position: relative;
+      }
+
+      .con p {
+        font-size: 0;
+      }
+
+      .txt {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        padding: 72px 60px 0;
+        background: #007dc5;
+        width: 490px;
+        height: 288px;
+        color: #fff;
+      }
+
+      .txt h2 {
+        font-size: 32px;
+        font-weight: 600;
+        margin-bottom: 30px;
+        letter-spacing: -0.32px;
+      }
+
+      .txt h4 {
+        font-size: 18px;
+        opacity: 0.8;
+        font-weight: 400;
+        line-height: 30px;
+        word-break: keep-all;
+        letter-spacing: -0.18px;
+      }
+      .tasklist h5 {
+        font-size: 24px;
+        margin: 40px 0 30px;
+      }
+
+      .tasklist ul {
+        display: flex;
+        list-style: none;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+
+      .tasklist ul li {
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        flex: 0 0 calc((100% - 8px) / 2);
+        padding: 24px 0;
+        background: #f5f5f5;
+        border-radius: 5px;
+      }
+
+      .tasklist ul li p {
+        color: #171717;
+      }
+
+      .tasklist ul li span {
+        color: #ccc;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <h1>적용 산업</h1>
+      <input type="radio" name="menu" id="menu1" checked />
+      <input type="radio" name="menu" id="menu2" />
+      <input type="radio" name="menu" id="menu3" />
+      <input type="radio" name="menu" id="menu4" />
+      <input type="radio" name="menu" id="menu5" />
+      <input type="radio" name="menu" id="menu6" />
+
+      <div class="menu">
+        <label for="menu1">반도체</label>
+        <label for="menu2">전기/전자</label>
+        <label for="menu3">2차 전지</label>
+        <label for="menu4">식음료/제약</label>
+        <label for="menu5">화학</label>
+        <label for="menu6">기계/금속</label>
+      </div>
+
+      <div class="con">
+        <div class="conbox">
+          <p>
+            <img
+              src="https://www.hansolpns.com/assets/resources/front/images/contents/smart_factory/industry-01.jpg"
+              alt="industry img"
+            />
+          </p>
+          <div class="txt">
+            <h2>반도체</h2>
+            <h4>
+              반도체 산업은 고사양화로 공정 난이도가 높아져 자동화 시스템에 의한
+              공정 관리가 중요하며, 빅데이터와 AI를 활용해 제조 경쟁력을
+              향상시키는 추세입니다. 특히 반도체 업종에서는 복잡한 공정과 설비로
+              인해 빅데이터 기반 AI 기술이 활용됩니다.
+            </h4>
+          </div>
+        </div>
+
+        <div class="conbox">
+          <p>
+            <img
+              src="https://www.hansolpns.com/assets/resources/front/images/contents/smart_factory/industry-02.jpg"
+              alt="industry img"
+            />
+          </p>
+          <div class="txt">
+            <h2>전기/전자</h2>
+            <h4>
+              전기/전자 업종은 제품 수명 주기가 짧고 생산라인 개조가 빈번해
+              다양한 설비 데이터 수집 및 품질 프로세스 관리가 필요하며 이를 위해
+              플랫폼 기반 솔루션과 설비, Legacy I/F를 활용한 생산 환경 지원이
+              중요합니다. 품질 정보 공유 및 설비 보전 관리 등을 구현해 이슈
+              대응력을 강화할 필요가 있습니다.
+            </h4>
+          </div>
+        </div>
+
+        <div class="conbox">
+          <p>
+            <img
+              src="https://www.hansolpns.com/assets/resources/front/images/contents/smart_factory/industry-03.jpg"
+              alt="industry img"
+            />
+          </p>
+          <div class="txt">
+            <h2>2차 전지</h2>
+            <h4>
+              다양한 적용분야로 빠르게 성장중인 배터리 산업은 안전과 친환경에
+              대한 중요성이 크며, 다양한 생산단계와 고부가가치 제품, 데이터
+              관리의 중요성과 고품질, 안정성, 환경 친화성이 강조되고 있습니다.
+            </h4>
+          </div>
+        </div>
+
+        <div class="conbox">
+          <p>
+            <img
+              src="https://www.hansolpns.com/assets/resources/front/images/contents/smart_factory/industry-04.jpg"
+              alt="industry img"
+            />
+          </p>
+          <div class="txt">
+            <h2>식음료/제약</h2>
+            <h4>
+              식/의약품 산업은 제품 안정성을 보장하고 규제 요구에 부응해야 하며
+              프로세스의 표준화 및 자동 데이터 집계가 필요한 산업입니다.
+              스마트팩토리 중심으로 자동화를 통한 생산성 향상과 가시성 확보에
+              중점을 둘 필요가 있으며, 글로벌 시장에서 한식 및 HMR의 성장과 함께
+              규제 강화에 대응하는 데 어려움이 있기 때문에 스마트한 제조환경이
+              요구되는 산업입니다.
+            </h4>
+          </div>
+        </div>
+
+        <div class="conbox">
+          <p>
+            <img
+              src="https://www.hansolpns.com/assets/resources/front/images/contents/smart_factory/industry-05.jpg"
+              alt="industry img"
+            />
+          </p>
+          <div class="txt">
+            <h2>화학</h2>
+            <h4>
+              화학 산업은 프로세스 장치산업으로 공정별 장치 제어 및 운전이 핵심
+              요소입니다. 최근 화학 소재 기업은 디지털화와 통합 관리를 통해 생산
+              데이터를 효과적으로 관리하고 있으며, 특히 반도체 화학 소재
+              분야에서는 수출 규제 대응을 위해 MES 생산체계를 구현하여 국산화를
+              촉진하고 있는 상황입니다.
+            </h4>
+          </div>
+        </div>
+
+        <div class="conbox">
+          <p>
+            <img
+              src="https://www.hansolpns.com/assets/resources/front/images/contents/smart_factory/industry-06.jpg"
+              alt="industry img"
+            />
+          </p>
+          <div class="txt">
+            <h2>기계/금속</h2>
+            <h4>
+              기계/금속 업종에서는 실시간 제조실행 관리의 중요성이 부각되고
+              있으며, 스마트팩토리 도입을 통해 설비 가동률을 높이고 생산 이슈에
+              신속히 대응하고 있습니다.
+            </h4>
+          </div>
+        </div>
+      </div>
+
+      <div class="tasklist">
+        <h5>Task</h5>
+        <ul>
+          <li>
+            <span class="material-symbols-outlined"> check </span>
+            <p>자재 수급부터 제품 출하까지 전 공정 추적성 확보의 어려움</p>
+          </li>
+          <li>
+            <span class="material-symbols-outlined"> check </span>
+            <p>ERP와의 연계를 통한 LOT 및 품질 정보 통합 관리의 필요성</p>
+          </li>
+          <li>
+            <span class="material-symbols-outlined"> check </span>
+            <p>사전 탐지 및 실시간 모니터링을 통한 예지 보전의 필요</p>
+          </li>
+          <li>
+            <span class="material-symbols-outlined"> check </span>
+            <p>
+              설비 엔지니어링 시스템과 AI 기술을 통한 탐지 및 설비운영 최적화
+            </p>
+          </li>
+          <li>
+            <span class="material-symbols-outlined"> check </span>
+            <p>
+              제조 현장의 가시성을 통한 민첩한 의사결정 지원 및 조립 라인 생산성
+              향상
+            </p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>

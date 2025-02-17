@@ -11,6 +11,7 @@
       crossorigin
       href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css"
     />
+
     <style>
       * {
         margin: 0;
@@ -18,37 +19,181 @@
       }
 
       body {
-        background: #eee;
+        scroll-behavior: smooth;
+      }
+
+      input {
+        display: none;
       }
 
       ul {
         list-style: none;
       }
+
       a {
         text-decoration: none;
+        color: #000;
       }
-      .edu {
-        width: 1680px;
-        height: 780px;
-        margin: 20px auto;
+
+      .section1 .wrap {
         display: flex;
-        gap: 24px;
+        align-items: flex-end;
+        justify-content: center;
+        width: 100%;
+        height: 700px;
+        background: url(https://www.doosanrobotics.com/images/sub/sub-bg13.jpg)
+          center/cover no-repeat;
+        font-family: Pretendard, serif;
+        padding: 50px;
+        box-sizing: border-box;
+      }
+
+      .section1 .wrap h1 {
+        position: absolute;
+        font-size: 72px;
+        top: 35%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #fff;
+        font-weight: 600;
+      }
+
+      .section1 .con {
+        position: relative;
+        display: flex;
+      }
+
+      .section1 .menulist {
+        display: flex;
+        border-radius: 10px;
+        overflow: hidden;
+        background: rgb(16 16 16 / 50%);
+        backdrop-filter: blur(30px);
+      }
+
+      .section1 .menulist a {
+        padding: 20px;
+        color: #fff;
+        font-weight: 500;
+      }
+
+      .section1 .con .menulist label {
+        position: relative;
+        text-align: center;
+        padding: 20px 0;
+        color: #fff;
+        width: 220px;
+        cursor: pointer;
+      }
+
+      .section1 .con .menulist label::after {
+        position: absolute;
+        content: "";
+        background: url(./images/arrow-down-light.svg) center/cover no-repeat;
+        width: 8px;
+        height: 5px;
+        top: 50%;
+        right: 21%;
+        transform: translate(-50%, -50%);
+      }
+
+      #menu1:checked ~ .wrap .con ul:first-of-type,
+      #menu2:checked ~ .wrap .con ul:last-of-type {
+        height: 150px;
+      }
+
+      .section1 .con ul {
+        position: absolute;
+        top: 60px;
+        list-style: none;
+        width: 220px;
+        background: #fff;
+        transition: 0.5s;
+        height: 0px;
+        overflow: hidden;
+        box-sizing: border-box;
+        z-index: 1;
+      }
+
+      .section1 .con ul:first-of-type {
+        left: 61px;
+      }
+
+      .section1 .con ul:last-of-type {
+        right: 0;
+      }
+
+      .section1 .con ul li {
+        display: flex;
+        width: 100%;
+        height: calc(150px / 4);
+      }
+
+      .section1 .con ul li a {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #000;
+        text-decoration: none;
+      }
+
+      .section1 .con ul li a:hover {
+        color: #097cd3;
+      }
+
+      /*********** 두산로봇교육 ***********/
+      .section2 {
+        background: #f7f7f7;
+        position: relative;
+        width: 100%;
+        padding: 150px 0;
         font-family: Pretendard, serif;
       }
 
+      .section2::after {
+        position: absolute;
+        content: "";
+        bottom: 0;
+        right: 0;
+        width: 1139px;
+        height: 154px;
+        background: url(https://www.doosanrobotics.com/images/services/logo-symbol.png)
+          center/cover no-repeat;
+      }
+
+      .section2 .wrap {
+        width: 1680px;
+        margin: 0 auto;
+      }
+
+      .section2 .wrap h1 {
+        font-size: 32px;
+        font-weight: 600;
+        letter-spacing: -1px;
+      }
+
+      .section2 .wrap .edu {
+        height: 780px;
+        margin: 50px auto;
+        display: flex;
+        gap: 24px;
+      }
+
       /* flex-direction: row-reverse; 반대로 배치 */
-      .edu img {
+      .section2 .wrap .edu img {
         width: 100%;
         height: 100%;
         object-fit: cover;
       }
-      .edu > div.left {
+      .section2 .wrap .edu > div.left {
         /* 전체4등분 중 1개를 갖기 */
         flex: 1;
         overflow: hidden;
         border-radius: 20px;
       }
-      .edu > div.right {
+      .section2 .wrap .edu > div.right {
         /* 전체4등분 중 3개를 갖기 */
         flex: 3;
         display: flex;
@@ -58,14 +203,14 @@
 
       /* right */
       /* 기본은 전부 flex : 1, 하나만 flex : 2 */
-      .edu > div.right > div.inner {
+      .section2 .wrap .edu > div.right > div.inner {
         display: flex;
         width: 100%;
         flex: 1;
         gap: 24px;
       }
 
-      .edu > div.right > div.inner > div {
+      .section2 .wrap .edu > div.right > div.inner > div {
         /* flex: 1; */
         border-radius: 20px;
         box-sizing: border-box;
@@ -73,7 +218,7 @@
         background: #fff;
       }
 
-      .edu > div.right > div.inner .txt {
+      .section2 .wrap .edu > div.right > div.inner .txt {
         /* flex : 1 때문에 width값을 지정해줘도 padding 주면 width값이 바뀌므로, div를 하나 더 줘서 자식에게 padding 줘야함 */
         width: 398px;
         height: 100%;
@@ -85,73 +230,127 @@
         box-sizing: border-box;
       }
 
-      .edu > div.right > div.inner .txt h1 {
+      .section2 .wrap .edu > div.right > div.inner .txt h1 {
         font-size: 32px;
         line-height: 50px;
         letter-spacing: -1px;
       }
 
-      .edu > div.right > div.inner .txt strong {
+      .section2 .wrap .edu > div.right > div.inner .txt strong {
         color: #005eb8;
       }
 
-      .edu > div.right > div.inner .txt p {
+      .section2 .wrap .edu > div.right > div.inner .txt p {
         font-size: 18px;
         color: #444;
         line-height: 30px;
         letter-spacing: -1px;
       }
 
-      .edu > div.right > div.inner:first-child > div:last-child {
+      .section2
+        .wrap
+        .edu
+        > div.right
+        > div.inner:first-child
+        > div:last-child {
         flex: 2;
       }
 
-      .edu > div.right > div.inner:last-child > div {
+      .section2 .wrap .edu > div.right > div.inner:last-child > div {
         flex: 1;
       }
     </style>
   </head>
   <body>
+    <!-- 상단 -->
+    <section class="section1">
+      <input type="radio" name="menu" id="menu1" />
+      <input type="radio" name="menu" id="menu2" />
+
+      <div class="wrap">
+        <h1>두산 로봇 교육</h1>
+        <div class="con">
+          <div class="menulist">
+            <a href="#"
+              ><img
+                src="https://www.doosanrobotics.com/images/icon-home.svg"
+                alt="home"
+            /></a>
+            <label for="menu1">교육 & 서비스</label>
+            <label for="menu2">두산 로봇 교육</label>
+          </div>
+          <ul>
+            <li><a href="#">제품 & 솔루션</a></li>
+            <li><a href="#">교육 & 서비스</a></li>
+            <li><a href="#">투자정보</a></li>
+            <li><a href="#">회사소개</a></li>
+          </ul>
+          <ul>
+            <li><a href="#">두산 로봇 교육</a></li>
+            <li><a href="#">다운로드 센터</a></li>
+            <li><a href="#">A/S 신청</a></li>
+            <li>
+              <a href="#"
+                >파트너 서비스<span class="material-symbols-outlined">
+                  arrow_outward
+                </span></a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
     <!-- https://www.doosanrobotics.com/kr/training-services/robot/ -->
-    <div class="edu">
-      <div class="left">
-        <img src="./images/robot-training-img01.png" alt="img" />
-      </div>
-
-      <div class="right">
-        <div class="inner">
-          <div>
-            <div class="txt">
-              <h1>
-                현장에서 바로 적용 가능한<br /><strong>최고의 실습 교육</strong>
-              </h1>
-              <p>
-                두산로보틱스에서 개발한 검증된 실무형 교육 커리큘럼으로, 실제
-                현장에서 바로 적용하며 시시각각 발생하는 다양한 문제를 해결할 수
-                있도록 설계되었습니다.
-              </p>
+    <section class="section2">
+      <div class="wrap">
+        <h1>두산 로봇 교육</h1>
+        <div class="edu">
+          <div class="left">
+            <img src="./images/robot-training-img01.png" alt="img" />
+          </div>
+          <div class="right">
+            <div class="inner">
+              <div>
+                <div class="txt">
+                  <h1>
+                    현장에서 바로 적용 가능한<br /><strong
+                      >최고의 실습 교육</strong
+                    >
+                  </h1>
+                  <p>
+                    두산로보틱스에서 개발한 검증된 실무형 교육 커리큘럼으로,
+                    실제 현장에서 바로 적용하며 시시각각 발생하는 다양한 문제를
+                    해결할 수 있도록 설계되었습니다.
+                  </p>
+                </div>
+              </div>
+              <div>
+                <img src="./images/robot-training-img02.png" alt="img" />
+              </div>
+            </div>
+            <div class="inner">
+              <div>
+                <img src="./images/robot-training-img03.png" alt="img" />
+              </div>
+              <div>
+                <img src="./images/robot-training-img04.png" alt="img" />
+              </div>
+              <div>
+                <div class="txt">
+                  <h1>
+                    초보자부터 전문가까지<br /><strong>수준별 교육 제공</strong>
+                  </h1>
+                  <p>
+                    초보자부터 현업 엔지니어 및 교수까지 수준별로<br />들을 수
+                    있는 맞춤형 교육이 마련돼 있습니다.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
-
-          <div><img src="./images/robot-training-img02.png" alt="img" /></div>
-        </div>
-        <div class="inner">
-          <div><img src="./images/robot-training-img03.png" alt="img" /></div>
-          <div><img src="./images/robot-training-img04.png" alt="img" /></div>
-
-          <div>
-            <div class="txt">
-              <h1>
-                초보자부터 전문가까지<br /><strong>수준별 교육 제공</strong>
-              </h1>
-              <p>
-                초보자부터 현업 엔지니어 및 교수까지 수준별로<br />들을 수 있는
-                맞춤형 교육이 마련돼 있습니다.
-              </p>
-            </div>
-          </div>
         </div>
       </div>
-    </div>
+    </section>
   </body>
 </html>
