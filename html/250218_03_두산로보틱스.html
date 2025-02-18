@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>두산밥캣코리아</title>
+  <link rel="stylesheet" as="style" crossorigin
+    href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      overflow: hidden;
+    }
+
+    section {
+      position: relative;
+      width: 100%;
+      height: 100vh
+    }
+
+    section .bg {
+      width: 100%;
+      height: 100%;
+    }
+
+    section .bg video {
+      width: 100%;
+      height: 100;
+      object-fit: cover;
+      filter: brightness(50%);
+    }
+
+    section .con {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    section .con h1 {
+      font-size: 68px;
+      font-weight: 500;
+      color: #fff;
+    }
+
+    section .con a {
+      margin-top: 60px;
+      padding: 0 30px;
+      height: 70px;
+      background: rgba(255, 255, 255, .3);
+      border-radius: 70px;
+      color: #fff;
+      display: flex;
+      text-decoration: none;
+      align-items: center;
+      transition: .5s;
+    }
+
+    section .con a:hover {
+      background: rgba(255, 255, 255, 1);
+      color: #333;
+
+    }
+
+    section .con a span.arrow {
+      padding-left: 20px;
+    }
+
+    section .con a span img {
+      vertical-align: middle;
+      width: 24px;
+      transition: .5s;
+    }
+
+    section .con a:hover span img {
+      filter: invert();
+    }
+
+
+    /*********** 기억해둘 것 ***********
+    vertical-align: middle;
+    filter: invert(); 
+    ***********************************/
+  </style>
+</head>
+
+<body>
+
+  <section>
+    <div class="bg">
+      <video autoplay muted loop>
+        <source src="https://www.doosanrobotics.com/media/visual-1.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="con">
+      <h1>Innovation In Every Motion,<br>
+        Revolutionizing the Way You Work</h1>
+      <a href="#">
+        <span>두산 로봇과 함께 상상을 실현해 보세요</span>
+        <span class="arrow"><img src="https://www.doosanrobotics.com/images/arrow-right-light.svg" alt=""></span>
+      </a>
+    </div>
+  </section>
+
+</body>
+
+</html>
