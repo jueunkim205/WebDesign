@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IMAGE MAP</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- usemap과 map name은 동일해야함 -->
+  <img src="./images/map.jpg" alt="지도" usemap="#korea">
+  <map name="korea">
+    <area shape="rect" coords="145, 265, 180,290" href="https://www.daejeon.go.kr/" alt="대전시청" target="_new">
+    <area shape="circle" coords="90, 520, 40" href="https://www.jejusi.go.kr/index.ac" alt="제주도" target="_new">
+    <area shape="poly" coords="308,364 275,393,248,400,253,411,266,402,278,407,316,382"
+      href="https://www.busan.go.kr/index" alt="부산" target="_new">
+  </map>
+</body>
+
+</html>

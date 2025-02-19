@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IMAGE MAP</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    p {
+      width: 100px;
+      height: 100px;
+      /* 원래 색상 */
+      background: chartreuse;
+      /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+      /* alternate : 시작 <-> 끝 */
+      animation: move 5s ease-in-out 1s infinite alternate;
+      position: relative;
+    }
+
+    @keyframes move {
+
+      /* 시작 0%(from) {}, 끝  100%(to) {} */
+      /* 대상에 position을 줘야함 */
+      0% {
+        left: 0;
+        background: red;
+      }
+
+      100% {
+        left: 500px;
+        background: yellow;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <p></p>
+</body>
+
+</html>
