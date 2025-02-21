@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>shinhan</title>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=chevron_right" />
+  <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet" />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .wrap {
+      height: 360px;
+      margin: 100px auto 0;
+      padding: 70px 0;
+      background: #f1f4fb;
+
+    }
+
+    ul {
+      list-style: none;
+      display: flex;
+      width: 100%;
+      height: 100%;
+      gap: 30px;
+      width: 1200px;
+      margin: 0 auto;
+    }
+
+    ul li {
+      width: 100%;
+      height: 100%;
+    }
+
+    ul li a {
+      box-sizing: border-box;
+      text-decoration: none;
+      color: #000;
+      height: 100%;
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      border-radius: 20px;
+      border: 1px solid #ccc;
+      background: #fff;
+      padding: 32px;
+      transition: .5s;
+    }
+
+    ul li:hover a {
+      margin-top: -50px;
+      border: 1px solid #356cff;
+      box-shadow: 0 2.4rem 2.4rem #13265914;
+      background: #f1f4fb;
+    }
+
+    ul li:hover a>span {
+      background: #fff;
+    }
+
+    ul li .top {
+      position: relative;
+      width: 100%;
+    }
+
+    ul li .top span {
+      position: absolute;
+      right: 0;
+      top: 3px;
+    }
+
+    ul li .top h2 {
+      font-weight: 400;
+      font-size: 20px;
+    }
+
+    ul li .top h1 {
+      font-size: 24px;
+    }
+
+    ul li p {
+      width: 120px;
+      height: 120px;
+      margin: 0 auto;
+    }
+
+    ul li:nth-child(1) p {
+      position: relative;
+      background: url(./images/shinhan/img01.png);
+    }
+
+    ul li:nth-child(2) p {
+      background: url(./images/shinhan/img02.png);
+    }
+
+    ul li:nth-child(3) p {
+      background: url(./images/shinhan/img03.png);
+    }
+
+    ul li:nth-child(4) p {
+      background: url(./images/shinhan/img04.png);
+    }
+
+    li:hover p {
+      animation: ani 3s steps(91) infinite;
+    }
+
+    /* hover시 배경바꿈 */
+    ul li:nth-child(1):hover p {
+      background: url(./images/shinhan/img01_bg.png);
+    }
+
+    ul li:nth-child(2):hover p {
+      background: url(./images/shinhan/img02_bg.png);
+    }
+
+    ul li:nth-child(3):hover p {
+      background: url(./images/shinhan/img03_bg.png);
+    }
+
+    ul li:nth-child(4):hover p {
+      background: url(./images/shinhan/img04_bg.png);
+    }
+
+    ul li a>span {
+      font-family: 'Spoqa Han Sans Neo', "Noto Sans KR";
+      display: flex;
+      justify-content: center;
+      font-size: 18px;
+      width: 100%;
+      padding: 8px 0;
+      background: #f1f4fb;
+      border-radius: 20px;
+    }
+
+    @keyframes ani {
+      0% {
+        background-position: 0 0;
+      }
+
+      100% {
+        background-position: -10920px 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <ul>
+      <li>
+        <a href="">
+          <div class="top">
+            <h2>다양한</h2>
+            <span class="material-symbols-outlined">
+              chevron_right
+            </span>
+            <h1>Data서비스</h1>
+          </div>
+          <p>
+            <!-- image 넣기 -->
+          </p>
+          <span>Data One-Stop Service</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="">
+          <div class="top">
+            <h2>혁신적인</h2>
+            <span class="material-symbols-outlined">
+              chevron_right
+            </span>
+            <h1>솔루션서비스</h1>
+          </div>
+          <p>
+            <!-- image 넣기 -->
+          </p>
+          <span>상권분석, 시장 모니터링</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="">
+          <div class="top">
+            <h2>스마트한</h2>
+            <span class="material-symbols-outlined">
+              chevron_right
+            </span>
+            <h1>광고서비스</h1>
+          </div>
+          <p>
+            <!-- image 넣기 -->
+          </p>
+          <span>최적의 고객 타겟팅</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="">
+          <div class="top">
+            <h2>탁월한</h2>
+            <span class="material-symbols-outlined">
+              chevron_right
+            </span>
+            <h1>API서비스</h1>
+          </div>
+          <p>
+            <!-- image 넣기 -->
+          </p>
+          <span>Data 실시간 활용</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</body>
+
+</html>
