@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>극동건설</title>
+  <!-- 구글아이콘 -->
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=menu" />
+  <!-- 나눔스퀘어 -->
+  <!-- font-family: 'NanumSquare', sans-serif -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@2.0/nanumsquare.css" />
+  <!-- -----------Roboto----------- -->
+  <!-- font-family: "Roboto", serif; -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet" />
+  <!-- Play -->
+  <!-- font-family: "Play", serif; -->
+  <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet" />
+  <!-- -----------Noto sans Kr----------- -->
+  <!-- font-family: "Noto Sans KR", serif; -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet" />
+</head>
+
+
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  .wrap {
+    box-sizing: border-box;
+  }
+
+  /* 공통 */
+  ul {
+    list-style: none;
+  }
+
+  a {
+    text-decoration: none;
+    color: #fff;
+  }
+
+  button {
+    border-style: none;
+  }
+
+  h3.tit {
+    font-family: "Play", serif;
+    font-weight: 600;
+    font-size: 40px;
+  }
+
+
+  /***************** header *****************/
+
+  header {
+    width: 100%;
+    /* height: 100%; */
+    height: 100vh;
+    box-sizing: border-box;
+    background: url(./images/background01.jpg) center/cover no-repeat;
+  }
+
+  header nav {
+    padding: 0 60px 0 70px;
+    height: 120px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, .3);
+    font-family: "Roboto", Noto Sans KR;
+  }
+
+  header nav ul {
+    display: flex;
+    width: 650px;
+    justify-content: space-around;
+  }
+
+  /* header nav ul */
+  header nav ul li a {
+    font-size: 22px;
+    letter-spacing: -1px;
+    font-weight: 600;
+    line-height: 100%;
+  }
+
+  header nav .lang {
+    font-size: 13px;
+    padding: 7px 15px;
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, .5);
+    letter-spacing: -1px;
+    font-weight: 600;
+  }
+
+  header nav .btns {
+    display: flex;
+    width: 150px;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  header nav .btns span:last-child {
+    color: #fff;
+  }
+
+  header .txt {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    margin: 0 auto;
+    font-family: 'NanumSquare', sans-serif;
+    text-align: center;
+    letter-spacing: -1px;
+  }
+
+  header .txt p:nth-of-type(1) {
+    font-family: "Play", serif;
+    font-size: 25px;
+  }
+
+  header .txt p:nth-child(2) {
+    font-size: 80px;
+    font-weight: 300;
+    margin: 16px 0;
+    letter-spacing: -2px;
+  }
+
+  header .txt p:nth-child(2) strong {
+    font-weight: 800;
+  }
+
+  header .txt p:nth-of-type(3) {
+    font-size: 25px;
+    font-family: 'NanumSquare', sans-serif
+  }
+
+
+  /***************** section1 *****************/
+
+  .section1 .wrap {
+    width: 100%;
+    padding: 110px 0;
+    background: #f0f0f0;
+  }
+
+  .section1 ul {
+    margin: 40px auto;
+    display: flex;
+    width: 1280px;
+    height: 600px;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+
+  .section1 ul li {
+    width: calc((100% - 80px) / 3);
+  }
+
+  .section1 ul li a {
+    display: block;
+    width: 100%;
+    position: relative;
+    padding: 35px 33px;
+    height: 300px;
+    box-sizing: border-box;
+    letter-spacing: -1px;
+    transition: .2s;
+    background-size: 100%;
+    background-position: center;
+  }
+
+  .section1 li:first-child a {
+    background-image: url(https://www.kukdong.co.kr/images/main/business_img2.jpg);
+  }
+
+  .section1 li:nth-child(2) a {
+    background-image: url(https://www.kukdong.co.kr/images/main/business_img5.jpg);
+  }
+
+  .section1 li:nth-child(5) a {
+    background-image: url(https://www.kukdong.co.kr/images/main/business_img4.jpg);
+  }
+
+  .section1 li:nth-child(6) a {
+    background-image: url(https://www.kukdong.co.kr/images/main/business_img6.jpg);
+  }
+
+  .section1 li a:hover {
+    padding-top: 30px;
+    background-size: 110%;
+  }
+
+  .section1 li a:hover::before {
+    bottom: 35px;
+  }
+
+  .section1 ul li a:before {
+    position: absolute;
+    content: '';
+    width: 57px;
+    height: 12px;
+    bottom: 30px;
+    right: 30px;
+    background: url(./images/business_arrow.png);
+    transition: .2s;
+  }
+
+
+  .section1 li h3 {
+    font-family: "Play", serif;
+    font-weight: 600;
+    margin-bottom: 20px;
+    font-size: 19px;
+    line-height: 30px;
+  }
+
+  .section1 ul li:nth-child(3) h3 {
+    text-align: center;
+    margin-top: 100px;
+    font-size: 40px;
+  }
+
+  .section1 ul li p {
+    font-size: 18px;
+    font-family: 'NanumSquare', sans-serif;
+  }
+
+
+
+
+  /***************** section2 *****************/
+  .section2 .wrap,
+  .section4 .wrap {
+    width: 1280px;
+    padding: 120px 0;
+    margin: 0 auto;
+  }
+
+  .section2 .up {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .section2 .up ul {
+    display: flex;
+    gap: 10px;
+  }
+
+  .section2 .up button {
+    background: #eee;
+    width: 120px;
+    padding: 20px;
+    font-size: 14px;
+    font-family: "Roboto", Noto Sans KR;
+    color: #002264;
+    cursor: pointer;
+    letter-spacing: -1px;
+  }
+
+  /***************** section3 *****************/
+
+  .section3 .wrap {
+    width: 100%;
+    padding: 120px 0;
+    text-align: center;
+    background: url(./images/mid_bg_img1.jpg) center/cover no-repeat;
+    background-attachment: fixed;
+  }
+
+  .section3 .wrap ul {
+    width: 1080px;
+    display: flex;
+    margin: 80px auto 0;
+    list-style: none;
+    overflow: hidden;
+  }
+
+  .section3 .wrap ul li {
+    position: relative;
+    text-align: center;
+    flex: 1;
+    padding: 0 30px;
+  }
+
+  .section3 .wrap ul li:before {
+    position: absolute;
+    content: '';
+    top: 55%;
+    transform: translateY(-50%);
+    right: 0;
+    width: 1px;
+    height: 70%;
+    background: rgba(255, 255, 255, .5);
+  }
+
+  .section3 .wrap h1 {
+    color: #fff;
+    font-size: 45px;
+    font-family: "Noto Sans KR", serif;
+    font-weight: 300;
+    line-height: 80px;
+  }
+
+  .section3 .wrap ul li h3 {
+    position: relative;
+    font-family: "Roboto", Noto Sans KR;
+    font-size: 25px;
+    font-weight: 400;
+    padding: 5px 40px;
+    margin-bottom: 20px;
+    display: inline-block;
+  }
+
+  /* hover시 효과주기 */
+  .section3 .wrap ul li h3 span {
+    position: absolute;
+    background: #ccc;
+    width: 10px;
+    height: 0;
+    transition: 1s;
+  }
+
+  .section3 .wrap ul li h3 .top {
+    width: 100%;
+    height: 1px;
+    top: 0;
+    left: 0;
+    transform: scaleX(0);
+  }
+
+  .section3 .wrap ul li h3 .bottom {
+    width: 100%;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+  }
+
+  .section3 .wrap ul li h3 .left {
+    width: 1px;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transform: scaleY(0);
+  }
+
+  .section3 .wrap ul li h3 .right {
+    width: 1px;
+    height: 100%;
+    top: 0;
+    right: 0;
+    transform: scaleY(0);
+  }
+
+  .section3 .wrap ul li:hover .top,
+  .section3 .wrap ul li:hover .bottom {
+    transform: scaleX(1);
+  }
+
+  .section3 .wrap ul li:hover .left,
+  .section3 .wrap ul li:hover .right {
+    transform: scaley(1);
+  }
+
+  .section3 .wrap ul li p {
+    word-break: keep-all;
+    letter-spacing: -1px;
+  }
+
+  /***************** footer *****************/
+
+  footer {
+    height: 300px;
+  }
+</style>
+
+<body>
+  <div class="wrap">
+    <header>
+      <nav>
+        <p><span class="logo">
+            <img src="./images/logo_off.png" alt="logo">
+          </span></p>
+        <ul>
+          <li><a href="#">회사소개</a></li>
+          <li><a href="#">주요사업</a></li>
+          <li><a href="#">R&D</a></li>
+          <li><a href="#">PR ROOM</a></li>
+          <li><a href="#">인재채용</a></li>
+        </ul>
+        <div class="btns">
+          <span class="lang"><a href="#">ENG</a></span>
+          <span class="material-symbols-outlined">
+            menu
+          </span>
+        </div>
+      </nav>
+
+      <div class="txt">
+        <p>Architecture & Culture</p>
+        <p><strong>인류</strong>의 <strong>상상</strong>을 <strong>뛰어넘다</strong></p>
+        <p>지상 88층·지하 6층·452m 높이의 세계적인 마천루, 페트로나스 트윈타워.<br>
+          극동건설의 첨단 공법이 세계의 스카이라인을 바꾸고 있습니다.</p>
+      </div>
+    </header>
+
+    <section class="section1">
+      <div class="wrap">
+        <ul>
+          <li>
+            <a href="">
+              <h3>CIVIL<br />WORKS</h3>
+              <p>토목</p>
+            </a>
+          </li>
+
+          <li>
+            <a href="">
+              <h3>ARCHITECTURAL<br />WORKS</h3>
+              <p>건축</p>
+            </a>
+          </li>
+
+          <li>
+            <h3 class="tit">BUSINESS</h3>
+          </li>
+
+          <li>
+            <!-- 빈칸 -->
+          </li>
+
+          <li>
+            <a href="">
+              <h3>PLANTS<br />ENVIRONMENTAL<br>WORKS</h3>
+              <p>플랜트ㆍ환경</p>
+            </a>
+          </li>
+
+          <li>
+            <a href="">
+              <h3>OVERSEAS<br />BUSINESS</h3>
+              <p>해외사업</p>
+            </a>
+          </li>
+
+        </ul>
+      </div>
+    </section>
+
+    <section class="section2">
+      <div class="wrap">
+        <div class="up">
+          <h3 class="tit">PORTFOLIO</h3>
+          <ul>
+            <li><button type="button">토목</button></button></li>
+            <li><button type="button">건축</button></button></li>
+            <li><button type="button">플랜트ㆍ환경</button></button></li>
+            <li><button type="button">해외사업</button></button></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+
+
+
+    <section class="section3">
+      <div class="wrap">
+        <h1>개개인의 특성과 능력을 중시하는 극동건설은<br>
+          여러분의 <strong>성장의 터</strong>를 마련합니다.</h1>
+        <ul>
+          <li>
+            <a href="">
+              <h3>
+                인재상
+                <!-- hover시 효과주기 -->
+                <span class="line top"></span>
+                <span class="line right"></span>
+                <span class="line bottom"></span>
+                <span class="line left"></span>
+              </h3>
+              <p>극동건설이 추구하는 인재상을 여러분께 소개합니다</p>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <h3>
+                인사제도
+                <span class="line top"></span>
+                <span class="line right"></span>
+                <span class="line bottom"></span>
+                <span class="line left"></span>
+              </h3>
+              <p>
+                임직원의 역량향상과 동기부여를 위해 다양한 제도를 운영합니다
+              </p>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <h3>
+                채용안내
+                <span class="line top"></span>
+                <span class="line right"></span>
+                <span class="line bottom"></span>
+                <span class="line left"></span>
+              </h3>
+              <p>극동건설의 채용제도 및 절차를 자세히 소개합니다</p>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <h3>
+                채용공고
+                <span class="line top"></span>
+                <span class="line right"></span>
+                <span class="line bottom"></span>
+                <span class="line left"></span>
+              </h3>
+              <p>극동건설의 채용공고를 소개합니다</p>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+
+
+    <footer>
+
+    </footer>
+
+  </div>
+
+</body>
+
+</html>
