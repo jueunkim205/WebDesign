@@ -55,6 +55,11 @@
     font-size: 40px;
   }
 
+  .arrow {
+    position: absolute;
+    content: '';
+    background: url(./images/business_arrow.png);
+  }
 
   /***************** header *****************/
 
@@ -199,18 +204,15 @@
     background-size: 110%;
   }
 
-  .section1 li a:hover::before {
+  .section1 li a:hover .arrow {
     bottom: 35px;
   }
 
-  .section1 ul li a:before {
-    position: absolute;
-    content: '';
+  .section1 ul li .arrow {
     width: 57px;
     height: 12px;
     bottom: 30px;
     right: 30px;
-    background: url(./images/business_arrow.png);
     transition: .2s;
   }
 
@@ -377,6 +379,11 @@
     letter-spacing: -1px;
   }
 
+  /***************** section4 *****************/
+
+
+
+
   /***************** footer *****************/
 
   footer {
@@ -418,16 +425,17 @@
       <div class="wrap">
         <ul>
           <li>
-            <a href="">
+            <a href="#">
               <h3>CIVIL<br />WORKS</h3>
               <p>토목</p>
+              <span class="arrow"></span>
             </a>
           </li>
 
-          <li>
-            <a href="">
+          <li><a href="#">
               <h3>ARCHITECTURAL<br />WORKS</h3>
               <p>건축</p>
+              <span class="arrow"></span>
             </a>
           </li>
 
@@ -440,16 +448,18 @@
           </li>
 
           <li>
-            <a href="">
+            <a href="#">
               <h3>PLANTS<br />ENVIRONMENTAL<br>WORKS</h3>
               <p>플랜트ㆍ환경</p>
+              <span class="arrow"></span>
             </a>
           </li>
 
           <li>
-            <a href="">
+            <a href="#">
               <h3>OVERSEAS<br />BUSINESS</h3>
               <p>해외사업</p>
+              <span class="arrow"></span>
             </a>
           </li>
 
@@ -471,16 +481,13 @@
       </div>
     </section>
 
-
-
-
     <section class="section3">
       <div class="wrap">
         <h1>개개인의 특성과 능력을 중시하는 극동건설은<br>
           여러분의 <strong>성장의 터</strong>를 마련합니다.</h1>
         <ul>
           <li>
-            <a href="">
+            <a href="#">
               <h3>
                 인재상
                 <!-- hover시 효과주기 -->
@@ -493,7 +500,7 @@
             </a>
           </li>
           <li>
-            <a href="">
+            <a href="#">
               <h3>
                 인사제도
                 <span class="line top"></span>
@@ -507,7 +514,7 @@
             </a>
           </li>
           <li>
-            <a href="">
+            <a href="#">
               <h3>
                 채용안내
                 <span class="line top"></span>
@@ -519,7 +526,7 @@
             </a>
           </li>
           <li>
-            <a href="">
+            <a href="#">
               <h3>
                 채용공고
                 <span class="line top"></span>
@@ -534,7 +541,84 @@
       </div>
     </section>
 
+    <section class="section4">
+      <div class="wrap">
+        <div class="con">
+          <ul>
+            <!-- 극동뉴스 RnD -->
+            <li>극동뉴스</li>
+            <li>R&D</li>
+          </ul>
 
+          <!-- arrow 코드 재활용 -->
+          <ul>
+            <li>
+              <a href="#">
+                <div>
+                  <h1>언론속의 <span>극동</span></h1>
+                  <p>언론에 소개되는 극동의 소식을<br />안내해드립니다.</p>
+                  <span class="arrow">
+                  </span>
+                </div>
+                <!-- hover 효과를 주기 위함 -->
+                <span class="line top"></span>
+                <span class="line right"></span>
+                <span class="line bottom"></span>
+                <span class="line left"></span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <div>
+                  <h1>입주고객 <span>A/S 안내</span></h1>
+                  <p>스타클래스 입주 후 A/S 신청에<br />대한 안내 입니다.</p>
+                  <span class="arrow">
+                  </span>
+                </div>
+                <span class="line top"></span>
+                <span class="line right"></span>
+                <span class="line bottom"></span>
+                <span class="line left"></span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <div>
+                  <h1>언론속의 <span>극동</span></h1>
+                  <p>언론에 소개되는 극동의 소식을<br />안내해드립니다.</p>
+                  <span class="arrow">
+                  </span>
+                </div>
+                <!-- hover 효과를 주기 위함 -->
+                <span class="line top"></span>
+                <span class="line right"></span>
+                <span class="line bottom"></span>
+                <span class="line left"></span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <div>
+                  <h1>입주고객 <span>A/S 안내</span></h1>
+                  <p>스타클래스 입주 후 A/S 신청에<br />대한 안내 입니다.</p>
+                  <span class="arrow">
+                  </span>
+                </div>
+                <span class="line top"></span>
+                <span class="line right"></span>
+                <span class="line bottom"></span>
+                <span class="line left"></span>
+              </a>
+            </li>
+          </ul>
+
+
+        </div>
+        <div class="banner">
+
+        </div>
+      </div>
+    </section>
 
     <footer>
 
