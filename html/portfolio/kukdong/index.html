@@ -14,6 +14,7 @@
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@2.0/nanumsquare.css" />
   <!-- -----------Roboto----------- -->
   <!-- font-family: "Roboto", serif; -->
+
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
     rel="stylesheet" />
   <!-- Play -->
@@ -50,15 +51,29 @@
   }
 
   h3.tit {
-    font-family: "Play", serif;
+    font-family: "Play", sans-serif;
     font-weight: 600;
     font-size: 40px;
   }
 
+  h4 {
+    font-family: "Roboto", Noto Sans KR;
+    font-size: 25px;
+    font-weight: 400;
+  }
+
+  p {
+    font-size: 16px;
+    font-family: "Roboto", Noto Sans KR;
+    letter-spacing: -1px;
+  }
+
+
   .arrow {
     position: absolute;
     content: '';
-    background: url(./images/business_arrow.png);
+    width: 57px;
+    height: 12px;
   }
 
   /***************** header *****************/
@@ -148,7 +163,6 @@
     font-family: 'NanumSquare', sans-serif
   }
 
-
   /***************** section1 *****************/
 
   .section1 .wrap {
@@ -209,13 +223,11 @@
   }
 
   .section1 ul li .arrow {
-    width: 57px;
-    height: 12px;
+    background: url(./images/business_arrow.png);
     bottom: 30px;
     right: 30px;
     transition: .2s;
   }
-
 
   .section1 li h3 {
     font-family: "Play", serif;
@@ -236,12 +248,9 @@
     font-family: 'NanumSquare', sans-serif;
   }
 
-
-
-
   /***************** section2 *****************/
-  .section2 .wrap,
-  .section4 .wrap {
+
+  .section2 .wrap {
     width: 1280px;
     padding: 120px 0;
     margin: 0 auto;
@@ -313,18 +322,15 @@
     line-height: 80px;
   }
 
-  .section3 .wrap ul li h3 {
+  .section3 .wrap ul li h4 {
     position: relative;
-    font-family: "Roboto", Noto Sans KR;
-    font-size: 25px;
-    font-weight: 400;
     padding: 5px 40px;
     margin-bottom: 20px;
     display: inline-block;
   }
 
   /* hover시 효과주기 */
-  .section3 .wrap ul li h3 span {
+  .section3 .wrap ul li h4 .line {
     position: absolute;
     background: #ccc;
     width: 10px;
@@ -332,7 +338,7 @@
     transition: 1s;
   }
 
-  .section3 .wrap ul li h3 .top {
+  .section3 .wrap ul li h4 .top {
     width: 100%;
     height: 1px;
     top: 0;
@@ -340,7 +346,7 @@
     transform: scaleX(0);
   }
 
-  .section3 .wrap ul li h3 .bottom {
+  .section3 .wrap ul li h4 .bottom {
     width: 100%;
     height: 1px;
     bottom: 0;
@@ -348,7 +354,7 @@
     transform: scaleX(0);
   }
 
-  .section3 .wrap ul li h3 .left {
+  .section3 .wrap ul li h4 .left {
     width: 1px;
     height: 100%;
     top: 0;
@@ -356,7 +362,7 @@
     transform: scaleY(0);
   }
 
-  .section3 .wrap ul li h3 .right {
+  .section3 .wrap ul li h4 .right {
     width: 1px;
     height: 100%;
     top: 0;
@@ -376,13 +382,143 @@
 
   .section3 .wrap ul li p {
     word-break: keep-all;
-    letter-spacing: -1px;
   }
 
   /***************** section4 *****************/
 
+  .section4 .wrap {
+    width: 1280px;
+    margin: 120px auto 0;
+    text-align: center;
+  }
 
+  .section4 .wrap .con {
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-between;
+  }
 
+  .section4 .wrap .con_left {
+    width: 680px;
+    height: 600px;
+    display: flex;
+  }
+
+  .section4 .wrap .con_left li {
+    flex: 1;
+    height: 550px;
+  }
+
+  .section4 .wrap .con_left li:first-child {
+    margin-top: -50px;
+    background: url(./images/pr_img1.jpg) center/cover no-repeat;
+  }
+
+  .section4 .wrap .con_left li:last-child {
+    background: url(./images/pr_img2.jpg);
+  }
+
+  .section4 .wrap .con_right {
+    width: 565px;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .section4 .wrap .con_right li {
+    width: calc((100% - 20px) / 2);
+    height: 265px;
+  }
+
+  .section4 .wrap .con_right li a {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 40px 30px;
+    text-align: left;
+    color: #544C47;
+    box-sizing: border-box;
+    background: #f0f0f0;
+  }
+
+  .section4 .wrap .con_right li a h4 span {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 20px;
+  }
+
+  .section4 .arrow {
+    background: url(./images/next_bar_bk.png);
+    bottom: 40px;
+    left: 30px;
+  }
+
+  .section4 .line {
+    position: absolute;
+    background: #07348c;
+  }
+
+  .section4 .top {
+    width: 100%;
+    height: 5px;
+    left: 0;
+    top: 0;
+    transform: scaleX(0);
+    transform-origin: 0 0;
+    transition: 0.1s ease-in-out 0.3s;
+  }
+
+  .section4 .wrap .con_right li:hover .top {
+    transform: scaleX(1);
+    transition: 0.1s ease-in-out;
+  }
+
+  .section4 .right {
+    width: 5px;
+    height: 100%;
+    right: 0;
+    top: 0;
+    transform: scaleY(0);
+    transform-origin: 0 0;
+    transition: 0.1s ease-in-out 0.2s;
+  }
+
+  .section4 .wrap .con_right li:hover .right {
+    transform: scaleY(1);
+    transition: 0.1s ease-in-out 0.1s;
+  }
+
+  .section4 .bottom {
+    width: 100%;
+    height: 5px;
+    right: 0;
+    bottom: 0;
+    transform: scaleX(0);
+    transform-origin: 100% 100%;
+    transition: 0.1s ease-in-out 0.1s;
+  }
+
+  .section4 .wrap .con_right li:hover .bottom {
+    transform: scaleY(1);
+    transition: 0.1s ease-in-out 0.2s;
+  }
+
+  .section4 .left {
+    width: 5px;
+    height: 100%;
+    left: 0;
+    top: 0;
+    transform: scaleY(0);
+    transform-origin: 100% 100%;
+    transition: 0.1s ease-in-out;
+  }
+
+  .section4 .wrap .con_right li:hover .left {
+    transform: scaleX(1);
+    transition: 0.1s ease-in-out 0.3s;
+  }
 
   /***************** footer *****************/
 
@@ -393,6 +529,8 @@
 
 <body>
   <div class="wrap">
+    <!-- https://www.kukdong.co.kr/ -->
+
     <header>
       <nav>
         <p><span class="logo">
@@ -488,26 +626,26 @@
         <ul>
           <li>
             <a href="#">
-              <h3>
+              <h4>
                 인재상
                 <!-- hover시 효과주기 -->
                 <span class="line top"></span>
                 <span class="line right"></span>
                 <span class="line bottom"></span>
                 <span class="line left"></span>
-              </h3>
+              </h4>
               <p>극동건설이 추구하는 인재상을 여러분께 소개합니다</p>
             </a>
           </li>
           <li>
             <a href="#">
-              <h3>
+              <h4>
                 인사제도
                 <span class="line top"></span>
                 <span class="line right"></span>
                 <span class="line bottom"></span>
                 <span class="line left"></span>
-              </h3>
+              </h4>
               <p>
                 임직원의 역량향상과 동기부여를 위해 다양한 제도를 운영합니다
               </p>
@@ -515,25 +653,25 @@
           </li>
           <li>
             <a href="#">
-              <h3>
+              <h4>
                 채용안내
                 <span class="line top"></span>
                 <span class="line right"></span>
                 <span class="line bottom"></span>
                 <span class="line left"></span>
-              </h3>
+              </h4>
               <p>극동건설의 채용제도 및 절차를 자세히 소개합니다</p>
             </a>
           </li>
           <li>
             <a href="#">
-              <h3>
+              <h4>
                 채용공고
                 <span class="line top"></span>
                 <span class="line right"></span>
                 <span class="line bottom"></span>
                 <span class="line left"></span>
-              </h3>
+              </h4>
               <p>극동건설의 채용공고를 소개합니다</p>
             </a>
           </li>
@@ -543,23 +681,26 @@
 
     <section class="section4">
       <div class="wrap">
+        <h3 class="tit">PR Center</h3>
+        <p>세상에 없던 신기술을 개척하는 기업,극동건설이 기술의 진보를 선도합니다</p>
+
         <div class="con">
-          <ul>
+          <ul class="con_left">
             <!-- 극동뉴스 RnD -->
-            <li>극동뉴스</li>
-            <li>R&D</li>
+            <li><a href="#">
+                <h4 class="tit">극동뉴스</h4>
+              </a></li>
+            <li><a href="#">
+                <h3 class="tit">R&D</h3>
+              </a></li>
           </ul>
-
-          <!-- arrow 코드 재활용 -->
-          <ul>
+          <ul class="con_right">
             <li>
-              <a href="#">
-                <div>
-                  <h1>언론속의 <span>극동</span></h1>
-                  <p>언론에 소개되는 극동의 소식을<br />안내해드립니다.</p>
-                  <span class="arrow">
-                  </span>
-                </div>
+              <a href="">
+                <h4>언론속의 <span>극동</span></h4>
+                <p>언론에 소개되는 극동의 소식을<br />안내해드립니다.</p>
+                <span class="arrow">
+                </span>
                 <!-- hover 효과를 주기 위함 -->
                 <span class="line top"></span>
                 <span class="line right"></span>
@@ -568,13 +709,11 @@
               </a>
             </li>
             <li>
-              <a href="#">
-                <div>
-                  <h1>입주고객 <span>A/S 안내</span></h1>
-                  <p>스타클래스 입주 후 A/S 신청에<br />대한 안내 입니다.</p>
-                  <span class="arrow">
-                  </span>
-                </div>
+              <a href="">
+                <h4>입주고객 <span>A/S 안내</span></h4>
+                <p>스타클래스 입주 후 A/S 신청에<br />대한 안내 입니다.</p>
+                <span class="arrow">
+                </span>
                 <span class="line top"></span>
                 <span class="line right"></span>
                 <span class="line bottom"></span>
@@ -582,14 +721,11 @@
               </a>
             </li>
             <li>
-              <a href="#">
-                <div>
-                  <h1>언론속의 <span>극동</span></h1>
-                  <p>언론에 소개되는 극동의 소식을<br />안내해드립니다.</p>
-                  <span class="arrow">
-                  </span>
-                </div>
-                <!-- hover 효과를 주기 위함 -->
+              <a href="">
+                <h4>극동건설 <span>인재채용</span></h4>
+                <p>극동건설과 함께 성장해 나갈<br>인재를 모집합니다</p>
+                <span class="arrow">
+                </span>
                 <span class="line top"></span>
                 <span class="line right"></span>
                 <span class="line bottom"></span>
@@ -597,13 +733,11 @@
               </a>
             </li>
             <li>
-              <a href="#">
-                <div>
-                  <h1>입주고객 <span>A/S 안내</span></h1>
-                  <p>스타클래스 입주 후 A/S 신청에<br />대한 안내 입니다.</p>
-                  <span class="arrow">
-                  </span>
-                </div>
+              <a href="">
+                <h4>기업 <span>홍보영상</span></h4>
+                <p>극동건설의 다양한 홍보영상을<br>소개합니다.</p>
+                <span class="arrow">
+                </span>
                 <span class="line top"></span>
                 <span class="line right"></span>
                 <span class="line bottom"></span>
@@ -611,14 +745,17 @@
               </a>
             </li>
           </ul>
-
-
-        </div>
-        <div class="banner">
-
         </div>
       </div>
     </section>
+
+
+    <section class="section5">
+      <div class="banner">
+
+      </div>
+    </section>
+
 
     <footer>
 
