@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>솔브케이</title>
+  <link rel="stylesheet" as="style" crossorigin
+    href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: #111111;
+      font-family: Pretendard, serif;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    .wrap {
+      width: 1200px;
+      height: 850px;
+      margin: 100px auto;
+    }
+
+    .up h1 {
+      color: #fff;
+      font-size: 32px;
+      margin: 40px 0 100px;
+      font-weight: 400;
+    }
+
+    .down {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      position: relative;
+    }
+
+    .left {
+      width: 472px;
+      margin-top: 50px;
+    }
+
+    .left li {
+      padding: 22px 0;
+      display: flex;
+      gap: 20px;
+      border-bottom: 1px solid rgba(255, 255, 255, .1);
+      transition: .3s;
+    }
+
+    /* 첫번째 */
+    .left li:first-child h2 {
+      color: #2970ff;
+      font-size: 24px;
+    }
+
+    .left li:first-child img {
+      opacity: 1;
+    }
+
+    .left li:first-child {
+      border-bottom: 2px solid #fff;
+    }
+
+    .left:hover li:not(:hover) h2 {
+      color: #989898;
+      font-size: 20px;
+    }
+
+    .left:hover li:not(:hover) .con {
+      opacity: 0;
+    }
+
+    .left:hover li:not(:hover) {
+      border-bottom: 1px solid rgba(255, 255, 255, .1);
+    }
+
+    .left:hover li:not(:hover) img {
+      opacity: 0;
+    }
+
+    .left li h2 {
+      color: #989898;
+      font-size: 20px;
+      transition: .3s;
+    }
+
+    .left li img {
+      opacity: 0;
+    }
+
+    /* left hover */
+    .left li:hover {
+      border-bottom: 2px solid #fff;
+    }
+
+    .left li:hover h2 {
+      font-size: 24px;
+    }
+
+    .left li:hover img {
+      opacity: 1;
+      transition: .3s;
+    }
+
+    .con {
+      width: 598px;
+    }
+
+
+    .left li:nth-child(2):hover h2 {
+      color: #2ccbe5;
+    }
+
+    .left li:nth-child(3):hover h2 {
+      color: #2970ff;
+    }
+
+    .left li:nth-child(4):hover h2 {
+      color: #8ab1ff;
+    }
+
+    .left li:nth-child(5):hover h2 {
+      color: #55d8c5;
+    }
+
+    .left li:nth-child(6):hover h2 {
+      color: #95a1bd;
+    }
+
+    /* 오른쪽 con */
+    .con {
+      position: absolute;
+      top: 0;
+      right: 0;
+      opacity: 0;
+      transition: .3s;
+      color: #fff;
+      width: 598px;
+      height: 100%;
+    }
+
+    .con h3 {
+      color: #fff;
+      margin-top: 60px;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 30px;
+      word-break: keep-all;
+    }
+
+
+    .left li:nth-child(1):hover .con,
+    .left li:nth-child(2):hover .con,
+    .left li:nth-child(3):hover .con,
+    .left li:nth-child(4):hover .con,
+    .left li:nth-child(5):hover .con,
+    .left li:nth-child(6):hover .con {
+      opacity: 1;
+    }
+
+    .left li:nth-child(1) .con {
+      opacity: 1;
+    }
+
+
+    /* viewmore */
+    .con:after {
+      position: absolute;
+      content: 'view more';
+      top: 50%;
+      padding: 14px 24px;
+      border: 1px solid #fff;
+    }
+  </style>
+
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="up">
+      <p><img
+          src="https://www.ahnlab.com/_next/image?url=%2Fimage-proxy%3Furl%3Dhttps%253A%252F%252Fimage.ahnlab.com%252Fimg_upload%252Fassets%252Fimages%252Fko%252Fahn-plus.png&w=1920&q=75"
+          alt="logo"></p>
+      <h1>디지털 비즈니스 혁신을 위한<br>최적의 보안 플랫폼</h1>
+    </div>
+
+    <div class="down">
+      <ul class="left">
+        <li>
+          <h2>AhnLab CONNECT PLUS</h2>
+          <p><img src="https://image.ahnlab.com/img_upload/assets/images/ko/ahn-plus-connect-after.png" alt="img"></p>
+          <div class="con">
+            <p><img
+                src="https://www.ahnlab.com/_next/image?url=%2Fimage-proxy%3Furl%3Dhttps%253A%252F%252Fimage.ahnlab.com%252Fimg_upload%252Fmain%252F2312233132376103.png&w=1920&q=75"
+                alt="img"></p>
+            <h3>AhnLab CONNECT PLUS는 XDR, SOAR, TI 플랫폼 등으로 구성되어
+              연계와 연동을 기반으로 통합 보안의 정점에 선 차세대 보안 플랫폼입니다.</h3>
+          </div>
+        </li>
+        <li>
+          <h2>AhnLab CLOUD PLUS</h2>
+          <p><img src="https://image.ahnlab.com/img_upload/assets/images/ko/ahn-plus-cloud-after.png" alt="img"></p>
+          <div class="con">
+            <p><img
+                src="https://www.ahnlab.com/_next/image?url=%2Fimage-proxy%3Furl%3Dhttps%253A%252F%252Fimage.ahnlab.com%252Fimg_upload%252Fmain%252F2312233132376103.png&w=1920&q=75"
+                alt="img"></p>
+            <h3>AhnLab CONNECT PLUS는 XDR, SOAR, TI 플랫폼 등으로 구성되어
+              연계와 연동을 기반으로 통합 보안의 정점에 선 차세대 보안 플랫폼입니다.</h3>
+          </div>
+        </li>
+        <li>
+          <h2>AhnLab ENDPOINT PLUS </h2>
+          <p><img src="https://image.ahnlab.com/img_upload/assets/images/ko/ahn-plus-connect-after.png" alt="img"></p>
+          <div class="con">
+            <p><img
+                src="https://www.ahnlab.com/_next/image?url=%2Fimage-proxy%3Furl%3Dhttps%253A%252F%252Fimage.ahnlab.com%252Fimg_upload%252Fmain%252F2312233132477178.png&w=1920&q=75"
+                alt="img"></p>
+            <h3>AhnLab CONNECT PLUS는 XDR, SOAR, TI 플랫폼 등으로 구성되어
+              연계와 연동을 기반으로 통합 보안의 정점에 선 차세대 보안 플랫폼입니다.</h3>
+          </div>
+        </li>
+        <li>
+          <h2>AhnLab NETWORK PLUS</h2>
+          <p><img src="https://image.ahnlab.com/img_upload/assets/images/ko/ahn-plus-network-after.png" alt="img"></p>
+          <div class="con">
+            <p><img
+                src="https://www.ahnlab.com/_next/image?url=%2Fimage-proxy%3Furl%3Dhttps%253A%252F%252Fimage.ahnlab.com%252Fimg_upload%252Fmain%252F2312233132654111.png&w=1920&q=75"
+                alt="img"></p>
+            <h3>AhnLab CONNECT PLUS는 XDR, SOAR, TI 플랫폼 등으로 구성되어
+              연계와 연동을 기반으로 통합 보안의 정점에 선 차세대 보안 플랫폼입니다.</h3>
+          </div>
+        </li>
+        <li>
+          <h2>AhnLab SERVICE PLUS</h2>
+          <p><img src="https://image.ahnlab.com/img_upload/assets/images/ko/ahn-plus-service-after.png" alt="img"></p>
+          <div class="con">
+            <p><img
+                src="https://www.ahnlab.com/_next/image?url=%2Fimage-proxy%3Furl%3Dhttps%253A%252F%252Fimage.ahnlab.com%252Fimg_upload%252Fmain%252F2312233132733452.png&w=1920&q=75"
+                alt="img"></p>
+            <h3>AhnLab CONNECT PLUS는 XDR, SOAR, TI 플랫폼 등으로 구성되어
+              연계와 연동을 기반으로 통합 보안의 정점에 선 차세대 보안 플랫폼입니다.</h3>
+          </div>
+        </li>
+        <li>
+          <h2>AhnLab CPS PLUS</h2>
+          <p><img src="https://image.ahnlab.com/img_upload/assets/images/ko/ahn-plus-cps-after.png" alt="img"></p>
+          <div class="con">
+            <p><img
+                src="https://www.ahnlab.com/_next/image?url=%2Fimage-proxy%3Furl%3Dhttps%253A%252F%252Fimage.ahnlab.com%252Fimg_upload%252Fmain%252F2407314037297029.png&w=1920&q=75"
+                alt="img"></p>
+            <h3>AhnLab CONNECT PLUS는 XDR, SOAR, TI 플랫폼 등으로 구성되어
+              연계와 연동을 기반으로 통합 보안의 정점에 선 차세대 보안 플랫폼입니다.</h3>
+          </div>
+        </li>
+      </ul>
+
+
+    </div>
+
+  </div>
+
+</body>
+
+</html>

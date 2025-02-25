@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>솔브케이</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      cursor: url(./images/banner_arrow.png), auto;
+    }
+
+    @font-face {
+      font-family: 'SUIT-Regular';
+      src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Regular.woff2') format('woff2');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    a {
+      text-decoration: none;
+      color: #000
+    }
+
+    .wrap {
+      background-color: #FFD678;
+      width: 100vw;
+      height: 100vh;
+      position: relative;
+      overflow: hidden;
+    }
+
+    nav {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    .menu a {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .menu span {
+      background: #000;
+      width: 30px;
+      height: 5px;
+    }
+
+    /* main */
+    main,
+    .center {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .bg {
+      background: url(./images/solvek_bg.png) center/cover no-repeat;
+      width: 800px;
+      height: 800px;
+      animation: rotate 20s infinite linear;
+    }
+
+    @keyframes rotate {
+      0% {
+        transform: rotate(0);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    .center {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 650px;
+      height: 650px;
+      background: #fff;
+      border-radius: 50%;
+    }
+
+    .center img {
+      animation: hands 1s infinite ease-in-out alternate;
+    }
+
+    @keyframes hands {
+      0% {
+        transform: translateY(0px);
+      }
+
+      100% {
+        transform: translateY(-30px);
+
+      }
+    }
+
+    .center a {
+      padding: 25px 100px;
+      background: #fff;
+      border-radius: 50px;
+      border: 1px solid #000;
+      font-family: 'SUIT-Regular';
+      font-weight: bold;
+      font-size: 20px;
+      margin-top: 20px;
+    }
+  </style>
+
+</head>
+
+<body>
+  <div class="wrap">
+
+    <header>
+      <nav>
+        <p><a href="#"><img src="./images/solvek_logo.svg" alt="logo"></a></p>
+        <p class="menu"><a href="#"><span></span><span></span><span></span></a></p>
+      </nav>
+    </header>
+
+    <main>
+      <p class="bg"></p>
+
+      <div class="center">
+        <p><img src="./images/solvek_con.png" alt="handshake"></p>
+        <a href="#"><span>JOIN US!</span></a>
+      </div>
+    </main>
+
+  </div>
+</body>
+
+</html>
