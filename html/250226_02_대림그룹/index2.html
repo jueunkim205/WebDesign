@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>대림</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .con {
+      width: 1094px;
+      margin: 200px 0 auto;
+    }
+
+    .con ul {
+      position: relative;
+      list-style: none;
+    }
+
+    ul li {
+      width: 1904px;
+      height: 300px;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    li:first-child {
+      background-image: url(./images/business_daelim2.png), url(./images/business01.png);
+    }
+
+    /* li:nth-child(2) {
+      background-image: url(./images/business_daelim2.png), url(./images/business01.png);
+    }
+
+    li:nth-child(3) {
+      background-image: url(./images/business_daelim2.png), url(./images/business01.png);
+    }
+
+    li:nth-child(4) {
+      background-image: url(./images/business_daelim2.png), url(./images/business01.png);
+    }
+
+    li:nth-child(5) {
+      background-image: url(./images/business_daelim2.png), url(./images/business01.png);
+    }
+
+    li:nth-child(6) {
+      background-image: url(./images/business_daelim2.png), url(./images/business01.png);
+    }
+
+    li:nth-child(7) {
+      background-image: url(./images/business_daelim2.png), url(./images/business01.png);
+    } */
+
+    ul li img {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+
+    ul li:first-child img {
+      top: -194px;
+      left: 1002px;
+    }
+
+
+
+    /* radio버튼 누를시 동작 */
+    #menu1:checked~.con .label_list label:first-child,
+    #menu2:checked~.con .label_list label:nth-child(2),
+    #menu3:checked~.con .label_list label:nth-child(3),
+    #menu4:checked~.con .label_list label:nth-child(4),
+    #menu5:checked~.con .label_list label:nth-child(5),
+    #menu6:checked~.con .label_list label:nth-child(6),
+    #menu7:checked~.con .label_list label:last-child {
+      background: #1b2e59;
+      color: #fff;
+    }
+
+    #menu1:checked~.con .txt_list p:first-child,
+    #menu2:checked~.con .txt_list p:nth-child(2),
+    #menu3:checked~.con .txt_list p:nth-child(3),
+    #menu4:checked~.con .txt_list p:nth-child(4),
+    #menu5:checked~.con .txt_list p:nth-child(5),
+    #menu6:checked~.con .txt_list p:nth-child(6),
+    #menu7:checked~.con .txt_list p:last-child {
+      opacity: 1;
+    }
+
+    #menu1:checked~.con .img_list p.business01 {
+      opacity: 1;
+    }
+  </style>
+</head>
+
+<body>
+  <input type="radio" name="btn" id="menu1" checked>
+  <input type="radio" name="btn" id="menu2">
+  <input type="radio" name="btn" id="menu3">
+  <input type="radio" name="btn" id="menu4">
+  <input type="radio" name="btn" id="menu5">
+  <input type="radio" name="btn" id="menu6">
+  <input type="radio" name="btn" id="menu7">
+
+  <div class="con">
+    <ul>
+      <li><img src="./images/business_img01.png" alt="png"></li>
+      <li><img src="./images/business_img02.png" alt="png"></li>
+      <li><img src="./images/business_img03.png" alt="png"></li>
+      <li><img src="./images/business_img04.png" alt="png"></li>
+      <li><img src="./images/business_img05.png" alt="png"></li>
+      <li><img src="./images/business_img06.png" alt="png"></li>
+      <li><img src="./images/business_img07.png" alt="png"></li>
+    </ul>
+  </div>
+
+
+
+
+
+
+
+
+  <div class="label_list">
+    <label for="menu1">트레이딩</label>
+    <label for="menu2">PI</label>
+    <label for="menu3">물류</label>
+    <label for="menu4">탱크컨테이너</label>
+    <label for="menu5">건설정보화</label>
+    <label for="menu6">IT서비스</label>
+    <label for="menu7">투자</label>
+  </div>
+
+  <div class="txt_list">
+    <p>기초 유화(Naphtha)에서 폴리머 제품까지 전방위로 Trading Business를 확장하고 있으며,<br>
+      국내 및 해외 100여개 국가에 판매하고 있습니다. 당사는 석유화학 트레이딩 전문 기업으로 고객 가치 및 성과를 창출하고 있습니다.</p>
+    <p>㈜대림의 독자적인 기술로 만든 폴리이미드 제품을<br>
+      반도체, 디스플레이, 우주/항공, 방산, 자동차 등 여러 산업 내 공급하고 있습니다.</p>
+    <p>전세계를 연결하는 글로벌 네트워크 바탕으로 차별화 된 대림만의 물류 서비스가<br>
+      경쟁력 있는 운임과 다양한 운송 방법으로 고객에게 서비스를 실현하고 있습니다.</p>
+    <p>국내 M/S 1위, Fleet 보유 대수 1위의 전문 탱크컨테이너 Operator로서<br>
+      업계 최고의 Know-how와 글로벌 네트워크를 바탕으로 경쟁력 있는 운송 운임과 고객 맞춤형 서비스를 제공합니다.</p>
+    <p>건설 자체의 부가가치 상승과 주택, 터널, 항만, 철도, 교량 등<br>
+      건축물에 대한 기획부터 설계, 시공, A/S로 이어지는 Total Service를 제공합니다.</p>
+    <p>(주)대림은 IT 시스템 통합, 유지보수 및 대내외 SI사업으로 지속성장 해왔습니다.</p>
+    <p>자체 주거 상품 및 브랜드 개발, 투자, 운용, 관리까지<br>
+      부동산 디벨로퍼 전 영역의 사업을 진행하고 있습니다.</p>
+  </div>
+
+  </div>
+</body>
+
+</html>
