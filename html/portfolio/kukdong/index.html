@@ -405,19 +405,61 @@
   }
 
   .section4 .wrap .con_left li {
+    position: relative;
     flex: 1;
     height: 550px;
+    background-size: 100%;
+    background-position: center;
+    transition: .5s;
   }
 
   .section4 .wrap .con_left li:first-child {
     margin-top: -50px;
-    background: url(./images/pr_img1.jpg) center/cover no-repeat;
+    background-image: url(./images/pr_img1.jpg)
   }
 
   .section4 .wrap .con_left li:last-child {
-    background: url(./images/pr_img2.jpg);
+    background-image: url(./images/pr_img2.jpg);
   }
 
+  .section4 .wrap .con_left .txt {
+    text-align-last: left;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    height: 35%;
+  }
+
+  .section4 .wrap .con_left .txt h3 {
+    font-size: 50px;
+    margin-bottom: 15px;
+  }
+
+  .section4 .wrap .con_left .arrow {
+    background: url(./images/business_arrow.png);
+    bottom: 0;
+    left: 0;
+    transition: .5s;
+  }
+
+  .section4 .wrap .con_left li:hover {
+    background-size: 110%;
+  }
+
+  .section4 .wrap .con_left li:hover .arrow {
+    transform: translateX(20px);
+  }
+
+  .section4 .wrap .con_left a {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+
+  /* right */
   .section4 .wrap .con_right {
     width: 565px;
     height: 100%;
@@ -449,18 +491,19 @@
     margin-bottom: 20px;
   }
 
-  .section4 .arrow {
+  .section4 .con_right .arrow {
     background: url(./images/next_bar_bk.png);
     bottom: 40px;
     left: 30px;
   }
 
-  .section4 .line {
+
+  .section4 .con_right .line {
     position: absolute;
     background: #07348c;
   }
 
-  .section4 .top {
+  .section4 .con_right .top {
     width: 100%;
     height: 5px;
     left: 0;
@@ -475,7 +518,7 @@
     transition: 0.1s ease-in-out;
   }
 
-  .section4 .right {
+  .section4 .con_right .right {
     width: 5px;
     height: 100%;
     right: 0;
@@ -490,7 +533,7 @@
     transition: 0.1s ease-in-out 0.1s;
   }
 
-  .section4 .bottom {
+  .section4 .con_right .bottom {
     width: 100%;
     height: 5px;
     right: 0;
@@ -505,7 +548,7 @@
     transition: 0.1s ease-in-out 0.2s;
   }
 
-  .section4 .left {
+  .section4 .con_right .left {
     width: 5px;
     height: 100%;
     left: 0;
@@ -520,10 +563,60 @@
     transition: 0.1s ease-in-out 0.3s;
   }
 
+  /***************** section5 *****************/
+
+  .section5 ul.banner {
+    width: 1280px;
+    margin: 120px auto 50px;
+    display: flex;
+    gap: 20px;
+  }
+
+  .section5 ul.banner li {
+    flex: 1;
+  }
+
+  .section5 ul.banner li a {
+    padding: 5px 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+
   /***************** footer *****************/
 
   footer {
-    height: 300px;
+    height: 274px;
+    width: 100%;
+    border-top: solid 1px #ccc;
+    background: #202020;
+  }
+
+  footer .wrap {
+    width: 1280px;
+    margin: 70px auto 50px;
+    border: 1px solid #000;
+  }
+
+  footer .wrap .top {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 65px;
+    border-bottom: 1px solid #ccc;
+  }
+
+  footer .wrap .top a {
+    font-family: "Roboto", sans-serif;
+  }
+
+  footer .wrap .top ul {
+    display: flex;
+    gap: 10px;
   }
 </style>
 
@@ -682,21 +775,30 @@
     <section class="section4">
       <div class="wrap">
         <h3 class="tit">PR Center</h3>
-        <p>세상에 없던 신기술을 개척하는 기업,극동건설이 기술의 진보를 선도합니다</p>
+        <p>세상에 없던 신기술을 개척하는 기업, 극동건설이 기술의 진보를 선도합니다</p>
 
         <div class="con">
           <ul class="con_left">
             <!-- 극동뉴스 RnD -->
             <li><a href="#">
-                <h4 class="tit">극동뉴스</h4>
+                <div class="txt">
+                  <h3 class="tit">극동뉴스</h3>
+                  <p>극동건설의 다양한 소식을 가장 빠르게 전달해드립니다.</p>
+                  <span class="arrow">
+                </div>
               </a></li>
+
             <li><a href="#">
-                <h3 class="tit">R&D</h3>
+                <div class="txt">
+                  <h3 class="tit">R&D</h3>
+                  <p>끊임없는 신기술 개발과 혁신으로 극동건설이 건축기술의 진보를 위해 노력하고 있습니다</p>
+                  <span class="arrow">
+                </div>
               </a></li>
           </ul>
           <ul class="con_right">
             <li>
-              <a href="">
+              <a href="#">
                 <h4>언론속의 <span>극동</span></h4>
                 <p>언론에 소개되는 극동의 소식을<br />안내해드립니다.</p>
                 <span class="arrow">
@@ -709,7 +811,7 @@
               </a>
             </li>
             <li>
-              <a href="">
+              <a href="#">
                 <h4>입주고객 <span>A/S 안내</span></h4>
                 <p>스타클래스 입주 후 A/S 신청에<br />대한 안내 입니다.</p>
                 <span class="arrow">
@@ -721,7 +823,7 @@
               </a>
             </li>
             <li>
-              <a href="">
+              <a href="#">
                 <h4>극동건설 <span>인재채용</span></h4>
                 <p>극동건설과 함께 성장해 나갈<br>인재를 모집합니다</p>
                 <span class="arrow">
@@ -733,7 +835,7 @@
               </a>
             </li>
             <li>
-              <a href="">
+              <a href="#">
                 <h4>기업 <span>홍보영상</span></h4>
                 <p>극동건설의 다양한 홍보영상을<br>소개합니다.</p>
                 <span class="arrow">
@@ -751,14 +853,43 @@
 
 
     <section class="section5">
-      <div class="banner">
-
-      </div>
+      <ul class="banner">
+        <li><a href="https://www.gumgwang.co.kr/" target="_blank"><img src="./images/banner1_gumgwangLogo.jpg"
+              alt="banner img"></a>
+        </li>
+        <li><a href="https://www.namkwang.co.kr/" target="_blank"><img src="./images/banner2_namkwangLogo.jpg"
+              alt="banner img"></a>
+        </li>
+        <li><a href="https://www.haustory.co.kr/" target="_blank"><img src="./images/banner3_haustoryLogo.jpg"
+              alt="banner img"></a>
+        </li>
+        <li><a href="https://www.kukdongapt.co.kr/" target="_blank"><img src="./images/banner4_starclassLogo.jpg"
+              alt="banner img"></a>
+        </li>
+        <li><a href="https://b2b.gumgwang.co.kr/" target="_blank"><img src="./images/banner5_B2BLogo.jpg"
+              alt="banner img"></a></li>
+      </ul>
     </section>
 
 
     <footer>
-
+      <div class="wrap">
+        <div class="top">
+          <p><img src="./images/ft_logo.png" alt="ft_logo"></p>
+          <ul>
+            <li><a href="#">이용약관</a></li>
+            <li><a href="#">개인정보처리방침</a></li>
+            <li><a href="#">CONTACT US</a></li>
+          </ul>
+        </div>
+        <div class="bottom">
+          <ul>
+            <li>서울특별시 마포구 마포대로 163 (서울신용보증재단), 9층</li>
+            <li>Copyright ⓒ 2020 KUKDONG. LTD. All Rights Reserved.</li>
+            <select name="" id=""></select>
+          </ul>
+        </div>
+      </div>
     </footer>
 
   </div>
