@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" as="style" crossorigin
+    href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: #f7f7f7;
+    }
+
+    .grid {
+      width: 1680px;
+      height: 780px;
+      margin: 50px auto;
+      display: grid;
+      gap: 24px;
+      grid-template-areas: "left txt1 photo1 photo1" "left photo2 photo3 txt2";
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      box-sizing: border-box;
+    }
+
+    .grid div {
+      border-radius: 20px;
+      box-sizing: border-box;
+      overflow: hidden;
+    }
+
+    .left {
+      grid-area: left;
+      background: url(https://www.doosanrobotics.com/images/services/robot-training-img01.png) center/cover no-repeat;
+    }
+
+    .txt {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      background: #fff;
+      font-family: Pretendard, serif;
+      word-break: keep-all;
+      padding: 48px 40px;
+    }
+
+    .txt h1 {
+      line-height: 50px;
+      font-weight: 600;
+    }
+
+    .txt p {
+      color: #444;
+      font-size: 18px;
+      line-height: 30px;
+      /* letter-spacing: -1px; */
+    }
+
+    .txt h1 strong {
+      color: #005EB8;
+    }
+
+    .txt1 {
+      grid-area: txt1;
+    }
+
+    .txt2 {
+      grid-area: txt2;
+    }
+
+    .photo1 {
+      grid-area: photo1;
+      background: url(https://www.doosanrobotics.com/images/services/robot-training-img02.png) center/cover no-repeat;
+    }
+
+    .photo2 {
+      grid-area: photo2;
+      background: url(https://www.doosanrobotics.com/images/services/robot-training-img03.png) center/cover no-repeat;
+    }
+
+    .photo3 {
+      grid-area: photo3;
+      background: url(https://www.doosanrobotics.com/images/services/robot-training-img04.png) center/cover no-repeat;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="grid">
+    <div class="left"></div>
+    <div class="txt1 txt">
+      <h1>현장에서 바로 적용 가능한 <strong>최고의 실습 교육</strong></h1>
+      <p>두산로보틱스에서 개발한 검증된 실무형 교육 커리큘럼으로, 실제 현장에서 바로 적용하며 시시각각 발생하는 다양한 문제를 해결할 수 있도록 설계되었습니다.</p>
+    </div>
+    <div class="photo1"></div>
+    <div class="photo2"></div>
+    <div class="photo3"></div>
+    <div class="txt2 txt">
+      <h1>초보자부터 전문가까지 <strong>수준별 교육 제공</strong></h1>
+      <p>초보자부터 현업 엔지니어 및 교수까지 수준별로 들을 수 있는 맞춤형 교육이 마련돼 있습니다.</p>
+    </div>
+  </div>
+</body>
+
+</html>

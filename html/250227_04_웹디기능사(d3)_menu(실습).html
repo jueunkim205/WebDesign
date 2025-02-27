@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>grid</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+
+    ul {
+      list-style: none;
+    }
+
+    a {
+      display: block;
+      text-decoration: none;
+      color: #333;
+      box-sizing: border-box;
+    }
+
+    .menu {
+      position: relative;
+      width: 100%;
+      border: 1px solid #000;
+    }
+
+    .menu .mainmenu {
+      width: 200px;
+      height: 300px;
+    }
+
+    .menu .mainmenu li {
+      height: 25%;
+    }
+
+    .menu .mainmenu li a {
+      text-align: center;
+      height: 100%;
+      line-height: 75px;
+      border: 1px solid #000;
+    }
+
+    .menu .mainmenu li:hover a {
+      background: #ccc;
+    }
+
+    .menu .sub {
+      display: flex;
+      position: absolute;
+      top: 0;
+      left: 200px;
+      width: 80%;
+      height: 300px;
+      background: #ddd;
+    }
+
+    .menu .sub ul {
+      width: 150px;
+      height: 100%
+    }
+    .menu .sub ul li{
+      height: 25%;
+      box-sizing: border-box;
+    }
+    
+    .menu .sub ul li a {
+      text-align: center;
+      line-height: 75px;
+    }
+
+    .menu .sub ul li:hover a {
+      background: #000;
+      color: #fff;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="menu">
+    <ul class="mainmenu">
+      <li><a href="">OnSale</a></li>
+      <li><a href="">기획전</a></li>
+      <li><a href="">푸른마을 레시피</a></li>
+      <li><a href="">매장안내</a></li>
+    </ul>
+
+    <ul class="sub">
+      <li>
+        <ul>
+          <li><a href="">할인행사</a></li>
+          <li><a href="">덤증정</a></li>
+        </ul>
+      </li>
+
+      <li>
+        <ul>
+          <li><a href="">봄 먹거리</a></li>
+          <li><a href="">여름 먹거리</a></li>
+          <li><a href="">가을 먹거리</a></li>
+          <li><a href="">겨울 먹거리</a></li>
+        </ul>
+      </li>
+
+      <li>
+        <ul>
+          <li><a href="">메인요리</a></li>
+          <li><a href="">밑반찬</a></li>
+          <li><a href="">간식</a></li>
+          <li><a href="">브런치</a></li>
+        </ul>
+      </li>
+
+      <li>
+        <ul>
+          <li><a href="">신규매장</a></li>
+          <li><a href="">추천매장</a></li>
+          <li><a href="">공지사항</a></li>
+        </ul>
+      </li>
+
+    </ul>
+  </div>
+
+</body>
+
+</html>

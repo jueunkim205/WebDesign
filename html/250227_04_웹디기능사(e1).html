@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>grid</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .grid-container {
+      display: grid;
+      height: 100vh;
+      grid-template-columns: 200px 400px auto;
+      grid-template-areas: "left mid right" "footlogo footmenu footmenu" "footlogo copy copy";
+      grid-template-rows: auto 60px 60px;
+    }
+
+    .grid-container div {
+      border: 1px solid #ddd;
+    }
+
+    .left {
+      grid-area: left;
+      background: #aaa;
+    }
+
+    .mid {
+      grid-area: mid;
+      background: #bbb;
+    }
+
+    .right {
+      grid-area: right;
+      background: #ccc;
+    }
+
+    .footlogo {
+      grid-area: footlogo;
+      background: #ddd;
+    }
+
+    .footmenu {
+      grid-area: footmenu;
+      background: #eee;
+    }
+
+    .copy {
+      grid-area: copy;
+      background: #aaa;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="grid-container">
+    <div class="left">left</div>
+    <div class="mid">mid</div>
+    <div class="right">right</div>
+    <div class="footlogo">footlogo</div>
+    <div class="footmenu">footmenu</div>
+    <div class="copy">copy</div>
+  </div>
+
+  </div>
+
+</body>
+
+</html>

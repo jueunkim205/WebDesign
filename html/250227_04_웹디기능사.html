@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>grid</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .grid-container  {
+      display: grid;
+        width: 1200px;
+        margin: 0 auto;
+        grid-template-columns: repeat(6, 200px);
+      grid-template-areas: "toplogo nav nav nav nav nav"
+      "slide slide slide slide slide slide"
+          "notice notice banner banner go go"
+          "footlogo copy copy copy copy sns";
+        grid-template-rows: 100px 300px 200px 100px;
+      background: #ccc;
+    }
+
+    .grid-container div{
+      border: 1px solid #000;
+    }
+
+    .toplogo {
+      grid-area: toplogo;
+      background: #aaa;
+    }
+
+    .menu {
+      grid-area: nav;
+      background: #bbb;
+    }
+
+    .slide {
+      grid-area: slide;
+      background: #ccc;
+    }
+
+    .notice {
+      grid-area: notice;
+      background: #ddd;
+    }
+
+    .banner {
+      grid-area: banner;
+      background: #eee;
+    }
+
+    .go {
+      grid-area: go;
+      background: #aaa;
+    }
+
+    .footlogo {
+      grid-area: footlogo;
+      background: #bbb;
+    }
+
+    .copy {
+      grid-area: copy;
+      background: #ccc;
+    }
+
+    .sns {
+      grid-area: sns;
+      background: #ddd;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- http://webdesignmilk.com/ -->
+  <div class="grid-container">
+    <div class="toplogo">logo</div>
+    <div class="menu">menu</div>
+    <div class="slide">slide</div>
+    <div class="notice">notice</div>
+    <div class="banner">banner</div>
+    <div class="go">공지사항</div>
+    <div class="footlogo">footlogo</div>
+    <div class="copy">copyright</div>
+    <div class="sns">sns</div>
+  </div>
+
+</body>
+
+</html>

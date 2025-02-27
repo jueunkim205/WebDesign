@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>grid</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .grid-container  {
+      display: grid;
+        width: 1200px;
+        height: 750px;
+        margin: 0 auto;
+      grid-template-areas: "toplogo slide slide slide banner"
+      "nav slide slide slide banner"
+      "nav notice notice gallery gallery"
+      "footlogo copy copy copy site";
+      grid-template-columns: 20% 20% 20% 20% 20%;
+      grid-template-rows: repeat(10% 30% 30% 20%);
+    }
+
+    .grid-container div{
+      border: 1px solid #ddd;
+    }
+
+    .toplogo {
+      grid-area: toplogo;
+      background: #aaa;
+    }
+
+    .menu {
+      grid-area: nav;
+      background: #bbb;
+    }
+
+    .slide {
+      grid-area: slide;
+      background: #ccc;
+    }
+
+    .notice {
+      grid-area: notice;
+      background: #ddd;
+    }
+
+    .banner {
+      grid-area: banner;
+      background: #eee;
+    }
+
+    .footlogo {
+      grid-area: footlogo;
+      background: #bbb;
+    }
+
+    .gallery{
+      grid-area: gallery;
+      background: #ddd;
+    }
+
+    .copy {
+      grid-area: copy;
+      background: #ccc;
+    }
+
+    .familysite {
+      grid-area: site;
+      background: #ddd;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- http://webdesignmilk.com/ -->
+  <div class="grid-container">
+    <div class="toplogo">logo</div>
+    <div class="menu">menu</div>
+    <div class="slide">slide</div>
+    <div class="notice">공지사항</div>
+    <div class="banner">banner</div>
+    <div class="gallery">갤러리</div>
+    <div class="footlogo">footlogo</div>
+    <div class="copy">copyright</div>
+    <div class="familysite">family site</div>
+  </div>
+
+</body>
+
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>grid</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .grid-container  {
+      display: grid;
+        width: 1200px;
+        margin: 0 auto;
+        grid-template-areas: "toplogo   slide slide slide slide"
+                              "nav   slide slide slide slide"
+                              "nav notice gallery  banner  go"
+                              "nav footlogo   copy copy sns";
+          grid-template-rows: 100px 250px 200px 50px 50px;
+          /* grid-template-columns:repeat(7, calc(1200px / 7)); */
+          grid-template-columns:200px 200px 200px 300px 300px;
+    }
+
+    .grid-container div{
+      border: 1px solid #ddd;
+    }
+
+    .toplogo {
+      grid-area: toplogo;
+      background: #aaa;
+    }
+
+    .menu {
+      grid-area: nav;
+      background: #bbb;
+    }
+
+    .slide {
+      grid-area: slide;
+      background: #ccc;
+    }
+
+    .notice {
+      grid-area: notice;
+      background: #ddd;
+    }
+
+    .banner {
+      grid-area: banner;
+      background: #eee;
+    }
+
+    .go {
+      grid-area: go;
+      background: #aaa;
+    }
+
+    .footlogo {
+      grid-area: footlogo;
+      background: #bbb;
+    }
+
+    .gallery{
+      grid-area: gallery;
+      background: #ddd;
+    }
+
+    .copy {
+      grid-area: copy;
+      background: #ccc;
+    }
+
+    .sns {
+      grid-area: sns;
+      background: #ddd;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- http://webdesignmilk.com/ -->
+  <div class="grid-container">
+    <div class="toplogo">logo</div>
+    <div class="menu">menu</div>
+    <div class="slide">slide</div>
+    <div class="notice">공지사항</div>
+    <div class="banner">banner</div>
+    <div class="go">바로가기</div>
+    <div class="gallery">갤러리</div>
+    <div class="footlogo">footlogo</div>
+    <div class="copy">copyright</div>
+    <div class="sns">sns</div>
+  </div>
+
+</body>
+
+</html>
