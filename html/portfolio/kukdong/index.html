@@ -60,6 +60,7 @@
     font-family: "Roboto", Noto Sans KR;
     font-size: 25px;
     font-weight: 400;
+    letter-spacing: -1px;
   }
 
   p {
@@ -590,7 +591,6 @@
   /***************** footer *****************/
 
   footer {
-    height: 274px;
     width: 100%;
     border-top: solid 1px #ccc;
     background: #202020;
@@ -598,25 +598,58 @@
 
   footer .wrap {
     width: 1280px;
-    margin: 70px auto 50px;
-    border: 1px solid #000;
+    padding: 56px 0 50px;
+    margin: 0 auto;
   }
 
-  footer .wrap .top {
+  footer .wrap .top,
+  footer .wrap .bottom {
     display: flex;
     justify-content: space-between;
     width: 100%;
     height: 65px;
-    border-bottom: 1px solid #ccc;
-  }
-
-  footer .wrap .top a {
-    font-family: "Roboto", sans-serif;
+    align-items: center;
   }
 
   footer .wrap .top ul {
     display: flex;
-    gap: 10px;
+  }
+
+  footer .wrap .top ul a {
+    font-family: "Roboto", sans-serif;
+    padding: 0 10px;
+    font-weight: 300;
+    font-size: 13px;
+    color: #b1b1b1;
+    position: relative;
+    letter-spacing: -1.5px;
+  }
+
+  footer .wrap .top ul li:not(:last-child) a::after {
+    content: '';
+    position: absolute;
+    top: 1px;
+    right: 0;
+    width: 1px;
+    height: 10px;
+    background: #ccc;
+  }
+
+  footer .wrap .bottom {
+    border-bottom: none;
+    padding: 42px 0 0;
+    margin-top: 18px;
+    border-top: solid 1px #b1b1b1;
+  }
+
+  footer .wrap .bottom ul li:first-child {
+    margin-bottom: 10px;
+  }
+
+  footer .wrap .bottom p {
+    font-size: 12px;
+    font-weight: 300;
+    color: #999;
   }
 </style>
 
@@ -884,10 +917,20 @@
         </div>
         <div class="bottom">
           <ul>
-            <li>서울특별시 마포구 마포대로 163 (서울신용보증재단), 9층</li>
-            <li>Copyright ⓒ 2020 KUKDONG. LTD. All Rights Reserved.</li>
-            <select name="" id=""></select>
+            <li>
+              <p>서울특별시 마포구 마포대로 163 (서울신용보증재단), 9층</p>
+            </li>
+            <li>
+              <p>Copyright ⓒ 2020 KUKDONG. LTD. All Rights Reserved.</p>
+            </li>
           </ul>
+          <!-- 버튼수정해야됨 -->
+          <select name="familySite" id="site">
+            <option value="gumgwang"><a href="https://www.gumgwang.co.kr/">금광기업</a></option>
+            <option value="namkwang"><a href="https://www.namkwang.co.kr/">남광토건</a></option>
+            <option value="kukdongapt"><a href="https://www.kukdongapt.co.kr/">스타클래스</a></option>
+            <option value="haustory"><a href="https://www.haustory.co.kr/">하우스토리</a></option>
+          </select>
         </div>
       </div>
     </footer>
