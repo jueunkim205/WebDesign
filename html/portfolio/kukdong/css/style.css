@@ -1,0 +1,624 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.wrap {
+  box-sizing: border-box;
+}
+
+/* 공통 */
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+button {
+  border-style: none;
+}
+
+h3.tit {
+  font-family: "Play", sans-serif;
+  font-weight: 600;
+  font-size: 40px;
+}
+
+h4 {
+  font-family: "Roboto", Noto Sans KR;
+  font-size: 25px;
+  font-weight: 400;
+  letter-spacing: -1px;
+}
+
+p {
+  font-size: 16px;
+  font-family: "Roboto", Noto Sans KR;
+  letter-spacing: -1px;
+}
+
+
+.arrow {
+  position: absolute;
+  content: '';
+  width: 57px;
+  height: 12px;
+}
+
+/***************** header *****************/
+
+header {
+  width: 100%;
+  /* height: 100%; */
+  height: 100vh;
+  box-sizing: border-box;
+  background: url(../images/background01.jpg) center/cover no-repeat;
+}
+
+header nav {
+  padding: 0 60px 0 70px;
+  height: 120px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, .3);
+  font-family: "Roboto", Noto Sans KR;
+}
+
+header nav ul {
+  display: flex;
+  width: 650px;
+  justify-content: space-around;
+}
+
+/* header nav ul */
+header nav ul li a {
+  font-size: 22px;
+  letter-spacing: -1px;
+  font-weight: 600;
+  line-height: 100%;
+}
+
+header nav .lang {
+  font-size: 13px;
+  padding: 7px 15px;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, .5);
+  letter-spacing: -1px;
+  font-weight: 600;
+}
+
+header nav .btns {
+  display: flex;
+  width: 150px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header nav .btns span:last-child {
+  color: #fff;
+}
+
+header .txt {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  margin: 0 auto;
+  font-family: 'NanumSquare', sans-serif;
+  text-align: center;
+  letter-spacing: -1px;
+}
+
+header .txt p:nth-of-type(1) {
+  font-family: "Play", serif;
+  font-size: 25px;
+}
+
+header .txt p:nth-child(2) {
+  font-size: 80px;
+  font-weight: 300;
+  margin: 16px 0;
+  letter-spacing: -2px;
+}
+
+header .txt p:nth-child(2) strong {
+  font-weight: 800;
+}
+
+header .txt p:nth-of-type(3) {
+  font-size: 25px;
+  font-family: 'NanumSquare', sans-serif
+}
+
+/***************** section1 *****************/
+
+.section1 .wrap {
+  width: 100%;
+  padding: 110px 0;
+  background: #f0f0f0;
+}
+
+.section1 ul {
+  margin: 40px auto;
+  display: flex;
+  width: 1280px;
+  height: 600px;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.section1 ul li {
+  width: calc((100% - 80px) / 3);
+}
+
+.section1 ul li a {
+  display: block;
+  width: 100%;
+  position: relative;
+  padding: 35px 33px;
+  height: 300px;
+  box-sizing: border-box;
+  letter-spacing: -1px;
+  transition: .2s;
+  background-size: 100%;
+  background-position: center;
+}
+
+.section1 li:first-child a {
+  background-image: url(https://www.kukdong.co.kr/images/main/business_img2.jpg);
+}
+
+.section1 li:nth-child(2) a {
+  background-image: url(https://www.kukdong.co.kr/images/main/business_img5.jpg);
+}
+
+.section1 li:nth-child(5) a {
+  background-image: url(https://www.kukdong.co.kr/images/main/business_img4.jpg);
+}
+
+.section1 li:nth-child(6) a {
+  background-image: url(https://www.kukdong.co.kr/images/main/business_img6.jpg);
+}
+
+.section1 li a:hover {
+  padding-top: 30px;
+  background-size: 110%;
+}
+
+.section1 li a:hover .arrow {
+  bottom: 35px;
+}
+
+.section1 ul li .arrow {
+  background: url(../images/business_arrow.png);
+  bottom: 30px;
+  right: 30px;
+  transition: .2s;
+}
+
+.section1 li h3 {
+  font-family: "Play", serif;
+  font-weight: 600;
+  margin-bottom: 20px;
+  font-size: 19px;
+  line-height: 30px;
+}
+
+.section1 ul li:nth-child(3) h3 {
+  text-align: center;
+  margin-top: 100px;
+  font-size: 40px;
+}
+
+.section1 ul li p {
+  font-size: 18px;
+  font-family: 'NanumSquare', sans-serif;
+}
+
+/***************** section2 *****************/
+
+.section2 .wrap {
+  width: 1280px;
+  padding: 120px 0;
+  margin: 0 auto;
+}
+
+.section2 .up {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.section2 .up ul {
+  display: flex;
+  gap: 10px;
+}
+
+.section2 .up button {
+  background: #eee;
+  width: 120px;
+  padding: 20px;
+  font-size: 14px;
+  font-family: "Roboto", Noto Sans KR;
+  color: #002264;
+  cursor: pointer;
+  letter-spacing: -1px;
+}
+
+/***************** section3 *****************/
+
+.section3 .wrap {
+  width: 100%;
+  padding: 120px 0;
+  text-align: center;
+  background: url(../images/mid_bg_img1.jpg) center/cover no-repeat;
+  background-attachment: fixed;
+}
+
+.section3 .wrap ul {
+  width: 1080px;
+  display: flex;
+  margin: 80px auto 0;
+  list-style: none;
+  overflow: hidden;
+}
+
+.section3 .wrap ul li {
+  position: relative;
+  text-align: center;
+  flex: 1;
+  padding: 0 30px;
+}
+
+.section3 .wrap ul li:before {
+  position: absolute;
+  content: '';
+  top: 55%;
+  transform: translateY(-50%);
+  right: 0;
+  width: 1px;
+  height: 70%;
+  background: rgba(255, 255, 255, .5);
+}
+
+.section3 .wrap h1 {
+  color: #fff;
+  font-size: 45px;
+  font-family: "Noto Sans KR", serif;
+  font-weight: 300;
+  line-height: 80px;
+}
+
+.section3 .wrap ul li h4 {
+  position: relative;
+  padding: 5px 40px;
+  margin-bottom: 20px;
+  display: inline-block;
+}
+
+/* hover시 효과주기 */
+.section3 .wrap ul li h4 .line {
+  position: absolute;
+  background: #ccc;
+  width: 10px;
+  height: 0;
+  transition: 1s;
+}
+
+.section3 .wrap ul li h4 .top {
+  width: 100%;
+  height: 1px;
+  top: 0;
+  left: 0;
+  transform: scaleX(0);
+}
+
+.section3 .wrap ul li h4 .bottom {
+  width: 100%;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  transform: scaleX(0);
+}
+
+.section3 .wrap ul li h4 .left {
+  width: 1px;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transform: scaleY(0);
+}
+
+.section3 .wrap ul li h4 .right {
+  width: 1px;
+  height: 100%;
+  top: 0;
+  right: 0;
+  transform: scaleY(0);
+}
+
+.section3 .wrap ul li:hover .top,
+.section3 .wrap ul li:hover .bottom {
+  transform: scaleX(1);
+}
+
+.section3 .wrap ul li:hover .left,
+.section3 .wrap ul li:hover .right {
+  transform: scaley(1);
+}
+
+.section3 .wrap ul li p {
+  word-break: keep-all;
+}
+
+/***************** section4 *****************/
+
+.section4 .wrap {
+  width: 1280px;
+  margin: 120px auto 0;
+  text-align: center;
+}
+
+.section4 .wrap .con {
+  margin-top: 100px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.section4 .wrap .con_left {
+  width: 680px;
+  height: 600px;
+  display: flex;
+}
+
+.section4 .wrap .con_left li {
+  position: relative;
+  flex: 1;
+  height: 550px;
+  background-size: 100%;
+  background-position: center;
+  transition: .5s;
+}
+
+.section4 .wrap .con_left li:first-child {
+  margin-top: -50px;
+  background-image: url(../images/pr_img1.jpg)
+}
+
+.section4 .wrap .con_left li:last-child {
+  background-image: url(../images/pr_img2.jpg);
+}
+
+.section4 .wrap .con_left .txt {
+  text-align-last: left;
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+  height: 35%;
+}
+
+.section4 .wrap .con_left .txt h3 {
+  font-size: 50px;
+  margin-bottom: 15px;
+}
+
+.section4 .wrap .con_left .arrow {
+  background: url(../images/business_arrow.png);
+  bottom: 0;
+  left: 0;
+  transition: .5s;
+}
+
+.section4 .wrap .con_left li:hover {
+  background-size: 110%;
+}
+
+.section4 .wrap .con_left li:hover .arrow {
+  transform: translateX(20px);
+}
+
+.section4 .wrap .con_left a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+
+/* right */
+.section4 .wrap .con_right {
+  width: 565px;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.section4 .wrap .con_right li {
+  width: calc((100% - 20px) / 2);
+  height: 265px;
+}
+
+.section4 .wrap .con_right li a {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 40px 30px;
+  text-align: left;
+  color: #544C47;
+  box-sizing: border-box;
+  background: #f0f0f0;
+}
+
+.section4 .wrap .con_right li a h4 span {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.section4 .con_right .arrow {
+  background: url(../images/next_bar_bk.png);
+  bottom: 40px;
+  left: 30px;
+}
+
+
+.section4 .con_right .line {
+  position: absolute;
+  background: #07348c;
+}
+
+.section4 .con_right .top {
+  width: 100%;
+  height: 5px;
+  left: 0;
+  top: 0;
+  transform: scaleX(0);
+  transform-origin: 0 0;
+  transition: 0.1s ease-in-out 0.3s;
+}
+
+.section4 .wrap .con_right li:hover .top {
+  transform: scaleX(1);
+  transition: 0.1s ease-in-out;
+}
+
+.section4 .con_right .right {
+  width: 5px;
+  height: 100%;
+  right: 0;
+  top: 0;
+  transform: scaleY(0);
+  transform-origin: 0 0;
+  transition: 0.1s ease-in-out 0.2s;
+}
+
+.section4 .wrap .con_right li:hover .right {
+  transform: scaleY(1);
+  transition: 0.1s ease-in-out 0.1s;
+}
+
+.section4 .con_right .bottom {
+  width: 100%;
+  height: 5px;
+  right: 0;
+  bottom: 0;
+  transform: scaleX(0);
+  transform-origin: 100% 100%;
+  transition: 0.1s ease-in-out 0.1s;
+}
+
+.section4 .wrap .con_right li:hover .bottom {
+  transform: scaleY(1);
+  transition: 0.1s ease-in-out 0.2s;
+}
+
+.section4 .con_right .left {
+  width: 5px;
+  height: 100%;
+  left: 0;
+  top: 0;
+  transform: scaleY(0);
+  transform-origin: 100% 100%;
+  transition: 0.1s ease-in-out;
+}
+
+.section4 .wrap .con_right li:hover .left {
+  transform: scaleX(1);
+  transition: 0.1s ease-in-out 0.3s;
+}
+
+/***************** section5 *****************/
+
+.section5 ul.banner {
+  width: 1280px;
+  margin: 120px auto 50px;
+  display: flex;
+  gap: 20px;
+}
+
+.section5 ul.banner li {
+  flex: 1;
+}
+
+.section5 ul.banner li a {
+  padding: 5px 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/***************** footer *****************/
+
+footer {
+  width: 100%;
+  border-top: solid 1px #ccc;
+  background: #202020;
+}
+
+footer .wrap {
+  width: 1280px;
+  padding: 56px 0 50px;
+  margin: 0 auto;
+}
+
+footer .wrap .top,
+footer .wrap .bottom {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 65px;
+  align-items: center;
+}
+
+footer .wrap .top ul {
+  display: flex;
+}
+
+footer .wrap .top ul a {
+  font-family: "Roboto", sans-serif;
+  padding: 0 10px;
+  font-weight: 300;
+  font-size: 13px;
+  color: #b1b1b1;
+  position: relative;
+  letter-spacing: -1.5px;
+}
+
+footer .wrap .top ul li:not(:last-child) a::after {
+  content: '';
+  position: absolute;
+  top: 1px;
+  right: 0;
+  width: 1px;
+  height: 10px;
+  background: #ccc;
+}
+
+footer .wrap .bottom {
+  border-bottom: none;
+  padding: 42px 0 0;
+  margin-top: 18px;
+  border-top: solid 1px #b1b1b1;
+}
+
+footer .wrap .bottom ul li:first-child {
+  margin-bottom: 10px;
+}
+
+footer .wrap .bottom p {
+  font-size: 12px;
+  font-weight: 300;
+  color: #999;
+}
