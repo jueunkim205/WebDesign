@@ -10,7 +10,7 @@
   box-sizing: border-box;
 }
 
-section>h1 {
+section > h1 {
   font-family: Noto Sans KR, serif;
   font-size: 36px;
   text-align: center;
@@ -32,18 +32,18 @@ ul {
   margin-bottom: 0;
 }
 
-.sec3 li>p {
+.sec3 li > p {
   width: 720px;
   height: 100%;
   border-radius: 10px;
   overflow: hidden;
 }
 
-.sec3 li:nth-child(2n + 1)>p {
+.sec3 li:nth-child(2n + 1) > p {
   float: left;
 }
 
-.sec3 li:nth-child(2n)>p {
+.sec3 li:nth-child(2n) > p {
   float: right;
 }
 
@@ -94,7 +94,8 @@ ul {
 
 /******** section4 시작 ********/
 .sec4 ul {
-  width: 100%;
+  width: 1480px;
+  margin: 100px auto 0;
   height: 500px;
   display: flex;
   gap: 16px;
@@ -110,12 +111,8 @@ ul {
 }
 
 .sec4 li:hover {
-  width: 400px;
-  transition: 1s;
-}
-
-.sec4 li:last-child {
-  margin-right: 0;
+  width: 350px;
+  transition: 0.8s cubic-bezier(0.45, 1.05, 0.79, 0.99);
 }
 
 .sec4 li::after {
@@ -166,14 +163,16 @@ ul {
 }
 
 .sec4 .txt {
+  margin: 0 auto;
   position: relative;
-  z-index: 1;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   width: 100%;
   height: 100%;
-  justify-content: center;
-  margin: 0 auto;
+  z-index: 1;
+  color: #fff;
+  box-sizing: border-box;
 }
 
 .sec4 li h1 {
@@ -181,20 +180,17 @@ ul {
   font-family: Noto Sans, serif;
   font-weight: 800;
   font-size: 24px;
-  color: #fff;
   width: 100%;
   word-break: keep-all;
 }
 
 .sec4 .txt p {
+  height: 100px;
+  padding: 0 25px;
+  font-weight: 600;
+  line-height: 30px;
   opacity: 0;
   word-break: keep-all;
-  height: 100px;
-  padding: 10px;
-  font-weight: bold;
-  color: #fff;
-  line-height: 30px;
-  letter-spacing: -1px;
 }
 
 .sec4 li:hover h1 {
