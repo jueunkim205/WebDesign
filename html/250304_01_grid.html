@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>grid</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .grid-container {
+      display: grid;
+      background: #ccc;
+      /* grid-template-columns: 100px 200px 300px; */
+      /* grid-template-columns: 1fr 1fr 1fr; */
+      grid-template-columns: repeat(3, 1fr);
+      /* grid-template-rows: repeat(3 180px); */
+      grid-template-rows: 100px minmax(50px,auto);
+      grid-auto-rows: minmax(100px, auto);
+      /* grid-auto-rows: 200px; */
+      /* column-gap: 20px;
+      row-gap: 40px; */
+      gap: 40px 20px;
+
+    }
+
+    .grid-item {
+      background: #ddd;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="grid-container">
+    <div class="grid-item">1</div>
+    <div class="grid-item">2</div>
+    <div class="grid-item">3</div>
+    <div class="grid-item">4</div>
+    <div class="grid-item">5</div>
+    <div class="grid-item">6</div>
+    <div class="grid-item">7</div>
+    <div class="grid-item">8</div>
+    <div class="grid-item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam corrupti, repudiandae saepe, beatae nisi sunt cum quasi, sed libero modi velit quod atque! Laboriosam iste nulla ea incidunt labore cumque doloremque sint eaque magnam quae. Quasi dolor cupiditate doloribus tenetur nesciunt commodi ut quae, sunt, corporis aut doloremque laboriosam quis sint porro praesentium placeat perspiciatis mollitia quibusdam excepturi voluptatum inventore eligendi, aperiam quidem. Earum sapiente illo, vitae vel consequuntur, veniam suscipit veritatis eius voluptatibus accusantium libero ducimus minima quis reprehenderit! Nulla voluptates rem quos earum quia ab facere est, minima nemo molestiae laborum alias asperiores distinctio, nesciunt aut labore expedita a delectus porro, sint vel aliquid. Magnam blanditiis officia non quaerat a id ipsa mollitia aliquid ex fuga, esse placeat, consequuntur eligendi dolorem quia autem commodi temporibus? Quae, laboriosam animi quod quia nobis velit deleniti, a vel ad blanditiis ipsa? At, voluptas labore officia similique hic inventore ad adipisci illum recusandae doloribus quod dolores impedit consequatur eum quidem cum rerum explicabo fugit molestias optio aspernatur! Tenetur deserunt ut vel ipsam quasi ipsum, praesentium libero atque inventore et! Minima corrupti quam quisquam ipsam sunt voluptatibus nulla voluptate modi placeat nesciunt, totam, facere autem, dicta quia. Distinctio, est. Ut commodi similique placeat ea tempore modi. Minima quidem deleniti eaque repellat dicta necessitatibus aperiam quibusdam saepe molestias. Aut soluta unde, consectetur voluptas officiis voluptatem ullam vero repellendus possimus, et deserunt tempora, ratione nemo debitis qui! Impedit omnis similique ipsam magnam animi dicta nesciunt aperiam, ducimus delectus commodi rem. Vel a enim iusto eaque laboriosam qui totam est nulla! Vel voluptates, aperiam, fuga tempore facilis possimus quo laborum accusamus odit obcaecati maxime corporis est provident ducimus nulla culpa voluptatem tempora placeat saepe. Harum quam sed ab, aspernatur, quae laborum enim voluptates incidunt sint itaque facilis impedit voluptatum exercitationem ducimus totam unde numquam mollitia sit.</div>
+  </div>
+</body>
+
+</html>
