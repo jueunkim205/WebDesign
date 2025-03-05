@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SVG</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    section {
+      position: relative;
+      width: 300px;height: 300px;
+    }
+
+    section p {
+      clip-path: url(#path);
+    }
+
+    section p img{
+      width: 100%;height: 100%;
+    }
+
+    svg {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+</head>
+
+<body>
+
+  <section>
+    <p><img src="./images/photo1.jpg" alt="photo1"></p>
+    <svg>
+      <clipPath id="path" clipPathUnits="'userSpaceOnUse'"">
+        <path
+          d="M19.3,121.2c-5,2.4-9,8.8-9,14.3v209c0,5.5,3.9,12.2,8.7,14.9l224.5,125.1c4.8,2.7,12.7,2.8,17.6,0.2
+          l239.8-125.5c4.9-2.6,8.9-9.1,8.9-14.6v-209c0-5.5-4.1-11.8-9.2-14L258.4,15.1c-5-2.2-13.2-2.1-18.2,0.3L19.3,121.2z" />
+        <path
+          d="M19.3,121.2c-5,2.4-9,8.8-9,14.3v209c0,5.5,3.9,12.2,8.7,14.9l224.5,125.1c4.8,2.7,12.7,2.8,17.6,0.2
+          l239.8-125.5c4.9-2.6,8.9-9.1,8.9-14.6v-209c0-5.5-4.1-11.8-9.2-14L258.4,15.1c-5-2.2-13.2-2.1-18.2,0.3L19.3,121.2z" />
+      </clipPath>
+    </svg>
+  </section>
+
+
+</body>
+
+</html>

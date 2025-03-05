@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>position flex grid</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    body{
+      padding: 100px 0;
+    }
+    body>div {
+      width: 500px;
+      height: 500px;
+      border: 1px solid #000;
+      margin: 20px;
+    }
+
+    p {
+      width: 200px;
+      height: 200px;
+      border: 1px solid #000;
+      text-align: center;
+    }
+
+    .con1 {
+      position: relative;
+    }
+
+    .con1 p,
+    .con1 p span {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .con2,
+    .con2 p {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .con3,
+    .con3 p {
+      display: grid;
+      place-content: center;
+    }
+
+    .con4{
+      display: grid;
+      height: 100px;
+      justify-items: center;
+      align-content: center;
+      align-items: center;
+      /* align-items: center; */
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    .con4 a{
+      display: block;
+      width: 200px;
+      border: 1px solid #000;
+    }
+
+    article{
+      display: grid;
+      /* items 그 안의 아이템까지 가운데 */
+      /* justify-items: center; */
+      /* content 부모안의 자식이 가운데 */
+      justify-content: center;
+    }
+
+    article a{
+      display: block;
+      /* width: 200px; */
+      border: 1px solid #000;
+    }
+    
+  </style>
+</head>
+
+<body>
+  <div class="con1">
+    <p>
+      <span>position<br>con1</span>
+    </p>
+  </div>
+  <div class="con2">
+    <p>
+     flex<br>con2
+    </p>
+  </div>
+  <div class="con3">
+    <p>
+   grid<br>con3
+    </p>
+  </div>
+  <section class="con4">
+    <a href="#">grid<br>con4<br>con4con4con4con4con4con4</a>
+    <a href="#">grid<br>con4</a>
+    <a href="#">grid<br>con4</a>
+    <a href="#">grid<br>con4<br>con4con4con4con4con4con4</a>
+  </section>
+
+  <article>
+    <a href="#">123456789</a>
+    <a href="#">123456</a>
+    <a href="#">1234</a>
+    <a href="#">12</a>
+  </article>
+</body>
+
+</html>

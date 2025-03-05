@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>position flex grid</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    ul {
+      list-style: none;
+      display: grid;
+      border: 1px solid #000;
+      /* row / column */
+      /* grid-template: 100px 300px 200px 100px / 200px 200px 400px 200px 200px; */
+      /* grid: 100px 300px 200px 100px / 200px 200px 400px 200px 200px; */
+      /* grid: grid-template-rows / grid-template-column */
+      /* margin: 20px; */
+      /* grid: 150px / auto auto auto; */
+      /* grid: 100px 200px 300px / 200px; */
+      
+      /* grid-auto-flow: dense;
+      grid-auto-rows: 100px;
+      grid-template-columns: 200px 200px 400px; */
+      grid: auto-flow dense 100px / 200px 200px 400px ;
+    }
+
+    ul li:first-child {
+      grid-column-start: 3;
+      grid-row-start: 1;
+      /* align-self: center;
+      justify-self: center; */
+      background: red;
+      order: 3;
+    }
+
+    ul li:nth-child(4){  
+      grid-column-start: 3;
+      grid-row-start: 1;
+      z-index: 1;
+      background: yellow;
+      order: 4;
+     }
+     
+  </style>
+</head>
+
+<body>
+  <ul>
+    <li>logo</li>
+    <li>menu</li>
+    <li>slide</li>
+    <li>notice</li>
+    <li>gallery</li>
+    <li>바로가기</li>
+    <li>logo</li>
+    <li>copyright</li>
+    <li>sns</li>
+  </ul>
+  <ul>
+    <li>logo</li>
+    <li>menu</li>
+    <li>slide</li>
+    <li>notice</li>
+    <li>gallery</li>
+    <li>바로가기</li>
+    <li>logo</li>
+    <li>copyright</li>
+    <li>sns</li>
+  </ul>
+  <ul>
+    <li>logo</li>
+    <li>menu</li>
+    <li>slide</li>
+    <li>notice</li>
+    <li>gallery</li>
+    <li>바로가기</li>
+    <li>logo</li>
+    <li>copyright</li>
+    <li>sns</li>
+  </ul>
+  <ul>
+    <li>logo</li>
+    <li>menu</li>
+    <li>slide</li>
+    <li>notice</li>
+    <li>gallery</li>
+    <li>바로가기</li>
+    <li>logo</li>
+    <li>copyright</li>
+    <li>sns</li>
+  </ul>
+</body>
+
+</html>

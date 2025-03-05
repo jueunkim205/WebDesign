@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SVG</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    section {
+      position: relative;
+      width: 300px;
+      height: 300px;
+    }
+
+    section p {
+      clip-path: url(#path);
+      width: 100%;height: 100%;
+    }
+
+    section p img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      animation: photoChange 5s infinite linear alternate;
+      opacity: 1;
+    }
+
+    svg {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    @keyframes photoChange {
+      0%{
+        opacity: 0;
+      }
+      100%{
+        opacity: 1;
+        content:url(https://www.otoki.com/images/common/clip2.jpg);
+      }
+      /* 100%{
+        opacity: 0;
+      } */
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 일러스트에서 가로세로 1px shape만들고(스트로크 none) 속성창에 width, height 1px설정, rotate 90도 돌리고 effect -> stylize -> round corner .1 로 설정후 save a copy에서 more option에서 decimal places 3으로 설정 후 svg 저장, 코드 가져오기 -->
+<!-- 1px짜리 svg만들어놓고 키우면 그 사이즈대로 커짐 -->
+  <section>
+    <p><img src="https://www.otoki.com/images/common/clip2_1.jpg" alt="photo1"></p>
+    <svg>
+      <clipPath id="path" clipPathUnits="objectBoundingBox"">
+        <path d="
+        M0.089,0.205C0.04,0.23,0,0.295,0,0.35v0.3c0,0.055,0.04,0.12,0.089,0.145l0.321,0.161c0.049,0.025,0.13,0.025,0.179,0
+        l0.321-0.161C0.96,0.77,1,0.705,1,0.65v-0.3c0-0.055-0.04-0.12-0.089-0.145L0.589,0.045c-0.049-0.025-0.13-0.025-0.179,0
+        L0.089,0.205z" />
+      </clipPath>
+    </svg>
+  </section>
+
+
+</body>
+
+</html>
