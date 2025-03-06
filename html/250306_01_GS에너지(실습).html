@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GS에너지</title>
+  <link rel="stylesheet" as="style" crossorigin
+    href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .wrap {
+      margin: 0 auto;
+      width: 1500px;
+      font-family: Pretendard, serif;
+    }
+
+    input {
+      display: none;
+    }
+
+    ul {
+      list-style: none;
+      margin: 10px 0;
+      border-top: 1px solid #000;
+    }
+
+    ul li {
+      overflow: hidden;
+    }
+
+    ul li label {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 32px;
+      padding: 40px 60px 40px 20px;
+      font-weight: bold;
+      border-bottom: 1px solid #ddd;
+    }
+
+    ul li label span.plus {
+      position: relative;
+      width: 26px;
+      height: 3px;
+      background: #000;
+    }
+
+    ul li label span.plus:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 26px;
+      height: 3px;
+      background: #000;
+      transition: .5s;
+      transform: rotate(-90deg);
+    }
+
+    ul li .con {
+      height: 0px;
+      box-sizing: border-box;
+      transition: .5s ease-in-out;
+    }
+
+    ul li .con img {
+      margin: 60px 0;
+    }
+
+    ul li .con p:last-child {
+      font-size: 24px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    #con1:checked~ul li:first-child span:after,
+    #con2:checked~ul li:last-child span:after {
+      transform: rotate(0deg);
+    }
+
+    #con1:checked~ul li:first-child .con,
+    #con2:checked~ul li:last-child .con {
+      height: 600px;
+    }
+
+    #con1:checked~ul li:last-child label {
+      border-top: 1px solid #ddd;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <input type="checkbox" name="list" id="con1">
+    <input type="checkbox" name="list" id="con2">
+    <ul>
+      <li>
+        <label for="con1">GS파워<span class="plus"></span></label>
+        <div class="con">
+          <p><img src="https://www.gsenergy.co.kr/pub/images/img_collective_a01.jpg" alt="con img"></p>
+          <p>GS파워는 한국전력공사의 발전부문 매각과 한국지역난방공사 공기업 민영화 작업의 일환으로 정부가 시행한 안양/부천 열병합 발전 및
+            지역난방설비에 대한 공개경쟁입찰에서 인수자로 최종 결정되어, 2000년 6월 22일 자산양수도 계약을 체결하고, 그 해 9 월 1일 본격적인 운영을 시작하였습니다.</p>
+        </div>
+      </li>
+      <li>
+        <label for="con2">인천종합에너지<span class="plus"></span></label>
+        <div class="con">
+          <p><img src="https://www.gsenergy.co.kr/pub/images/img_collective_b01.jpg" alt="con img"></p>
+          <p>인천종합에너지는 2004년 6월, 송도국제도시를 중심으로 인천지역의 원활한 지역 냉 난방 공급과
+            국가에너지절약에 기여하기 위해 설립되었습니다. 당사는 편리하고 안전하게 지역 냉 난방을 공급하고 열공급원가를 절감하기 위해 지속적으로 노력해오고 있습니다.</p>
+        </div>
+        </span>
+      </li>
+    </ul>
+  </div>
+</body>
+
+</html>
