@@ -12,31 +12,93 @@
   font-style: normal;
 }
 
-/* nav */
-
-.top {
-  display: flex;
-  height: 30px;
-  border: 1px solid #000;
+ul {
+  list-style: none;
 }
 
-.top>div {
+a {
+  text-decoration: none;
+}
+
+/* 최상단 */
+.top {
+  max-width: 100%;
+  height: 45px;
+  display: flex;
+  align-items: center;
+}
+
+.top div {
+  display: flex;
   height: 100%;
-  border: 1px solid #000;
+  align-items: center;
+  box-sizing: border-box;
 }
 
 .top .left {
   background: #1d2a3e;
-  width: 80%;
+  width: 87%;
+  color: #fff;
+  padding: 0 20px 0 30px;
+}
+
+.top .weather {
+  width: 90%;
 }
 
 .top .lang {
-  background: #1d2a3e;
   width: 10%;
+  justify-content: flex-end;
 }
 
-.top .right {
-  background: #1d2a3e;
-  width: 20%;
+.top .lang p {
+  padding: 7px 6px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, .1);
+}
+
+
+.top .site {
+  width: 13%;
   font-family: 'GmarketSansMedium';
+  padding: 0 35px;
+  color: #fff;
+  background: #418087 url(../images/page_m.png) right top no-repeat;
+}
+
+.top .site a {
+  font-size: 15px;
+  color: #fff;
+}
+
+.top .lang p,
+.top .site p {
+  display: flex;
+  margin-left: 10px;
+}
+
+/* 누리집 */
+.nuri {
+  display: flex;
+  padding: 10px 50px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  align-items: center;
+  background: #eef0f3;
+}
+
+.nuri p {
+  font-size: 0;
+}
+
+.nuri span {
+  font-size: 14px;
+  color: #666;
+  font-family: gothic, "Malgun Gothic";
+  letter-spacing: -1px;
+  margin-left: 10px;
+}
+
+.nuri img {
+  width: 22px;
+  vertical-align: middle;
 }
