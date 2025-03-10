@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>신세계푸드</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    h3 {
+      font-size: 25px;
+      font-weight: bold;
+      color: #444;
+    }
+
+    section {
+      text-align: center;
+      padding: 50px 0;
+    }
+
+    .section1 {
+      background: #f3f3f3;
+      text-align: center;
+      padding: 50px 0;
+    }
+
+    .section1 ul {
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 1000px;
+      gap: 50px;
+      margin: 100px auto 50px;
+      justify-content: center;
+    }
+
+    .section1 ul li {
+      width: 250px;
+      height: 250px;
+      background: #3aa746;
+      box-sizing: border-box;
+      border-radius: 50%;
+      display: flex;
+      flex-direction: column;
+      border: 10px solid #fff;
+      padding: 30px;
+    }
+
+    .section1 ul li:nth-child(2) {
+      margin-top: -30px;
+      position: relative;
+      background: #11791d;
+      width: 300px;
+      height: 300px;
+      border: 30px solid #fff;
+    }
+
+    .section1 ul li:nth-child(2)::after {
+      content: '';
+      position: absolute;
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      border: 1px solid #11791d;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .section1 ul li h4 {
+      color: yellow;
+      font-size: 20px;
+      margin-top: 15px;
+    }
+
+    .section1 ul li p {
+      color: #fff;
+      letter-spacing: -1px;
+      margin-top: 30px;
+    }
+
+    /*   .section2      */
+    .section2 ul {
+      max-width: 940px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      justify-content: center;
+      margin: 50px auto;
+    }
+
+    .section2 ul li {
+      /* width: 485px; */
+      /* max-width: calc((100% - 30px) / 2); */
+      width: calc(50% - 20px);
+      box-sizing: border-box;
+      margin-top: 40px;
+    }
+
+    .section2 ul li img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+
+    .section2 ul li .txt {
+      position: relative;
+      text-align: left;
+      margin-top: 30px;
+      padding-left: 15px;
+      color: #444;
+    }
+
+    .section2 ul li .txt:after {
+      content: '';
+      position: absolute;
+      top: 8px;
+      left: 0;
+      width: 4px;
+      height: 90%;
+      background: #ccc;
+    }
+
+    .section2 ul li .txt h3 {
+      font-size: 20px;
+    }
+
+    .section2 ul li .txt span {
+      display: block;
+      line-height: 35px;
+      margin-top: 10px;
+      letter-spacing: -1px;
+      word-break: keep-all;
+    }
+
+    @media screen and (max-width: 960px) {
+
+      .section2 h3 {
+        font-size: 16px;
+      }
+
+      .section2 ul {
+        gap: 25px;
+        margin: 20px auto;
+      }
+
+      .section2 ul li:nth-child(1),
+      .section2 ul li:nth-child(2) {
+        margin-top: 0;
+      }
+
+      .section2 ul li .txt {
+        margin-top: 15px;
+      }
+
+      .section2 ul li .txt:after {
+        top: 4px;
+      }
+
+      .section2 ul li .txt h3 {
+        font-size: 14px;
+      }
+
+      .section2 ul li .txt span {
+        font-size: 14px;
+        line-height: 25px;
+        margin-top: 15;
+      }
+    }
+
+    @media screen and (max-width: 640px) {
+      .section2 ul {
+        padding: 0 10px;
+      }
+
+      .section2 ul li {
+        width: 100%;
+        margin-top: 0px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <section class="section1">
+      <h3>친환경경영 의사결정 조직</h3>
+      <ul>
+        <li>
+          <h4>CSR팀</h4>
+          <p>친환경 관련<br>사회공헌활동 추진</p>
+        </li>
+        <li>
+          <h4>(CGO)<br>친환경경영 임원</h4>
+          <p>지원담당, 인사담당, FE담당<br>친환경활동/ 폐기물 절감<br>/ 온실가스 저감</p>
+        </li>
+        <li>
+          <h4>안전환경파트</h4>
+          <p>환경 리스크 대응관리<br>폐기물 재활용 촉진<br>대기 및 수질오염<br>예방활동</p>
+        </li>
+        <li>
+          <h4>FE운영팀</h4>
+          <p>용수, 폐기물, 온실가스<br>저감 활동</p>
+        </li>
+      </ul>
+    </section>
+
+    <section class="section2">
+      <h3>친환경 활동 실천</h3>
+      <ul>
+        <li>
+          <p><img src="https://www.shinsegaefood.com/images/background/bg_evf_img_01.png" alt="img"></p>
+          <div class="txt">
+            <h3>음성공장 태양열발전</h3>
+            <span>음성공장 상부 유휴부지를 활용하여 신재생에너지를 생산하여<br>
+              가스(LNG)를 대체하여 사용하고 있습니다.</span>
+          </div>
+        </li>
+        <li>
+          <p><img src="https://www.shinsegaefood.com/images/background/bg_evf_img_02.png" alt="img"></p>
+          <div class="txt">
+            <h3>친환경패키징 확대</h3>
+            <span>식품제조 시 사용되는 용기를 탄소중립형 포장재,<br>
+              대체 플라스틱 적용을 확대하고 있습니다.</span>
+          </div>
+        </li>
+        <li>
+          <p><img src="https://www.shinsegaefood.com/images/background/bg_evf_img_03.png" alt="img"></p>
+          <div class="txt">
+            <h3>대안육제품 개발</h3>
+            <span>제품 제조 시 원료육 대신 식물성 원료를 사용하여 가축사육 시<br>
+              발생되는 메탄가스 및 물과 사료의 사용량을 줄여 지속가능한<br>
+              지구환경에 이바지 하고자 합니다.</span>
+          </div>
+        </li>
+        <li>
+          <p><img src="https://www.shinsegaefood.com/images/background/bg_evf_img_05.png" alt="img"></p>
+          <div class="txt">
+            <h3>(협력회사)친환경 경영 독려</h3>
+            <span>2021년부터 (물류 등)협력회사 입찰평가 시 ESG경영 우수 실천<br>
+              협력사 대상 가점 부여를 통해 ESG 영향력 전파에 앞장서고 있습니다.</span>
+          </div>
+        </li>
+      </ul>
+    </section>
+  </div>
+</body>
+
+</html>
