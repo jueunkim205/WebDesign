@@ -1,0 +1,173 @@
+@charset "utf-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* 공통 */
+section {
+  max-width: 1720px;
+  margin: 100px auto 0;
+  border: 1px solid #000;
+}
+
+ul {
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+}
+
+h3 {
+  font-size: 30px;
+}
+
+span {
+  font-size: 20px;
+}
+
+
+/* section 채용절차 */
+.recruit ul{
+  display: flex;
+}
+
+
+
+
+
+
+
+
+/* section 마지막부분 */
+.section_last ul {
+  margin: 0 auto;
+  width: 95%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* padding: 0 3vw; */
+.section_last ul li {
+  width: calc(100% / 3);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0 4%;
+  box-sizing: border-box;
+  font-family: Pretendard, serif;
+  letter-spacing: -1px;
+  border-right: 1px solid #ccc;
+}
+
+.section_last ul li:last-child {
+  border-right: none;
+}
+
+.section_last ul li .inner {
+  display: flex;
+  justify-content: space-between;
+}
+
+.section_last ul li .inner .txt {
+  width: 70%;
+}
+
+.section_last ul li .inner .txt h3 {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.section_last ul li .inner .txt span {
+  word-break: keep-all;
+  line-height: 30px;
+  color: #666;
+}
+
+.section_last ul li p img {
+  width: 100%;
+  vertical-align: middle;
+  object-fit: cover;
+}
+
+.section_last ul li a {
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+  color: #111;
+  margin-top: 30px;
+  padding: 10px;
+  border-bottom: 3px solid #000;
+}
+
+
+
+@media screen and (max-width: 1280px) {
+  .section_last ul li {
+    padding: 20px;
+  }
+
+  .section_last ul li:nth-child(1) {
+    width: 50%;
+  }
+
+  .section_last ul li:nth-child(2) {
+    width: 50%;
+    border-right: none;
+  }
+
+  .section_last ul li:nth-child(3) {
+    width: 100%;
+    border-top: 1px solid #ccc;
+  }
+}
+
+@media screen and (max-width: 840px) {
+
+  .section_last ul li .inner .txt h3 {
+    font-size: 24px;
+    margin-bottom: 16px;
+  }
+
+  .section_last ul li .inner .txt span {
+    font-size: 16px;
+    line-height: 24px;
+    color: #666;
+  }
+
+  .section_last ul li a {
+    width: 40px;
+    font-size: 14px;
+    padding: 10px;
+    margin-top: 20px;
+  }
+
+  .section_last ul li p img {
+    width: 80px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+
+  .section_last ul li {
+    border-right: none;
+    border-bottom: 1px solid #ccc;
+  }
+
+  .section_last ul li:nth-child(1) {
+    width: 100%
+  }
+
+  .section_last ul li:nth-child(2) {
+    border-bottom: none;
+    width: 100%
+  }
+
+  .section_last ul li a {
+    margin-top: 30px;
+  }
+
+}
