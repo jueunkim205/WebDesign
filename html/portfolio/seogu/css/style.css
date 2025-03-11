@@ -37,7 +37,7 @@ a {
 
 .top .left {
   background: #1d2a3e;
-  width: 87%;
+  flex: 1;
   color: #fff;
   padding: 0 20px 0 30px;
 }
@@ -57,9 +57,8 @@ a {
   background: rgba(255, 255, 255, .1);
 }
 
-
 .top .site {
-  width: 13%;
+  width: 250px;
   font-family: 'GmarketSansMedium';
   padding: 0 35px;
   color: #fff;
@@ -67,6 +66,8 @@ a {
 }
 
 .top .site a {
+  display: block;
+  letter-spacing: -1px;
   font-size: 15px;
   color: #fff;
 }
@@ -101,4 +102,63 @@ a {
 .nuri img {
   width: 22px;
   vertical-align: middle;
+}
+
+/* 메뉴 */
+
+
+header nav .wrap {
+  display: flex;
+}
+
+header nav .wrap .logo  a img{
+width: 200px;
+}
+header nav .wrap p:nth-child(2){
+ display: flex;
+ width: 140px;
+}
+header nav .wrap p:nth-child(2) img{
+  width: 47px;height: 35px;
+}
+header nav .wrap p:nth-child(2) span{
+  display: block;width: 100px;
+}
+
+
+
+
+
+
+
+
+
+/**************** 반응형 *******************/
+
+
+@media screen and (max-width:1280px){
+  .top .weather {
+   opacity: 0;
+  }
+}
+
+@media screen and (max-width:1024px) {
+
+  .top .left
+ {
+    width: 100%;
+  }
+  .top .weather ,
+  .top .lang,
+  .top .site {
+    display: none;
+  }
+}
+
+@media screen and (max-width:768px) {
+
+  .top {
+    display: none;
+  }
+ 
 }

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>삼성중공업</title>
+  <link rel="stylesheet" as="style" crossorigin
+    href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .wrap {
+      width: 100%;
+      max-width: 1400px;
+      padding: 0 2vw;
+      box-sizing: border-box;
+      margin: 50px auto 0;
+      font-family: Pretendard, serif;
+    }
+
+    .wrap h1 {
+      text-align: center;
+      font-size: 50px;
+      letter-spacing: -1px;
+      margin-bottom: 20px;
+      color: #111;
+    }
+
+    .wrap>p {
+      text-align: right;
+      font-size: 18px;
+      letter-spacing: -1px;
+      margin-bottom: 40px;
+      color: #666;
+    }
+
+    .wrap ul {
+      width: 100%;
+      list-style: none;
+      display: flex;
+      gap: 0 3vw;
+      flex-wrap: wrap;
+      box-sizing: border-box;
+      justify-content: space-between;
+    }
+
+    .wrap ul li {
+      display: flex;
+      justify-content: space-between;
+      width: calc((100% - 6vw) / 3);
+      max-width: 380px;
+      /* flex: 0 0 28%; */
+      padding: 40px 0;
+      box-sizing: border-box;
+    }
+
+    .wrap ul li p {
+      font-size: 22px;
+      font-weight: 500;
+      color: #333;
+    }
+
+    .wrap ul li span {
+      font-size: 25px;
+      font-weight: bold;
+      color: #111;
+    }
+
+    .wrap ul li:nth-child(-n+3) {
+      border-bottom: 4px solid #000;
+    }
+
+
+
+    @media screen and (max-width: 840px) {
+      .wrap h1 {
+        font-size: 40px;
+      }
+
+      .wrap>p {
+        font-size: 14.4px;
+      }
+
+      .wrap ul li p {
+        font-size: 17.6px;
+      }
+
+      .wrap ul li span {
+        font-size: 20px;
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      .wrap ul li {
+        width: calc((100% - 3vw) / 2);
+        padding: 5% 0;
+        border-bottom: 4px solid #000;
+      }
+
+      @media screen and (max-width: 640px) {
+        .wrap ul li {
+          display: block;
+          text-align: center;
+          padding: 4% 0;
+        }
+
+        .wrap ul li p {
+          margin-bottom: 5px;
+        }
+
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <h1>삼성중공업 주식회사</h1>
+    <p>[기준일 2023.12.31]</p>
+    <ul>
+      <li>
+        <p>대표이사</p>
+        <span>최성안</span>
+      </li>
+      <li>
+        <p>창립일</p>
+        <span>1974년 8월 5일</span>
+      </li>
+      <li>
+        <p>종업원수</p>
+        <span>9,640명</span>
+      </li>
+      <li>
+        <p>자본금</p>
+        <span>8,801억원</span>
+      </li>
+      <li>
+        <p>매출액</p>
+        <span>79,072억원</span>
+      </li>
+      <li>
+        <p>총자산</p>
+        <span>158,920억원</span>
+      </li>
+    </ul>
+  </div>
+</body>
+
+</html>

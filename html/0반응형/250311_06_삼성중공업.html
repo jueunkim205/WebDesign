@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>삼성중공업</title>
+  <link rel="stylesheet" as="style" crossorigin
+    href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .wrap {
+      width: 100%;
+      max-width: 1400px;
+      margin: 50px auto;
+      font-family: Pretendard, serif;
+    }
+
+    ul {
+      width: 96%;
+      margin: 0 auto;
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 150px;
+    }
+
+    ul li {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    ul li p,
+    ul li .txt {
+      flex: 0 45%;
+    }
+
+    ul li .txt {
+      padding-top: 30px;
+    }
+
+    ul li .txt h1 {
+      font-size: 50px;
+      font-weight: 800;
+      color: #0c4da2;
+      padding-bottom: 20px;
+      margin-bottom: 30px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    ul li .txt span {
+      line-height: 33px;
+      font-size: 20px;
+      color: #666;
+      letter-spacing: -1px;
+      word-break: keep-all;
+    }
+
+    ul li:nth-child(2n) {
+      flex-direction: row-reverse;
+      text-align: right;
+    }
+
+    ul li img {
+      width: 100%;
+      vertical-align: middle;
+    }
+
+    @media screen and (max-width:1360px) {
+
+      ul li p,
+      ul li .txt {
+        flex-basis: 47%;
+      }
+
+      ul li .txt span br {
+        display: none;
+      }
+    }
+
+    @media screen and (max-width:1024px) {
+      ul {
+        gap: 0;
+      }
+
+      ul li,
+      ul li:nth-child(2n) {
+        flex-direction: column;
+        text-align: left;
+        margin: 50px 0;
+      }
+
+      ul li p,
+      ul li .txt {
+        flex: 1;
+      }
+
+      ul li img {
+        max-width: 640px;
+      }
+
+      ul li .txt {
+        width: 100%;
+        padding-top: 50px;
+      }
+
+      ul li .txt h1 {
+        font-size: 40px;
+      }
+
+      ul li .txt span {
+        font-size: 20px;
+      }
+
+    }
+
+    @media screen and (max-width:840px) {
+
+      ul li {
+        max-width: 840px;
+      }
+
+      ul li .txt {
+        padding-top: 25px;
+      }
+
+      ul li .txt h1 {
+        font-size: 32px;
+      }
+
+      ul li .txt span {
+        font-size: 16px;
+        line-height: 25px;
+      }
+
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <ul>
+
+      <li>
+        <p><img src="https://www.samsungshi.com/images/sub/green_fuel_lng.png" alt=""></p>
+
+        <div class="txt">
+          <h1>LNG</h1>
+          <span>삼성중공업은 LNG Value Chain 전 영역에 앞선 기술력 보유하고 있으며,<br>
+            세계 최초 조선·해양 통합 LNG 핵심 기술 대규모 연구개발 단지를 조성하여<br>
+            연구 개발 제품 성능 및 안전성을 검증하고 있습니다.</span>
+        </div>
+      </li>
+
+      <li>
+        <p><img src="https://www.samsungshi.com/images/sub/green_fuel_methanol.png" alt=""></p>
+        <div class="txt">
+          <h1>메탄올</h1>
+          <span>삼성중공업은 메탄올 LFSS(Low Flashpoint Fuel Supply<br>
+            System, 저인화점 연료 공급 시스템)을 개발하고, 선박 특성에<br>
+            따라 공정 및 배치를 최적화하고 있습니다.</span>
+        </div>
+      </li>
+
+      <li>
+        <p><img src="https://www.samsungshi.com/images/sub/green_fuel_ammonia.png" alt=""></p>
+        <div class="txt">
+          <h1>암모니아</h1>
+          <span>삼성중공업은 암모니아 기반 기술 상용화를 위해<br>
+            암모니아 실증설비를 조성하여 핵심 시스템 성능과 품질을<br>
+            검증하고, 안전성을 확보하고 있습니다.</span>
+        </div>
+      </li>
+
+      <li>
+        <p><img src="https://www.samsungshi.com/images/sub/green_fuel_battery.png" alt=""></p>
+        <div class="txt">
+          <h1>연료전지</h1>
+          <span>삼성중공업은 CO2 배출 저감과<br>
+            엔진으로 인한 소음·진동 감소 및 유지보수 비용 절감을 위해<br>
+            연료전지 기술을 개발하고 있습니다.</span>
+        </div>
+      </li>
+
+    </ul>
+  </div>
+</body>
+
+</html>
