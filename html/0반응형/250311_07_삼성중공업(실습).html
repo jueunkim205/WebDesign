@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>삼성중공업</title>
+  <link rel="stylesheet" as="style" crossorigin
+    href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .wrap {
+      max-width: 1400px;
+      margin: 50px auto;
+      font-family: Pretendard, serif;
+      padding: 30px;
+    }
+
+    .wrap .maintxt {
+      transform: translateY(100%);
+    }
+
+    .wrap .maintxt h1 {
+      font-size: 45px;
+      margin-bottom: 20px;
+    }
+
+    h4 {
+      color: #666;
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 30px;
+      letter-spacing: -1px;
+      word-break: keep-all;
+      margin-bottom: 20px;
+    }
+
+    ul {
+      width: 100%;
+      list-style: none;
+      display: flex;
+      border: 1px solid #000;
+    }
+
+    ul li {
+      flex: 1 0 50%;
+      box-sizing: border-box;
+    }
+
+    ul li:first-child {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    ul li:first-child .con {
+      margin: 30% 0;
+    }
+
+    ul li:last-child {
+      max-width: 640px
+    }
+
+    ul li:last-child .con:first-child {
+      margin-bottom: 100px;
+    }
+
+
+    ul li p img {
+      width: 100%;
+      object-fit: cover;
+    }
+
+    ul li h2 {
+      margin: 20px 0 10px;
+      font-size: 30px;
+    }
+
+
+    ul li a {
+      position: relative;
+      text-decoration: none;
+      color: #000;
+      border-bottom: 2px solid #111;
+      font-weight: 500;
+      font-size: 15px;
+      transform: .5s;
+      padding: 3px;
+      z-index: 1;
+    }
+
+    ul li a:hover {
+      color: #fff;
+    }
+
+    ul li a::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      width: 100%;
+      background: #000;
+      z-index: -1;
+      height: 100%;
+      transform-origin: 0 100%;
+      transform: scaleY(0);
+      transition: transform .5s;
+    }
+
+    ul li a:hover:before {
+      transform: scaleY(1);
+    }
+
+    @media screen and (max-width: 1280px) {
+
+      ul li:first-child .con {
+           margin: 30% 7%;
+      }
+
+      ul li h2 {
+      font-size: 27px;
+    }
+
+     h4 {
+        font-size: 17px;
+        line-height: 25px;
+      }
+    }
+
+    @media screen and (max-width: 1080px) {
+
+      ul {
+        margin: 15% auto;
+      }
+
+      ul li:first-child .con {
+        margin: 30% 5%;
+        width: 80%;
+      }
+
+      .wrap .maintxt {
+        transform: translateY(80%);
+      }
+
+      .wrap .maintxt h1 {
+        font-size: 38px;
+      }
+
+      .wrap .maintxt h4 {
+        font-size: 16px;
+        line-height: 25px;
+        letter-spacing: 0;
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      .wrap .maintxt {
+        transform: translateY(50%);
+      }
+    }
+
+    @media screen and (max-width: 560px) {
+      .wrap .maintxt {
+        transform: translateY(0%);
+      }
+
+      ul {
+        width: 100%;
+        list-style: none;
+        display: block;
+        margin: 0 auto;
+      }
+
+      ul li:first-child .con {
+        margin: 0 0 100px;
+        width: 100%;
+      }
+
+      .wrap .maintxt h1 {
+        font-size: 31px;
+      }
+
+      .wrap .maintxt h4 {
+        font-size: 15px;
+      }
+
+      ul li p img {
+        height: 280px
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="maintxt">
+      <h1>우리의 약속</h1>
+      <h4>급격한 대내외 변화에 대응하기 위해 비전과 목표, 체계 등을 수립하고,<br>
+        지속적인 개선활동을 수행하여 ESG 경영 실천에 대한 의지를 표명하고자 합니다.</h4>
+    </div>
+
+
+    <ul>
+      <li>
+        <div class="con">
+          <p><img src="https://www.samsungshi.com/ESG/Kor/images/main/promise_e.jpg" alt="환경 이미지"></p>
+          <h2>환경</h2>
+          <h4>사업 전반에 있어서 환경을 먼저 생각하고, 기후변화 대응에 앞장서겠습니다.</h4>
+          <a href="#">자세히 보기</a>
+        </div>
+      </li>
+
+      <li>
+        <div class="con">
+          <p><img src="https://www.samsungshi.com/ESG/Kor/images/main/promise_s.jpg" alt="사회적 책임 이미지"></p>
+          <h2>사회적 책임</h2>
+          <h4>이해관계자의 가치를 존중하고, 사회적 책임을 다하겠습니다.</h4>
+          <a href="#">자세히 보기</a>
+        </div>
+
+        <div class="con">
+          <p><img src="https://www.samsungshi.com/ESG/Kor/images/main/promise_g.jpg" alt="거버넌스 이미지"></p>
+          <h2>거버넌스</h2>
+          <h4>투명하고 건전한 거버넌스를 확립하여 깨끗한 문화를 정착시키겠습니다.</h4>
+          <a href="#">자세히 보기</a>
+        </div>
+      </li>
+
+    </ul>
+  </div>
+</body>
+
+</html>
