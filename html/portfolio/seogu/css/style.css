@@ -5,6 +5,10 @@
   padding: 0;
 }
 
+:root {
+  font-size: 10px;
+}
+
 @font-face {
   font-family: 'GmarketSansMedium';
   src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
@@ -46,13 +50,21 @@ a {
   width: 90%;
 }
 
+.top .weather>span {
+  font-size: 1.6rem;
+}
+
 .top .lang {
   width: 10%;
   justify-content: flex-end;
 }
 
+.top .lang span {
+  font-size: 1.6rem;
+}
+
 .top .lang p {
-  padding: 7px 6px;
+  padding: .5rem;
   border-radius: 50%;
   background: rgba(255, 255, 255, .1);
 }
@@ -60,7 +72,7 @@ a {
 .top .site {
   width: 250px;
   font-family: 'GmarketSansMedium';
-  padding: 0 35px;
+  padding: 0 3.5rem;
   color: #fff;
   background: #418087 url(../images/page_m.png) right top no-repeat;
 }
@@ -68,7 +80,7 @@ a {
 .top .site a {
   display: block;
   letter-spacing: -1px;
-  font-size: 15px;
+  font-size: 1.5rem;
   color: #fff;
 }
 
@@ -81,7 +93,7 @@ a {
 /* 누리집 */
 .nuri {
   display: flex;
-  padding: 10px 50px;
+  padding: 1rem 5rem;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   align-items: center;
   background: #eef0f3;
@@ -92,9 +104,8 @@ a {
 }
 
 .nuri span {
-  font-size: 14px;
+  font-size: 1.4rem;
   color: #666;
-  font-family: gothic, "Malgun Gothic";
   letter-spacing: -1px;
   margin-left: 10px;
 }
@@ -109,26 +120,51 @@ a {
 
 header nav .wrap {
   display: flex;
+  align-items: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 2rem 3rem;
+  font-family: 'GmarketSansMedium';
 }
 
-header nav .wrap .logo  a img{
-width: 200px;
-}
-header nav .wrap p:nth-child(2){
- display: flex;
- width: 140px;
-}
-header nav .wrap p:nth-child(2) img{
-  width: 47px;height: 35px;
-}
-header nav .wrap p:nth-child(2) span{
-  display: block;width: 100px;
+header nav .wrap .logo a img {
+  width: 200px;
 }
 
+header nav .wrap p:nth-child(2) {
+  display: flex;
+  margin-left: 1rem;
+}
 
+header nav .wrap p:nth-child(2) img {
+  width: 47px;
+  vertical-align: middle;
+  padding-bottom: 3px;
+}
 
+header nav .wrap p:nth-child(2) span {
+  font-size: 1.3rem;
+  color: #494949;
+}
 
+header nav .wrap .mainMenu {
+  display: flex;
+  gap: 10rem;
+  height: 100%;
+  flex: 1;
+  text-align: center;
+  padding-right: 10rem;
+  justify-content: center;
+}
 
+header nav .wrap .mainMenu li a {
+  color: #222;
+  font-size: 1.9rem;
+}
+
+header nav .wrap .siteMap span{
+  font-size: 3rem;
+  color: #000;
+}
 
 
 
@@ -136,19 +172,19 @@ header nav .wrap p:nth-child(2) span{
 /**************** 반응형 *******************/
 
 
-@media screen and (max-width:1280px){
+@media screen and (max-width:1280px) {
   .top .weather {
-   opacity: 0;
+    opacity: 0;
   }
 }
 
 @media screen and (max-width:1024px) {
 
-  .top .left
- {
+  .top .left {
     width: 100%;
   }
-  .top .weather ,
+
+  .top .weather,
   .top .lang,
   .top .site {
     display: none;
@@ -160,5 +196,5 @@ header nav .wrap p:nth-child(2) span{
   .top {
     display: none;
   }
- 
+
 }

@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>녹색성장지속가능대학원</title>
+  <!-- google icon -->
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=arrow_outward" />
+  <!-- font -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT@2/fonts/static/woff2/SUIT.css" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      /* rem의 기준 */
+      font-size: 10px;
+    }
+
+    a {
+      text-decoration: none;
+      color: #fff;
+    }
+
+    .wrap {
+      padding: 0 3rem;
+    }
+
+    .con {
+      width: 100%;
+      max-width: 1800px;
+      margin: 50px auto;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 2.4rem;
+    }
+
+    .con>div {
+      position: relative;
+      overflow: hidden;
+      border-radius: 15px;
+    }
+
+    .con .txt {
+      margin-left: 50px;
+    }
+
+    .con .txt h1 {
+      font-size: 6.4rem;
+      margin-bottom: 20px;
+      font-family: "Montserrat", sans-serif;
+      color: #222;
+    }
+
+    .con .txt h5 {
+      font-size: 2rem;
+      line-height: 3.5rem;
+      font-weight: 400;
+      color: #5d5d5d;
+      font-family: 'SUIT', sans-serif;
+    }
+
+    .con .txt h5 strong {
+      font-weight: 800;
+      color: #00a287;
+    }
+
+    .con div h2 {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      left: 10%;
+      bottom: 10%;
+      font-size: 2.7rem;
+      z-index: 1;
+    }
+
+    .con div h2 span {
+      font-size: 3rem;
+      margin-left: 1rem;
+    }
+
+    .con div p {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    .con div img {
+      position: relative;
+      vertical-align: middle;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(60%);
+      transition: .5s;
+    }
+
+    .con div:not(:nth-child(5)):hover img{
+      filter: none;
+      transform: scale(1.1);
+      transform-origin: center center;
+    }
+
+    .con div:nth-child(5) img {
+      filter: none;
+    }
+
+
+    @media screen and (max-width: 1280px) {
+      html {
+        font-size: 9px;
+      }
+     
+      .con .txt {
+        height: auto;
+        margin-left: 2rem;
+      }
+      
+      .con div h2 {
+        left: 3rem;
+        bottom: 3rem;
+      }
+
+    @media screen and (max-width: 1140px) {
+      html {
+        font-size: 9px;
+      }
+
+      .con {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      .con>div {
+        height: 270px;
+      }
+
+      .con .txt {
+        /* height: auto; */
+        margin-left: 0;
+      }
+
+      .con div:nth-child(1) {
+        width: 100%;
+      }
+
+      .con div:nth-child(n+2) {
+        width: calc(50% - 1.2rem);
+        box-sizing: border-box;
+      }
+
+      .con div:nth-child(5) {
+        display: none;
+      }
+    }
+
+    @media screen and (max-width: 1024px) {
+      html {
+        font-size: 8px;
+      }
+
+      .con>div {
+        height: 240px;
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+
+      .con .txt h1 {
+        font-size: 4rem;
+      }
+    }
+
+    @media screen and (max-width: 560px) {
+
+      .con div:nth-child(1) {
+        height: 150px;
+      }
+
+      .con div:nth-child(n+2) {
+        height: 160px;
+      }
+
+      .con div h2 {
+        font-size: 2.5rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+
+    <div class="con">
+      <div class="txt">
+        <h1>PROGRAM</h1>
+        <h5><strong>KAIST GGGS</strong>에서는 녹색성장과 지속가능성 문제해결을 위해<br>
+          탄소중립기후기술 및 정책·금융에 대한 통섭적인 이해를 갖춘<br>
+          국가 핵심인재를 양성합니다.</h5>
+      </div>
+      <div>
+        <a href="">
+          <h2>박사과정<span class="material-symbols-outlined">
+              arrow_outward
+            </span></h2>
+          <p><img src="https://gggs.kaist.ac.kr/html/images/main/sec03_tab01.png" alt="이미지"></p>
+        </a>
+      </div>
+      <div>
+        <a href="">
+          <h2>군학 프로그램<span class="material-symbols-outlined">
+              arrow_outward
+            </span></h2>
+          <p><img src="https://gggs.kaist.ac.kr/html/images/main/sec03_tab02.png" alt="이미지"></p>
+        </a>
+      </div>
+
+      <div>
+        <a href="">
+          <h2>석사과정<span class="material-symbols-outlined">
+              arrow_outward
+            </span></h2>
+          <p><img src="https://gggs.kaist.ac.kr/html/images/main/sec03_tab03.png" alt="이미지"></p>
+        </a>
+      </div>
+
+      <div>
+        <p><img src="https://gggs.kaist.ac.kr/html/images/main/sec03_thumb.png" alt="이미지"></p>
+      </div>
+
+      <div>
+        <a href="">
+          <h2>외국인 전형<span class="material-symbols-outlined">
+              arrow_outward
+            </span></h2>
+          <p><img src="https://gggs.kaist.ac.kr/html/images/main/sec03_tab04.png" alt="이미지"></p>
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+
+</html>
