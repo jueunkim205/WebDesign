@@ -215,7 +215,8 @@ header nav .mainMenu:hover~.bg {
   left: 50%;
   transform: translateX(-50%);
   display: flex;
-  width: 75%;
+  width: 70%;
+  gap: 10%;
   font-family: "Noto Sans KR", serif;
 }
 
@@ -450,16 +451,13 @@ header nav .mainMenu:hover~.bg {
 footer .up,
 footer .down {
   width: 100%;
-  border: 1px solid #000;
   margin: 0 auto;
   box-sizing: border-box;
 }
 
-
-footer .down {
-  background: #f4f6f9;
-  margin: 0 auto;
-  border: 1px solid #000;
+footer .up{
+  border-top: 1px solid #ddd;
+  border-bottom:  1px solid #ddd;
 }
 
 footer .up .banner {
@@ -467,35 +465,61 @@ footer .up .banner {
   display: flex;
   margin: 0 auto;
   justify-content: space-between;
-  padding: 5px 0;
+  padding: 15px 0;
 }
 
 footer .up .banner ul {
   display: flex;
   align-items: center;
 }
+
 footer .up .banner ul:first-child {
   gap: 30px;
 }
 
 footer .up .banner ul:first-child a {
-  position : relative;
+  position: relative;
   font-size: 12px;
+  color: #555;
+  font-weight: 900;
 }
 
-footer .up .banner ul:first-child a::after{
+footer .up .banner ul:first-child li:first-child a {
+  color: #4567ad;
+}
+
+footer .up .banner ul:first-child li:nth-child(-n+6) a::after {
   content: '';
-  position : absolute;
+  position: absolute;
   width: 1px;
   height: 80%;
+  top: 50%;
+  transform: translateY(-50%);
+  right: -15px;
   background: #ccc;
+}
+
+footer .up .banner ul:first-child li:nth-child(n+7):nth-child(-n+8) a::after {
+  content: '';
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  right: -23px;
+  background: url(../images/open_in_new.png) center/cover no-repeat;
+  filter: opacity(55%);
+}
+
+footer .up .banner ul:last-child {
+  display: flex;
+  gap: 15px;
 }
 
 footer .up .banner ul:last-child li p {
   background-image: url(../images/icons.png);
   width: 32px;
   height: 32px;
-  border: 1px solid #000;
   background-size: 292px;
   line-height: 99px;
 }
@@ -524,11 +548,17 @@ footer .banner ul:last-child li:nth-child(6) p {
   background-position: -254px -13px;
 }
 
+
+footer .down {
+  background: #f4f6f9;
+  margin: 0 auto;
+padding: 4% 0;
+}
+
 footer .down .con {
   max-width: 1200px;
   display: flex;
   margin: 0 auto;
-  border: 1px solid #000;
 }
 
 
