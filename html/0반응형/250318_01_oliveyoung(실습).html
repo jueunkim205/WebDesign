@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .wrap {
+      display: flex;
+      gap: 20px;
+      max-width: 1420px;
+      margin: 50px auto;
+      height: 858px;
+      width: 100%;
+    }
+
+    .left_con {
+      width: 40%;
+      height: 100%;
+    }
+
+    .left_con a {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      vertical-align: middle;
+    }
+
+    h2 {
+      font-size: 20px;
+      margin-top: 15px;
+    }
+
+    span {
+      font-size: 14px;
+      padding: 10px;
+      border-radius: 20px;
+    }
+
+    .left_con p {
+      width: 100%;
+      height: 580px;
+    }
+
+    .left_con .down {
+      background: #21a100;
+      position: relative;
+      flex: 1;
+    }
+
+    .txt {
+      color: #fff;
+      width: 100%;
+      padding: 0 7%;
+      position: absolute;
+      left: 0;
+      bottom: 10%;
+      box-sizing: border-box;
+    }
+
+    .right_con {
+      width: 60%;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .right_con .up {
+      display: flex;
+      gap: 20px;
+      height: calc(50% - 10px);
+    }
+
+    .right_con .up>div,
+    .right_con .down>div {
+      position: relative;
+      flex: 1;
+      overflow: hidden;
+    }
+
+    .right_con .down {
+      display: flex;
+      gap: 20px;
+      height: calc(50% - 10px);
+      justify-content: space-between;
+    }
+
+    .right_con .down>div {
+      flex: 1;
+    }
+
+    .right_con .down .right {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .right_con .down .right>div {
+      position: relative;
+      height: 50%;
+    }
+
+
+    @media screen and (max-width:1440px) {
+      .wrap {
+        flex-direction: column;
+        height: auto;
+        padding: 0 60px;
+        box-sizing: border-box;
+        gap: 30px;
+      }
+
+      .left_con {
+        width: 100%;
+      }
+
+      .left_con a {
+        flex-direction: row;
+      }
+
+      .left_con a p,
+      .left_con a .down {
+        flex: 1;
+      }
+
+      .right_con {
+        width: 100%;
+        height: 1000px;
+        gap: 30px;
+      }
+
+      .right_con .up,
+      .right_con .down,
+      .right_con .down .right {
+        gap: 30px;
+      }
+    }
+
+
+    @media screen and (max-width:960px) {
+      .wrap {
+        padding: 0 20px;
+        gap: 10px;
+      }
+
+      .left_con a {
+        height: 500px;
+        flex-direction: column;
+      }
+
+      .left_con img {
+        height: 400px;
+      }
+
+      .left_con .down {
+        height: 100px;
+      }
+
+      .right_con {
+        height: auto;
+        gap: 10px;
+      }
+
+      .right_con .up {
+        flex-direction: column;
+        height: 1000px;
+      }
+
+      .right_con .up>div {
+        width: 100%;
+        height: 50%;
+      }
+
+      .right_con .down {
+        height: 600px;
+      }
+
+      .right_con .up,
+      .right_con .down,
+      .right_con .down .right {
+        gap: 10px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <!-- ----------------------------- -->
+    <div class="left_con">
+      <!-- 580 -->
+      <a href="">
+
+        <p class="up"><img src="./images/oliveyoung_recruit.jpg" alt="채용 이미지"></p>
+
+        <div class="down">
+          <div class="txt">
+            <span>보도자료</span>
+            <h2>CJ올리브영, 2025 상반기 신입사원 채용</h2>
+          </div>
+        </div>
+
+      </a>
+    </div>
+    <!-- ----------------------------- -->
+    <div class="right_con">
+      <!-- 840 -->
+      <div class="up">
+
+        <div>
+          <a href=""><img src="./images/oliveyoung01.png" alt="">
+            <div class="txt">
+              <span>보도자료</span>
+              <h2>189개 국적 외국인 942만건 결제… 올리브영, ‘글로벌 K뷰티 게이트웨이’ 자리매김</h2>
+            </div>
+          </a>
+        </div>
+
+        <div>
+          <a href=""><img src="./images/oliveyoung02.jpg" alt="">
+            <div class="txt">
+              <span>보도자료</span>
+              <h2>CJ올리브영 ‘K뷰티 혁신 성장’ 사례, 美하버드 경영대학원 수업 교재 채택</h2>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="down">
+        <!-- 변동없음 -->
+        <div class="left">
+          <a href=""><img src="./images/oliveyoung03.jpg" alt="">
+            <div class="txt">
+              <span>테크블로그</span>
+              <h2>올리브영 테크블로그 바로가기</h2>
+            </div>
+          </a>
+        </div>
+
+        <div class="right">
+
+          <div>
+            <a href=""><img src="./images/oliveyoung04.png" alt="">
+              <div class="txt">
+                <span>산업지원정보</span>
+                <h2>화장품 산업 관련 정부지원사업 모아보기</h2>
+              </div>
+            </a>
+          </div>
+
+          <div>
+            <a href=""><img src="./images/oliveyoung05.png" alt="">
+              <div class="txt">
+                <span>채용 공고</span>
+                <h2>올리브영 채용 공고 모아보기</h2>
+              </div>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+</body>
+
+</html>

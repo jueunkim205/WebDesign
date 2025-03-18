@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" as="style" crossorigin
+    href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    a {
+      text-decoration: none;
+      color: #565e65;
+      font-size: 18px;
+      font-weight: 400;
+    }
+
+    .wrap {
+      padding: 0 60px;
+    }
+
+    .wrap>ul {
+      display: flex;
+      width: 100%;
+      max-width: 1420px;
+      margin: 50px auto;
+      box-sizing: border-box;
+    }
+
+    .wrap>ul .left {
+      position: fixed;
+    }
+
+    .wrap>ul .left h1 {
+      font-size: 54px;
+    }
+
+    .wrap>ul .left .list {
+      font-family: Pretendard, serif;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      font-size: 18px;
+      margin-top: 50px;
+    }
+
+    .wrap>ul .right {
+      width: 60%;
+      margin-left: 40%;
+    }
+
+    .wrap>ul .right li>p {
+      width: 15%;
+      line-height: 10px;
+      font-size: 18px;
+      color: #565e65;
+    }
+
+    .wrap>ul .right ul>li {
+      display: flex;
+      margin-bottom: 100px;
+    }
+
+    .wrap>ul .right ul>li:last-child {
+      margin-bottom: 0;
+    }
+
+    .wrap>ul .right ul li .con {
+      flex: 1;
+      font-family: Pretendard, serif;
+    }
+
+    .wrap>ul .right ul li .con h5 {
+      display: none;
+      font-size: 12px;
+      color: #565e65;
+      font-weight: 400;
+    }
+
+    .wrap>ul .right ul li .con h2 {
+      margin: 46px 0 34px;
+      font-size: 30px;
+      line-height: 40px;
+    }
+
+    .wrap>ul .right ul li .con h6 {
+      font-size: 18px;
+      font-weight: 500;
+      color: #565e65;
+      line-height: 27px;
+    }
+
+    .wrap>ul .right ul li .con span {
+      display: inline-block;
+      margin-top: 35px;
+      font-weight: bold;
+    }
+
+    .wrap>ul .right img {
+      width: 100%;
+    }
+
+
+    @media screen and (max-width:1169px) {
+
+      .wrap {
+        padding: 0 20px;
+      }
+
+      .wrap>ul {
+        flex-direction: column;
+      }
+
+      .wrap>ul .left {
+        position: relative;
+      }
+
+      .wrap>ul .left h1 {
+        font-size: 26px;
+        margin-bottom: 50px;
+      }
+
+      .wrap>ul .left .list {
+        display: none;
+      }
+
+      .wrap>ul .right {
+        width: 100%;
+        margin-left: 0;
+      }
+
+      .wrap>ul .right ul>li {
+        margin-bottom: 70px;
+      }
+
+      .wrap>ul .right ul li>p {
+        width: 2%;
+        line-height: 12px;
+        font-size: 12px;
+        text-align: center;
+      }
+
+      .wrap>ul .right ul li .con {
+        flex: 1;
+        margin-left: 10px;
+      }
+
+      .wrap>ul .right ul li .con h5 {
+        display: block;
+        margin-bottom: 10px;
+      }
+
+      .wrap>ul .right ul li .con h2 {
+        margin: 30px 0 25px;
+        font-size: 18px;
+        line-height: 25px;
+      }
+
+      .wrap>ul .right ul li .con h6 {
+        font-size: 13px;
+        line-height: 20px;
+      }
+
+      .wrap>ul .right ul li .con span {
+        font-size: 13px;
+        margin-top: 20px;
+      }
+
+
+
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <ul>
+      <li class="left">
+        <h1>OLIVE YOUNG<br>Platforms</h1>
+
+        <div class="list">
+          <h5><a href="#one">올리브영 매장</a></h5>
+          <h5><a href="#two">올리브영 Online (국내)</a></h5>
+          <h5><a href="#three">올리브영 글로벌</a></h5>
+
+        </div>
+      </li>
+
+
+      <li class="right">
+        <ul>
+
+          <li>
+            <p id="one">01</p>
+            <div class="con">
+              <h5>올리브영 매장 (국내)</h5>
+              <p><img src="https://corp.oliveyoung.com/img/tmp/tmp_img_platform1-cf428ca64855adc4a1062251b83cf683.jpg"
+                  alt="">
+              </p>
+              <h2>고객과 가장 가까운 곳에서<br>건강한 아름다움을 제안합니다.</h2>
+              <h6>우리는 1,370여개의 매장을 기반으로 고객에게 뷰티&헬스 상품을 큐레이션합니다.<br>
+                또한 체험형 콘텐츠와 커머스의 연계를 통해 파트너사들에게<br>
+                매력적인 브랜딩, 마케팅 채널로 진화하고 있습니다.</h6>
+              <span>올리브영 매장이 보고 싶다면?</span>
+            </div>
+          </li>
+
+          <li>
+            <p id="two">02</p>
+            <div class="con">
+              <h5>올리브영 Online (국내)</h5>
+              <p><img src="https://corp.oliveyoung.com/img/tmp/tmp_img_platform2-777eecd5b0d28e7c17848bfe3dffe645.jpg"
+                  alt="">
+              </p>
+              <h2>고객이 건강한 아름다움을 찾아가는<br>온라인 PLAYGROUND를 제공합니다.</h2>
+              <h6>우리는 차별화된 온라인 콘텐츠와 AI기술 기반 상품 추천을 통해 월 이용자 수 532만명,<br>
+                멤버십 회원 수 1,560만명 이상의 뷰티&헬스 커뮤니티를 구현했습니다.<br>
+                또한 업계 최초 당일 배송 서비스인 오늘드림을 실행하여 고객경험을 혁신했습니다.</h6>
+              <span>올리브영 Online 서비스가 궁금하다면?</span>
+            </div>
+          </li>
+
+          <li>
+            <p id="three">03</p>
+            <div class="con">
+              <h5>올리브영 글로벌</h5>
+              <p><img src="https://corp.oliveyoung.com/img/tmp/tmp_img_platform3-c78371c66bba75b227096ecd0f128e12.jpg"
+                  alt="">
+              </p>
+              <h2>전세계에 한국의<br>뷰티&헬스를 알립니다.</h2>
+              <h6>우리는 한국의 뷰티&헬스 브랜드들이 세계로 뻗어 나가는 교두보 역할을 수행합니다.<br>
+                2019년 런칭한 글로벌몰과 연간 약 500만명 이상이 외국인 고객이 방문하는 국내 글로벌 특화매장은<br>
+                파트너사와 함께 글로벌 시장에서 동반 성장을 할 수 있는 핵심 원동력입니다.</h6>
+              <span>올리브영의 글로벌 플랫폼을 보고싶다면?</span>
+            </div>
+          </li>
+
+        </ul>
+      </li>
+
+    </ul>
+  </div>
+</body>
+
+</html>
