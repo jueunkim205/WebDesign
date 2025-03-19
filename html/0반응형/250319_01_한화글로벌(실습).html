@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hanwha Group</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .wrap {
+      width: 100%;
+      max-width: 1900px;
+      padding: 4vw;
+      text-align: center;
+      box-sizing: border-box;
+    }
+
+    .wrap h1 {
+      font-size: 4vw;
+      letter-spacing: -1px;
+    }
+
+    .wrap ul {
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      gap: 15px;
+      margin: 50px auto;
+    }
+
+    .wrap ul li {
+      flex: 1 1 calc(100% / 3);
+      padding: 4vw 2vw;
+      background-color: #EFE8E4;
+      border-radius: 10px;
+    }
+
+
+    .wrap ul li p img {
+      vertical-align: middle;
+      height: 10vw;
+    }
+
+    .wrap ul li h2 {
+      font-size: 1.8vw;
+      margin-top: 25px;
+      letter-spacing: -1px;
+      color: #222;
+    }
+
+    .wrap ul li h2 span {
+      color: #F37321;
+    }
+
+    .line {
+      width: 80%;
+      height: 1px;
+      background: #ccc;
+      margin: 1.5vw auto;
+    }
+
+    .wrap ul li h5 {
+      font-size: 1vw;
+      font-weight: 500;
+      color: #616161;
+      word-break: keep-all;
+    }
+
+
+
+    @media screen and (max-width: 1024px) {
+      .wrap {
+        padding: 3.5vw;
+      }
+
+      .wrap ul {
+        gap: 15px;
+        margin: 30px auto;
+        gap: 7px;
+      }
+
+      .line {
+        width: 90%;
+      }
+
+      .wrap ul li h5 {
+        font-size: 12px;
+      }
+
+      .wrap ul li h5 br {
+        display: none;
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+
+      .wrap h1 {
+        display: none;
+      }
+
+      .wrap ul {
+        flex-wrap: wrap;
+      }
+
+      .wrap ul li {
+        display: flex;
+        align-items: center;
+        flex-basis: 100%;
+        padding: 4vw 18px;
+      }
+
+      .wrap ul li p {
+        width: 18vw;
+      }
+
+      .wrap ul li:first-child p img {
+        height: 16vw;
+      }
+
+      .wrap ul li p img {
+        height: 15vw;
+      }
+
+      .txt {
+        flex: 5;
+        text-align: left;
+        margin-left: 18px;
+      }
+
+      .wrap ul li h2 {
+        margin-top: 0;
+        font-size: 17px;
+      }
+
+      .line {
+        width: 100%;
+      }
+
+      .wrap ul li:last-child h2 br {
+        display: none;
+      }
+
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <h1>Our Brand Values</h1>
+
+    <ul>
+      <li>
+        <p><img src="https://www.hanwha.com/assets/img/main/sustainable-and-inclusive-growth.svg" alt=""></p>
+        <div class="txt">
+          <h2>Sustainable and<br>Inclusive <span>Growth</span></h2>
+          <div class="line"></div>
+          <h5>We strive for social, economic, and<br>
+            environmental prosperity for all</h5>
+        </div>
+      </li>
+      <li>
+        <p><img src="https://www.hanwha.com/assets/img/main/technology-and-solution-driven-innovation.svg" alt=""></p>
+        <div class="txt">
+          <h2>Technology and<br>Solution-driven <span>Innovation</span></h2>
+          <div class="line"></div>
+          <h5>Through technological innovation,<br>
+            we provide solutions from people to planet</h5>
+        </div>
+      </li>
+      <li>
+        <p><img src="https://www.hanwha.com/assets/img/main/hanwha-enhances-lives.svg" alt=""></p>
+        <div class="txt">
+          <h2>Enhancing <br><span>Lives</span></h2>
+          <div class="line"></div>
+          <h5>We lay the foundation for a fulfilling life through<br>
+            our technologies, products, and services</h5>
+        </div>
+      </li>
+    </ul>
+
+  </div>
+</body>
+
+</html>
