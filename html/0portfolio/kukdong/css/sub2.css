@@ -1,0 +1,74 @@
+@charset "utf-8";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.wrap {
+  box-sizing: border-box;
+}
+
+/************* 공통 *************/
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/************* main *************/
+main .wrap {
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto 100px;
+}
+
+main .title {
+  font-size: 52px;
+  text-align: center;
+  font-family: 'NanumSquare', sans-serif;
+  margin: 100px 0 70px;
+  color: #222;
+  font-weight: 400;
+  letter-spacing: -1px;
+}
+
+main .list {
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+main .list label {
+  border: 1px solid #aaa;
+  cursor: pointer;
+  min-width: 130px;
+  text-align: center;
+  color: #222;
+  padding: 20px 10px;
+  letter-spacing: -1px;
+}
+
+main .list label:not(:last-of-type) {
+  border-right: none;
+}
+
+#desc1:checked~.list label:first-child,
+#desc2:checked~.list label:nth-child(2),
+#desc3:checked~.list label:nth-child(3),
+#desc4:checked~.list label:nth-child(4),
+#desc5:checked~.list label:nth-child(5),
+#desc6:checked~.list label:last-child {
+  background: #555;
+  color: #fff;
+}
+
+.desc {
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+.desc .desc_tit {
+  text-align: center;
+}
