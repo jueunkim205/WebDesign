@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      /* !important 붙이면 최우선적용 */
+      background: #ccc !important;
+    }
+  </style>
+  <script>
+    // (property) document.title 속성 =
+    document.title = "자바스크립트";
+
+    // (method) Console.log 메소드 ()
+    console.log(123 + '123' + "\n" + 'abc');
+
+    function myFunction() {
+      document.getElementById("demo").innerHTML = "Paragraph changed.";
+    }
+
+    console.log(123.456+111);
+    console.log(1,000 + 2,000);
+    console.log(1.2.3+ 111);
+  </script>
+</head>
+
+<body>
+  <p id="demo">변경전</p>
+  <button onclick="myFunction()">클릭</button>
+</body>
+<script>
+  document.title = "자바스크립트 변경";
+  // 자바스크립트는 '-' 산술연산자로만 쓴다
+  // 위치상관없이 내부방식(css) < 인라인 방식(js) 우선적용
+  document.body.style.backgroundColor = "cyan";
+
+  // innerText 안의 문자만 바꿔줌
+  // innerHTML html태그 적용됨
+  document.getElementById("demo").innerHTML = "<i>변경<br>완료</i>";
+  document.getElementById("demo").style.color = "#f00"
+</script>
+
+</html>

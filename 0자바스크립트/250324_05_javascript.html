@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style></style>
+  <script></script>
+</head>
+
+<body>
+  <p class="txt">하나</p>
+  <p class="txt">둘</p>
+  <p class="txt">셋</p>
+  <p class="txt">넷</p>
+  <p class="txt">다섯</p>
+  <div>
+    <p class="txt">하나</p>
+    <p class="txt">둘</p>
+    <p class="txt">셋</p>
+    <p class="txt">넷</p>
+    <p class="txt">다섯</p>
+  </div>
+  <h3>A h3 element</h3>
+  <h4>A h4 element</h4>
+
+
+  <script>
+    document.getElementsByClassName("txt")[2].style.color = "#f00";
+
+    // querySelector는 무조건 첫번째 선택자만 가져다줌
+    document.querySelector("div p").style.color = "cyan";
+
+    // 둘 중 제일 처음 만난 요소만 선택
+    document.querySelector("h3, h4").style.color = "red";
+
+
+    document.querySelectorAll(".txt")[2].style.border="1px solid plum";
+
+  </script>
+</body>
+
+
+</html>

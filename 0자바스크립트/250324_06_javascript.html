@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style></style>
+  <script></script>
+</head>
+
+<body>
+  <p class="txt">하나</p>
+
+  <button onclick="colorChange()">글자색바꾸기</button>
+  <button onclick="sizeChange()">글자크기바꾸기</button>
+  <button>테두리넣기</button>
+
+  <script>
+    function colorChange() {
+      // document.getElementsByClassName('txt')[0].style.color = "red";
+      document.querySelector('.txt').style.color = '#f00';
+    }
+
+    function sizeChange() {
+      // document.getElementsByClassName('txt')[0].style.fontSize = '32px';
+      document.querySelector('.txt').style.fontSize = "32px";
+    }
+
+    // ㅎㅎ재밌다 아직까지는
+    document.getElementsByTagName('button')[2].onclick = function () {
+      document.querySelector('.txt').style.border = "1px solid purple";
+      document.querySelector('.txt').style.backgroundColor = "plum";
+    }
+  </script>
+</body>
+
+
+</html>

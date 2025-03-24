@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    div {
+      position: relative;
+    }
+
+    div p {
+      position: absolute;
+      left: 0;
+      top: 0;
+      display: none;
+    }
+
+    div p.on {
+      display: block;
+    }
+  </style>
+  <script></script>
+</head>
+
+<body>
+  <ul>
+    <li>photo1</li>
+    <li>photo2</li>
+    <li>photo3</li>
+    <li>photo4</li>
+    <li>photo5</li>
+  </ul>
+
+
+  <div>
+    <p><img src="../html/images/photo1.jpg" alt="photo"></p>
+    <p><img src="../html/images/photo2.jpg" alt="photo"></p>
+    <p><img src="../html/images/photo3.jpg" alt="photo"></p>
+    <p><img src="../html/images/photo4.jpg" alt="photo"></p>
+    <p><img src="../html/images/photo5.jpg" alt="photo"></p>
+  </div>
+
+  <script>
+
+
+    function my() {
+      document.querySelectorAll('p').forEach(function (value, key) {
+        value.classList.remove('on');
+      });
+    }
+
+
+
+
+    document.getElementsByTagName("li")[0].onclick = function () {
+      my();
+      document.getElementsByTagName("p")[0].classList.add("on");
+    };
+
+    document.getElementsByTagName("li")[1].onclick = function () {
+      my();
+      document.getElementsByTagName("p")[1].classList.add("on");
+    };
+
+
+    document.getElementsByTagName("li")[2].onclick = function () {
+      my();
+      document.getElementsByTagName("p")[2].classList.add("on");
+    };
+
+
+    document.getElementsByTagName("li")[3].onclick = function () {
+      my();
+      document.getElementsByTagName("p")[3].classList.add("on");
+    };
+
+
+    document.getElementsByTagName("li")[4].onclick = function () {
+      my();
+      document.getElementsByTagName("p")[4].classList.add("on");
+    };
+
+
+
+    /*
+    document.querySelectorAll("ul li")[0].style.color = "#f00";
+
+    document.querySelectorAll("ul li").forEach(function (value, key) {
+      // console.log(value);
+      // console.log(value, key);
+      value.onclick = function () {
+        console.log(key);
+        // value.classList.add('on');
+      }
+    })
+*/
+
+  </script>
+</body>
+
+
+</html>
