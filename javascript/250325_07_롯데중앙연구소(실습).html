@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> 연구개발 | 연구분야 | 연구활동 | 롯데중앙연구소</title>
+  <link rel="stylesheet" as="style" crossorigin
+    href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .wrap {
+      font-family: Pretendard, sans-serif;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .up {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin: 100px 0;
+    }
+
+    .up li a {
+      display: block;
+      color: #ccc;
+      background: #333c;
+      width: 200px;
+      height: 54px;
+      line-height: 54px;
+      font-size: 20px;
+      text-align: center;
+      border-radius: 30px;
+    }
+
+    .up li.on a {
+      background: #da291c;
+      color: #fff;
+      font-weight: 600;
+    }
+
+    .down {
+      width: 100%;
+      height: 400px;
+      position: relative;
+    }
+
+    .down li {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+    }
+
+    .down li:first-child {
+      background: url(https://www.lotternd.com/assets/images/sub/research/research-ban1.jpg) center/cover no-repeat;
+    }
+
+    .down li:nth-child(2) {
+      background: url(https://www.lotternd.com/assets/images/sub/research/research-ban2.jpg) center/cover no-repeat;
+    }
+
+    .down li:nth-child(3) {
+      background: url(https://www.lotternd.com/assets/images/sub/research/research-ban3.jpg) center/cover no-repeat;
+    }
+
+    .down li:nth-child(4) {
+      background: url(https://www.lotternd.com/assets/images/sub/research/research-ban4.jpg) center/cover no-repeat;
+    }
+
+    .down li:nth-child(5) {
+      background: url(https://www.lotternd.com/assets/images/sub/research/research-ban5.jpg) center/cover no-repeat;
+    }
+
+    .down li:last-child {
+      background: url(https://www.lotternd.com/assets/images/sub/research/research-ban6.jpg) center/cover no-repeat;
+    }
+
+    .down li .txt {
+      position: absolute;
+      text-align: center;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .down li h1 {
+      font-size: 38px;
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+
+    .down li p {
+      font-size: 22px;
+      font-weight: 300;
+    }
+
+    .down li.on {
+      opacity: 1;
+    }
+
+    .down li.on .txt {
+      animation: wave1 1s ease;
+    }
+
+
+    @keyframes wave1 {
+      0% {
+        margin-top: 50px;
+        opacity: 20%;
+      }
+
+      100% {
+        margin-top: 0px;
+        opacity: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <ul class="up">
+      <li><a href="#">연구개발</a></li>
+      <li><a href="#">기초연구</a></li>
+      <li><a href="#">패키지연구</a></li>
+      <li><a href="#">기술연구</a></li>
+      <li><a href="#">안전관리</a></li>
+      <li><a href="#">연구전략</a></li>
+    </ul>
+
+    <ul class="down">
+      <li>
+        <div class="txt">
+          <h1>연구개발</h1>
+          <p>소비자의 니즈와 시장 선호도에 부합하는 신제품을 출시하고 품질을 개선합니다.</p>
+        </div>
+      </li>
+      <li>
+        <div class="txt">
+          <h1>기초연구</h1>
+          <p>바이오 연구, 신소재 발굴 등 개발의 기틀을 마련하고 신규 솔루션을 개척합니다.</p>
+        </div>
+      </li>
+      <li>
+        <div class="txt">
+          <h1>패키지연구</h1>
+          <p>제품 포장을 설계하고 디자인하여 품질 유지와 아이덴티티 강화를 이룹니다.</p>
+        </div>
+      </li>
+      <li>
+        <div class="txt">
+          <h1>기술연구</h1>
+          <p>첨단 기술을 현장에 적용하여 식품 제조 방식의 선진화를 이끕니다.</p>
+        </div>
+      </li>
+      <li>
+        <div class="txt">
+          <h1>안전관리</h1>
+          <p>위생 관리와 위해 사고 예방을 통해 롯데 식품 및 상품의 안전을 책임집니다.</p>
+        </div>
+      </li>
+      <li>
+        <div class="txt">
+          <h1>연구전략</h1>
+          <p>진행 방향을 설계하고 실질적 연구 활동을 지원합니다.</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <script>
+
+    function myRemove() {
+      document.querySelectorAll('.up li').forEach(function (v, k) {
+        v.classList.remove('on');
+      })
+
+      document.querySelectorAll('.down li').forEach(function (v, k) {
+        v.classList.remove('on');
+      })
+    }
+
+    document.querySelectorAll('.up li')[0].classList.add('on');
+    document.querySelectorAll('.down li')[0].classList.add('on');
+
+    document.querySelectorAll('.up li').forEach(function (v, k) {
+      v.onclick = function (e) {
+        e.preventDefault();
+        myRemove();
+        v.classList.add('on');
+        document.querySelectorAll('.down li')[k].classList.add('on');
+        document.title = v.textContent + ' |   연구분야 |  연구활동 |  롯데중앙연구소';
+      }
+    })
+  </script>
+</body>
+
+</html>

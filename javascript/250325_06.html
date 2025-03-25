@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>변수</title>
+  <style>
+  </style>
+</head>
+
+<body>
+  <p class="on"></p>
+
+
+  <script>
+    var br = '<br>'
+
+    var a = 123;
+    var a = 456;
+    a = 'aaaa';
+
+    var b;
+    b = 'bbbb'
+    document.write(a, b);
+
+    var c = true; // 1
+    var d = false; // 0
+    let e = 000;
+    let f;  // <= 전역변수
+    f = 222;
+    document.write(br + "f = " + f + br);
+    {
+      // 지역변수
+      let f = 333;
+      document.write(br + "f = " + f + br);
+    }
+
+    // let 재선언 불가, 재할당 가능
+    f = 555;
+    document.write(br + "f = " + f + br);
+
+
+    // const 재선언, 재할당 불가
+    const g = 444;
+    // 오류남
+    // const h;
+    // h = 'aaa';
+    document.write(a + b + c + br);
+    document.write(c + d);
+    document.write(e + br);
+
+    let p01 = document.querySelector('p');
+    let aaa = p01.classList.contains('on');
+    document.write(aaa + br);
+  </script>
+</body>
+
+</html>
