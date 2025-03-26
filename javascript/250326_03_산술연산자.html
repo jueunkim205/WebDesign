@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>click event</title>
+  <style>
+
+  </style>
+</head>
+
+<body>
+
+  <script>
+    let br = '<br>';
+    let a = 10;
+    let b = 20;
+    document.write("a + b = " + (a + b) + br);
+    document.write("a + b = " + a + b + br);
+    // ,(콤마)는 왼쪽오른쪽의 식을 연결
+    document.write("a + b = ", a + b , br);
+    document.write("a - b = ", a - b , br);
+    document.write("a / b = ", a / b , br);
+    document.write("a % b = ", a % b , br);
+    // ** 거듭제곱 
+    document.write("a ** b = ", a ** b , br);
+
+    // 후위연산 : a먼저 출력 후 연산함
+    // a : 10, 연산함-> a : 11, 재출력-> a : 11
+    document.write("후위연산 a++ : ", a++, br);
+    document.write("후위연산 후 a : ", a, br);
+
+    // 전위연산
+    document.write("전위연산 ++a : ", ++a, br);
+
+    document.write('a-- : ', a--, br);
+    document.write('a : ', a, br);
+    
+  </script>
+</body>
+
+</html>

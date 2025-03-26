@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>click event</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    a {
+      text-decoration: none;
+      color: #000;
+    }
+
+    p {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    p a {
+      background: rgba(0, 0, 0, .5);
+      color: #fff;
+      padding: 10px 15px;
+      text-decoration: none;
+    }
+
+    #popup {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border: 1px solid #000;
+      width: 500px;
+      height: 500px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <p><a href="#">클릭</a></p>
+  <div id="popup">
+    popup
+    <a href="">close</a>
+  </div>
+
+  <script>
+    document.querySelector('#popup').style.display = 'none';
+
+    document.querySelector('p a').addEventListener('click', function (e) {
+      e.preventDefault();
+
+      // 팝업띄움
+      document.querySelector('#popup').style.display = 'block';
+      // 버튼가림
+      this.style.display = 'none';
+    })
+
+    document.querySelector('#popup a').onclick = function (e) {
+      e.preventDefault();
+
+      // 팝업가림
+      document.querySelector('#popup').style.display = 'none';
+      // 버튼띄움
+      document.querySelector('p a').style.display = 'block'
+    }
+
+
+  </script>
+</body>
+
+</html>

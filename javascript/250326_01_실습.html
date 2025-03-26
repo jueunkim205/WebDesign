@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>click event</title>
+  <style>
+    button {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: #444;
+      color: #fff;
+      border: none;
+      padding: 10px 15px;
+    }
+
+    .click {
+      background: #aaa;
+      color: #000;
+    }
+
+    .on {
+      background: #aaa;
+    }
+  </style>
+</head>
+
+<body>
+
+  <button>클릭</button>
+
+
+  <script>
+    document.querySelector('button').onclick = function () {
+      document.querySelector('button').classList.toggle('click');
+      document.body.classList.toggle('on');
+    }
+  </script>
+</body>
+
+</html>

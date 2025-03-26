@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>신세계푸드</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .bg1 {
+      margin: 200px auto;
+      background-position: top center;
+      background-repeat: no-repeat;
+    }
+
+    ul {
+      width: 100%;
+      height: 450px;
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0 64px;
+    }
+
+    ul li a {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      background: #fff;
+      text-decoration: none;
+      color: #000;
+    }
+
+    ul li a.on:after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      border: 10px solid red;
+    }
+
+    span {
+      width: 100%;
+      height: 100%;
+      color: #444;
+      font-size: 25px;
+      text-align: center;
+      padding-top: 115px;
+      line-height: 25px;
+      border-radius: 50%;
+      box-sizing: border-box;
+      background-position: top center;
+      background-repeat: no-repeat;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="business" class="bg1">
+    <ul>
+      <li>
+        <a href="#" class="on"><span>식품제조/<br />유통</span></a>
+      </li>
+      <li>
+        <a href="#"><span>푸드서비스</span></a>
+      </li>
+      <li>
+        <a href="#"><span>프리미엄<br />다이닝</span></a>
+      </li>
+      <li>
+        <a href="#"><span>베이커리</span></a>
+      </li>
+      <li>
+        <a href="#"><span>프랜차이즈</span></a>
+      </li>
+      <li>
+        <a href="#"><span>자회사</span></a>
+      </li>
+    </ul>
+  </div>
+  <script>
+    // 각 메뉴 클릭시
+    // 이미지 링크에는 _on붙임
+    // 클릭하면 a태그에 on이라는 클래스를 붙임
+
+    function remove() {
+      document.querySelectorAll('ul li').forEach(function (v, k) {
+        v.querySelector('a').classList.remove('on');
+        v.querySelector('a span').style.backgroundImage =
+          'url(https://www.shinsegaefood.com/images/business/bg_business_tab0' + (k + 1) + '.png)'
+      })
+    }
+
+
+    document.querySelectorAll('.bg1')[0].style.backgroundImage = 'url(./images/bg1.jpg)';
+
+
+    // 이미지넣기
+    document.querySelectorAll('ul li').forEach(function (v, k) {
+      v.querySelector('a span').style.backgroundImage =
+        'url(https://www.shinsegaefood.com/images/business/bg_business_tab0' + (k + 1) + '.png)'
+    })
+
+    document.querySelectorAll('ul li')[0].querySelector('a span').style.backgroundImage =
+      'url(https://www.shinsegaefood.com/images/business/bg_business_tab01_on.png)';
+
+
+
+
+    // 메뉴 누를때마다 클래스 넣기
+    document.querySelectorAll('ul li').forEach(function (v, k) {
+      v.querySelector('a').onclick = function (e) {
+        e.preventDefault();
+        remove();
+        this.classList.add('on');
+        this.querySelector('a span').style.backgroundImage =
+          'url(https://www.shinsegaefood.com/images/business/bg_business_tab0' + (k + 1) + '_on.png)';
+
+          // 모르겠다
+       this.querySelectorAll('.bg1')[0].style.backgroundImage = 'url(./images/bg' + (k + 1) + '.jpg )';
+      }
+    })
+
+  </script>
+</body>
+
+</html>
