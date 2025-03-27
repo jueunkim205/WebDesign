@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>문자열메소드</title>
+  <style>
+
+  </style>
+</head>
+
+<body>
+
+
+  <script>
+    let br = '<br>';
+    let str1 = 'nice to meet you';
+    let str2 = new String('nice to meet you')
+
+    document.write(str1, br);
+    // search 찾으려는 문자열의 위치 반환
+    document.write(str1.search('m'), br);
+
+    document.write(str1.search('M'), br);
+
+    // /M 대소문자 구분, 없으면 소문자
+    document.write(str1.search(/m/i), br);
+    document.write(str1.replace('m', 'M'), br);
+    // replace 대소문자 구분함
+    document.write(str1.replace('M', 'M'), br);
+    // replace에 정규식 사용가능
+    document.write(str1.replace(/m/i, 'n'), br);
+    // g:소문자 m replace
+    document.write(str1.replace(/m/g, 'n'), br);
+    document.write(str1.replace(/m/gi, 'n'), br);
+
+    document.write(str1.replaceAll('m', 'n'), br);
+    document.write(str1.indexOf('m'), br);
+
+    // 찾고자 하는것이 없으면 -1 반환
+    document.write(str1.indexOf('x'), br);
+
+    // lastIndexOf 뒤에서부터 찾음
+    document.write(str1.lastIndexOf('e'), br);
+
+    document.write(str1.match('m'), br);
+    document.write(str1.match('x'), br);
+
+    // 해당 인덱스번호에 있는 문자 반환
+    document.write(str1.charAt(8), br);
+
+    // 시작인덱스번호, 개수
+    document.write(str1.slice(0, 3), br);
+    // 뒤에서부터
+    document.write(str1.slice(-7, -1), br);
+    document.write(str1.slice(7), br);
+    document.write(str1.slice(-7), br);
+
+    let str3 = '123456-1234567'
+    document.write(str3.replace(str3.slice(8), '*'.repeat(6)), br)
+    // slice
+
+    // substring 메소드는 인수에 음의값이 입력되면 0으로 처리
+    document.write(str3.substring(7), br)
+    document.write(str3.substring(-1), br)
+    // 개수 생략하면 다 갖고옴
+    document.write(str3.substr(0, 5), br)
+    document.write(str3.substr(0), br)
+    // - 뒤에서부터
+    document.write(str3.substr(-6), br)
+    document.write(str3.substr(-6, 2), br)
+    // length 공백도 문자로 침
+    document.write(str3.length, br, br)
+
+    let str4 = 'a b c d';
+
+    // 공백으로 분리, 3개만
+    document.write(str4.split(' ', 3), br)
+    document.write(str4.split(' ').length, br);
+    document.write(str4.split(' ')[3]);
+
+  </script>
+</body>
+
+</html>

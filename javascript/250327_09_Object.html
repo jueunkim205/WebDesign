@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Object</title>
+  <style>
+
+  </style>
+</head>
+
+<body>
+
+
+  <script>
+    // 방법 1
+    // let student = {};
+    // student.kor = 90;
+    // student.eng = 70;
+    // student.math = 80;
+
+    // 방법 2
+    // let student = { kor: 90, eng: 70, math: 80 }
+
+    // 방법 3
+    // let student = new Object();
+    // student.kor = 90;
+    // student.eng = 70;
+    // student.math = 80;
+
+    let student = {
+      name: '홍길동', kor: 90, eng: 70, math: 80,
+      sum: function () {
+        // 이 안에 들어가는건 진짜 동작이 있어야한다.
+        return student.kor + student.eng + student.math;
+      },
+      avg: function () {
+        // return (student.kor + student.eng + student.math) / 3;
+        return this.sum() / 3;
+      }
+    };
+
+    // student.sum = student.kor + student.eng + student.math;
+    // student.avg = student.sum / 3;
+
+    // 메소드는 반드시 괄호 넣는다.
+
+    document.write(student.name, '님의 국어점수는 ', student.kor, '점이고, 영어점수는 ', student.eng, '점이고, 수학점수는 ', student.math, '점이고, 총점은 ', student.sum(), '점이고, 평균은 ', student.avg(), '입니다');
+  </script>
+</body>
+
+</html>

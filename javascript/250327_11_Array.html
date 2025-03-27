@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Array</title>
+  <style>
+
+  </style>
+</head>
+
+<body>
+
+
+  <script>
+    let br = '<br>'
+    const numbers = [45, 4, 9, 16, 25];
+    numbers.forEach(function (v, i, a) {
+      // 값
+      // console.log('v : ', v);
+
+      // 고유의 인덱스번호
+      // console.log('i : ', i);
+
+      // 배열자체를 갖고옴
+      // console.log('a : ', a);
+    })
+
+    // Object.keys : 키값 반환
+    document.write(`Object.values : ${Object.values(numbers)}`,br)
+    document.write(`Object.keys : ${Object.keys(numbers)}`)
+
+  </script>
+</body>
+
+</html>

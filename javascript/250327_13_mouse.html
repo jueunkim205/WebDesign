@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>mouse</title>
+  <style>
+    .out {
+      width: 20%;
+      height: 120px;
+      margin: 20px;
+      background: #ccc;
+    }
+
+    .in {
+      width: 60%;
+      height: 60%;
+      background: #fc0;
+      margin: 10px auto;
+    }
+
+    p {
+      line-height: 16px;
+      margin: 0;
+      padding: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 부모요소 -->
+  <div class="out overP">
+    <p class="overfirst">move your mouse</p>
+    <!-- 자식요소 -->
+    <div class="in overC">
+      <p class="overlast">move your mouse</p>
+      <p class="overchild">0</p>
+    </div>
+    <p class="overparents">0</p>
+  </div>
+
+  <br>
+
+  <div class="out enterP">
+    <p class="enterfirst">move your mouse</p>
+    <div class="in enterC">
+      <p class="enterlast">move your mouse</p>
+      <p class="enterchild">0</p>
+    </div>
+    <p class="enterparents">0</p>
+  </div>
+
+
+  <script>
+    let i = 0;
+    document.querySelector('.overP').onmouseover = function () {
+      document.querySelector('.overlast').innerText = "mouseover";
+      // 같은 공간안에서 마우스를 움직임에도 계속 카운팅 됨 = 이벤트 버블링이 일어남;
+      document.querySelector('.overchild').innerText = i++;
+      document.querySelector('.overparents').innerText = i++;
+    }
+
+    document.querySelector('.overP').onmouseout = function(){
+      document.querySelector('.overlast').innerText = "mouseout";
+      document.querySelector('.overfirst').innerText = "mouseout";
+    }
+
+    let j = 0;
+    // document.querySelector('.enterP').onmouseenter = function(){
+    document.querySelector('.enterP').addEventListener('mouseenter', function () {
+      document.querySelector('.enterlast').innerText = "mouseenter";
+      // 같은 공간안에서 마우스를 움직임에도 계속 카운팅 됨 = 이벤트 버블링이 일어남;
+      document.querySelector('.enterchild').innerText = j++;
+      document.querySelector('.enterparents').innerText = j++;
+    })
+
+    document.querySelector('.enterP').onmouseleave = function(){
+      document.querySelector('.enterfirst').innerText = "mouseleave";
+      document.querySelector('.enterlast').innerText = "mouseleave";
+    }
+
+  </script>
+</body>
+
+</html>

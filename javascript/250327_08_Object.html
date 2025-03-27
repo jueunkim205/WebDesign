@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+
+  </style>
+</head>
+
+<body>
+
+
+  <script>
+    let br = '<br>'
+    const car = {
+      type: "volvo", model: "S60", color: "gray", info: function () {
+        // return 정의되어 있는 값을 반환
+        return document.write(this.type + this.model + this.color + this.age, br)
+      },
+      age: 10,
+    };
+    // info는 동작이고 return으로 출력가능
+    car.info();
+
+
+    const obj = {}
+    obj.kor = 100;
+    obj.eng = 100;
+    obj.math = 90;
+
+    document.write('당신의 총점은 : ', obj.kor + obj.eng + obj.math)
+    const obj2 = new Object();
+    // 변수 obj2 하나에 세개의 데이터 저장가능
+    obj2.a = '하나';
+    obj2.b = '둘';
+    obj2.c = '셋';
+
+    let one = '하나';
+    let two = '둘';
+    let three = '셋';
+
+
+
+
+
+  </script>
+</body>
+
+</html>

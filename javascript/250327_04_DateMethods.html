@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>date메소드</title>
+  <style></style>
+</head>
+
+<body>
+
+
+  <script>
+
+    let br = '<br>';
+    let x = new Date();
+
+    document.write(x + br);
+    document.write('년도 : ', x.getFullYear(), br);
+
+    // 월 -> 0부터 시작
+    document.write('월 : ', x.getMonth() + 1, br);
+    document.write('일 : ', x.getDate(), br);
+    document.write('요일 : ', x.getDay(), br);
+    document.write('오늘날짜 : ', x.getFullYear(), '년 ', x.getMonth() + 1, '월 ', x.getDate(), '일', br, br)
+
+    document.write('Hour : ', x.getHours(), br);
+    document.write('Minutes : ', x.getMinutes(), br);
+    document.write('Seconds : ', x.getSeconds(), br);
+    document.write('Milliseconds : ', x.getMilliseconds(), br);
+    document.write('times : ', x.getTime(), br);
+    document.write('현재시간 : ', x.getHours(), '시 ', x.getMinutes(), '분 ', x.getSeconds(), '초', br, br)
+
+    let s = x.getSeconds();
+    // padStart 빈자리를 만든다. (2 두자리, 0 자릿수 채우기)
+document.write(s.toString().padStart(2, '0'));
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>타입연산자</title>
+  <style></style>
+</head>
+
+<body>
+
+
+  <script>
+    let br = '<br>';
+    let a = 10;
+    let b = 20;
+    let c = '10';
+    let d = String(30);
+    let e = Number('그린')
+    let f = '10.33.3';
+    let g = Number('10.33.3');
+
+    document.write('a의 유형은? ', typeof a, br)
+    document.write('b의 유형은? ', typeof b, br)
+    document.write('c의 유형은? ', typeof c, br)
+    document.write('10.33 유형은? ', typeof 10.33, br)
+    document.write('e 유형은? ', typeof e, br)
+    document.write('f 유형은? ', typeof f, br)
+    document.write('g 유형은? ', typeof g, br)
+    // 도무지 숫자가 아니라서 덧셈이 불가, NaN 출력
+    document.write('g+1 ', g + 1, br)
+    document.write(e, br)
+
+    // parseFloat 소수점 반환
+    document.write(parseFloat(123.4567) + br)
+    document.write(parseFloat("123.4567") + br)
+
+    // parseInt 정수 반환
+    document.write(parseInt(123.4567) + br)
+    document.write(parseInt("123.4567") + br)
+
+    let x = '5';
+    let y = + x;
+
+    document.write('x 유형은? ', typeof x, br);
+    document.write('y 유형은? ', typeof y, br);
+    document.write('y + y = ', y + y, br);
+
+    document.write(String(123), br)
+    document.write(String(100 + 23), br)
+    document.write((100 + 23).toString(), br,br)
+
+    let num1 = 5.345345;
+    let num2 = 1000000;
+    let num3 = num1.toExponential(2);
+
+    // toExponential 지수형태로 바꿈 e(제곱승)
+    document.write('toExponential',br)
+    document.write(num1.toExponential(2), br);
+    document.write(num2.toExponential(3), br,br);
+
+    // toFixed 반올림
+    document.write('toFixed',br)
+    document.write(num1.toFixed(2), br);
+    document.write(num2.toFixed(3), br,br);
+
+    // toPrecision 지정된 길이로 쓰여진 숫자가 포함된 문자열을 반환
+    document.write('toPrecision',br)
+    document.write(num1.toPrecision(2), br);
+    document.write(num2.toPrecision(3), br,br);
+  </script>
+</body>
+
+</html>
