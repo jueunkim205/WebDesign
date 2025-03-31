@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <style>
+
+  </style>
+</head>
+
+<body>
+
+
+  <ul>
+
+  </ul>
+
+  <div>
+    <p></p>
+  </div>
+
+
+  <script>
+    // document.write('제목1입니다 <br>')
+    // document.write('제목2입니다 <br>')
+    // document.write('제목3입니다 <br>')
+    // document.write('제목4입니다 <br>')
+    // document.write('제목5입니다 <br>')
+
+    // for (let i = 1; i <= 5; i++) {
+    //   document.write(`제목 ${i}입니다 <br>`)
+    // }
+
+    // for (let i = 1; i <= 100; i++) {
+    //   if(i%2==0){
+    //     document.write(`${i}<br>`)
+    //   }
+    // }
+
+    // for (let i = 1; i <= 100; i++) {
+    //   if(i%2==1){
+    //     document.write(`${i}<br>`)
+    //   }
+    // }
+
+    let sum1 = 0;
+    for (let i = 0; i <= 10; i++) {
+      sum1 += i;
+    }
+
+    document.write(`1부터 10까지의 합계 <br>`);
+    document.write(`${sum1} <br> <br>`);
+
+    let sum2 = 0;
+    for (let i = 0; i <= 100; i++) {
+      sum2 += i;
+    }
+
+    document.write(`1부터 100까지의 합계 <br>`);
+    document.write(`${sum2} <br> <br>`);
+
+
+    let sum3 = 0;
+    for (let i = 0; i <= 100; i++) {
+      if (i % 2 == 0) {
+        sum3 += i;
+      }
+    }
+
+    document.write(`1부터 100까지의 짝수의 합계 <br>`);
+    document.write(`${sum3} <br> <br>`);
+
+
+    let sum4 = 0;
+    for (let i = 0; i <= 100; i++) {
+      if (i % 2 == 1) {
+        sum4 += i;
+      }
+    }
+
+    document.write(`1부터 100까지의 홀수의 합계 <br>`);
+    document.write(`${sum4} <br> <br>`);
+
+// 이해가 안감
+  let str = '<ul>';
+    for(let i=1; i<=100; i++){
+      str += `<li><a href ='#'>링크${i}</a></li>`;
+    }
+    str += '</ul>';
+    document.write(str);
+  </script>
+</body>
+
+</html>

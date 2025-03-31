@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <style>
+
+  </style>
+</head>
+
+<body>
+  <a href="#">클릭</a>
+  <p id="demo">문단입니다</p>
+
+  <script>
+    // a 클릭했을때
+    // p태그에 '참입니다' 띄우기
+    let bool = true;
+
+    document.querySelector('a').addEventListener('click', function (e) {
+      e.preventDefault();
+
+      if (bool) {
+        document.getElementById('demo').innerText = '참입니다.';
+      } else {
+        document.getElementById('demo').innerText = '거짓입니다.';
+      }
+      bool = !bool;
+    })
+  </script>
+</body>
+
+</html>

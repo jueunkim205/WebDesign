@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <style>
+
+  </style>
+</head>
+
+<body>
+  <a href="#">클릭하면 이미지로 변경(photo1.jpg)</a>
+  <p id="demo">photo1</p>
+
+
+  <script>
+    let bool = true;
+
+    document.querySelector('a').onclick = function () {
+      if (bool) {
+        this.innerText = '이미지';
+        document.querySelector('p').innerHTML = '<img src="../html/images/photo1.jpg" alt="">';
+      } else{
+        this.innerText = '문자'
+        document.querySelector('p').innerText = 'photo1';
+      }
+      bool = !bool;
+    }
+    
+  </script>
+</body>
+
+</html>
