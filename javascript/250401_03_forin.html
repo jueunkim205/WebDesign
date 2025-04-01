@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <style>
+    div {
+      float: left;
+      width: 100px;
+    }
+  </style>
+</head>
+
+<body>
+
+
+  <script>
+    let br = '<br>'
+    const person = { fname: "John", lname: "Doe", age: 25, gender: '남자' };
+    // 해당 값 만큼만 반복
+    let txt = "";
+    for (let x in person) {
+      txt += person[x] + " ";
+    }
+    // document.write(txt);
+
+    const jueun = { name: '김주은', gender: 'female', age: '30' }
+    let jueuninfo = '';
+    for (let x in jueun) {
+      // x가 아니어도 됨
+      jueuninfo += jueun[x] + ' ';
+    }
+    document.write(jueuninfo + br);
+
+
+    const numbers = [45, 4, 9, 16, 25];
+    let txt3 = "";
+    for (let x in numbers) {
+      txt3 += numbers[x] + "<br>";
+      document.write(x + br);
+    }
+    document.write(br + txt3);
+
+  </script>
+</body>
+
+</html>

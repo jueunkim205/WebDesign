@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <style>
+
+  </style>
+</head>
+<p></p>
+
+<body>
+
+
+  <script>
+    let br = '<br>'
+    document.write(add(4, 5), br);
+    document.write(myAdd(100), br);
+
+    // 선언식
+    function add(a, b) {
+      return a + b;
+    }
+
+    function myAdd(a) {
+      return a + 100;
+    }
+
+    // 표현식
+    const x = function(){
+      return 10+10;
+    }
+    document.write(x() ,br)
+    document.write(x ,br)
+  </script>
+</body>
+
+</html>

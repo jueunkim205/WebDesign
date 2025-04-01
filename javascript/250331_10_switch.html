@@ -14,15 +14,6 @@
 <body>
 
 
-  <ul>
-
-  </ul>
-
-  <div>
-    <p></p>
-  </div>
-
-
   <script>
     // document.write('제목1입니다 <br>')
     // document.write('제목2입니다 <br>')
@@ -85,13 +76,29 @@
     document.write(`${sum4} <br> <br>`);
 
 // 이해가 안감
-  let str = '<ul>';
-    for(let i=1; i<=100; i++){
-      str += `<li><a href ='#'>링크${i}</a></li>`;
-    }
-    str += '</ul>';
-    document.write(str);
+  // let str = '<ul>';
+  //   for(let i=1; i<=100; i++){
+  //     str += `<li><a href ='#'>링크${i}</a></li>`;
+  //   }
+  //   str += '</ul>';
+  //   document.write(str);
+
+let str2 = '<div>'
+  for(let i =0; i<=10; i++){
+    str2 += `<p><a href ="#">제목${i}</a></p>`;
+
+  }
+  str2 += '</div>'
+  
+  document.write(str2)
+
+
+
+
+
+
   </script>
+
 </body>
 
 </html>

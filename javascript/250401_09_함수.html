@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <style>
+
+  </style>
+</head>
+<p></p>
+<body>
+
+
+  <script>
+    /********************************************
+     * 함수 호출
+        1. 이벤트 발생 시(사용자가 버튼을 클릭할 때)
+        2. JavaScript 코드에서 호출될 때
+        3. 자동으로(자체 호출)
+     * ******************************************/
+
+    function myWrite() {
+      document.write('자바스크립트');
+    }
+    
+    document.querySelector('p').onclick = function () {
+      myWrite();
+    };
+
+    // 자체함수
+    (function () { document.write('자바스크립트'); })();
+
+  </script>
+</body>
+
+</html>

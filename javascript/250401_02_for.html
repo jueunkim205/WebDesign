@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <style>
+    div {
+      float: left;
+      width: 100px;
+    }
+  </style>
+</head>
+
+<body>
+
+
+  <script>
+    let br = '<br>'
+    /*
+    for (let i = 1; i <= 9; i++) {
+      document.write(`2 X ${i} = ${2 * i}` + br);
+    }
+    document.write(br)
+
+    for (let i = 1; i <= 9; i++) {
+      document.write(`3 X ${i} = ${3 * i}` + br);
+    }
+    document.write(br)
+   
+
+    for (let i = 2; i <= 19; i++) {
+      for (let j = 1; j <= 9; j++) {
+        document.write(`${i} * ${j} = ${i * j}` + br)
+      }
+      if (j = 9) {
+        document.write(br)
+      }
+    }
+ */
+
+    let str = ''
+    for (let i = 2; i <= 19; i++) {
+      str += '<div>';
+      str += `<h1>${i}단</h1>`;
+      for (let j = 1; j <= 9; j++) {
+        str += (`${i} * ${j} = ${i * j}` + br);
+      }
+      str += '</div>';
+    }
+    document.write(str);
+
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .list {
+      display: flex;
+      list-style: none;
+      width: 75%;
+      margin: 100px auto 0;
+      gap: 10px;
+    }
+
+    .list li {
+      flex: 1;
+      cursor: pointer;
+    }
+
+    .list img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  </style>
+</head>
+
+<body>
+  <ul class="list">
+    <li>
+      <img src="./images/olive/img_sustain_pc_1.jpg" alt="" />
+    </li>
+    <li>
+      <img src="./images/olive/img_sustain_pc_2.jpg" alt="" />
+    </li>
+    <li>
+      <img src="./images/olive/img_sustain_pc_3.jpg" alt="" />
+    </li>
+    <li>
+      <img src="./images/olive/img_sustain_pc_4.jpg" alt="" />
+    </li>
+    <li>
+      <img src="./images/olive/img_sustain_pc_5.jpg" alt="" />
+    </li>
+  </ul>
+  <script>
+
+    let btn = document.querySelectorAll('.list li');
+    btn.forEach(function (v, k) {
+      v.onmouseenter = function () {
+        console.log(k);
+        myover(k);
+      }
+
+      v.onmouseleave = function () {
+        myleave();
+      }
+    })
+
+    // 위에서 받은 매개변수 k -> i 둘이 같음
+    function myover(i) {
+      btn.forEach(function (item, index) {
+          item.querySelector('img').src = `./images/olive/img_sustain_pc_hover_${i + 1}_${index + 1}.jpg`;
+        })
+    }
+
+    function myleave() {
+      btn.forEach(function (item, index) {
+        item.querySelector('img').src = `./images/olive/img_sustain_pc_${index + 1}.jpg`;
+      })
+    }
+  </script>
+</body>
+
+</html>
