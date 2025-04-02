@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <style>
+
+  </style>
+</head>
+
+<body>
+
+
+  <script>
+    let br = '<br>'
+    document.write();
+    document.write(Math.E, br);    // 오일러 수를 반환합니다. 
+    document.write(Math.PI, br);   // PI 반환
+    document.write(Math.SQRT2, br);   // 2의 제곱근을 반환합니다
+    document.write(Math.SQRT1_2, br);   // 1/2의 제곱근을 반환합니다.
+    document.write(Math.LN2, br);   // 2의 자연 로그를 반환합니다.
+    document.write(Math.LN10, br);   // 10의 자연 로그를 반환합니다. 
+    document.write(Math.LOG2E, br);   // E의 밑이 2인 로그를 반환합니다.
+    document.write(Math.LOG10E, br);   // E의 밑이 10인 로그를 반환합니다. 
+
+
+    console.log(Math.round(1.567));
+    console.log(Math.round(1.234));
+    console.log(Math.ceil(1.234)); // 크거나 같은값중에서 작은값을 반환합니다(천장)
+    console.log(Math.ceil(2.345));
+    console.log(Math.floor(1.234)); // 작거나 같은값중에서 큰값을 반환합니다.(바닥)
+    console.log(Math.floor(1.567));
+    console.log(Math.trunc(1.567)); // 반올림 버려
+    console.log(Math.trunc(1.567));
+    console.log(Math.sign(4)); // x가 음수, null 또는 양수이면 반환합니다.
+    console.log(Math.sign(0));
+    console.log(Math.sign(null));
+    console.log(Math.pow(8, 3)); // x의 값을 y의 거듭제곱으로 반환합니다. 
+    console.log(Math.sqrt(64)); // x의 제곱근을 반환합니다. 
+    console.log(Math.abs(-44)); // x의 절대(양수) 값을 반환합니다.
+    console.log(Math.min(0, 150, 30, 20, -8, -200)); // x의 절대(양수) 값을 반환합니다.
+    console.log(Math.max(0, 150, 30, 20, -8, -200)); // x의 절대(양수) 값을 반환합니다.
+    console.log(Math.random());
+
+    let random = Math.random(0, 1, 2, 3, 4, 5) * 6
+    let num = Math.floor(Math.random(0, 1, 2, 3, 4, 5) * 6);
+    document.write(`랜덤 ${num}`, br);
+    document.write(`랜덤 ${random}`);
+
+  </script>
+</body>
+
+</html>
