@@ -16,24 +16,17 @@ ctrl + shift + p -> Snippets: Configure User Snippets
 
 [html]
 
-"<!--": {
-    "prefix": "<<",
-    "body": ["<!-- -->"],
-    "description": "주석"
-  }
-
-
 [css]
 
- "*{": {
-    "prefix": "*{",
-    "body": ["*{ margin : 0; padding : 0;}"],
-    "description": "setting"
-  },
   "color": {
     "prefix": "clr",
     "body": ["color: #000"],
     "description": "color"
+  },
+  "*{": {
+    "prefix": "*{",
+    "body": ["*{ margin : 0; padding : 0;} a{text-decoration: none;}  ul{list-style: none;}" ],
+    "description": "setting"
   },
   "pa": {
     "prefix": "pa",
@@ -45,3 +38,17 @@ ctrl + shift + p -> Snippets: Configure User Snippets
     "body": ["position : relative;"],
     "description": "position"
   }
+
+[javascript]
+
+  	"document.write": {
+    "prefix": "docw",
+    "body": ["document.write();"],
+    "description": "document.write"
+  },
+
+	"console.log":{
+		"prefix": "conl",
+    "body": ["console.log();"],
+    "description": "console.log"
+	}
