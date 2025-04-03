@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OUR PRODUCTS</title>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .wrap {
+      width: 100%;
+      max-width: 1240px;
+      font-family: "Archivo", sans-serif;
+      color: #d1a050;
+      margin: 20px auto;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    h1 {
+      font-size: 42px;
+    }
+
+    h2 {
+      font-size: 42px;
+      font-weight: 500;
+      margin: 70px 0 20px;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    li span {
+      position: relative;
+      display: flex;
+      align-items: center;
+      font-size: 24px;
+      padding: 20px 30px;
+      cursor: pointer;
+      border-top: 1px solid #d1a050;
+    }
+
+    li span:after {
+      position: absolute;
+      content: "\2b";
+      top: 50%;
+      left: 10px;
+      font-family: "Font Awesome 6 Free";
+      font-weight: 900;
+      font-size: 15px;
+      transform: translateY(-50%);
+      transition: .5s;
+    }
+
+    li.on span {
+      font-weight: 700;
+    }
+
+    li.on span:after {
+      transform: translateY(-50%) rotate(45deg);
+    }
+
+    li span img {
+      width: 20px;
+      height: 20px;
+      margin-left: 5px;
+      vertical-align: middle;
+    }
+
+    li p {
+      overflow: hidden;
+      width: 100%;
+      transition: .5s;
+      height: 0;
+    }
+
+    li.on p {
+      height: auto;
+    }
+
+    li p img {
+      width: 100%;
+      padding: 70px 30px;
+      box-sizing: border-box;
+      vertical-align: middle;
+    }
+  </style>
+</head>
+
+<div class="wrap">
+  <h1>RETAIL</h1>
+  <h2>Slices - Oat Base</h2>
+  <ul>
+    <li>
+      <span>AMERICAN</span>
+      <p><img src="https://d29wx3mrk1ysd0.cloudfront.net/_img/sub231114/SLICES-OATBASE-AMERICAN-pc.jpg" alt=""></p>
+    </li>
+    <li>
+      <span>CHEDDAR</span>
+      <p><img src="https://d29wx3mrk1ysd0.cloudfront.net/_img/sub231114/SLICES-OATBASE-AMERICAN-pc.jpg" alt=""></p>
+    </li>
+    <li>
+      <span>PEPPER JACK<img src="https://www.armoredfresh.com/img/webstaurantstore-w-mark.png" alt=""></span>
+      <p><img src="https://d29wx3mrk1ysd0.cloudfront.net/_img/sub231114/SLICES-OATBASE-AMERICAN-pc.jpg" alt=""></p>
+    </li>
+  </ul>
+</div>
+
+<body>
+
+  <script>
+    document.querySelectorAll('ul li').forEach(function (v, k) {
+
+      v.querySelector('span').onclick = function () {
+
+        // li에 class on줬을때 span, p의 효과
+        let bool = v.querySelector('p').clientHeight;
+
+        if (bool == 0) {
+          let thisHt = v.querySelector('p img').clientHeight;
+          v.classList.add('on');
+          v.querySelector('p').style.height = thisHt + 'px';
+        } else {
+          v.classList.remove('on')
+          v.querySelector('p').style.height = 0;
+        }
+      }
+    })
+  </script>
+</body>
+
+</html>
