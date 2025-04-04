@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <style>
+    body {
+      height: 100px;
+      /* cursor: url(../html/images/twitter.svg), auto; */
+    }
+
+    .con {
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: rgba(0, 0, 0, .5);
+      opacity: 0;
+      /* animation: circle 1s infinite; */
+    }
+
+    .con.on{
+      opacity: 1;
+    }
+
+    .page {
+      height: 500px;
+      border: 1px solid #000;
+      margin: 500px 0;
+    }
+
+    /* @keyframes circle {
+      0% {
+        transform: scale(1);
+      }
+
+      50% {
+        transform: scale(1.5);
+      }
+
+      100% {
+        transform: scale(1);
+      }
+    } */
+  </style>
+</head>
+
+<body>
+
+  <div class="con">view more</div>
+  <div class="page"></div>
+
+  <script>
+    document.querySelector('.page').onmousemove = function (e) {
+      let x = e.pageX;
+      let y = e.pageX;
+      document.querySelector('.con').style.left = x + 'px';
+      document.querySelector('.con').style.top = y - scrollY + 'px';
+    }
+
+    document.querySelector('.page').onmouseenter = function () {
+      document.querySelector('.con').classList.add('on');
+    }
+
+    document.querySelector('.page').onmouseleave = function () {
+      document.querySelector('.con').classList.remove('on');
+    }
+
+  </script>
+</body>
+
+</html>

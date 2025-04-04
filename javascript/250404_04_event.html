@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    #navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      height: 50px;
+      background: limegreen;
+    }
+
+    #navbar.on {
+      background: MediumSpringGreen;
+    }
+
+    .con {
+      width: 100%;
+      height: 3000px;
+      background: #ccc;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="navbar"></div>
+  <div class="con"></div>
+  <script>
+    window.addEventListener('wheel', function (e) {
+      let ht = document.documentElement.scrollTop;
+      let delta = e.deltaY;
+      console.log(ht)
+
+      if (ht > 150) {
+        // 아래로내림
+        document.getElementById('navbar').classList.add('on');
+      } else {
+        document.getElementById('navbar').classList.remove('on');
+      }
+    })
+  </script>
+</body>
+
+</html>
