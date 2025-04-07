@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <style>
+
+  </style>
+</head>
+
+<body>
+  <button id="on">Turn on the light</button>
+  <img src="https://www.w3schools.com/html/pic_bulboff.gif" alt="off">
+  <button id="off">Turn off the light</button>
+  <!-- replace slice -->
+
+  <script>
+    let br = '<br>'
+    let link = 'https://www.w3schools.com/html/pic_bulboff.gif'
+    let light = document.querySelector('img').src;
+    let rlink = light.slice(-7, -4)
+
+    // console.log(light);
+
+    document.getElementById('on').onclick = function () {
+      // console.log(this.id);
+      document.querySelector('img').src = light.replace(rlink, this.id)
+    }
+
+    document.getElementById('off').onclick = function () {
+      // console.log(this.id);
+      document.querySelector('img').src = 'https://www.w3schools.com/html/pic_bulboff.gif'
+    }
+  </script>
+</body>
+
+</html>
