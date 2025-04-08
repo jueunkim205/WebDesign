@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>1</title>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .photoFrame {
+      position: relative;
+      width: 1000px;
+      height: 500px;
+      overflow: hidden;
+      margin: 0 auto;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    ul.photo {
+      position: absolute;
+      list-style: none;
+      display: flex;
+      top: 0;
+      left: 0;
+      transition: .5s;
+    }
+
+    ul.photo li {
+      position: relative;
+    }
+
+    ul.photo span {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: rgba(255, 255, 255, .5);
+      z-index: 1;
+      padding: 30px;
+      border-radius: 20px;
+    }
+
+    img {
+      width: 1000px;
+      height: 500px;
+      object-fit: cover;
+    }
+
+    .btns {
+      display: flex;
+      margin-top: 20px;
+      gap: 20px;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .btns span {
+      cursor: pointer;
+    }
+
+    .btns p {
+      width: 10px;
+      height: 10px;
+      background: #000;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 슬라이드연습 -->
+  <div class="photoFrame">
+    <ul class="photo">
+      <li>
+        <p><img src="../html/images/photo3.jpg" alt="photo"></p>
+        <span>photo1</span>
+      </li>
+      <li>
+        <p><img src="../html/images/photo4.jpg" alt="photo"></p>
+        <span>photo2</span>
+      </li>
+      <li>
+        <p><img src="../html/images/photo5.jpg" alt="photo"></p>
+        <span>photo3</span>
+      </li>
+    </ul>
+  </div>
+
+  <div class="btns">
+    <span id='prev' class="material-symbols-outlined">
+      arrow_left
+    </span>
+    <p></p>
+    <p></p>
+    <p></p>
+    <span id='next' class="material-symbols-outlined">
+      arrow_right
+    </span>
+  </div>
+
+  <script>
+    //  slide_3.html 참고
+    // 변수선언
+    let photoF = document.querySelector('.photoFrame');
+    let photoUl = document.querySelector('.photo');
+    let photoLi = document.querySelectorAll('.photo li');
+    let len = photoLi.length; // li의 개수 갖고오기
+    let current = 0; // 순서
+    let prev = document.getElementById('prev');
+    let next = document.getElementById('next');
+
+
+
+
+    console.log(len);
+
+    // 화살표 클릭시 기능
+    prev.onclick = function () {
+      // 아래와 같이 하면 한번밖에 작동안함, current라는 변수가 필요
+      // photoUl.style.left = -1000 + 'px'
+      if (current > 0) {
+        photoUl.style.left = (current - 1) * -1000 + 'px'
+        current--; 
+        console.log(current);
+        console.log(photoUl.style.left);
+      } else if (current == 0) {
+        photoUl.style.left = '-2000px'
+        // current = 2;
+        current = len-1;
+        console.log(current);
+        console.log(photoUl.style.left);
+      }
+    }
+
+    next.onclick = function () {
+      // photoUl.style.left = 1000 + 'px'
+      // 클릭하기전 current가 최대 1인상태까지
+      if (current < len-1) {
+        current++;
+        photoUl.style.left = (current * -1000) + 'px'
+        console.log(current);
+        console.log(photoUl.style.left);
+        // 클릭하려는데 이미 current가 2일때
+      } else if (current == len-1) {
+        photoUl.style.left = 0;
+        current = 0;
+      }
+    }
+
+
+
+
+  </script>
+</body>
+
+</html>

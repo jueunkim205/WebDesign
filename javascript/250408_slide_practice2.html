@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2</title>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .photoFrame {
+      position: relative;
+      width: 1000px;
+      height: 500px;
+      overflow: hidden;
+      margin: 0 auto;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    ul.photo {
+      position: absolute;
+      list-style: none;
+      display: flex;
+      top: 0;
+      left: 0;
+    }
+
+    ul.photo li {
+      position: relative;
+    }
+
+    ul.photo span {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: rgba(255, 255, 255, .5);
+      z-index: 1;
+      padding: 30px;
+      border-radius: 20px;
+    }
+
+    img {
+      width: 1000px;
+      height: 500px;
+      object-fit: cover;
+    }
+
+    .btns {
+      display: flex;
+      margin-top: 20px;
+      gap: 20px;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .btns span {
+      cursor: pointer;
+    }
+
+    .btns p {
+      width: 10px;
+      height: 10px;
+      background: #000;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+
+    .btns p.on {
+      background: dodgerblue;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 슬라이드연습 -->
+  <div class="photoFrame">
+    <ul class="photo">
+      <li>
+        <p><img src="../html/images/photo3.jpg" alt="photo"></p>
+        <span>photo1</span>
+      </li>
+      <li>
+        <p><img src="../html/images/photo4.jpg" alt="photo"></p>
+        <span>photo2</span>
+      </li>
+      <li>
+        <p><img src="../html/images/photo5.jpg" alt="photo"></p>
+        <span>photo3</span>
+      </li>
+    </ul>
+  </div>
+
+  <div class="btns">
+    <span id='prev' class="material-symbols-outlined">
+      arrow_left
+    </span>
+    <p></p>
+    <p></p>
+    <p></p>
+    <span id='next' class="material-symbols-outlined">
+      arrow_right
+    </span>
+  </div>
+
+  <script>
+    //  slide_3.html 참고
+    // 변수선언
+    let photoF = document.querySelector('.photoFrame');
+    let photoUl = document.querySelector('.photo');
+    let photoLi = document.querySelectorAll('.photo li');
+    let len = photoLi.length; // li의 개수 갖고오기
+    let current = 0; // 순서
+    let prev = document.getElementById('prev');
+    let next = document.getElementById('next');
+    let btns = document.querySelectorAll('.btns p');
+    btns[0].classList.add("on");
+
+    /******************************************************
+     * 마지막요소에서 첫번째요소로 자연스럽게 넘어가게 만들기 *
+     * makeClone 추가
+     * ***************************************************/
+
+    function makeClone() {
+      // 클론이 있으면 마지막 사진에서 첫 사진으로 넘어가는 부분이 자연스럽게 보임
+      // 슬라이드 리스트 안의 li요소 중 첫번째 것과 마지막것을 복사 후 리스트에 추가하는 과정
+      // append <-> prepend
+
+
+      // 리스트의 첫번째 요소 복사
+      let clone_first = photoLi[0].cloneNode(true);
+      // 목록에 추가, Inserts nodes after the last child of node
+      photoUl.append(clone_first);
+      // 마지막 요소 이후 첫번째 요소 추가
+
+      // 리스트의 마지막 요소 복사
+      let clone_last = photoLi[len - 1].cloneNode(true);
+      // Inserts nodes before the first child of node
+      photoUl.prepend(clone_last);
+    }
+
+    makeClone();
+    // makeclone하면 마지막 요소부터 보이므로 아래 코드 추가
+    photoUl.style.left = '-1000px';
+    // photo li 보면 5개로 늘어나있음.
+
+
+    // 화살표 클릭시 기능
+    prev.onclick = function () {
+      console.log(current);
+
+      if (current > 0) {
+        photoUl.style.left = -current * 1000 + 'px'
+        photoUl.style.transition = '.5s';
+      }
+
+      if (current == 0) {
+        setTimeout(() => {
+          photoUl.style.left = (len) * -1000 + 'px'
+          // photoUl.style.left = '-3000px'
+          photoUl.style.transition = '0s';
+        }, 500);
+        current = 3;
+      }
+      current--;
+    }
+
+
+    next.onclick = function () {
+      console.log(current);
+
+      if (current <= len) {
+        photoUl.style.left = -(current + 2) * 1000 + 'px';
+        photoUl.style.transition = '.5s';
+      }
+
+      if (current == len - 1) {
+        setTimeout(() => {
+          photoUl.style.left = '-1000px';
+          photoUl.style.transition = '0s';
+        }, 500);
+        current = -1;
+      }
+      current++;
+    }
+
+    btns.forEach(function (v, k) {
+      v.onclick = function () {
+        photoUl.style.left = -(k + 1) * 1000 + 'px';
+        photoUl.style.transition = '.5s';
+        current = k;
+        console.log(current);
+        console.log(k);
+
+
+        for (let i = 0; i < len; i++) {
+          btns[i].classList.remove('on')
+        }
+        btns[k].classList.add('on')
+      }
+    })
+
+// 페이지를 넘길때마다 버튼 클래스 작동안함
+
+
+  </script>
+</body>
+
+</html>
