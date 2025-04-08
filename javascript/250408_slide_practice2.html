@@ -168,11 +168,11 @@
 
       if (current == 0) {
         setTimeout(() => {
-          photoUl.style.left = (len) * -1000 + 'px'
           // photoUl.style.left = '-3000px'
+          photoUl.style.left = (len) * -1000 + 'px'
           photoUl.style.transition = '0s';
         }, 500);
-        current = 3;
+        current = len;
       }
       current--;
     }
@@ -204,6 +204,7 @@
         console.log(current);
         console.log(k);
 
+        console.log(len);
 
         for (let i = 0; i < len; i++) {
           btns[i].classList.remove('on')
@@ -211,9 +212,6 @@
         btns[k].classList.add('on')
       }
     })
-
-// 페이지를 넘길때마다 버튼 클래스 작동안함
-
 
   </script>
 </body>

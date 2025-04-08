@@ -309,7 +309,7 @@ header .txt p:nth-of-type(3) {
   background: #ccc;
   width: 10px;
   height: 0;
-  transition: 1s;
+  transition: .7s;
 }
 
 .section3 .wrap ul li h4 .top {
