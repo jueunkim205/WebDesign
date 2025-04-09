@@ -57,7 +57,7 @@
         <p><span class="logo">
             <img src="./images/logo_off.png" alt="logo">
           </span></p>
-          
+
         <ul class="mainMenu">
           <li><a href="./subpage/sub1.html">회사소개</a></li>
           <li><a href="./subpage/sub2.html">주요사업</a></li>
@@ -66,9 +66,9 @@
           <li><a href="#">인재채용</a></li>
         </ul>
 
-        <div class="subManu">
+        <div class="subMenu">
           <!-- 좌:boxitem / 우:subItem -->
-          <div class="subMenuItem">
+          <div class="subMenuItem ">
             <!-- 1 -->
             <div class="box">
               <div class="boxItem">
@@ -110,7 +110,7 @@
               </li>
             </ul>
           </div>
-      
+
           <div class="subMenuItem">
             <!-- 2 -->
             <div class="box">
@@ -146,7 +146,7 @@
               </li>
             </ul>
           </div>
-      
+
           <div class="subMenuItem">
             <!-- 3 -->
             <div class="box">
@@ -176,7 +176,7 @@
               </li>
             </ul>
           </div>
-      
+
           <div class="subMenuItem">
             <!-- 4 -->
             <div class="box">
@@ -212,7 +212,7 @@
               </li>
             </ul>
           </div>
-      
+
           <div class="subMenuItem">
             <!-- 5 -->
             <div class="box">
@@ -463,7 +463,6 @@
       </div>
     </section>
 
-
     <section class="section5">
       <ul class="banner">
         <li><a href="https://www.gumgwang.co.kr/" target="_blank"><img src="./images/banner1_gumgwangLogo.jpg"
@@ -517,14 +516,73 @@
   </div>
 
 
-
-
   <script>
     /* mainMenu에 hover시 nav색상변경
     mainMenu li 폰트색상변경, subMenu에 마우스 올려도 고정됨
 
+    nav on ->
+
 
     */
+
+    let nav = document.querySelector('nav');
+    let mainMenu = document.querySelector('.mainMenu');
+    let mainMenuLi = document.querySelectorAll('.mainMenu li');
+    let subMenu = document.querySelector('.subMenu');
+    let subMenuItem = document.querySelectorAll('.subMenuItem');
+
+    function addClass(k) {
+      // 순서에 해당하는 sub메뉴 클래스 추가
+      subMenuItem.forEach(function (item, index) {
+        subMenuItem[k].classList.add('on');
+      })
+    }
+
+    // 순서에 해당하는 sub메뉴 클래스 삭제
+    function rmClass() {
+      subMenuItem.forEach(function (v, k) {
+        subMenuItem[k].classList.remove('on');
+      })
+    }
+
+
+
+
+    // 메인메뉴 리스트에 마우스 올릴때마다
+    mainMenuLi.forEach(function (v, k) {
+      v.onmouseenter = function () {
+        // header배경색 클래스 추가삭제
+        nav.classList.add('on');
+        // 폰트색깔
+        v.querySelector('a').classList.add('on');
+        // 서브메뉴 보이기
+        subMenu.classList.add('on');
+        rmClass();
+        addClass(k);
+        // 로고 바꾸기
+        document.querySelector('.logo img').src = './images/logo_on.png'
+      }
+
+      v.onmouseleave = function () {
+        v.querySelector('a').classList.remove('on');
+
+        subMenu.onmouseleave = function () {
+        document.querySelector('.logo img').src = './images/logo_off.png'
+        v.querySelector('a').classList.remove('on');
+        rmClass();
+        subMenu.classList.remove('on');
+        nav.classList.remove('on');
+      }
+
+        // 서브메뉴 가리기
+      }
+
+     
+
+    })
+
+
+
 
 
   </script>

@@ -42,7 +42,6 @@ p {
   letter-spacing: -1px;
 }
 
-
 .arrow {
   position: absolute;
   content: '';
@@ -61,44 +60,74 @@ header {
 }
 
 header nav {
-  position : relative;
+  position: relative;
   padding: 0 60px 0 70px;
   height: 120px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  box-sizing: border-box;
   border-bottom: 1px solid rgba(255, 255, 255, .3);
   font-family: "Roboto", Noto Sans KR;
 }
 
 header nav .mainMenu {
+  height: 100%;
   display: flex;
-  width: 640px;
   justify-content: space-around;
 }
 
-/* header nav ul */
 header nav .mainMenu li a {
+  display: block;
+  padding: 0 30px;
+  height: 120px;
   font-size: 22px;
   letter-spacing: -1px;
   font-weight: 600;
-  line-height: 100%;
+  line-height: 120px;
+  box-sizing: border-box;
+}
+
+
+/* menu에 hover시 효과 */
+header nav.on {
+  background: #fff;
+}
+
+header nav.on .mainMenu a {
+  color: #222;
+}
+
+header nav.on .mainMenu a.on {
+  color: dodgerblue;
 }
 
 /*  */
-
-
-.subManu {
-  position : absolute;
+.subMenu {
+  display: none;
+  position: absolute;
   width: 100%;
   height: 380px;
-  top: 120px;
-  left:0;
+  top: 119px;
+  left: 0;
+  z-index: 20;
+  box-sizing: border-box;
+}
+
+.subMenu.on {
+  display: block;
+}
+
+.subMenuItem.on {
   z-index: 10;
 }
 
-.subMenuItem{
-  position : absolute;
+.subMenuItem.on a:hover {
+  color: #07348c;
+}
+
+.subMenuItem {
+  position: absolute;
   width: 100%;
   height: 100%;
   display: flex;
@@ -107,10 +136,17 @@ header nav .mainMenu li a {
 }
 
 .subMenuItem .box {
+  display: flex;
+  justify-content: end;
   height: 100%;
-  padding: 40px 50px 40px 18vw;
+  width: 35%;
+  padding: 40px 50px 40px 0;
   box-sizing: border-box;
   background: #eee;
+}
+
+.subMenuItem .boxItem{
+  width: 50%;
 }
 
 .subMenuItem .box h1 {
@@ -128,12 +164,13 @@ header nav .mainMenu li a {
 
 .subItem {
   display: flex;
-  width: 100%;
+  flex: 1;
   height: 100%;
   gap: 20px;
-  padding: 60px 20vw 15px 50px;
+  padding: 60px 0 15px 50px;
   box-sizing: border-box;
   background: #fff;
+  /* background: lightblue; */
 }
 
 .subItem li {
