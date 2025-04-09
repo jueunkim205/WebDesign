@@ -517,13 +517,6 @@
 
 
   <script>
-    /* mainMenu에 hover시 nav색상변경
-    mainMenu li 폰트색상변경, subMenu에 마우스 올려도 고정됨
-
-    nav on ->
-
-
-    */
 
     let nav = document.querySelector('nav');
     let mainMenu = document.querySelector('.mainMenu');
@@ -534,6 +527,7 @@
     function addClass(k) {
       // 순서에 해당하는 sub메뉴 클래스 추가
       subMenuItem.forEach(function (item, index) {
+        mainMenuLi[k].querySelector('a').classList.add('on')
         subMenuItem[k].classList.add('on');
       })
     }
@@ -541,51 +535,38 @@
     // 순서에 해당하는 sub메뉴 클래스 삭제
     function rmClass() {
       subMenuItem.forEach(function (v, k) {
+        mainMenuLi[k].querySelector('a').classList.remove('on')
         subMenuItem[k].classList.remove('on');
       })
     }
 
+    // nav.classList.remove('on');
 
     // 메인메뉴 리스트에 마우스 올릴때마다
     mainMenuLi.forEach(function (v, k) {
       v.onmouseenter = function () {
-        // header배경색 클래스 추가삭제
-        nav.classList.add('on');
-        // 폰트색깔
-        v.querySelector('a').classList.add('on');
-        // 서브메뉴 보이기
-        subMenu.classList.add('on');
-        rmClass();
+        rmClass()
         addClass(k);
-        // 로고 바꾸기
-        document.querySelector('.logo img').src = './images/logo_on.png'
+        mainMenuLi[k].querySelector('a').classList.add('on')
       }
-
-      v.onmouseleave = function () {
-        v.querySelector('a').classList.remove('on');
-        rmClass();
-
-        v.querySelector('a').classList.remove('on');
-
-
-        subMenu.onmouseleave = function () {
-          nav.classList.remove('on');
-          subMenu.classList.remove('on');
-          document.querySelector('.logo img').src = './images/logo_off.png'
-        }
-
-        // 서브메뉴 가리기
-      }
-
     })
 
-    // mainMenu.onmouseleave = function () {
-    //   nav.classList.remove('on');
-    //   subMenu.classList.remove('on');
-    //   document.querySelector('.logo img').src = './images/logo_off.png'
-    // }
+    // mainMenu에서 mouseleave할때마다 subMenu도 사라져야 하지만
+    // subMenu에 mouseenter할때는 subMenu가 사라지면 안됨
+    mainMenu.addEventListener('mouseenter', function () {
+      nav.classList.add('on');
+    })
 
+    mainMenu.addEventListener('mouseleave', function () {
+      nav.classList.remove('on');
 
+      subMenu.addEventListener('mouseenter', function () {
+        nav.classList.add('on');
+      })
+      subMenu.addEventListener('mouseleave', function () {
+        nav.classList.remove('on');
+      })
+    })
 
   </script>
 </body>

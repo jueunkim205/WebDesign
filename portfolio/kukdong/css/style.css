@@ -61,7 +61,7 @@ header {
 
 header nav {
   position: relative;
-  padding: 0 60px 0 70px;
+  padding: 0 50px 0 70px;
   height: 120px;
   display: flex;
   justify-content: space-between;
@@ -69,6 +69,7 @@ header nav {
   box-sizing: border-box;
   border-bottom: 1px solid rgba(255, 255, 255, .3);
   font-family: "Roboto", Noto Sans KR;
+  transition: .5s;
 }
 
 header nav .mainMenu {
@@ -79,7 +80,7 @@ header nav .mainMenu {
 
 header nav .mainMenu li a {
   display: block;
-  padding: 0 30px;
+  padding: 0 25px;
   height: 120px;
   font-size: 22px;
   letter-spacing: -1px;
@@ -88,10 +89,13 @@ header nav .mainMenu li a {
   box-sizing: border-box;
 }
 
-
 /* menu에 hover시 효과 */
 header nav.on {
   background: #fff;
+}
+
+header nav.on .logo img {
+  content: url(../images/logo_on.png);
 }
 
 header nav.on .mainMenu a {
@@ -99,11 +103,10 @@ header nav.on .mainMenu a {
 }
 
 header nav.on .mainMenu a.on {
-  color: dodgerblue;
+  color: #07348c;
 }
 
-/*  */
-.subMenu {
+header nav .subMenu {
   display: none;
   position: absolute;
   width: 100%;
@@ -114,7 +117,7 @@ header nav.on .mainMenu a.on {
   box-sizing: border-box;
 }
 
-.subMenu.on {
+header nav.on .subMenu {
   display: block;
 }
 
@@ -123,7 +126,12 @@ header nav.on .mainMenu a.on {
 }
 
 .subMenuItem.on a:hover {
+  transition: .5s;
   color: #07348c;
+}
+
+.subMenuItem.on h2>a:hover {
+  border-bottom: 1px solid #07348c;
 }
 
 .subMenuItem {
@@ -145,15 +153,16 @@ header nav.on .mainMenu a.on {
   background: #eee;
 }
 
-.subMenuItem .boxItem{
+.subMenuItem .boxItem {
   width: 50%;
 }
 
-.subMenuItem .box h1 {
+.subMenuItem .boxItem h1 {
   font-size: 35px;
+  line-height: 35px;
 }
 
-.subMenuItem .box span {
+.subMenuItem .boxItem span {
   display: block;
   color: #888;
   font-size: 14px;
@@ -167,10 +176,9 @@ header nav.on .mainMenu a.on {
   flex: 1;
   height: 100%;
   gap: 20px;
-  padding: 60px 0 15px 50px;
+  padding: 40px 0 0 50px;
   box-sizing: border-box;
-  background: #fff;
-  /* background: lightblue; */
+  background: #f8f8f8;
 }
 
 .subItem li {
@@ -179,13 +187,16 @@ header nav.on .mainMenu a.on {
 }
 
 .subItem li h2 {
+  font-size: 15px;
   padding-bottom: 18px;
-  margin-bottom: 18px;
 }
 
-.subItem li h2 a {
+.subItem li h2>a {
+  display: block;
   color: #222;
   font-weight: 500;
+  padding: 18px 0;
+  border-bottom: 1px solid #222;
 }
 
 .subItem li ul li {
@@ -199,35 +210,52 @@ header nav.on .mainMenu a.on {
   word-break: keep-all;
   letter-spacing: -1px;
   margin: 7px 0;
-  /* border: 1px solid #000; */
 }
-
-.subItem h2 {
-  font-size: 15px;
-  padding: 10px 0;
-  border-bottom: 1px solid #ccc;
-}
-
 
 /*  */
+header nav.on .lang {
+  border: 1px solid #222;
+}
+
+header nav.on .lang a {
+  color: #222;
+}
+
 header nav .lang {
   font-size: 13px;
   padding: 7px 15px;
+  margin-right: 100px;
   color: #fff;
   border: 1px solid rgba(255, 255, 255, .5);
   letter-spacing: -1px;
   font-weight: 600;
+  cursor: pointer;
 }
 
 header nav .btns {
   display: flex;
-  width: 150px;
+  height: 100%;
   justify-content: space-between;
   align-items: center;
 }
 
 header nav .btns span:last-child {
   color: #fff;
+  font-size: 30px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+header nav.on .btns span:last-child::after {
+  position: absolute;
+  content: '';
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  width: 130px;
+  height: 120px;
+  background: #07348c;
+  z-index: -1;
 }
 
 header .txt {
