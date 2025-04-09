@@ -61,6 +61,7 @@ header {
 }
 
 header nav {
+  position : relative;
   padding: 0 60px 0 70px;
   height: 120px;
   display: flex;
@@ -70,20 +71,108 @@ header nav {
   font-family: "Roboto", Noto Sans KR;
 }
 
-header nav ul {
+header nav .mainMenu {
   display: flex;
-  width: 650px;
+  width: 640px;
   justify-content: space-around;
 }
 
 /* header nav ul */
-header nav ul li a {
+header nav .mainMenu li a {
   font-size: 22px;
   letter-spacing: -1px;
   font-weight: 600;
   line-height: 100%;
 }
 
+/*  */
+
+
+.subManu {
+  position : absolute;
+  width: 100%;
+  height: 380px;
+  top: 120px;
+  left:0;
+  z-index: 10;
+}
+
+.subMenuItem{
+  position : absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.subMenuItem .box {
+  height: 100%;
+  padding: 40px 50px 40px 18vw;
+  box-sizing: border-box;
+  background: #eee;
+}
+
+.subMenuItem .box h1 {
+  font-size: 35px;
+}
+
+.subMenuItem .box span {
+  display: block;
+  color: #888;
+  font-size: 14px;
+  margin: 20px 0 15px;
+  letter-spacing: -1px;
+  word-break: keep-all;
+}
+
+.subItem {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  gap: 20px;
+  padding: 60px 20vw 15px 50px;
+  box-sizing: border-box;
+  background: #fff;
+}
+
+.subItem li {
+  width: 130px;
+  height: 100%;
+}
+
+.subItem li h2 {
+  padding-bottom: 18px;
+  margin-bottom: 18px;
+}
+
+.subItem li h2 a {
+  color: #222;
+  font-weight: 500;
+}
+
+.subItem li ul li {
+  line-height: 17px;
+}
+
+.subItem li ul li a {
+  display: block;
+  font-size: 13px;
+  color: #666;
+  word-break: keep-all;
+  letter-spacing: -1px;
+  margin: 7px 0;
+  /* border: 1px solid #000; */
+}
+
+.subItem h2 {
+  font-size: 15px;
+  padding: 10px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+
+/*  */
 header nav .lang {
   font-size: 13px;
   padding: 7px 15px;
