@@ -546,8 +546,6 @@
     }
 
 
-
-
     // 메인메뉴 리스트에 마우스 올릴때마다
     mainMenuLi.forEach(function (v, k) {
       v.onmouseenter = function () {
@@ -565,23 +563,27 @@
 
       v.onmouseleave = function () {
         v.querySelector('a').classList.remove('on');
+        rmClass();
+
+        v.querySelector('a').classList.remove('on');
+
 
         subMenu.onmouseleave = function () {
-        document.querySelector('.logo img').src = './images/logo_off.png'
-        v.querySelector('a').classList.remove('on');
-        rmClass();
-        subMenu.classList.remove('on');
-        nav.classList.remove('on');
-      }
+          nav.classList.remove('on');
+          subMenu.classList.remove('on');
+          document.querySelector('.logo img').src = './images/logo_off.png'
+        }
 
         // 서브메뉴 가리기
       }
 
-     
-
     })
 
-
+    // mainMenu.onmouseleave = function () {
+    //   nav.classList.remove('on');
+    //   subMenu.classList.remove('on');
+    //   document.querySelector('.logo img').src = './images/logo_off.png'
+    // }
 
 
 
