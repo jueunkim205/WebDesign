@@ -715,6 +715,32 @@ header .txt p:nth-of-type(3) {
   box-sizing: border-box;
 }
 
+#topbtn {
+  position: fixed;
+  text-align: center;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  border: 1px solid #000;
+  background: rgba(255, 255, 255, .5);
+  /*border-radius: 50%;
+
+  z-index: 50;
+  box-sizing: border-box; */
+}
+
+#topbtn span {
+  display: block;
+  margin-top: 6px;
+  font-size: 20px;
+}
+
+#topbtn p {
+  /* margin-top: -5px; */
+  font-size: 13px;
+}
+
 /***************** footer *****************/
 
 footer {
