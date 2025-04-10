@@ -35,19 +35,11 @@
 
     <!-- 안한거
     언어변경
-    전체매뉴보기
+    전체매뉴보기 <- 먼저하기
     메인화면 슬라이드
 
     포트폴리오
     FOOTER 패밀리사이트
-    TOP버튼
-
-  subPage 뭘로할지 고민중
-
-
-
-  메뉴는 0408_3_메뉴.html 참고
-  
     -->
 
     <header>
@@ -526,6 +518,8 @@
     let mainMenuLi = document.querySelectorAll('.mainMenu li');
     let subMenu = document.querySelector('.subMenu');
     let subMenuItem = document.querySelectorAll('.subMenuItem');
+    let topBtn = document.getElementById('topbtn');
+
 
     function addClass(k) {
       // 순서에 해당하는 sub메뉴 클래스 추가
@@ -570,6 +564,12 @@
         nav.classList.remove('on');
       })
     })
+
+
+    // top버튼
+    topBtn.onclick = function(){
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
 
   </script>
 </body>
