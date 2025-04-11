@@ -30,7 +30,7 @@ h3.tit {
 }
 
 h4 {
-  font-family: "Roboto", Noto Sans KR;
+  font-family: "Roboto", "Noto Sans KR";
   font-size: 25px;
   font-weight: 400;
   letter-spacing: -1px;
@@ -38,7 +38,7 @@ h4 {
 
 p {
   font-size: 16px;
-  font-family: "Roboto", Noto Sans KR;
+  font-family: "Roboto", "Noto Sans KR";
   letter-spacing: -1px;
 }
 
@@ -68,7 +68,7 @@ header nav {
   align-items: center;
   box-sizing: border-box;
   border-bottom: 1px solid rgba(255, 255, 255, .3);
-  font-family: "Roboto", Noto Sans KR;
+  font-family: "Roboto", "Noto Sans KR";
   transition: .5s;
 }
 
@@ -147,7 +147,7 @@ header nav.on .subMenu {
   display: flex;
   justify-content: end;
   height: 100%;
-  width: 35%;
+  width: 33%;
   padding: 40px 50px 40px 0;
   box-sizing: border-box;
   background: #eee;
@@ -379,8 +379,8 @@ header .txt p:nth-of-type(3) {
 /***************** section2 *****************/
 
 .section2 .wrap {
+  position: relative;
   width: 1280px;
-  padding: 120px 0;
   margin: 0 auto;
 }
 
@@ -388,9 +388,10 @@ header .txt p:nth-of-type(3) {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin: 120px 0 110px;
 }
 
-.section2 .up ul {
+.section2 .up #upBtn {
   display: flex;
   gap: 10px;
 }
@@ -400,11 +401,78 @@ header .txt p:nth-of-type(3) {
   width: 120px;
   padding: 20px;
   font-size: 14px;
-  font-family: "Roboto", Noto Sans KR;
+  font-family: "Roboto", "Noto Sans KR";
   color: #002264;
   cursor: pointer;
   letter-spacing: -1px;
 }
+
+.section2 .up button.on {
+  background: #002264;
+  color: #fff;
+}
+
+.section2 #downCon {
+  width: 100%;
+  height: 590px;
+  border: 1px solid #000;
+}
+
+.section2 #downCon ul {
+  position: absolute;
+  display: none;
+}
+
+.section2 #downCon ul.on {
+  display: block;
+}
+
+.section2 #downCon .swiper {
+  display: none;
+  width: 1280px;
+  height: 590px;
+  padding: 0 40px;
+  box-sizing: border-box;
+  border: 1px solid blue;
+  margin: 0 auto;
+}
+
+.section2 #downCon .swiper.on {
+  display: block;
+}
+
+/* 박스 */
+.section2 #downCon .swiper-slide {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: space-between;
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  overflow: hidden;
+}
+
+.section2 #downCon .swiper-slide>p {
+  width: 740px;
+  height: 520px;
+  border: 1px solid #000;
+  display: flex;
+  align-items: flex-start;
+}
+
+.section2 #downCon .swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.section2 #downCon .con {
+  flex: 1;
+  padding-left: 75px;
+  text-align-last: left;
+}
+
 
 /***************** section3 *****************/
 
@@ -737,6 +805,107 @@ header .txt p:nth-of-type(3) {
   /* margin-top: -5px; */
   font-size: 13px;
 }
+
+/***************** 전체매뉴 *****************/
+
+#allMenu {
+  display: none;
+  font-family: "Roboto", "Noto Sans KR";
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1280px;
+  height: 600px;
+  background: #07348c;
+  z-index: 30;
+  padding: 50px;
+  box-sizing: border-box;
+  letter-spacing: -1px;
+}
+
+#allMenu>ul {
+  display: flex;
+  margin-top: 100px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid rgba(255, 255, 255, .2);
+}
+
+#allMenu>ul .list {
+  width: calc(100% / 6);
+}
+
+#allMenu>ul .list h3 {
+  padding-bottom: 10px;
+  font-size: 20px;
+}
+
+#allMenu>ul .list p a {
+  display: block;
+  font-size: 15px;
+  padding: 6px 0 6px 2px;
+}
+
+#allMenu>ul .list a:hover {
+  color: #ffe24a
+}
+
+#allMenu #close {
+  position: absolute;
+  display: block;
+  top: 50px;
+  right: 50px;
+  width: 80px;
+  height: 80px;
+  border: 1px solid #fff;
+  cursor: pointer;
+}
+
+#allMenu #close::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 30px;
+  height: 1px;
+  margin-left: -15px;
+  transform: rotate(45deg);
+  background: #fff;
+}
+
+#allMenu #close::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 30px;
+  height: 1px;
+  margin-left: -15px;
+  transform: rotate(-45deg);
+  background: #fff;
+}
+
+#allMenu.on {
+  display: block;
+}
+
+.darkbg.on {
+  display: block;
+}
+
+.darkbg {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100%;
+  background: rgba(0, 0, 0, .8);
+  z-index: 20;
+  border: 1px solid #000;
+}
+
+
 
 /***************** footer *****************/
 
