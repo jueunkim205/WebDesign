@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AOS</title>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    section {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-direction: column;
+      gap: 50px;
+    }
+
+    section>div {
+      width: 200px;
+      height: 200px;
+      background: #000;
+    }
+
+    section:nth-child(1) {
+      background: #aaa;
+    }
+
+    section:nth-child(2) {
+      background: #bbb;
+    }
+
+    section:nth-child(3) {
+      background: #ddd;
+    }
+
+    section:nth-child(4) {
+      background: #eee;
+    }
+
+    section:nth-child(5) {
+      background: #777;
+    }
+
+    section:nth-child(6) {
+      background: #888;
+    }
+
+    section:nth-child(7) {
+      background: #999;
+    }
+  </style>
+</head>
+
+<body>
+
+  <section>
+    <div data-aos="fade-right">fade-right</div>
+  </section>
+  <section>
+    <div data-aos="fade-up" data-aos-duration="1200" >fade-up</div>
+    <div data-aos="fade-down" data-aos-duration="1200" >fade-up</div>
+  </section>
+  <section>
+    <div data-aos="fade-down" data-aos-duration="3000">fade-up</div>
+  </section>
+  <section>
+    <div data-aos="fade-right">"fade-right</div>
+  </section>
+  <section>
+    <div data-aos="fade-left">fade-left</div>
+  </section>
+  <section>
+    <div data-aos="flip-left">flip-left</div>
+  </section>
+  <section>
+    <div data-aos="zoom-in">zoom-in</div>
+  </section>
+
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+
+    window.onscroll = function () {
+      let scrtop = document.documentElement.scrollTop;
+      console.log(scrtop);
+    }
+
+    AOS.init({
+      duration: 1000,
+      // delay: 500,
+      easing: 'ease-in-out-sine',
+      offset: 120,
+    });
+  </script>
+</body>
+
+</html>
