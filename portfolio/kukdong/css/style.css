@@ -441,6 +441,7 @@ header .txt p:nth-of-type(3) {
 
 /* 박스 */
 .section2 #downCon .swiper-slide {
+  position: relative;
   display: flex;
   width: 1200px;
   height: 100%;
@@ -470,21 +471,18 @@ header .txt p:nth-of-type(3) {
   text-align-last: left;
 }
 
-.swiper-button-next,
-.swiper-button-prev {
-  position: absolute;
-  top: var(--swiper-navigation-top-offset, 50%);
-  width: calc(var(--swiper-navigation-size) / 44 * 27);
-  height: var(--swiper-navigation-size);
-  margin-top: calc(0px - (var(--swiper-navigation-size) / 2));
-  z-index: 10;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #fff, #000 !important;
+.section2 #downCon #arrow .swiper-button-next {
+  /* color: red; */
+  color: #fff;
+  opacity: 1;
+  margin-right: -10px;
 }
 
+.section2 #downCon #arrow .swiper-button-prev {
+  color: #000;
+  opacity: 1;
+  margin-left: -10px;
+}
 
 
 /***************** section3 *****************/
