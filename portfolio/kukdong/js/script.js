@@ -5,6 +5,9 @@ let subMenu = document.querySelector(".subMenu");
 let subMenuItem = document.querySelectorAll(".subMenuItem");
 let topBtn = document.getElementById("topbtn");
 
+
+
+
 function addClass(k) {
   // 순서에 해당하는 sub메뉴 클래스 추가
   subMenuItem.forEach(function (item, index) {
@@ -75,7 +78,26 @@ darkbg.addEventListener("click", function () {
   darkbg.classList.remove("on");
 });
 
+
+
 // 포트폴리오
+
+var swiper = new Swiper(".mySwiper", {
+  // loop: true,
+  effect: "fade",
+  spaceBetween: 40,
+  observer: true,
+  observeParents: true,
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
+
 let upBtn = document.querySelectorAll("#upBtn button");
 let downCon = document.querySelectorAll("#downCon .swiper");
 
@@ -102,5 +124,3 @@ upBtn.forEach(function (v, k, allItem) {
     });
   };
 });
-
-

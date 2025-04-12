@@ -7,23 +7,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>극동건설</title>
   <link rel="stylesheet" href="./css/style.css">
+  <!-- swiper -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <!-- 구글아이콘 -->
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
   <!-- 나눔스퀘어 -->
-  <!-- font-family: 'NanumSquare', sans-serif -->
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@2.0/nanumsquare.css" />
   <!-- -----------Roboto----------- -->
-  <!-- font-family: "Roboto", serif; -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
     rel="stylesheet" />
   <!-- Play -->
-  <!-- font-family: "Play", serif; -->
   <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet" />
   <!-- -----------Noto sans Kr----------- -->
-  <!-- font-family: "Noto Sans KR", serif; -->
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet" />
-  <!-- swiper -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 
 
@@ -658,7 +654,9 @@
     </section>
 
     <div id="topbtn">
-      <span></span>
+      <span class="material-symbols-outlined">
+        keyboard_arrow_up
+      </span>
       <p>TOP</p>
     </div>
 
@@ -823,21 +821,6 @@
 
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="./js/script.js"></script>
-  <script>
-    // swiper
-    var swiper = new Swiper(".mySwiper", {
-      loop: true,
-      effect: "fade",
-      autoplay: {
-        delay: 3000,
-        disableOnInteraction: false,
-      },
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-    });
-  </script>
 </body>
 
 </html>
