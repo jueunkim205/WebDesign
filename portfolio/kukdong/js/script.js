@@ -7,7 +7,6 @@ let topBtn = document.getElementById("topbtn");
 
 
 
-
 function addClass(k) {
   // 순서에 해당하는 sub메뉴 클래스 추가
   subMenuItem.forEach(function (item, index) {
@@ -104,7 +103,7 @@ let downCon = document.querySelectorAll("#downCon .swiper");
 upBtn[0].classList.add("on");
 downCon[0].classList.add("on");
 
-function rmClass() {
+function S2rmClass() {
   upBtn.forEach(function (v, k) {
     v.classList.remove("on");
   });
@@ -116,7 +115,7 @@ function rmClass() {
 
 upBtn.forEach(function (v, k, allItem) {
   v.onclick = function () {
-    rmClass();
+    S2rmClass();
     this.classList.add("on");
 
     downCon.forEach(function (item, index) {
