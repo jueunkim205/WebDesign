@@ -36,11 +36,26 @@ ul {
   text-shadow: rgba(0, 0, 0, 0.3) 0px 0px 10px;
 }
 
+section {
+  padding: 50px 0;
+  box-sizing: border-box;
+}
+
 section .wrap {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
 }
+
+section .wrap h2 {}
+
+section .wrap:nth-child(2) ul {
+  display: flex;
+}
+
+
+
+
 
 .section2 {
   background: url(../images/bg_brand.jpg) center/cover no-repeat;

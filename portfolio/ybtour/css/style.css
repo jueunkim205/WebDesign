@@ -293,9 +293,9 @@ header nav .mainMenu:hover~.bg {
 
 .section3 li>p {
   max-width: 720px;
-  width: 50%;
+  width: 48%;
   height: 100%;
-  border-radius: 20px;
+  border-radius: 10px;
   overflow: hidden;
 }
 
@@ -457,9 +457,9 @@ footer .down {
   box-sizing: border-box;
 }
 
-footer .up{
+footer .up {
   border-top: 1px solid #ddd;
-  border-bottom:  1px solid #ddd;
+  border-bottom: 1px solid #ddd;
 }
 
 footer .up .banner {
@@ -554,7 +554,7 @@ footer .banner ul:last-child li:nth-child(6) p {
 footer .down {
   background: #f4f6f9;
   margin: 0 auto;
-padding: 4% 0;
+  padding: 4% 0;
 }
 
 footer .down .con {
