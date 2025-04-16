@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JQuery</title>
+  <style></style>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script>
+    $(function () {
+
+    })
+
+  </script>
+</head>
+
+<body>
+  <p id="p1">하나</p>
+  <p>둘</p>
+  <p>셋</p>
+  <p>넷</p>
+  <p>다섯</p>
+
+
+  <script>
+    $('p').mouseenter(function () {
+      $(this).css('color', 'green')
+    })
+
+    $('p').mouseleave(function () {
+      $(this).css('color', '#000')
+    })
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JQuery</title>
+  <style></style>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script>
+    $(function () {
+      // $('p:nth-child(2)').css('color', 'red');
+      // $('p:odd').css('color', 'green');
+      // $('p:even').css('color', 'blue');
+      // $('h1+p').css('color', 'gold');
+      // $('h1~p').css('color', 'gold');
+      $('p:gt(2)').css('color', 'violet'); // 2보다 큰 애들
+      
+    })
+
+  </script>
+</head>
+
+<body>
+  <h1>jQuery</h1>
+  <p>하나</p>
+  <p>둘</p>
+  <p>셋</p>
+  <p>넷</p>
+  <p>다섯</p>
+  <section>
+    <div class="visual"></div>
+  </section>
+
+  <script>
+
+    // 첫번째 p만 바뀜
+    // document.querySelector('p').style.color = 'green';
+
+    // document.getElementsByTagName('p')[0].style.color='plum';
+    // document.querySelectorAll('p').forEach(function(v,k){
+    //   v.style.color = 'red';
+    // })
+    // document.querySelector('h1').textContent = 'hello';
+    // document.querySelector('h1').remove();
+    // let sec = document.querySelector('.visual').parentNode.nodeName;
+    // console.log(sec);
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JQuery</title>
+  <style></style>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script>
+    // jquery는 body위에 있어도 된다.
+    // $(document).ready(function(){
+      // 문서가 준비되면 실행한다.
+      
+
+    // })
+  </script>
+</head>
+
+<body>
+<h1>jQuery</h1>
+
+  <script>
+    // 자바스크립트는 위에서 아래로 해석하기 때문에 body보다 위에 있으면 안된다.
+    // document.querySelector('body').style.backgroundColor = 'red';
+
+    // jQuery를 사용하면 작업/메소드를 함께 연결할 수 있습니다. (Chaining)
+    // $('body').css('background-color','plum').css('color', 'blue').css('fontSize', '30px').css('border','1px solid brown');
+    
+    // css 계속 쓸거면 중괄호 넣어라
+    $('body').css({color:'green', fontSize:'30px', backgroundColor:'plum' })
+  </script>
+</body>
+
+</html>

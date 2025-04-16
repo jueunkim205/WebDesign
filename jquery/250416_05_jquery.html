@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JQuery</title>
+  <style></style>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script>
+    $(function () {
+
+    })
+
+  </script>
+</head>
+
+<body>
+  <p id="p1">하나</p>
+  <p>둘</p>
+  <p>셋</p>
+  <p>넷</p>
+  <p>다섯</p>
+
+
+  <script>
+    /*
+    let pTag = document.querySelectorAll('p')
+
+    let myfnc = function () {
+      pTag.forEach(function (v, k) {
+        v.style.color = '#000';
+      })
+    }
+
+    pTag.forEach(function (v, k) {
+      v.onclick = function () {
+        myfnc();
+        v.style.color = 'red'
+      }
+    })
+    */
+
+    /*
+    let p = document.querySelectorAll('p')
+
+    p.forEach(function(v, k, all){
+      v.onclick = function(){
+        all.forEach(function(item){
+          item.style.color = '#000';
+        })
+
+        this.style.color = 'red';
+      }
+    })
+*/
+
+    /*
+        let p = document.querySelectorAll('p')
+        // function 지우고 여는괄호닫는괄호 옆에 화살표
+        // 화살표함수는 this가 안됨
+        p.forEach((v, k, all) => {
+          v.onclick = () => {
+            all.forEach((item) => {
+              item.style.color = '#000';
+            })
+            v.style.color = 'red';
+          }
+        })
+        */
+
+    $('p').mouseenter((e) => {
+      $('p').css('color', '#000');
+      $(e.currentTarget).css('color', 'plum');
+    })
+
+    // dblclick : 더블클릭
+    // $('p').dblclick(function () {
+    //   $(this).hide();
+    // })
+
+
+    // mousedown : 왼쪽, 가운데 또는 오른쪽 마우스 버튼을 누르면 실행
+    // mouseout : 왼쪽, 가운데 또는 오른쪽 마우스 버튼을 떼면 실행
+    $("#p1").mouseup(function () {
+      alert("Mouse down over p1!");
+    });
+
+
+  </script>
+</body>
+
+</html>
