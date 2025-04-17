@@ -7,21 +7,33 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title></title>
   <style></style>
-  
+
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
   <script>
     $(function () {
+      $('a').click(function () {
+        $('p').toggle(500, 'linear', function () {
 
+          if ($('a').text() == 'hide') {
+            $('a').text('show');
+          } else {
+            $('a').text('hide');
+          }
+        })
+
+        return false;
+      })
     })
   </script>
 </head>
 
 <body>
-
+  <p>show()hide()</p>
+  <a href="#">show/hide</a>
 
   <script>
     let br = '<br>'
-    
+
   </script>
 </body>
 

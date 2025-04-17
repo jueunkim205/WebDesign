@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <style></style>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script>
+    $(function () {
+      let i = 0;
+      $('#demo').on('click', function () {
+        console.log(i++);
+        if (i > 5) {
+          $(this).off('click')
+        }
+      })
+
+      $('#one').one('click', function () {
+        console.log(i++);
+      })
+
+      $('#demo').on('mouseover', function () {
+        $(this).css('color', 'plum')
+      }).on('mouseleave', function () {
+        $(this).css('color', '#000')
+      })
+
+      // $('#con').click(function(){
+      //   $(this).text('클릭이벤트')
+      // }).dblclick(function(){
+      //   $(this).text('더블클릭이벤트')
+      // }).mouseenter(function(){
+      //   $(this).text('마우스엔터이벤트')
+      // }).mouseleave(function(){
+      //   $(this).text('마우스리브이벤트')
+      // })
+
+      $('#con').on({
+        click: function () {
+          $(this).text('클릭이벤트')
+        }, dbclick: function () {
+          $(this).text('더블클릭이벤트')
+        }, mouseenter: function () {
+          $(this).text('마우스엔터이벤트')
+        }, mouseleave: function () {
+          $(this).text('마우스리브이벤트')
+        }
+      })
+
+    })
+  </script>
+</head>
+
+<body>
+  <p id="demo">jQuery on method</p>
+  <p id="one">jQuery one method</p>
+  <p id="con">on 메서드입니다</p>
+
+  <script>
+    let br = '<br>'
+
+  </script>
+</body>
+
+</html>

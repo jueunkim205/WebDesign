@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <style></style>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script>
+    $(function () {
+      $('a').on('click', function (e) {
+        e.preventDefault(); // a태그의 기본동작을 막아줌, 구문의 가장 위에
+        $('p').toggle(1000, 'linear');
+
+        // let txt = $(this).text()
+        let txt = $('p').css('display');
+        $(this).text('show');
+
+        if (txt == 'none') {
+          $(this).text('show')
+        } else {
+          $(this).text('hide')
+        }
+
+        return false; // a태그의 기본동작을 막아줌, 구문의 가장 끝
+
+        // e.preventDefault() 혹은 return false 둘 중 하나만 쓰면 됨
+      })
+    })
+  </script>
+</head>
+
+<body>
+  <p>show()hide()</p>
+  <a href="#">show/hide</a>
+
+  <script>
+    let br = '<br>'
+
+  </script>
+</body>
+
+</html>
