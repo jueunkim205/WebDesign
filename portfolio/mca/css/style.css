@@ -6,6 +6,8 @@
 }
 
 .wrap {
+  /* 무료폰트 없음 */
+  font-family: "Open Sans", sans-serif;
   box-sizing: border-box;
 }
 
@@ -17,4 +19,31 @@ ul {
 a {
   text-decoration: none;
   color: #fff;
+}
+
+.side {
+  position: fixed;
+  left: 0;
+  height: 0;
+  width: 7vw;
+  height: 100vh;
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #000;
+}
+
+.side h1 {
+  border: 1px solid #000;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  text-align: center;
+  line-height: 7vw;
+}
+
+.con {
+  flex: 1;
+  height: 100%;
 }
