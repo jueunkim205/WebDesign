@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <style></style>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script>
+    $(function () {
+
+      $('a:first-of-type').click(function (e) {
+        e.preventDefault();
+        $('p').fadeIn(1000, 'linear')
+      })
+
+      $('a:nth-of-type(2)').click(function (e) {
+        e.preventDefault();
+        $('p').fadeOut(1000, 'linear')
+      })
+
+      $('a:nth-of-type(3)').click(function (e) {
+        e.preventDefault();
+        $('p').fadeOut(1000, 'linear')
+      })
+   
+      $('a:nth-of-type(4)').click(function (e) {
+        e.preventDefault();
+        $('p').fadeTo(1000, 0, 'linear')
+      })
+   
+    })
+  </script>
+</head>
+
+<body>
+  <p>문단태그</p>
+  <a href="#">fade in</a><br>
+  <a href="#">fade out</a><br>
+  <a href="#">fade toggle</a><br>
+  <a href="#">fade to</a>
+  <script>
+    let br = '<br>'
+
+  </script>
+</body>
+
+</html>
