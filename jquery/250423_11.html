@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    p {
+      width: 100px;
+      height: 100px;
+      background: #ccc;
+      padding: 100px;
+      border: 10px solid #000;
+      margin: 50px;
+    }
+  </style>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="js/jquery-ui.min.js"></script>
+  <script>
+    $(function () {
+      let color = ['#aaa', '#bbb', '#ccc', '#ddd']
+      $('ul li').each(function (i, e) {
+        $(this).text(i+1).css({backgroundColor:color[i], fontSize : '20px', color:'#f00'})
+      })
+    })
+
+  </script>
+</head>
+
+<body>
+
+  <ul>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+  </ul>
+</body>
+
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    p {
+      width: 100px;
+      height: 100px;
+      background: #ccc;
+      transition: 1s;
+    }
+
+    p.on {
+      width: 0;
+      background: #f00;
+    }
+  </style>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="js/jquery-ui.min.js"></script>
+  <script>
+    $(function () {
+      // $('div').remove('.test');
+      // $('div').empty();
+      let bool = true;
+      $('a').click(function () {
+        // $('p').toggleClass('on')
+        if (bool) {
+          $('p').animate({ width: '0', backgroundColor: '#f00' })
+        } else {
+          $('p').animate({ width: '100px', backgroundColor: '#ccc' })
+        }
+        bool = !bool;
+      })
+      // console.log($('p').height(300));
+      $('p').height(600)
+    })
+  </script>
+</head>
+
+<body>
+
+  <!-- <div>
+    <p>문단태그</p>
+    <a href="#">링크태그</a>
+  </div>
+
+  <div class="test">
+    <p>문단태그</p>
+    <a href="#">링크태그</a>
+  </div>
+
+  <div class="test demo">
+    <p>문단태그</p>
+    <a href="#">링크태그</a>
+  </div> -->
+
+  <p></p>
+  <a href="#">링크태그</a>
+
+</body>
+
+</html>

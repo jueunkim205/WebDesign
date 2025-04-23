@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <style>
+    /* * {
+      margin: 0;
+      padding: 0;
+    } */
+    body {
+      padding: 1000px;
+    }
+
+    ul {
+      list-style: none;
+    }
+  </style>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="js/jquery-ui.min.js"></script>
+  <script>
+    $(function () {
+      $(document).keydown(function (e) {
+        e.preventDefault();
+        console.log(e.keyCode);
+      })
+
+      $(document).mousemove(function (e) {
+        console.log(e.clientX);
+        console.log(e.pageX);
+        console.log(e.screenX);
+      })
+      $(window).resize(function () {
+        console.log();
+      })
+    })
+
+  </script>
+</head>
+
+<body>
+
+
+</body>
+
+</html>

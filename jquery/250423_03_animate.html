@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    p {
+      position: relative;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: #ccc;
+    }
+
+    #draggable {
+      width: 150px;
+      height: 150px;
+      padding: 0.5em;
+      border: 1px solid #000;
+    }
+  </style>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="./js/jquery-ui.min.js"></script>
+  <script>
+    $(function () {
+      $('a').click(function (e) {
+        e.preventDefault();
+        $('#demo')
+          .animate({ left: '500px' }, 1000, 'linear')
+          .animate({ bottom: '-500px', backgroundColor: '#f00' }, 1000, 'swing')
+          .animate({ left: '0' }, 1000, 'easeInOutBounce')
+          .animate({ bottom: '0', backgroundColor: '#ccc' }, 1000, 'easeInOutElastic')
+      });
+      // 강제로 이벤트 실행시킴
+      $('a').trigger('click');
+      setInterval(() => {
+        $('a').click();
+      }, 4000);
+
+      $('draggable').draggable();
+
+    })
+  </script>
+</head>
+
+<body>
+  <p id="demo"></p>
+  <a href="#">클릭</a>
+  <div id="draggable" class="ui-widget-content">
+    Drag me around
+  </div>
+
+</body>
+
+</html>
