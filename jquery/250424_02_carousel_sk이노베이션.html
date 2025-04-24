@@ -22,10 +22,9 @@
     section {
       width: 1438px;
       height: 860px;
-      margin: 100px auto;
+      margin: 50px auto 0;
       display: flex;
       align-items: center;
-
       background: url(https://www.skinnovation.com/resources/images/main/s4-bg.jpg) center/cover;
       font-family: "SUIT", sans-serif;
       padding: 50px;
@@ -34,26 +33,31 @@
 
     .left {
       width: 40%;
+      padding-right: 20%;
+      z-index: 1;
     }
 
     .left ul li {
       position: relative;
+      height: 42px;
     }
 
-    .left ul li:hover::after{
+    .left ul li:hover::after {
       width: 0px;
       transition: .5s;
       animation: w .5s forwards;
     }
 
     @keyframes w {
-      0%{
+      0% {
         width: 0;
       }
-      100%{
+
+      100% {
         width: 20px;
       }
     }
+
     .left ul li:hover::after,
     .left ul li.on::after {
       position: absolute;
@@ -183,34 +187,16 @@
     .left ul li a {
       color: #333;
     }
+
+    #canvas {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+    }
   </style>
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-  <script>
-    $(function () {
-      let totalItem = $('.inner .item').length;
-      let degPerItem = 360 / totalItem;
-      $('.item').each(function (index, element) {
-        $(element).css('transform', `rotateY(${index * degPerItem}deg) translateZ(320px)`)
-      })
-
-       let btns = $('')
-      // $('.left ul li').on('mouseover', function () {
-      //   $('.left ul li').removeClass('on')
-      //   $(this).addClass('on')
-      // })
-
-      $('.left ul li').click(function (e) {
-        // hover, 클릭했을때 서식
-        e.preventDefault();
-        let i = $(this).index();
-        let y = -i * degPerItem;
-        $('.left ul li').removeClass('on')
-        $(this).addClass('on')
-        $('.inner').css('transform', `rotateY(${y}deg)`)
-      })
-
-    })
-  </script>
 </head>
 
 <body>
@@ -334,6 +320,97 @@
       </div>
     </div>
   </section>
+
+  <canvas id="canvas"></canvas>
+  <script>
+    // 제이쿼리
+    $(function () {
+      let totalItem = $('.inner .item').length;
+      let degPerItem = 360 / totalItem;
+      $('.item').each(function (index, element) {
+        $(element).css('transform', `rotateY(${index * degPerItem}deg) translateZ(320px)`)
+      })
+
+      $('.left ul li').click(function (e) {
+        // hover, 클릭했을때 서식
+        e.preventDefault();
+        let i = $(this).index();
+        let y = -i * degPerItem;
+        $('.left ul li').removeClass('on')
+        $(this).addClass('on')
+        $('.inner').css('transform', `rotateY(${y}deg)`)
+      })
+
+    })
+
+
+
+    // 나뭇잎
+    const canvas = document.getElementById('canvas');
+    const ctx = canvas.getContext('2d');
+
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    const leafImage = new Image();
+    leafImage.src = 'leaves.png'; // 나뭇잎 이미지
+
+    class Leaf {
+      constructor() {
+        this.reset();
+      }
+
+      reset() {
+        this.x = canvas.width + Math.random() * canvas.width;
+        this.y = Math.random() * canvas.height;
+        this.size = 30 + Math.random() * 30;
+        this.speedX = 1 + Math.random() * 2;
+        this.speedY = 0.5 - Math.random();
+        this.angle = Math.random() * Math.PI * 2;
+        this.spin = 0.02 + Math.random() * 0.05;
+      }
+
+      update() {
+        this.x -= this.speedX;
+        this.y += this.speedY;
+        this.angle += this.spin;
+
+        if (this.x < -this.size || this.y > canvas.height || this.y < -this.size) {
+          this.reset();
+          this.x = canvas.width;
+        }
+      }
+
+      draw() {
+        ctx.save();
+        ctx.translate(this.x, this.y);
+        ctx.rotate(this.angle);
+        ctx.drawImage(leafImage, -this.size / 2, -this.size / 2, this.size, this.size);
+        ctx.restore();
+      }
+    }
+
+    const leaves = [];
+    for (let i = 0; i < 15; i++) {
+      leaves.push(new Leaf());
+    }
+
+    function animate() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      leaves.forEach((leaf) => {
+        leaf.update();
+        leaf.draw();
+      });
+      requestAnimationFrame(animate);
+    }
+
+    // 🍃 클릭하면 새로운 나뭇잎 추가!
+    // canvas.addEventListener('click', () => {
+    //   leaves.push(new Leaf());
+    // });
+
+    leafImage.onload = animate;
+  </script>
 </body>
 
 </html>
