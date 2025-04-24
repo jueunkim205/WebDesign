@@ -64,11 +64,13 @@
   </style>
   <script src="./js/jquery-3.7.1.min.js"></script>
   <script>
-    $(function () {
-      $('#left').click(function () {
-        $('.box').css('transform', 'rotate(-90deg)')
-      })
-    })
+   $(function () {
+        let x = 0;
+        let y = 0;
+        $("#left").click(function () {
+          $(".box").css("transform", `rotateY(${(y -= 90)}deg)`);
+        });
+      });
   </script>
 </head>
 
