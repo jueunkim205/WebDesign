@@ -58,3 +58,5 @@ https://owlcarousel2.github.io/OwlCarousel2/demos/demos.html
 https://www.svgrepo.com/
 https://swiperjs.com/demos
 https://michalsnik.github.io/aos/
+https://gsap.com/docs/v3/Plugins/ScrollTrigger/?page=1#demos
+https://codepen.io/tag/css-art
