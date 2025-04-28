@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/owl.theme.default.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .item {
+      background: #ccc;
+      height: 500px;
+    }
+  </style>
+
+  <script src="js/jquery-3.7.1.min.js"></script>
+  <script>
+    $(function () {
+      var owl = $('.owl-carousel');
+
+      owl.owlCarousel({
+        loop: true,
+        margin: 10,
+        nav: true,
+        autoplay: false,
+        autoplayTimeout: 3000,
+        autoplayHoverPause: false,
+        // responsive: {
+        //   0: {
+        //     items: 1,
+        //   },
+        //   600: {
+        //     items: 3,
+        //   },
+        //   1000: {
+        //     items: 5,
+        //   }
+        // }
+      });
+
+      $('.play').on('click', function () {
+        owl.trigger('play.owl.autoplay', [1000])
+      })
+
+      $('.stop').on('click', function () {
+        owl.trigger('stop.owl.autoplay')
+      })
+    })
+  </script>
+</head>
+
+<body>
+  <div class="owl-carousel owl-theme">
+    <div class="item">
+      <h4>1</h4>
+    </div>
+    <div class="item">
+      <h4>2</h4>
+    </div>
+    <div class="item">
+      <h4>3</h4>
+    </div>
+    <div class="item">
+      <h4>4</h4>
+    </div>
+    <div class="item">
+      <h4>5</h4>
+    </div>
+  </div>
+  <button type="button" class="play">play</button>
+  <button type="button" class="stop">stop</button>
+
+
+
+
+
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/owl.carousel.js"></script>
+</body>
+
+</html>
