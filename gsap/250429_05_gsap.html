@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GSAP Example</title>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+  <style>
+    .box {
+      width: 50px;
+      height: 50px;
+      background: #ccc;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box"></div>
+
+  <script>
+    gsap.from('.box', { scaleX: 0, duration: 3, TransformOrigin: 'left top', delay:1, repeat:-1, yoyo:true });
+  </script>
+</body>
+
+</html>

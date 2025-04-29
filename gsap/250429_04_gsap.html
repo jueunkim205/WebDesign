@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+  <style>
+    .box {
+      width: 50px;
+      height: 50px;
+    }
+
+    .green {
+      background: green;
+    }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+  <script>
+  </script>
+</head>
+
+<body>
+  <div class="box green"></div>
+
+
+
+  <script>
+    let btn = gsap.to('.green', { scale: .5, duration: 1, repeat: -1, yoyo: 1, paused: true })
+
+    // document.querySelector('.green').onmouseenter = function(){
+    //   btn.restart();
+    // }
+    // document.querySelector('.green').onmouseleave = function(){
+    //   btn.pause();
+    // }
+
+    $('.green').hover(
+      function () {
+        btn.restart();
+      }, function () {
+        btn.pause();
+      }
+    )
+  </script>
+</body>
+
+</html>
