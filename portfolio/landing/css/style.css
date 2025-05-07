@@ -11,6 +11,11 @@
   font-size: 1rem;
 }
 
+::selection {
+  color: white;
+  background-color: black;
+}
+
 body {
   font-family: Pretendard, serif;
   /* cursor: auto;  */
@@ -73,9 +78,12 @@ header nav ul li:hover a {
   border-bottom: 1px solid #000;
 }
 
+/* ********* section1 ********* */
 .section1 .intro {
   display: flex;
   align-items: center;
+  justify-content: center;
+  gap: 10rem;
   width: 100%;
   height: 70vh;
   max-width: 1200px;
@@ -86,26 +94,26 @@ header nav ul li:hover a {
 }
 
 .section1 .intro .mainText {
-  text-align: center;
+  text-align: left;
   height: 10rem;
   font-size: 1.5rem;
 }
 
 .section1 .intro .profile {
-  width: 20rem;
-  height: 20rem;
+  width: 40%;
+  text-align: right;
 }
 
 .section1 .intro .profile img {
-  width: 100%;
-  height: 100%;
+  width: 20rem;
+  height: 20rem;
   object-fit: cover;
   border-radius: 50%;
-  box-shadow: rgba(0, 0, 0, 0.1) 0rem 0rem 2rem 13px;
+  box-shadow: rgba(0, 255, 255, 0.1) 0rem 0rem 2rem 13px;
 }
 
 .section1 .intro ul {
-  text-align: center;
+  text-align: left;
   flex: 1;
 }
 
@@ -119,7 +127,7 @@ header nav ul li:hover a {
 
 .section1 .intro ul li:nth-child(3) {
   display: flex;
-  justify-content: center;
+  justify-content: left;
   gap: .5rem;
   margin-top: 5rem;
 }
@@ -139,35 +147,30 @@ header nav ul li:hover a {
   object-fit: cover;
 }
 
-/* 포트폴리오 */
+/* ********* 포트폴리오 부분 ********* */
 .section2 {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
 }
 
-.section2 ul {
+.section2>ul {
   width: 100%;
   gap: 5rem;
   display: flex;
   flex-wrap: wrap;
 }
 
-.section2 ul li {
+.section2>ul>li {
   width: calc(50% - 2.5rem);
   border: 1px solid #ddd;
   box-shadow: rgba(71, 71, 71, 0.1) 0rem 0rem 2rem 13px;
   box-sizing: border-box;
 }
 
-.section2 ul li a {
+.section2>ul>li a {
   display: block;
   width: 100%;
-}
-
-.section2 ul li a>p {
-  width: 100%;
-  font-size: 0;
 }
 
 .section2 ul li img {
@@ -176,7 +179,7 @@ header nav ul li:hover a {
   object-fit: cover;
 }
 
-.section2 ul li .desc {
+.section2 .desc {
   display: flex;
   flex-direction: column;
   gap: .5rem;
@@ -184,46 +187,31 @@ header nav ul li:hover a {
   padding: 2rem;
   font-weight: 300;
 }
-
-.section2 ul li .desc .date {
-  font-size: .9rem;
+.section2 .desc li{
+  width: 100%;
+}
+.section2 .desc li:nth-child(2) {
+  font-size: .85rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+.section2 .desc li:nth-child(2) span:last-child{
+  margin-left: 1rem;
+  font-weight: 400;
 }
 
-.section2 ul li .desc div {
+.section2 .desc li:last-child  {
   display: flex;
   gap: .5rem;
   margin-top: 1rem;
 }
 
-.section2 ul li .desc div p {
+.section2 .desc  li:last-child p {
   width: 1.5rem;
   height: 1.5rem;
   border: 1px solid #ddd;
   padding: .5rem;
   border-radius: 50%;
-}
-
-.cursor {
-  opacity: 0;
-  position: fixed;
-  z-index: 1000;
-  transform: translate(-50%, -50%) scale(1);
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  background: rgba(0, 0, 0, 0.5);
-  color: #fff;
-  font-size: 1.5rem;
-  pointer-events: none;
-  transition: transform 0.4s;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.cursor.on {
-  opacity: 1;
-  transform: translate(-50%, -50%) scale(1);
 }
 
 .section3 {
@@ -236,6 +224,7 @@ header nav ul li:hover a {
   margin: 7rem auto 2rem;
 }
 
+/* ********* 최하단 copyright ********* */
 .section3 p {
   font-size: .9rem;
   color: #555;
@@ -251,11 +240,12 @@ header nav ul li:hover a {
   width: 1.2rem;
   height: 1.2rem;
 }
-.section3 div a img{
+
+.section3 div a img {
   filter: brightness(80%);
 }
 
-
+/* top버튼 */
 #topbtn {
   position: fixed;
   text-align: center;
@@ -283,6 +273,30 @@ header nav ul li:hover a {
 #topbtn p {
   line-height: .9;
   font-size: 1rem;
+}
+
+/* 커서 이미지 */
+.cursor {
+  opacity: 0;
+  position: fixed;
+  z-index: 1000;
+  transform: translate(-50%, -50%) scale(1);
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  font-size: 1.5rem;
+  pointer-events: none;
+  transition: transform 0.4s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cursor.on {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
 }
 
 

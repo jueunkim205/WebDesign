@@ -76,7 +76,7 @@ document.querySelectorAll(".section2 ul li").forEach(function (v) {
   };
   v.onmouseleave = function () {
     customCursor.classList.remove("on");
-    document.body.style.cursor = "url('../img/mouse3.png'), auto"; // 다시 기본 커서
+    document.body.style.cursor = "url('./img/mouse3.png'), auto"; // 다시 기본 커서
   };
 });
 
