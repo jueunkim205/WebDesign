@@ -11,6 +11,51 @@ window.addEventListener("wheel", function (e) {
   }
 });
 
+/******************** nav ********************** */
+const sections = ["body", ".section2", ".section3"];
+const sideMenu = document.querySelector(".sideMenu");
+const navMenuItems = document.querySelectorAll("nav .navMenu li");
+const sideMenuItems = document.querySelectorAll(".sideMenu .navMenu li");
+
+// 공통 함수: 메뉴 클릭 시 스크롤 이동
+function scrollToSection(index) {
+  const offset = index === 1 ? -150 : 0;
+  const target = document.querySelector(sections[index]);
+  if (target) {
+    const top = target.offsetTop + offset;
+    window.scrollTo({ top, behavior: "smooth" });
+  }
+}
+
+// nav 메뉴 클릭 이벤트
+navMenuItems.forEach((li, index) => {
+  li.addEventListener("click", (e) => {
+    e.preventDefault();
+    scrollToSection(index);
+  });
+});
+
+// side 메뉴 클릭 이벤트
+sideMenuItems.forEach((li, index) => {
+  li.addEventListener("click", (e) => {
+    e.preventDefault();
+    scrollToSection(index);
+    sideMenu.classList.remove("on"); // 사이드 메뉴 닫기
+  });
+});
+
+// 햄버거 메뉴 클릭 시 사이드 메뉴 열기
+document.querySelector("nav .mOnly").addEventListener("click", function (e) {
+  e.preventDefault();
+  sideMenu.classList.add("on");
+});
+
+// 사이드 메뉴 닫기 버튼
+document.querySelector(".sideMenu span").addEventListener("click", function () {
+  sideMenu.classList.remove("on");
+});
+
+
 /******************** 타이핑효과 ********************** */
 window.onload = function () {
   const text0 = document.getElementById("textType"); // 첫 줄
@@ -56,9 +101,7 @@ window.onload = function () {
     .start();
 };
 
-
 /******************** 마우스커서 ********************** */
-
 // 기본적으로 .cursor 보이게
 let customCursor = document.querySelector(".cursor");
 
@@ -80,7 +123,7 @@ document.querySelectorAll(".pImg").forEach(function (v) {
   };
 });
 
-// aos
+/******************** AOS ********************** */
 AOS.init({
   once: false,
 });
@@ -110,8 +153,6 @@ window.addEventListener("resize", () => {
   window._aosResizeTimer = setTimeout(updateAOS, 150);
 });
 
-
-
 /******************** top버튼 ********************** */
 let topBtn = document.getElementById("topbtn");
 
@@ -132,20 +173,3 @@ window.addEventListener("scroll", () => {
     topBtn.style.transform = "translateX(0)";
   }
 });
-
-
-let navLi = document.querySelectorAll('nav ul li')
-
-navLi[0].addEventListener('click', function(e){
-  e.preventDefault();
-  window.scrollTo({ top: document.querySelector('body').offsetTop, behavior: 'smooth' })
-})
-
-navLi[1].addEventListener('click', function(e){
-  e.preventDefault();
-  window.scrollTo({ top: document.querySelector('.section2').offsetTop - '150', behavior: 'smooth' })
-})
-navLi[2].addEventListener('click', function(e){
-  e.preventDefault();
-  window.scrollTo({ top: document.querySelector('.section3').offsetTop, behavior: 'smooth' })
-})

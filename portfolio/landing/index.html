@@ -20,20 +20,20 @@
 
 <body>
   <!-- <div class="cursor">click!</div> -->
-  <div>
+  <div class="wrap">
     <header>
       <nav>
         <!-- 250424 gpt 나뭇잎뿌리기 -->
         <h1><a href="index.html">KIM JUEUN</a></h1>
-        <ul>
+        <ul class="navMenu">
           <li><a href="#">ABOUT ME</a></li>
           <li><a href="#">PORTFOLIO</a></li>
           <li><a href="#">CONTACT</a></li>
-          <li class="mOnly"><a href="#"><span class="material-symbols-outlined">
-            menu
-            </span></a></li>
           <!-- 메뉴 클릭하면 해당 파트로 스크롤 -->
         </ul>
+        <a href="#" class="mOnly"><span class="material-symbols-outlined">
+            menu
+          </span></a>
       </nav>
     </header>
 
@@ -162,14 +162,27 @@
       </div>
       <p>©2025 JUEUN KIM. All Rights Reserved.</p>
     </section>
+
     <div id="topbtn">
       <span class="material-symbols-outlined">
         keyboard_arrow_up
       </span>
       <p>TOP</p>
     </div>
-  </div>
 
+    <div class="sideMenu">
+      <ul class="navMenu">
+        <li><a href="#">ABOUT ME</a></li>
+        <li><a href="#">PORTFOLIO</a></li>
+        <li><a href="#">CONTACT</a></li>
+      </ul>
+      <span class="material-symbols-outlined">
+        close
+      </span>
+    </div>
+
+
+  </div>
   <script type="text/javascript" src="./js/jquery-3.7.1.min.js"></script>
   <script type="text/javascript" src="./js/core.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>

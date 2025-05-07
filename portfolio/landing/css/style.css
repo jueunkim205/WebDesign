@@ -75,7 +75,8 @@ header nav ul li:hover:not(.mOnly) a {
   border-bottom: 1px solid #000;
 }
 
-header .mOnly {
+.mOnly {
+  padding-top: .7rem;
   display: none;
 }
 
@@ -350,7 +351,48 @@ header .mOnly {
   }
 }
 
+/* ********* sideMenu ********* */
 
+.sideMenu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  background: #fff;
+  width: 100%;
+  height: 100vh;
+  z-index: 500;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s ease;
+  transform: translateX(100%);
+  pointer-events: none; 
+}
+
+.sideMenu.on {
+  transform: translateX(0%);
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto
+}
+
+.sideMenu ul {
+  width: 90%;
+  margin: 10vh auto;
+}
+
+.sideMenu ul li {
+  font-size: 4rem;
+  line-height: 2;
+  text-align: center;
+}
+
+.sideMenu span {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 4rem;
+  cursor: pointer;
+}
 
 /* 반응형 */
 @media screen and (max-width : 1024px) {
@@ -391,10 +433,12 @@ header .mOnly {
     display: none;
   }
 
-  header .mOnly {
+  .mOnly {
     display: block;
     line-height: 2.5;
   }
+
+
 
   .section1 .intro {
     flex-direction: column;
@@ -437,13 +481,15 @@ header .mOnly {
     overflow: hidden;
   }
 
-  .section2>ul>li:first-child .pImg img{
+  .section2>ul>li:first-child .pImg img {
     content: url(../img/portfolio/p1.png);
   }
-  .section2>ul>li:nth-child(2) .pImg img{
+
+  .section2>ul>li:nth-child(2) .pImg img {
     content: url(../img/portfolio/p2.png);
   }
-  .section2>ul>li:nth-child(3) .pImg img{
+
+  .section2>ul>li:nth-child(3) .pImg img {
     content: url(../img/portfolio/p3.png);
   }
 
@@ -451,9 +497,11 @@ header .mOnly {
     width: 100%;
     margin: 0 1rem;
   }
-  .section2 .desc li:nth-child(2){
+
+  .section2 .desc li:nth-child(2) {
     margin-bottom: .5rem;
   }
+
   .section3 {
     margin: 2rem auto;
   }
