@@ -3,7 +3,7 @@ const header = document.querySelector("header");
 
 window.addEventListener("wheel", function (e) {
   const delta = e.deltaY;
-  console.log(delta);
+  // console.log(delta);
   if (delta > 0) {
     header.style.transform = "translateY(-200px)";
   } else {
@@ -59,20 +59,51 @@ window.onload = function () {
 
 /******************** 마우스커서 ********************** */
 
+// 기본적으로 .cursor 보이게
+let customCursor = document.querySelector(".cursor");
+
+// 마우스 움직일 때 위치 이동
 document.onmousemove = function (e) {
-  document.querySelector(".cursor").style.left = e.clientX + "px";
-  document.querySelector(".cursor").style.top = e.clientY + "px";
+  customCursor.style.left = e.clientX + "px";
+  customCursor.style.top = e.clientY + "px";
 };
-document.querySelectorAll(".section2 ul li").forEach(function (v, k) {
+
+// section2 안에서는 커스텀 커서 ON
+document.querySelectorAll(".section2 ul li").forEach(function (v) {
   v.onmouseenter = function () {
-    document.querySelector(".cursor").classList.add("on");
+    customCursor.classList.add("on");
+    document.body.style.cursor = "none"; // 기본 커서 숨김
   };
   v.onmouseleave = function () {
-    document.querySelector(".cursor").classList.remove("on");
+    customCursor.classList.remove("on");
+    document.body.style.cursor = "url('../img/mouse3.png'), auto"; // 다시 기본 커서
   };
 });
 
 // aos
 AOS.init({
   once: false,
+});
+
+
+
+/******************** top버튼 ********************** */
+let topBtn = document.getElementById("topbtn");
+
+topBtn.onclick = function () {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+};
+
+window.addEventListener("scroll", () => {
+  let scY = window.scrollY;
+
+  if (scY <= 50) {
+    topBtn.style.opacity = "0";
+    topBtn.style.pointerEvents = "none";
+    topBtn.style.transform = "translateX(100px)";
+  } else {
+    topBtn.style.opacity = "1";
+    topBtn.style.pointerEvents = "auto";
+    topBtn.style.transform = "translateX(0)";
+  }
 });

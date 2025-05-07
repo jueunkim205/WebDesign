@@ -13,6 +13,9 @@
 
 body {
   font-family: Pretendard, serif;
+  /* cursor: auto;  */
+  cursor: url('../img/mouse3.png') 15 15, auto;
+  /* 기본 커서 보이게 설정 */
 }
 
 ul {
@@ -91,8 +94,6 @@ header nav ul li:hover a {
 .section1 .intro .profile {
   width: 20rem;
   height: 20rem;
-  /* margin-left: 7rem; */
-  /* overflow: hidden; */
 }
 
 .section1 .intro .profile img {
@@ -137,7 +138,6 @@ header nav ul li:hover a {
   height: 100%;
   object-fit: cover;
 }
-
 
 /* 포트폴리오 */
 .section2 {
@@ -185,13 +185,6 @@ header nav ul li:hover a {
   font-weight: 300;
 }
 
-.section2 ul li .title {
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-  border: 1px solid #000;
-}
-
 .section2 ul li .desc .date {
   font-size: .9rem;
 }
@@ -199,6 +192,7 @@ header nav ul li:hover a {
 .section2 ul li .desc div {
   display: flex;
   gap: .5rem;
+  margin-top: 1rem;
 }
 
 .section2 ul li .desc div p {
@@ -243,6 +237,7 @@ header nav ul li:hover a {
 }
 
 .section3 p {
+  font-size: .9rem;
   color: #555;
 }
 
@@ -253,14 +248,47 @@ header nav ul li:hover a {
 
 .section3 div a {
   display: block;
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 1.2rem;
+  height: 1.2rem;
+}
+.section3 div a img{
+  filter: brightness(80%);
 }
 
 
-/* 깜빡이다가 사라지는 애니메이션 */
+#topbtn {
+  position: fixed;
+  text-align: center;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 0.5px solid #ccc;
+  background: #ffffffa5;
+  cursor: pointer;
+  z-index: 50;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(100px);
+  transition: all 0.5s ease;
+}
+
+#topbtn span {
+  display: block;
+  margin-top: 6px;
+  font-size: 1.7rem;
+}
+
+#topbtn p {
+  line-height: .9;
+  font-size: 1rem;
+}
+
+
+/* 타이핑효과 */
 .fade-out {
-  animation: fadeOut 1s ease-in-out forwards;
+  animation: fadeOut .7s ease-in-out forwards !important
 }
 
 @keyframes fadeOut {
