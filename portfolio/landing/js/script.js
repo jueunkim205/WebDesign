@@ -69,7 +69,7 @@ document.onmousemove = function (e) {
 };
 
 // section2 안에서는 커스텀 커서 ON
-document.querySelectorAll(".section2 ul li").forEach(function (v) {
+document.querySelectorAll(".pImg").forEach(function (v) {
   v.onmouseenter = function () {
     customCursor.classList.add("on");
     document.body.style.cursor = "none"; // 기본 커서 숨김

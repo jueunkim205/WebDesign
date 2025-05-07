@@ -166,11 +166,8 @@ header nav ul li:hover a {
   border: 1px solid #ddd;
   box-shadow: rgba(71, 71, 71, 0.1) 0rem 0rem 2rem 13px;
   box-sizing: border-box;
-}
-
-.section2>ul>li a {
-  display: block;
-  width: 100%;
+  border-radius: 1rem;
+  overflow: hidden;
 }
 
 .section2 ul li img {
@@ -187,32 +184,58 @@ header nav ul li:hover a {
   padding: 2rem;
   font-weight: 300;
 }
-.section2 .desc li{
+
+.section2 .desc li {
   width: 100%;
 }
+
 .section2 .desc li:nth-child(2) {
   font-size: .85rem;
   font-weight: 500;
   margin-bottom: 1rem;
 }
-.section2 .desc li:nth-child(2) span:last-child{
+
+.section2 .desc li:nth-child(2) span:last-child {
   margin-left: 1rem;
   font-weight: 400;
 }
 
-.section2 .desc li:last-child  {
+.section2 .desc li:nth-child(4) {
+  display: flex;
+  gap: .5rem;
+}
+
+.section2 .desc li:nth-child(4) a {
+  border: 1px solid #ccc;
+  font-size: .9rem;
+  padding: .3rem;
+  margin-top: .3rem;
+  border-radius: .7rem;
+  transition: .5s;
+}
+
+.section2 .desc li:nth-child(4) a:hover{
+  border: 1px solid #555;
+  background: #555;
+  color: #fff;
+}
+
+.section2 .desc li:last-child {
   display: flex;
   gap: .5rem;
   margin-top: 1rem;
 }
 
-.section2 .desc  li:last-child p {
+.section2 .desc li:last-child p {
   width: 1.5rem;
   height: 1.5rem;
   border: 1px solid #ddd;
   padding: .5rem;
   border-radius: 50%;
 }
+
+
+/* ********* 최하단 copyright ********* */
 
 .section3 {
   display: flex;
@@ -224,7 +247,6 @@ header nav ul li:hover a {
   margin: 7rem auto 2rem;
 }
 
-/* ********* 최하단 copyright ********* */
 .section3 p {
   font-size: .9rem;
   color: #555;
