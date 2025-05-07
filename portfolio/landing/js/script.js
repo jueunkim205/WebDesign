@@ -85,6 +85,31 @@ AOS.init({
   once: false,
 });
 
+function updateAOS() {
+  const textboxes = document.querySelectorAll(".section2>ul>li");
+
+  textboxes.forEach((textbox, k) => {
+    if (window.innerWidth < 1024) {
+      // textbox.setAttribute("data-aos-duration", "500");
+      textbox.setAttribute("data-aos-delay", "0");
+      textbox.setAttribute("data-aos-offset", "0");
+    } else {
+      // textbox.setAttribute("data-aos-duration", "800");
+      textbox.setAttribute("data-aos-delay", "200");
+      textbox.setAttribute("data-aos-offset", "150");
+    }
+  });
+
+  AOS.refresh(); // 꼭 필요!
+}
+
+window.addEventListener("DOMContentLoaded", updateAOS);
+window.addEventListener("resize", () => {
+  // resize 성능 최적화를 위해 debounce 사용 (선택 사항)
+  clearTimeout(window._aosResizeTimer);
+  window._aosResizeTimer = setTimeout(updateAOS, 150);
+});
+
 
 
 /******************** top버튼 ********************** */

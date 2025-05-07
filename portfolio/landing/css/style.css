@@ -71,8 +71,12 @@ header nav ul li a {
   transition: .5s;
 }
 
-header nav ul li:hover a {
+header nav ul li:hover:not(.mOnly) a {
   border-bottom: 1px solid #000;
+}
+
+header .mOnly {
+  display: none;
 }
 
 /* ********* section1 ********* */
@@ -90,15 +94,15 @@ header nav ul li:hover a {
   box-sizing: border-box;
 }
 
+.section1 .intro .profile {
+  width: 40%;
+  text-align: right;
+}
+
 .section1 .intro .mainText {
   text-align: left;
   height: 10rem;
   font-size: 1.5rem;
-}
-
-.section1 .intro .profile {
-  width: 40%;
-  text-align: right;
 }
 
 .section1 .intro .profile img {
@@ -166,6 +170,7 @@ header nav ul li:hover a {
   overflow: hidden;
   padding: 1rem;
   box-sizing: border-box;
+
 }
 
 .section3 div a img,
@@ -222,7 +227,7 @@ header nav ul li:hover a {
   margin-top: 1rem;
 }
 
-.section2 .desc li:last-child div{
+.section2 .desc li:last-child div {
   display: flex;
   align-items: center;
   gap: .5rem;
@@ -348,12 +353,113 @@ header nav ul li:hover a {
 
 
 /* 반응형 */
-@media screen and (max-width : 940px) {
-  header nav h1 {
-    /* font-size: 25px; */
+@media screen and (max-width : 1024px) {
+  :root {
+    font-size: 13px;
+    transition: .1s;
   }
 
-  header nav ul li a {
-    /* font-size: 13px; */
+  header nav ul {
+    gap: 3rem;
   }
+
+  .section1 .intro {
+    gap: 5rem;
+    height: auto;
+  }
+
+  .section2>ul {
+    gap: 1rem;
+  }
+
+  .section2>ul li {
+    width: calc(50% - 1rem);
+  }
+}
+
+@media screen and (max-width: 768px) {
+
+  header {
+    height: 5rem;
+  }
+
+  header nav h1 {
+    font-size: 2rem;
+  }
+
+  header ul li:not(.mOnly) {
+    display: none;
+  }
+
+  header .mOnly {
+    display: block;
+    line-height: 2.5;
+  }
+
+  .section1 .intro {
+    flex-direction: column;
+    gap: 2rem;
+    height: 40vh;
+    border: 1px solid transparent;
+    padding: 0;
+  }
+
+  .section1 .intro .profile {
+    width: 100%;
+    text-align: center;
+  }
+
+  .section1 .intro .profile img {
+    width: 15rem;
+    height: 15rem;
+  }
+
+  .section1 .intro .mainText {
+    text-align: center;
+    font-size: 1.2rem;
+    height: 6rem;
+  }
+
+  .section1 .intro ul {
+    width: 100%;
+    text-align: center;
+  }
+
+  .section1 .intro ul li:nth-child(3) {
+    justify-content: center;
+    margin-top: 2rem;
+  }
+
+  .section2 .pImg {
+    width: 100%;
+    height: 30vh;
+    border-radius: .5rem;
+    overflow: hidden;
+  }
+
+  .section2>ul>li:first-child .pImg img{
+    content: url(../img/portfolio/p1.png);
+  }
+  .section2>ul>li:nth-child(2) .pImg img{
+    content: url(../img/portfolio/p2.png);
+  }
+  .section2>ul>li:nth-child(3) .pImg img{
+    content: url(../img/portfolio/p3.png);
+  }
+
+  .section2>ul>li {
+    width: 100%;
+    margin: 0 1rem;
+  }
+  .section2 .desc li:nth-child(2){
+    margin-bottom: .5rem;
+  }
+  .section3 {
+    margin: 2rem auto;
+  }
+
+  .section3 div {
+    margin-bottom: .5rem;
+  }
+
 }
