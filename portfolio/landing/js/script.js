@@ -107,3 +107,20 @@ window.addEventListener("scroll", () => {
     topBtn.style.transform = "translateX(0)";
   }
 });
+
+
+let navLi = document.querySelectorAll('nav ul li')
+
+navLi[0].addEventListener('click', function(e){
+  e.preventDefault();
+  window.scrollTo({ top: document.querySelector('body').offsetTop, behavior: 'smooth' })
+})
+
+navLi[1].addEventListener('click', function(e){
+  e.preventDefault();
+  window.scrollTo({ top: document.querySelector('.section2').offsetTop - '150', behavior: 'smooth' })
+})
+navLi[2].addEventListener('click', function(e){
+  e.preventDefault();
+  window.scrollTo({ top: document.querySelector('.section3').offsetTop, behavior: 'smooth' })
+})
