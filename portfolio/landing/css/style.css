@@ -182,12 +182,82 @@ header nav ul li:hover:not(.mOnly) a {
   box-sizing: border-box;
 }
 
-.section2 .itemList .pImg {
+.section2 .pImg {
   width: 40%;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.section2 .pImg p:first-child {
   overflow: hidden;
 }
 
-.section2 ul li img {
+.section2 .pImg:hover p:last-child img {
+  animation: scrollImage 3s forwards ease-in-out;
+}
+
+/* 브라우저 이미지 */
+.section2 .pImg div p:last-child {
+  position: absolute;
+  z-index: -1;
+}
+
+.section2 .pImg .monitor p:first-child {
+  width: 25rem;
+  font-size: 0;
+}
+
+.section2 .pImg .monitor p:last-child,
+.section2 .pImg .phone p:last-child {
+  left: 50%;
+  transform: translateX(-50%);
+  overflow: hidden;
+}
+
+.section2 .pImg .monitor p:last-child {
+  width: 24rem;
+  height: 14rem;
+  top: 2rem;
+}
+
+.section2 .pImg .phone {
+  position: absolute;
+  top: 3rem;
+  right: 0;
+  width: 8rem;
+  z-index: 50;
+  overflow: hidden;
+}
+
+.section2 .pImg .phone p:last-child {
+  width: 7.5rem;
+  height: 16rem;
+  border-radius: 1rem;
+  top: .1rem;
+}
+
+.section2 .pImg img {
+  width: 100%;
+  object-fit: cover;
+}
+
+@keyframes scrollImage {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(-75%);
+  }
+}
+
+
+
+.section2 .desc li img {
   width: 100%;
   height: 100%;
   object-fit: contain;
