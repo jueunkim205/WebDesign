@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    :root {
+      font-size: 16px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .imgbox {
+      position: relative;
+      display: inline-block;
+    }
+
+    .imgbox p:first-child {
+      overflow: hidden;
+    }
+
+    .imgbox:hover p:last-child img {
+      animation: scrollImage 3s forwards ease-in-out;
+    }
+
+    /* 브라우저 이미지 */
+    .imgbox div p:last-child {
+      position: absolute;
+      top: 0;
+      z-index: -1;
+    }
+
+    .imgbox .monitor p:first-child {
+      width: 25rem;
+      font-size: 0;
+    }
+
+    .imgbox .monitor p:last-child {
+      left: 50%;
+      transform: translateX(-50%);
+      width: 24rem;
+      height: 14rem;
+      overflow: hidden;
+    }
+
+    .imgbox .phone {
+      position: absolute;
+      top: 6rem;
+      right: 0;
+      width: 9rem;
+      z-index: 50;
+      overflow: hidden;
+    }
+
+    .imgbox .phone p:last-child {
+      width: 8rem;
+      height: 18rem;
+      left: 50%;
+      transform: translateX(-50%);
+      border-radius: 1rem;
+      overflow: hidden;
+    }
+
+    .imgbox img {
+      width: 100%;
+      object-fit: cover;
+    }
+
+    @keyframes scrollImage {
+      from {
+        transform: translateY(0);
+      }
+
+      to {
+        transform: translateY(-70%);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="imgbox">
+    <div class="monitor">
+      <p>
+        <img src="./img/mac.png" alt="">
+      </p>
+      <p><img src="./img/portfolio/p2/p2full_s.png" alt=""></p>
+    </div>
+    <div class="phone">
+      <p>
+        <img src="./img/iPhone.png" alt="">
+      </p>
+      <p><img src="./img/portfolio/p2/m2full.png" alt=""></p>
+    </div>
+  </div>
+</body>
+
+</html>
