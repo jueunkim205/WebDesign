@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Intro - KIM JUEUN</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #fff;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Outfit', sans-serif;
+    }
+
+    .wrapper {
+      text-align: center;
+      animation: fadeOut 1s ease forwards;
+      animation-delay: 4s;
+    }
+
+    .intro-line {
+      font-size: 4rem;
+      color: #111;
+      white-space: nowrap;
+      overflow: hidden;
+      display: block;
+      /* inline-block → block 으로 변경 */
+    }
+
+
+    /* 이름 타이핑 */
+    .line1 {
+      max-width: 0ch;
+      animation: typing1 1.5s steps(10) forwards;
+    }
+
+    /* 포트폴리오 타이핑 */
+    .line2 {
+      max-width: 0ch;
+      margin-top: 1rem;
+      border-right: 2px solid #111;
+      visibility: hidden;
+      animation: none;
+    }
+
+    /* 타이핑 애니메이션 */
+    @keyframes typing1 {
+      from {
+        max-width: 0ch;
+      }
+
+      to {
+        max-width: 10ch;
+      }
+    }
+
+    @keyframes typing2 {
+      from {
+        max-width: 0ch;
+      }
+
+      to {
+        max-width: 10ch;
+      }
+    }
+
+    /* 깜빡이는 커서 효과 */
+    @keyframes blink {
+      50% {
+        border-color: transparent;
+      }
+    }
+
+    /* 전체 사라지기 */
+    @keyframes fadeOut {
+      to {
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="intro-line line1">KIM JUEUN</div>
+    <div class="intro-line line2" id="line2">PORTFOLIO</div>
+  </div>
+
+  <script>
+    const line2 = document.getElementById('line2');
+
+    // 포트폴리오 타이핑 애니메이션 시작
+    setTimeout(() => {
+      line2.style.visibility = 'visible';
+      line2.style.animation = 'typing2 1.5s steps(10) forwards, blink 0.7s step-end 2 alternate';
+
+    }, 1600); // 이름 타이핑 끝난 후
+  </script>
+</body>
+
+</html>

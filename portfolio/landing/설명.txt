@@ -6,3 +6,62 @@
                 넘어가도록 설정하여 시각적 완성도를 높였습니다.<br>
                 또한 JavaScript를 이용해 탭 메뉴를 구현하였고, 클릭 시 해당 콘텐츠가 전환되도록 하여<br>한 화면에서 다양한 정보를 효율적으로 확인할 수 있도록 구성했습니다</p>
             </div> -->
+
+
+
+
+
+            ✅ 추천 영어 문구
+"Always building. Always growing."
+→ 항상 만들고, 항상 성장하는.
+
+"Work in progress, just like the web."
+→ 나도 웹처럼 계속 발전 중.
+
+"Code. Learn. Repeat."
+→ 코드 쓰고, 배우고, 다시 반복하며 성장하는.
+
+"Sharpening skills, one line at a time."
+→ 한 줄 한 줄, 기술을 갈고닦다.
+
+"Fuelled by curiosity. Focused on progress."
+→ 호기심이 원동력, 성장이 목표.
+
+"Evolving with every project."
+→ 프로젝트마다 진화하는 개발자.
+
+"Not just building sites, building myself."
+→ 웹사이트뿐 아니라 나 자신도 만들어간다.
+
+어떤 뉘앙스가 가장 마음에 들어? 좀 더 캐주얼한 스타일로도 다시 정리해줄 수 있어!
+
+
+
+
+
+나의 말:
+좀더 캐주얼한거 궁금하다 줘봐
+ChatGPT의 말:
+좋아! 이번엔 좀 더 캐주얼하고 자연스럽게, 그러면서도 자기 발전하는 개발자 느낌이 나는 문구들을 소개해볼게:
+
+✅ 캐주얼 & 성장형 느낌 문구
+"Figuring it out, one bug at a time."
+→ 버그 하나씩 잡으면서 성장 중.
+
+"Still learning. Still coding."
+→ 아직 배우는 중. 아직 코딩 중.
+
+"Better code, every damn day."
+→ 매일 조금씩, 더 나은 코드.
+
+"Learning by building. Growing by breaking."
+→ 만들며 배우고, 깨지며 성장한다.
+
+"I break stuff. Then I learn."
+→ 부딪히고, 배우고, 다시 만든다.
+
+"From 'Hello World' to... wherever this leads."
+→ ‘Hello World’에서 시작해서, 어디든 도착할 거야.
+
+"Just a dev, getting better with every project."
+→ 프로젝트 하나마다 성장하는 개발자일 뿐.

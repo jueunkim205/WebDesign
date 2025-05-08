@@ -299,11 +299,27 @@ header nav ul li:hover:not(.mOnly) a {
   font-weight: 500;
   margin: 1rem 0 2rem;
   padding-top: 1rem;
-  border-top: 1px solid #eee;
+  border-top: 1px solid #ddd;
 }
 
 .section2 .desc li:nth-child(3) {
   line-height: 1.4;
+  padding-left: .7rem;
+}
+.section2 .desc li:nth-child(3) p{
+  position : relative;
+  line-height: 1.7;
+}
+.section2 .desc li:nth-child(3) p:before{
+  position : absolute;
+  content: '';
+  width: .3rem;
+  height: .3rem;
+  left: -.7rem;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  background: #ddd;
 }
 
 .section2 .desc .skillIcons {
@@ -317,7 +333,7 @@ header nav ul li:hover:not(.mOnly) a {
 }
 
 .section2 .desc li:last-child a {
-  border: 1px solid #ccc;
+  border: 1px solid #ddd;
   font-size: 1.3rem;
   line-height: .8;
   padding: .7rem 1.5rem;
@@ -376,7 +392,7 @@ header nav ul li:hover:not(.mOnly) a {
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  border: 0.5px solid #ccc;
+  border: 0.5px solid #ddd;
   background: #ffffffa5;
   cursor: pointer;
   z-index: 50;

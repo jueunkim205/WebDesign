@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Clean Glitch Intro</title>
+  <style>
+    :root {
+      font-size: 16px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      width: 100%;
+      height: 100%;
+      background: #fff;
+      font-family: 'Courier New', monospace;
+      overflow: hidden;
+      color: #222;
+    }
+
+    .intro {
+      width: 100%;
+      height: 100%;
+      background: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: fixed;
+      z-index: 999;
+    }
+
+    .glitch {
+      font-size: 2.5rem;
+      position: relative;
+      color: #222;
+      animation: flicker 2s infinite;
+    }
+
+    .glitch::before,
+    .glitch::after {
+      content: attr(data-text);
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      overflow: hidden;
+      z-index: -1;
+    }
+
+    .glitch::before {
+      left: 2px;
+      text-shadow: -2px 0 #00aaff;
+      color: #00aaff;
+      animation: glitch-anim 1s infinite linear alternate-reverse;
+    }
+
+    .glitch::after {
+      left: -2px;
+      text-shadow: -2px 0 #ff3d00;
+      color: #ff3d00;
+      animation: glitch-anim2 1s infinite linear alternate-reverse;
+    }
+
+    @keyframes glitch-anim {
+      0% { clip-path: inset(0 0 85% 0); }
+      20% { clip-path: inset(10% 0 70% 0); }
+      40% { clip-path: inset(50% 0 10% 0); }
+      60% { clip-path: inset(85% 0 0 0); }
+      80% { clip-path: inset(10% 0 85% 0); }
+      100% { clip-path: inset(0 0 90% 0); }
+    }
+
+    @keyframes glitch-anim2 {
+      0% { clip-path: inset(0 0 90% 0); }
+      20% { clip-path: inset(10% 0 85% 0); }
+      40% { clip-path: inset(60% 0 10% 0); }
+      60% { clip-path: inset(80% 0 0 0); }
+      80% { clip-path: inset(10% 0 75% 0); }
+      100% { clip-path: inset(0 0 80% 0); }
+    }
+
+    @keyframes flicker {
+      0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+        opacity: 1;
+      }
+      20%, 22%, 24%, 55% {
+        opacity: 0.4;
+      }
+    }
+
+    .subtext {
+      margin-top: 2rem;
+      font-size: 1rem;
+      opacity: 0;
+      animation: slideIn 1s ease-out 1.5s forwards;
+      color: #666;
+    }
+
+    @keyframes slideIn {
+      from {
+        transform: translateY(30px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    .main {
+      display: none;
+      padding: 5rem;
+      text-align: center;
+      color: #222;
+    }
+
+    body.loaded .intro {
+      display: none;
+    }
+
+    body.loaded .main {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <div class="intro">
+    <div class="glitch" data-text="Work in progress">Work in progress</div>
+    <div class="subtext">Just like the web.</div>
+  </div>
+
+  <div class="main">
+    <h1>Welcome to My Portfolio 👋</h1>
+    <p>Thanks for dropping by.</p>
+  </div>
+
+  <script>
+    setTimeout(() => {
+      document.body.classList.add('loaded');
+    }, 4000);
+  </script>
+</body>
+</html>
