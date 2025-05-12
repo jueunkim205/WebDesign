@@ -101,6 +101,51 @@ window.onload = function () {
     .start();
 };
 
+/******************** 글자회전 ********************** */
+function renderRotatingText() {
+  const text1 = "Work in progress,";
+  const text2 = "just like the web.";
+  const container = document.getElementById("circle-text");
+  const wrapper = container.parentElement;
+  const size = wrapper.offsetWidth;
+  const radius = size / 2.1;
+
+  const characters1 = text1.split("");
+  const characters2 = text2.split("");
+  const degStep1 = 180 / (characters1.length * 1.4);
+  const degStep2 = 180 / (characters2.length * 1.4);
+
+  container.innerHTML = "";
+
+  characters1.forEach((char, i) => {
+    const span = document.createElement("span");
+    span.innerText = char;
+    const angle = i * degStep1;
+    span.style.transform = `
+      rotate(${angle}deg)
+      translate(${radius}px)
+      rotate(90deg)
+    `;
+    container.appendChild(span);
+  });
+
+  characters2.forEach((char, i) => {
+    const span = document.createElement("span");
+    span.innerText = char;
+    const angle = 180 + i * degStep2;
+    span.style.transform = `
+      rotate(${angle}deg)
+      translate(${radius}px)
+      rotate(90deg)
+    `;
+    container.appendChild(span);
+  });
+}
+
+window.addEventListener("load", renderRotatingText);
+window.addEventListener("resize", renderRotatingText);
+
+
 /******************** 마우스커서 ********************** */
 // 기본적으로 .cursor 보이게
 let customCursor = document.querySelector(".cursor");

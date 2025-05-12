@@ -24,7 +24,7 @@
       color: #222;
     }
 
-    .intro {
+    .myIntro {
       width: 100%;
       height: 100%;
       background: #fff;
@@ -99,8 +99,8 @@
       margin-top: 2rem;
       font-size: 1rem;
       opacity: 0;
-      animation: slideIn 1s ease-out 1.5s forwards;
-      color: #666;
+      animation: slideIn 1s ease-out 1s forwards;
+      color: #222;
     }
 
     @keyframes slideIn {
@@ -114,14 +114,9 @@
       }
     }
 
-    .main {
-      display: none;
-      padding: 5rem;
-      text-align: center;
-      color: #222;
-    }
 
-    body.loaded .intro {
+
+    body.loaded .myIntro {
       display: none;
     }
 
@@ -131,7 +126,7 @@
   </style>
 </head>
 <body>
-  <div class="intro">
+  <div class="myIntro">
     <div class="glitch" data-text="Work in progress">Work in progress</div>
     <div class="subtext">Just like the web.</div>
   </div>
@@ -144,7 +139,7 @@
   <script>
     setTimeout(() => {
       document.body.classList.add('loaded');
-    }, 4000);
+    }, 3000);
   </script>
 </body>
 </html>
