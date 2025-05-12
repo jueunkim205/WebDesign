@@ -102,17 +102,17 @@ header nav ul li:hover:not(.mOnly) a {
   box-sizing: border-box;
 }
 
+.section1 .intro .mainText {
+  text-align: left;
+  height: 10rem;
+  font-size: 1.5rem;
+}
+
 .section1 .intro .profile {
   width: 40%;
   text-align: right;
   display: flex;
   justify-content: flex-end;
-}
-
-.section1 .intro .mainText {
-  text-align: left;
-  height: 10rem;
-  font-size: 1.5rem;
 }
 
 .section1 .intro .profile p {
