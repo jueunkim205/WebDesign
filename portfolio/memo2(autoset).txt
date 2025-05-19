@@ -1,0 +1,7 @@
+autoset설치
+
+https://sourceforge.net/projects/project-autoset/
+
+
+id root
+pw autoset
