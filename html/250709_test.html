@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Swiper demo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <!-- Demo styles -->
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+
+    .swiper {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+
+    .swiper-slide {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      height: 90%;
+    }
+
+    .picture {
+      width: 100%;
+      height: 90%;
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .swiper {
+      margin-left: auto;
+      margin-right: auto;
+      width: 80%;
+      height: 50vh;
+    }
+
+    #controller {
+      position: absolute;
+      top: 100%;
+      width: 100%;
+      border: 1px solid #000;
+    }
+
+    .txtbox {
+      border: 1px solid #000;
+      width: 50%;
+      margin: 0 auto;
+      height: 50px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Swiper -->
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <p class="picture"><img src="https://cdn.pixabay.com/photo/2016/09/29/08/33/apple-1702316_1280.jpg" alt="apple">
+        </p>
+        <p>apple</p>
+      </div>
+      <div class="swiper-slide">
+        <p class="picture"><img src="https://cdn.pixabay.com/photo/2017/05/31/14/31/mango-2360551_1280.jpg" alt="mango">
+        </p>
+        <p>mango</p>
+      </div>
+      <div class="swiper-slide">
+        <p class="picture"><img src="https://cdn.pixabay.com/photo/2015/08/14/19/41/minion-888797_1280.jpg"
+            alt="banana"></p>
+        <p>banana</p>
+      </div>
+      <div class="swiper-slide">
+        <p class="picture"><img src="https://cdn.pixabay.com/photo/2017/06/03/18/06/cherry-2369275_1280.jpg"
+            alt="cherry"></p>
+        <p>cherry</p>
+      </div>
+      <div class="swiper-slide">
+        <p class="picture"><img src="https://cdn.pixabay.com/photo/2019/01/21/15/06/blueberries-3946230_1280.jpg"
+            alt="blueberry"></p>
+        <p>blueberry</p>
+      </div>
+    </div>
+    <div id="controller">
+      <div class="swiper-pagination"></div>
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
+
+
+  <div class="txtbox">
+    <p></p>
+  </div>
+
+
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 1,
+      spaceBetween: 30,
+      loop: true,
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      on: {
+        slideChange: function () {
+          let activeSlide = this.slides[this.activeIndex];
+          console.log('현재 슬라이드 텍스트', activeSlide.querySelector('p:last-child'));
+          let txtbox = document.querySelector('.txtbox p');
+          txtbox.innerText = activeSlide.querySelector('p:last-child').innerText
+        }
+      }
+    });
+
+
+    let nowslide = document.querySelector('swiper.realIndex')
+
+  </script>
+</body>
+
+</html>
