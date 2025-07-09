@@ -31,6 +31,12 @@
       height: 90%;
     }
 
+    .swiper-slide a {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+
     .picture {
       width: 100%;
       height: 90%;
@@ -71,29 +77,41 @@
   <div class="swiper mySwiper">
     <div class="swiper-wrapper">
       <div class="swiper-slide">
-        <p class="picture"><img src="https://cdn.pixabay.com/photo/2016/09/29/08/33/apple-1702316_1280.jpg" alt="apple">
-        </p>
-        <p>apple</p>
+        <a href="https://www.naver.com">
+          <p class="picture"><img src="https://cdn.pixabay.com/photo/2016/09/29/08/33/apple-1702316_1280.jpg"
+              alt="apple">
+          </p>
+          <p>apple</p>
+        </a>
       </div>
       <div class="swiper-slide">
-        <p class="picture"><img src="https://cdn.pixabay.com/photo/2017/05/31/14/31/mango-2360551_1280.jpg" alt="mango">
-        </p>
-        <p>mango</p>
+        <a href="https://www.google.com">
+          <p class="picture"><img src="https://cdn.pixabay.com/photo/2017/05/31/14/31/mango-2360551_1280.jpg"
+              alt="mango">
+          </p>
+          <p>mango</p>
+        </a>
       </div>
       <div class="swiper-slide">
-        <p class="picture"><img src="https://cdn.pixabay.com/photo/2015/08/14/19/41/minion-888797_1280.jpg"
-            alt="banana"></p>
-        <p>banana</p>
+        <a href="https://www.youtube.com">
+          <p class="picture"><img src="https://cdn.pixabay.com/photo/2015/08/14/19/41/minion-888797_1280.jpg"
+              alt="banana"></p>
+          <p>banana</p>
+        </a>
       </div>
       <div class="swiper-slide">
-        <p class="picture"><img src="https://cdn.pixabay.com/photo/2017/06/03/18/06/cherry-2369275_1280.jpg"
-            alt="cherry"></p>
-        <p>cherry</p>
+        <a href="https://www.google.com">
+          <p class="picture"><img src="https://cdn.pixabay.com/photo/2017/06/03/18/06/cherry-2369275_1280.jpg"
+              alt="cherry"></p>
+          <p>cherry</p>
+        </a>
       </div>
       <div class="swiper-slide">
-        <p class="picture"><img src="https://cdn.pixabay.com/photo/2019/01/21/15/06/blueberries-3946230_1280.jpg"
-            alt="blueberry"></p>
-        <p>blueberry</p>
+        <a href="https://www.naver.com/">
+          <p class="picture"><img src="https://cdn.pixabay.com/photo/2019/01/21/15/06/blueberries-3946230_1280.jpg"
+              alt="blueberry"></p>
+          <p>blueberry</p>
+        </a>
       </div>
     </div>
     <div id="controller">
@@ -106,6 +124,7 @@
 
   <div class="txtbox">
     <p></p>
+    <a href=""><span class="detail">자세히보기</span></a>
   </div>
 
 
@@ -116,7 +135,7 @@
   <!-- Initialize Swiper -->
   <script>
     var swiper = new Swiper(".mySwiper", {
-      slidesPerView: 1,
+      slidesPerView: 2.5,
       spaceBetween: 30,
       loop: true,
       autoplay: {
@@ -134,16 +153,18 @@
       on: {
         slideChange: function () {
           let activeSlide = this.slides[this.activeIndex];
-          console.log('현재 슬라이드 텍스트', activeSlide.querySelector('p:last-child'));
+          let slideText = activeSlide.querySelector('p:last-child');
+          let slideLink = activeSlide.querySelector('.swiper-slide>a');
+          console.log('현재 슬라이드 텍스트', slideText);
+          console.log('현재 슬라이드 링크', slideLink);
+
           let txtbox = document.querySelector('.txtbox p');
-          txtbox.innerText = activeSlide.querySelector('p:last-child').innerText
+          let link = document.querySelector('.txtbox a');
+          txtbox.innerText = slideText.innerText;
+          link.setAttribute('href', slideLink.getAttribute('href'));
         }
       }
     });
-
-
-    let nowslide = document.querySelector('swiper.realIndex')
-
   </script>
 </body>
 
