@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>4탭 자동슬라이드 팝업</title>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    a {
+      text-decoration: none;
+      color: #222;
+    }
+
+    /* 팝업 */
+    .layer_popup {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 1000;
+      visibility: hidden;
+    }
+
+    #popup {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      max-width: 430px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      overflow: hidden;
+    }
+
+    /* 탭 메뉴 */
+    .tabs {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      height: 100px;
+      background: #f8f9fa;
+    }
+
+    .tabs-item {
+      flex: 1;
+      height: 100%;
+    }
+
+    .tabs-item a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      text-align: center;
+      font-weight: bold;
+      color: #666;
+      background: #f8f9fa;
+      border-right: 1px solid #ddd;
+    }
+
+    .tabs-item:last-child a {
+      border-right: none;
+    }
+
+    .tabs-item.active a {
+      background: white;
+      color: #fabe00;
+      border-bottom: 3px solid #fabe00;
+    }
+
+    /* 슬라이드 콘텐츠 */
+    .tab_content {
+      min-height: 200px;
+      text-align: center;
+    }
+
+    .tab_content img {
+      width: 100%;
+      height: auto;
+    }
+
+    /* 닫기 */
+    .close {
+      background: #f8f9fa;
+      padding: 15px 20px;
+      border-top: 1px solid #ddd;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .close a:hover {
+      color: #007bff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    /* 커스텀 화살표 */
+    .custom-prev,
+    .custom-next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 40px;
+      height: 40px;
+      background: rgba(0, 0, 0, 0.8);
+      color: white;
+      border: none;
+      border-radius: 50%;
+      font-size: 18px;
+      cursor: pointer;
+      z-index: 999;
+    }
+
+    .custom-prev {
+      left: 15px;
+      /* 팝업 안쪽으로 이동 */
+    }
+
+    .custom-next {
+      right: 15px;
+      /* 팝업 안쪽으로 이동 */
+    }
+
+    .custom-prev:hover,
+    .custom-next:hover {
+      background: rgba(0, 0, 0, 1);
+    }
+  </style>
+</head>
+
+<body>
+  <div style="text-align: center;">
+    <h1>4탭 자동슬라이드 팝업</h1>
+  </div>
+
+  <div id="slidepop" class="layer_popup">
+    <div id="popup">
+      <!-- 커스텀 화살표 버튼들 -->
+      <button class="custom-prev" onclick="prevSlide()">❮</button>
+      <button class="custom-next" onclick="nextSlide()">❯</button>
+
+      <div class="tab-slider">
+        <div class="tab_content">
+          <a href="https://baroseogu.com/default/sub9/01.php?com_board_basic=read_form&com_board_idx=19">
+            <img src="https://www.baroseogu.com/base/img/pop/pop_250721_1.jpg" alt="민생회복 소비쿠폰 사용 안내">
+          </a>
+        </div>
+        <div class="tab_content">
+          <img src="https://www.baroseogu.com/base/img/pop/pop_250701_1.png" alt="바로서구 건강하게 여름나기 프로모션">
+        </div>
+        <div class="tab_content">
+          <img src="https://www.baroseogu.com/base/img/pop/pop_250714.jpg" alt="우리아이 키성장을 체크하라">
+        </div>
+        <div class="tab_content">
+          <img src="https://www.baroseogu.com/base/img/pop/pop_250721_2.jpg" alt="8월 진료안내">
+        </div>
+        <div class="tab_content">
+          <img src="https://mittonclinic.com/base/img/pop/pop_250704_3.jpg" alt="8월 진료안내">
+        </div>
+      </div>
+
+      <ul class="tabs">
+        <li class="tabs-item tab-nav active" data-slide="0"><a href="#"><span>민생회복 소비쿠폰</span></a></li>
+        <li class="tabs-item tab-nav" data-slide="1"><a href="#"><span>건강하게 여름나기</span></a></li>
+        <li class="tabs-item tab-nav" data-slide="2"><a href="#"><span>우리아이 키성장을 체크하라</span></a></li>
+        <li class="tabs-item tab-nav" data-slide="3"><a href="#"><span>8월 진료안내</span></a></li>
+        <li class="tabs-item tab-nav" data-slide="4"><a href="#"><span>8월 진료안내</span></a></li>
+      </ul>
+
+      <div class="close">
+        <label><input type='checkbox' name='chkbox' value='slidepop'> 오늘 하루 이 창을 열지 않음</label>
+        <a href='#' onclick='closePopup(); return false;'>닫기</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // 쿠키 함수
+    function setCookie(name, value, expiredays) {
+      var todayDate = new Date();
+      todayDate.setDate(todayDate.getDate() + expiredays);
+      document.cookie = name + "=" + escape(value) + "; path=/; expires=" + todayDate.toGMTString() + ";"
+    }
+
+    function closeWin(flag, layer) {
+      if (flag) setCookie(layer, 'done', 1);
+      document.getElementById(layer).style.visibility = 'hidden';
+    }
+
+    function closePopup() {
+      var checkbox = document.querySelector('input[name="chkbox"]');
+      if (checkbox.checked) {
+        closeWin(true, "slidepop");
+      } else {
+        closeWin(false, "slidepop");
+      }
+    }
+
+    // 화살표 함수들 (전역으로 이동)
+    function prevSlide() {
+      $('.tab-slider').slick('slickPrev');
+    }
+
+    function nextSlide() {
+      $('.tab-slider').slick('slickNext');
+    }
+
+    // 초기화
+    $(document).ready(function () {
+      // 쿠키 확인 후 팝업 표시
+      var cookiedata = document.cookie;
+      if (cookiedata.indexOf('slidepop=done') < 0) {
+        document.getElementById('slidepop').style.visibility = 'visible';
+      }
+
+      // 슬릭 슬라이드 초기화
+      $('.tab-slider').slick({
+        autoplay: true,
+        autoplaySpeed: 3000,
+        fade: true,
+        arrows: false,
+        dots: false,
+        infinite: true,
+        speed: 500
+      });
+
+      // 슬라이드 변경 시 탭 업데이트
+      $('.tab-slider').on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+        $('.tab-nav').removeClass('active');
+        $('.tab-nav[data-slide="' + nextSlide + '"]').addClass('active');
+      });
+
+      // 탭 클릭 이벤트
+      $('.tab-nav').click(function (e) {
+        e.preventDefault();
+        $('.tab-slider').slick('slickGoTo', $(this).data('slide'));
+      });
+
+      // 체크박스는 그냥 체크만 되게
+      $('input[name="chkbox"]').change(function () {
+        // 체크만 하고 아무것도 안함
+      });
+
+      // 오버레이 클릭으로 닫기
+      $('#slidepop').click(function (e) {
+        if (e.target === this) {
+          closePopup();
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>
