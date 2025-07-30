@@ -244,6 +244,8 @@
       }
     }
   </style>
+
+
   <div class="call24">
     <p>24시</p>
     <p>응급상담문의</p>
@@ -253,6 +255,11 @@
     <span class="closeBtn">x</span>
   </div>
 
+  <script>
+    $('.closeBtn').click(function () {
+      $('.call24').hide();
+    });
+  </script>
 
   <!-- -------------팝업  -->
   <div id="slidepop" class="layer_popup">
