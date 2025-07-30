@@ -147,7 +147,114 @@
   <div style="text-align: center;">
     <h1>4탭 자동슬라이드 팝업</h1>
   </div>
+  <style>
+    @font-face {
+      font-family: 'Pretendard';
+      @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css");
+    }
 
+    .call24 {
+      position: fixed;
+      top: 0;
+      right: 0;
+      background: url(./imsi/bg.png) 100% center/cover;
+      width: 224px;
+      height: 182px;
+      padding: 20px 35px;
+      box-sizing: border-box;
+      color: #2f3035;
+      font-family: 'Pretendard Variable', sans-serif;
+    }
+
+    .call24 p:first-child,
+    .call24 p:nth-child(2) {
+      font-size: 20px;
+      line-height: 1.2;
+      letter-spacing: -1.5px;
+      font-weight: 800;
+    }
+
+    .call24 p:nth-child(3) {
+      font-size: 17px;
+      font-weight: 600;
+    }
+
+    .call24 p:nth-child(4) {
+      font-size: 16px;
+      color: red;
+      margin-top: 8px;
+      font-weight: 800;
+    }
+
+    .call24 .light {
+      position: absolute;
+      top: 18px;
+      right: 18px;
+    }
+
+    @media screen and (max-width: 480px) {
+      .call24 {
+        top: 80%;
+        right: 0;
+        width: 160px;
+        height: 130px;
+        padding: 15px 30px;
+      }
+
+      .call24 p:first-child,
+      .call24 p:nth-child(2) {
+        font-size: 14px;
+        line-height: 1.2;
+        letter-spacing: -1.5px;
+        font-weight: 800;
+      }
+
+      .call24 p:nth-child(3) {
+        font-size: 12px;
+        font-weight: 600;
+      }
+
+      .call24 p:nth-child(4) {
+        font-size: 12px;
+        color: red;
+        margin-top: 5px;
+        font-weight: 800;
+      }
+
+      .call24 .light {
+        top: 5px;
+        right: 5px;
+        transform: scale(.7);
+      }
+
+      .call24 .closeBtn {
+        position: absolute;
+        display: block;
+        width: 30px;
+        height: 30px;
+        background: #fff;
+        border-radius: 50%;
+        font-size: 15px;
+        top: 0;
+        left: 0;
+        line-height: 27px;
+        text-align: center;
+        cursor: pointer;
+        font-weight: bold;
+      }
+    }
+  </style>
+  <div class="call24">
+    <p>24시</p>
+    <p>응급상담문의</p>
+    <p>외상∙골절∙인대파열</p>
+    <p>010-8689-8549</p>
+    <p class="light"><img src="./imsi/light.png" alt="응급"></p>
+    <span class="closeBtn">x</span>
+  </div>
+
+
+  <!-- -------------팝업  -->
   <div id="slidepop" class="layer_popup">
     <div id="popup">
       <!-- 커스텀 화살표 버튼들 -->
