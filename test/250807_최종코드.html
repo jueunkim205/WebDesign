@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>최종 팝업</title>
+
+  <!-- jQuery 먼저 로드 -->
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+  <!-- Slick 라이브러리 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+
+  <style>
+    /* 팝업 배경 */
+    /* .popup-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 999;
+    } */
+
+    /* 팝업 본체 */
+    #myPopup .popup {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 90%;
+      max-width: 400px;
+      background: white;
+      /* border-radius: 8px; */
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      z-index: 1000;
+    }
+
+    /* 슬라이더 영역 크기 고정 */
+    #myPopup .slider {
+      width: 100%;
+      height: 0;
+      padding-bottom: 141.4%;
+      /* 707/500 * 100% = 141.4% */
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* 슬라이드 아이템을 절대 위치로 */
+    #myPopup .slide-item {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    /* 슬라이드 이미지 */
+    #myPopup .slide-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* 유튜브 비디오 */
+    #myPopup .slide-item .video {
+      position: relative;
+      width: 100%;
+      padding-bottom: 56.25%;
+      /* 16:9 비율 */
+      height: 0;
+      overflow: hidden;
+    }
+
+    #myPopup .slide-item .video iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    /* 탭 메뉴 (항상 보임) */
+    #myPopup .tabs {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      background: #f8f9fa;
+      border-top: 1px solid #ddd;
+    }
+
+    #myPopup .tabs li {
+      flex: 1;
+      text-align: center;
+      border-right: 1px solid #ddd;
+    }
+
+    #myPopup .tabs li:last-child {
+      border-right: none;
+    }
+
+    #myPopup .tabs li a {
+      display: block;
+      padding: 12px 8px;
+      color: #666;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: bold;
+      background: #f8f9fa;
+      transition: background 0.3s, border-bottom 0.3s;
+      box-sizing: border-box;
+      border-bottom: 3px solid transparent;
+    }
+
+    #myPopup .tabs li.active a {
+      background: white;
+      color: #0089da;
+      border-bottom: 3px solid #0089da;
+    }
+
+    /* 화살표 (2개 이상일 때만 보임) */
+    #myPopup .slick-prev,
+    #myPopup .slick-next {
+      display: none !important;
+      /* 기본적으로 숨김 */
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 40px;
+      height: 40px;
+      background: rgba(0, 0, 0, 0.5);
+      border: none;
+      border-radius: 50%;
+      color: white;
+      cursor: pointer;
+      z-index: 10;
+    }
+
+    #myPopup .slick-prev.show,
+    #myPopup .slick-next.show {
+      display: block !important;
+    }
+
+    #myPopup .slick-prev {
+      left: 10px;
+    }
+
+    #myPopup .slick-next {
+      right: 10px;
+    }
+
+    #myPopup .slick-prev:before,
+    #myPopup .slick-next:before {
+      font-size: 20px;
+      line-height: 1;
+      color: white;
+    }
+
+    /* 닫기 버튼 영역 */
+    #myPopup .close-area {
+      background: #f8f9fa;
+      padding: 10px 15px;
+      border-top: 1px solid #ddd;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 16px;
+    }
+
+    #myPopup .close-area label {
+      cursor: pointer;
+      display: flex;
+    }
+
+    #myPopup .close-area .close-btn {
+      color: #0089da;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 5px 10px;
+      border-radius: 4px;
+      transition: background 0.3s;
+    }
+
+    #myPopup input[type="checkbox"] {
+      margin: 2px 5px 0 0;
+      display: none;
+    }
+
+    #myPopup .close-area .close-btn:hover {
+      background: rgba(0, 137, 218, 0.1);
+    }
+
+    /* 모바일 */
+    @media (max-width: 768px) {
+      #myPopup .popup {
+        width: 80%;
+        max-width: 300px;
+        /* aspect-ratio는 유지됨 */
+      }
+
+      #myPopup .tabs li a {
+        padding: 8px 4px;
+        font-size: 11px;
+      }
+
+      #myPopup .close-area {
+        font-size: 11px;
+        padding: 3px 8px;
+      }
+    }
+
+    /* 숨김 */
+    #myPopup .hidden {
+      visibility: hidden !important;
+    }
+
+    /* 팝업 페이드 애니메이션 */
+    #myPopup .popup-bg {
+      opacity: 1;
+      transition: opacity 0.3s ease;
+    }
+
+    #myPopup .popup-bg.fade-out {
+      opacity: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <div style="text-align: center; padding: 50px;">
+    <button onclick="showPopup()">팝업 다시 보기</button>
+  </div>
+
+  <!-- 팝업 -->
+  <div id="myPopup" class="popup-bg layer_popup" style="visibility: hidden;">
+    <div class="popup">
+      <!-- 슬라이드 영역 -->
+      <div class="slider">
+        <!-- 슬라이드 1 -->
+        <div class="slide-item">
+          <img src="https://bestinternalmc.com/base/img/pop/pop_250530.jpg" alt="6월 진료시간변경">
+        </div>
+
+        <!-- 슬라이드 2 -->
+        <!-- <div class="slide-item">
+          <img
+            src="https://plus.unsplash.com/premium_photo-1697730247961-9066e1398257?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="">
+        </div> -->
+
+        <!-- 슬라이드 3 -->
+        <!-- <div class="slide-item">
+          <img
+            src="https://images.unsplash.com/photo-1754231537013-edf1da9619b4?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxMnx8fGVufDB8fHx8fA%3D%3D"
+            alt="진료실">
+        </div> -->
+
+        <!-- 슬라이드 4: 유튜브 -->
+        <!-- <div class="slide-item">
+          <div class="video">
+            <iframe src="https://www.youtube.com/embed/uR8Mrt1IpXg?si=0vlT6JTXb3V-X25x" allowfullscreen></iframe>
+          </div>
+        </div> -->
+      </div>
+
+      <!-- 탭 메뉴 -->
+      <ul class="tabs">
+        <li class="active"><a href="#" data-slide="0">6월 진료시간변경</a></li>
+        <!-- <li><a href="#" data-slide="1">탭2</a></li> -->
+        <!-- <li><a href="#" data-slide="2">탭3</a></li>-->
+        <!-- <li><a href="#" data-slide="3">동영상</a></li> -->
+      </ul>
+
+      <!-- 닫기 -->
+      <div class="close-area">
+        <label>
+          <input type="checkbox" name="chkbox" value="myPopup">
+          오늘은 그만 볼래요
+        </label>
+        <a href="#" class="close-btn" onclick="closePopup(); return false;">닫기</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+
+    // === 쿠키 함수들 ===
+    function setCookie(name, value, expiredays) {
+      var todayDate = new Date();
+      todayDate.setDate(todayDate.getDate() + expiredays);
+      document.cookie = name + "=" + escape(value) + "; path=/; expires=" + todayDate.toGMTString() + ";";
+    }
+
+    function closeWin(flag, layer) {
+      if (flag) setCookie(layer, 'done', 1);
+      // 즉시 숨김 (애니메이션 없음)
+      document.getElementById(layer).style.visibility = 'hidden';
+    }
+
+    function closePopup() {
+      var checkbox = document.querySelector('input[name="chkbox"]');
+      if (checkbox && checkbox.checked) {
+        closeWin(true, "myPopup");
+        // console.log('쿠키 저장하고 닫기');
+      } else {
+        closeWin(false, "myPopup");
+        // console.log('그냥 닫기');
+      }
+    }
+
+    // 바깥 클릭 시 즉시 닫기 (체크박스 확인 없이)
+    function closePopupQuick() {
+      document.getElementById('myPopup').style.visibility = 'hidden';
+      // console.log('즉시 닫기');
+    }
+
+    // 부드러운 팝업 닫기 (페이드 효과)
+    function closePopupSmooth() {
+      var popup = document.getElementById('myPopup');
+      popup.classList.add('fade-out');
+      setTimeout(function () {
+        closePopup();
+        popup.classList.remove('fade-out');
+      }, 300);
+    }
+
+    // 팝업 다시 보기
+    function showPopup() {
+      document.getElementById('myPopup').style.visibility = 'visible';
+    }
+
+    // === 페이지 로딩시 쿠키 확인 ===
+    window.onload = function () {
+      var cookiedata = document.cookie;
+      // console.log('현재 쿠키:', cookiedata);
+
+      var divs = document.getElementsByTagName('DIV');
+      for (var i = 0; i < divs.length; i++) {
+        if (divs[i].className && divs[i].className.indexOf('layer_popup') >= 0) {
+          if (cookiedata.indexOf(divs[i].id + '=done') >= 0) {
+            document.getElementById(divs[i].id).style.visibility = 'hidden';
+            // console.log('팝업 숨김 (쿠키 있음)');
+          } else {
+            document.getElementById(divs[i].id).style.visibility = 'visible';
+            // console.log('팝업 표시');
+          }
+        }
+      }
+    };
+
+    // === jQuery 초기화 ===
+    $(document).ready(function () {
+      var slideCount = $('.slide-item').length;
+      // console.log('슬라이드 개수:', slideCount);
+
+      // 슬라이드가 1개일 때는 슬릭 초기화 안함
+      if (slideCount > 1) {
+        // 슬릭 슬라이더 초기화 (여러 슬라이드일 때만)
+        $('.slider').slick({
+          autoplay: true,
+          autoplaySpeed: 4000,
+          fade: true,
+          arrows: true,
+          dots: false,
+          infinite: true,
+          speed: 500,
+          prevArrow: '<button class="slick-prev show">◀</button>',
+          nextArrow: '<button class="slick-next show">▶</button>'
+        });
+
+        // 슬라이드 변경시 탭 업데이트
+        $('.slider').on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+          $('.tabs li').removeClass('active');
+          $('.tabs li').eq(nextSlide).addClass('active');
+        });
+
+        // 탭 클릭시 슬라이드 이동
+        $('.tabs a').click(function (e) {
+          e.preventDefault();
+          var slideIndex = $(this).data('slide');
+          $('.slider').slick('slickGoTo', slideIndex);
+        });
+      } else {
+        // console.log('슬라이드 1개 - 슬릭 초기화 안함');
+
+        // 슬라이드가 1개일 때는 탭 클릭 무효화
+        $('.tabs a').click(function (e) {
+          e.preventDefault();
+          // 아무것도 안함
+        });
+      }
+
+      // 배경 클릭시 팝업 즉시 닫기 (체크박스 확인 없이)
+      // $('.popup-bg').click(function (e) {
+      //   if (e.target === this) {
+      //     closePopupQuick(); 
+      //   }
+      // });
+
+      // console.log('팝업 초기화 완료');
+    });
+  </script>
+</body>
+
+</html>

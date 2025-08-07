@@ -1,0 +1,791 @@
+<!-- 팝업 -->
+<script>
+  function mvwizCMS2_close_open() {
+    if (document.getElementById('cms2closebtn').value == '>>') {
+      mvwizCMS2_close();
+      //document.getElementById('mvwizCMS2_input_dsp').innerHTML= '';
+    } else {
+      mvwizCMS2_open(1370);
+    }
+  }
+  function mvwizCMS2_open(size) {
+    if (size > 1100) {
+      jframe('/index.php?mvwizCMS2_excute=search&id=main_design_contents&search=%EC%9D%B4%EB%82%98%EC%98%81%ED%94%BC%EB%B6%80%EA%B3%BC', 'mvwizCMS2_input_dsp', this);
+    }
+    $('#cms2frame').animate({ opacity: 1, width: size, height: 730 }, 500, function () { });
+    document.getElementById('cms2closebtn').value = '>>';
+  }
+  function mvwizCMS2_close() {
+    $('#cms2frame').animate({ opacity: 0.5, width: 100, height: 100 }, 500, function () { });
+    document.getElementById('cms2closebtn').value = '<<';
+    document.getElementById('mvwizCMS2_input_dsp').innerHTML = '';
+  }
+
+
+
+
+  setCookie('mvwizCMS2_width', '1200', 1);
+  setCookie('mvwizCMS2_left', '', 1);
+</script>
+
+
+
+
+
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+<style>
+  .modal-videou68671b897f216 {
+    font-family: 'Noto Sans KR', sans-serif;
+    box-sizing: border-box;
+    position: absolute;
+    /* fixed 대신 absolute 사용 */
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100vh;
+    /* 화면보다 작으면 자동 조절 */
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+
+
+
+
+  .modal-videou68671b897f216.fade-out {
+    opacity: 0;
+  }
+
+
+
+
+
+  .modal-videou68671b897f216 *,
+  .modal-videou68671b897f216 *::before,
+  .modal-videou68671b897f216 *::after {
+    box-sizing: border-box;
+  }
+
+
+
+
+
+  .modal-videou68671b897f216 button {
+    cursor: pointer;
+    border: 0;
+    outline: none;
+  }
+
+
+
+
+
+  .modal-videou68671b897f216>.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: none;
+  }
+
+
+
+
+  .modal-videou68671b897f216 .modal-content {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    padding: 0 20px;
+    z-index: 1;
+    font-size: 0;
+    overflow: hidden;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+
+
+
+
+
+    max-height: 95vh;
+    /* 브라우저 높이 제한 */
+    overflow-y: hidden;
+    /* 넘칠 경우 스크롤 표시 */
+    box-sizing: border-box;
+    /* 패딩까지 포함한 높이 계산 */
+  }
+
+
+
+
+
+  .modal-videou68671b897f216 .modal-content.scrollable {
+    overflow-y: auto;
+  }
+
+
+
+
+
+  .modal-videou68671b897f216 .modal-content.no-scroll {
+    overflow-y: hidden !important;
+  }
+
+
+
+
+
+  .modal-videou68671b897f216 .modal-content .modal-body .pop-slide {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+    -webkit-transition: opacity 0.3s ease;
+  }
+
+
+
+
+
+  .modal-videou68671b897f216 .modal-content .modal-body .pop-slide.slick-initialized {
+    visibility: visible;
+    opacity: 1;
+  }
+
+
+
+
+
+  .modal-videou68671b897f216 .modal-content .modal-body .pop-slide .item>a {
+    position: relative;
+    display: block;
+  }
+
+
+
+
+
+  .modal-videou68671b897f216 .modal-content .modal-body .pop-slide .item>a>figure img {
+    width: 100%;
+    display: block;
+  }
+
+
+
+
+
+  .modal-videou68671b897f216 .modal-content .modal-body .pop-slide .item>a>figure img.visible-lg {
+    display: none;
+  }
+
+
+
+
+
+  .modal-videou68671b897f216 .modal-content .modal-body .pop-slide .item>a .embed-responsive {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: none;
+    width: 100%;
+    padding: 0;
+    overflow: hidden;
+  }
+
+
+
+
+
+  .modal-videou68671b897f216 .modal-content .modal-body .pop-slide .item>a .embed-responsive:before {
+    display: block;
+    content: '';
+    padding-top: 56%;
+  }
+
+
+
+
+
+  .modal-videou68671b897f216 .modal-content .modal-body .pop-slide .item>a .embed-responsive>.video {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+
+
+
+
+
+  .modal-videou68671b897f216 .modal-content .modal-body .pop-slide .item.on>a .embed-responsive {
+    display: block;
+  }
+
+
+
+
+
+  .modal-videou68671b897f216 .modal-content .modal-body .slick-dots {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+    border: 0.5px solid #d9d9d9;
+    background-color: #fff;
+  }
+
+
+
+
+
+  .modal-videou68671b897f216 .modal-content .modal-body .slick-dots>li {
+    flex: 1 1 33.33%;
+    /* 한 줄에 3개씩 정렬 */
+    margin: 0px;
+    text-align: center;
+    border: 0.5px solid #d9d9d9;
+    background-color: #fff;
+  }
+
+
+
+
+
+  .modal-videou68671b897f216 .modal-content .modal-body .slick-dots>li:nth-child(3n) {
+    margin-right: 0;
+    /* 세 번째 버튼의 오른쪽 여백 제거 */
+  }
+
+
+
+
+
+  /* 마지막 줄이 2개일 경우 50%로 설정 */
+  .modal-videou68671b897f216 .modal-content .modal-body .slick-dots>li:nth-last-child(2):first-child,
+  .modal-videou68671b897f216 .modal-content .modal-body .slick-dots>li:nth-last-child(2):first-child~li {
+    flex: 1 1 50%;
+
+
+
+
+
+  }
+
+
+
+
+
+  /* 마지막 줄이 1개일 경우 100%로 설정 */
+  .modal-videou68671b897f216 .modal-content .modal-body .slick-dots>li:nth-last-child(1):first-child {
+    flex: 1 1 100%;
+
+
+
+
+
+  }
+
+
+
+
+
+  .modal-videou68671b897f216 .modal-content .modal-body .slick-dots>li>button {
+    width: 100%;
+    height: auto;
+    font-size: 15px;
+    color: #999999;
+    line-height: 15px;
+    padding: 15px 0;
+    text-indent: 0;
+    margin: 0;
+    font-weight: 400;
+    -webkit-transition-property: all;
+    transition-property: all;
+    -webkit-transition-duration: 0.15s;
+    transition-duration: 0.15s;
+    -webkit-transition-timing-function: linear;
+    transition-timing-function: linear;
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s;
+    background-color: #ffffff !important;
+  }
+
+
+
+
+
+  .modal-videou68671b897f216 .modal-content .modal-body .slick-dots>li.slick-active>button {
+    font-weight: bold;
+    color: #0089da;
+    background: #fff !important;
+  }
+
+
+
+
+
+  .modal-videou68671b897f216 .modal-content .btn-area_pop {
+    background-color: #fafafa;
+    padding: 5px 14px;
+  }
+
+
+
+
+
+  .modal-videou68671b897f216 .modal-content .btn-area_pop:after {
+    display: block;
+    content: '';
+    clear: both;
+  }
+
+
+
+
+
+  .modal-videou68671b897f216 .modal-content .btn-area_pop .btn {
+    display: block;
+    width: auto;
+    line-height: 32px;
+    font-size: 16px;
+    color: #000;
+    color: #;
+    font-weight: 400;
+    border: none;
+    background: none;
+    float: left;
+  }
+
+
+
+
+
+  .modal-videou68671b897f216 .modal-content .btn-area_pop .btn:last-child {
+    float: right;
+
+
+
+
+
+  }
+
+
+
+
+
+  .modal-videou68671b897f216 .slick-prev,
+  .modal-videou68671b897f216 .slick-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    z-index: 100005;
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.5);
+    /* 반투명 배경 */
+    border: none;
+    border-radius: 50%;
+    /* 동그라미 */
+    text-align: center;
+    line-height: 50px;
+    transition: background 0.3s ease;
+    display: block !important;
+  }
+
+
+
+
+
+  .modal-videou68671b897f216 .slick-prev {
+    left: 10px;
+    /* 왼쪽 화살표 위치 */
+  }
+
+
+
+
+
+  .modal-videou68671b897f216 .slick-next {
+    right: 10px;
+    /* 오른쪽 화살표 위치 */
+  }
+
+
+
+
+
+  .modal-videou68671b897f216 .slick-prev:hover,
+  .modal-videou68671b897f216 .slick-next:hover {
+    background: rgba(255, 255, 255, 0.7);
+    /* 호버 시 배경 밝게 */
+  }
+
+
+
+
+
+
+
+  /* 좌우 각도 꺽쇠 화살표 구현 */
+  .modal-videou68671b897f216 .slick-prev::after,
+  .modal-videou68671b897f216 .slick-next::after {
+    content: '';
+    display: block;
+    width: 12px;
+    height: 12px;
+    border: solid white;
+    border-width: 3px 3px 0 0;
+    /* 꺽쇠 선 */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+
+
+
+
+  .modal-videou68671b897f216 .slick-prev::after {
+    transform: translate(-50%, -50%) rotate(-135deg);
+    /* 왼쪽 화살표 꺾쇠 */
+  }
+
+
+
+
+
+  .modal-videou68671b897f216 .slick-next::after {
+    transform: translate(-50%, -50%) rotate(45deg);
+    /* 오른쪽 화살표 꺾쇠 */
+  }
+
+
+
+
+
+  /* 호버 시 화살표 색상 변경 */
+  .modal-videou68671b897f216 .slick-prev:hover::after,
+  .modal-videou68671b897f216 .slick-next:hover::after {
+    border-color: black;
+    /* 화살표 색상 변경 */
+  }
+
+
+
+  /* 팝업 가로길이 */
+
+
+  @media (min-width: 1024px) {
+    .modal-videou68671b897f216 .modal-content {
+      max-width: 400px;
+      top: 50%;
+      padding: 0;
+    }
+
+
+
+
+
+    .modal-videou68671b897f216 .modal-content .modal-body .pop-slide .item>a {
+      position: relative;
+    }
+
+
+
+
+
+    .modal-videou68671b897f216 .modal-content .modal-body .pop-slide .item>a>figure img.visible-sm {
+      display: none;
+    }
+
+
+
+
+
+    .modal-videou68671b897f216 .modal-content .modal-body .pop-slide .item>a>figure img.visible-lg {
+      display: block;
+    }
+
+
+
+
+
+    .modal-videou68671b897f216 .modal-content .modal-body .pop-slide .item>a .embed-responsive {
+      bottom: 45px;
+      right: 50px;
+      width: 600px;
+    }
+
+
+
+
+
+    .modal-videou68671b897f216 .modal-content .modal-body .slick-dots {
+      display: flex;
+      justify-content: center;
+    }
+
+
+
+
+
+    .modal-videou68671b897f216 .modal-content .modal-body .slick-dots>li>button {
+      width: 100%;
+      height: auto;
+      font-size: 15px;
+      color: #999999;
+      line-height: 15px;
+      padding: 15px 0;
+      text-indent: 0;
+      margin: 0;
+      font-weight: 400;
+      -webkit-transition-property: all;
+      transition-property: all;
+      -webkit-transition-duration: 0.15s;
+      transition-duration: 0.15s;
+      -webkit-transition-timing-function: linear;
+      transition-timing-function: linear;
+      -webkit-transition-delay: 0s;
+      transition-delay: 0s;
+      background-color: #ffffff !important;
+    }
+
+
+
+
+
+    .modal-videou68671b897f216 .modal-content .modal-body .slick-dots>li>button {
+      height: auto;
+      font-size: 15px;
+      color: #999999;
+      line-height: 15px;
+      padding: 15px 0;
+      font-weight: 400;
+      -webkit-transition-property: all;
+      transition-property: all;
+      -webkit-transition-duration: 0.15s;
+      transition-duration: 0.15s;
+      -webkit-transition-timing-function: linear;
+      transition-timing-function: linear;
+      -webkit-transition-delay: 0s;
+      transition-delay: 0s;
+      background-color: #ffffff !important;
+    }
+
+
+
+
+
+    .modal-videou68671b897f216 .modal-content .modal-body .slick-dots>li.slick-active>button {
+      font-weight: bold;
+      color: #0089da;
+      background: #fff !important;
+    }
+
+
+
+
+
+    .modal-videou68671b897f216 .modal-content .btn-area_pop {
+      background-color: #fafafa;
+      padding: 5px 14px;
+    }
+
+
+
+
+
+    .modal-videou68671b897f216 .modal-content .btn-area_pop .btn {
+      font-size: 16px;
+      line-height: 40px;
+      -webkit-transition-property: all;
+      transition-property: all;
+      -webkit-transition-duration: 0.15s;
+      transition-duration: 0.15s;
+      -webkit-transition-timing-function: linear;
+      transition-timing-function: linear;
+      -webkit-transition-delay: 0s;
+      transition-delay: 0s;
+    }
+
+
+
+
+
+    .modal-videou68671b897f216 .modal-content .btn-area_pop .btn:hover {
+      /*background-color: #d7d5ce; */
+    }
+  }
+</style>
+<!-- modal-video -->
+<!-- 여기를 수정 -->
+<div class="modal-videou68671b897f216" id="swiper_popup">
+  <div class="backdrop"></div>
+  <div class="modal-content">
+    <div class="modal-body">
+      <ul class="pop-slide">
+        <!--<li class="item " data-item="8월 진료일정 안내">
+                                <a href='javascript:void(0);' target="_self">
+                                    <figure>
+                                        <img src="" class="visible-sm" alt=""
+                                            onerror="this.onerror=null; this.src='/base/img/pop/pop_250731.jpg';">
+                                        <img src="/base/img/pop/pop_250731.jpg" class="visible-lg" alt="">
+                                    </figure>
+                                    <!-- <div class="embed-responsive">
+                                        <iframe src="https://www.youtube.com/embed/?enablejsapi=1" class="video"
+                                            allowfullscreen></iframe>
+                                    </div> -->
+        </a>
+        </li>-->
+
+
+
+        <!--<li class="item " data-item="민생회복">
+                                <a href='javascript:void(0);' target="_self">
+                                    <figure>
+                                        <img src="" class="visible-sm" alt=""
+                                            onerror="this.onerror=null; this.src='/base/img/pop/pop_250723.jpg';">
+                                        <img src="/base/img/pop/pop_250723.jpg" class="visible-lg" alt="">
+                                    </figure>
+                                    <!-- <div class="embed-responsive">
+                                        <iframe src="https://www.youtube.com/embed/?enablejsapi=1" class="video"
+                                            allowfullscreen></iframe>
+                                    </div> -->
+        </a>
+        </li>-->
+
+
+
+        <li class="item " data-item="6월 진료시간변경">
+          <a href='javascript:void(0);' target="_self">
+            <figure>
+              <img src="" class="visible-sm" alt=""
+                onerror="this.onerror=null; this.src='/base/img/pop/pop_250530.jpg';">
+              <img src="/base/img/pop/pop_250530.jpg" class="visible-lg" alt="">
+            </figure>
+            <!-- <div class="embed-responsive">
+                                        <iframe src="https://www.youtube.com/embed/?enablejsapi=1" class="video"
+                                            allowfullscreen></iframe>
+                                    </div> -->
+          </a>
+        </li>
+
+      </ul>
+    </div>
+    <div class="btn-area_pop">
+      <button type="button" class="btn today-close"
+        onclick="document.getElementById('swiper_popup').style.display='none'; document.getElementById('swiper_popup').innerHTML='';set_cookie('mvwiz_close_popup_swiper_popup', 1, 1 );">오늘은
+        그만 볼래요</button>
+      <button type="button" class="btn pop-close">닫기</button>
+    </div>
+  </div>
+</div>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js">
+</script>
+<!-- 팝업 닫기 (페이드아웃) 핸들러 -->
+<script>
+  (function ($) {
+    // #swiper_popup 내부의 backdrop 또는 pop-close 버튼 클릭 감지
+    $(document).on('click', '#swiper_popup .backdrop, #swiper_popup .pop-close', function () {
+      var $modal = $('#swiper_popup');
+      // 페이드 아웃 클래스 추가
+      $modal.addClass('fade-out');
+      // 0.3초 뒤 실제 숨기기 및 비디오 리셋
+      setTimeout(function () {
+        $modal
+          .css('display', 'none')
+          .removeClass('fade-out')
+          .find('.video').attr('src', '');
+      }, 300);
+    });
+  })(jQuery);
+</script>
+
+
+
+
+
+<script>
+  (function ($) {
+    $(document).ready(function () {
+      var $modal = $('.modal-videou68671b897f216');
+      var $popSlide = $modal.find('.pop-slide');
+      var $modalContent = $modal.find('.modal-content');
+
+
+
+
+
+      // 한 번도 초기화되지 않았다면
+      if ($popSlide.length && !$popSlide.hasClass('slick-initialized')) {
+        $popSlide
+          // 슬릭 레이아웃 완성 시마다 scrollable 클래스 붙이기
+          .on('init setPosition', function () {
+            $modalContent.addClass('scrollable');
+          })
+          // 슬라이드 전환 후 비디오 자동 정지
+          .on('afterChange', function () {
+            $popSlide.find('.video').each(function () {
+              this.contentWindow.postMessage(
+                '{"event":"command","func":"stopVideo","args":""}',
+                '*'
+              );
+            });
+          })
+          .slick({
+            autoplay: true,
+            autoplaySpeed: 6000,
+            arrows: true,
+            dots: true,
+            customPaging: function (slider, i) {
+              return '<button>' + $(slider.$slides[i]).attr('data-item') +
+                '</button>';
+            },
+            responsive: [{
+              breakpoint: 1024,
+              settings: {
+                autoplaySpeed: 6000
+              }
+            }],
+            adaptiveHeight: true,
+            prevArrow: '<button class="slick-prev" aria-label="Previous"><span class="arrow"></span></button>',
+            nextArrow: '<button class="slick-next" aria-label="Next"><span class="arrow"></span></button>'
+          });
+      }
+    });
+  })(jQuery);
+</script>
+
+
+
+
+
+
+
+
+<script>
+  mvwiz_close_popup_exec("swiper_popup");
+</script>
+
+
+
+
+
+</div>
+
+
+
+
+
+</div>
+<!-- /팝업 -->
